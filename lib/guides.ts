@@ -897,6 +897,152 @@ export const GUIDES: Guide[] = [
       { q: ["৫ লাখ টাকার ঋণের কিস্তি ২৪ মাসে কত?", "What is the EMI on a 5 lakh loan over 24 months?"], a: ["১০% বার্ষিক হারে (রিডিউসিং ব্যালেন্স) প্রায় ২৩,০৭২ টাকা।", "At 10% a year (reducing balance) it is about 23,072 taka."] },
     ],
   },
+  {
+    slug: "discount-labh-khoti-shotangsho-hisab",
+    title: ["ছাড়, লাভ ও ক্ষতির শতকরা হিসাব কীভাবে করবেন (উদাহরণসহ)", "How to calculate discount, profit and loss percentages (with examples)"],
+    desc: ["দোকানের ছাড়, দুইবার ছাড় এবং ক্রয়মূল্য থেকে লাভ-ক্ষতির শতকরা হার বের করার সহজ নিয়ম, ধাপে ধাপে উদাহরণসহ।", "Simple rules, with step by step examples, for shop discounts, two discounts in a row, and profit and loss percentages from the cost price."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "percentage-calculator", name: ["শতকরা হিসাব ক্যালকুলেটর", "Percentage calculator"] },
+    sections: [
+      {
+        h: ["ছাড়ের হিসাব", "Working out a discount"],
+        p: [
+          ["সূত্র: ছাড়ের পরিমাণ = দাম × (ছাড়ের হার ÷ ১০০)। ১,২০০ টাকার জিনিসে ১৫% ছাড় হলে ছাড় ১,২০০ × ১৫ ÷ ১০০ = ১৮০ টাকা। তাই দিতে হবে ১,২০০ − ১৮০ = ১,০২০ টাকা।", "Formula: discount amount = price × (discount rate ÷ 100). On an item priced 1,200 taka with 15% off, the discount is 1,200 × 15 ÷ 100 = 180 taka. So you pay 1,200 − 180 = 1,020 taka."],
+          ["ছাড়ের পরের দাম জানা থাকলে আগের দাম বের করা যায়: আগের দাম = পরের দাম ÷ (১ − ছাড়ের হার ÷ ১০০)। যেমন ১,০২০ ÷ ০.৮৫ = ১,২০০ টাকা।", "If you know the price after the discount you can find the original: original = new price ÷ (1 − discount rate ÷ 100). For example 1,020 ÷ 0.85 = 1,200 taka."],
+        ],
+      },
+      {
+        h: ["দুইবার ছাড় এবং বাড়া-কমার ফাঁদ", "Two discounts and the increase-then-decrease trap"],
+        p: [
+          ["১,০০০ টাকার জিনিসে প্রথমে ২০% এবং তারপর আরও ১০% ছাড় হলে মোট ৩০% ছাড় হয় না। ২০% ছাড়ে দাম হয় ৮০০। এরপর ৮০০ এর ১০% = ৮০ কমে দাম হয় ৭২০। মোট ছাড় ২৮০ টাকা, অর্থাৎ ২৮%।", "Two discounts of 20% and then 10% on a 1,000 taka item do not add up to 30%. After 20% off the price is 800. Then 10% of 800 is 80, so the price becomes 720. The total discount is 280 taka, which is 28%."],
+          ["একইভাবে ১০০ টাকা ২০% বাড়লে হয় ১২০। সেই ১২০ থেকে ২০% কমালে কমে ২৪ টাকা, দাম হয় ৯৬। অর্থাৎ আগের দামে ফেরা যায় না, ৪% কম থাকে। কারণ কমার হার নতুন, বড় অঙ্কের ওপর ধরা হয়।", "In the same way 100 taka raised by 20% becomes 120. Reducing that 120 by 20% takes off 24 and leaves 96. So you do not return to the old price, you end 4% lower, because the decrease is taken on the new, larger amount."],
+        ],
+      },
+      {
+        h: ["লাভ ও ক্ষতির শতকরা হার", "Profit and loss percentages"],
+        p: [
+          ["লাভ = বিক্রয়মূল্য − ক্রয়মূল্য। লাভের শতকরা হার = লাভ ÷ ক্রয়মূল্য × ১০০। ৮০০ টাকায় কিনে ১,০০০ টাকায় বিক্রি করলে লাভ ২০০ টাকা, আর হার ২০০ ÷ ৮০০ × ১০০ = ২৫%। ১,০০০ টাকায় কিনে ৮৫০ টাকায় বিক্রি করলে ক্ষতি ১৫০ টাকা, অর্থাৎ ১৫%।", "Profit = selling price − cost price. Profit percentage = profit ÷ cost price × 100. Buying at 800 and selling at 1,000 gives a profit of 200 taka, and the rate is 200 ÷ 800 × 100 = 25%. Buying at 1,000 and selling at 850 is a loss of 150 taka, which is 15%."],
+          ["নির্দিষ্ট লাভ চাইলে বিক্রয়মূল্য = ক্রয়মূল্য × (১ + লাভের হার ÷ ১০০)। ৫০০ টাকার পণ্যে ২০% লাভ চাইলে ৫০০ × ১.২ = ৬০০ টাকায় বিক্রি করতে হবে। লাভের শতাংশ সাধারণত ক্রয়মূল্যের ওপর ধরা হয়। কেউ বিক্রয়মূল্যের ওপর ধরলে (মার্জিন) অঙ্ক আলাদা হয়, যেমন ৮০০ থেকে ১,০০০ এ ২৫% লাভ, কিন্তু মার্জিন ২০০ ÷ ১,০০০ = ২০%।", "To get a set profit, selling price = cost price × (1 + profit rate ÷ 100). For a 500 taka item with a 20% profit you must sell at 500 × 1.2 = 600 taka. Profit percentage is normally taken on the cost price. If someone takes it on the selling price (margin) the figure differs: from 800 to 1,000 is a 25% profit but a margin of 200 ÷ 1,000 = 20%."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১,০০০ টাকার জিনিসে ১০% ছাড় হলে কত দিতে হবে?", "How much do I pay on a 1,000 taka item with 10% off?"], a: ["ছাড় ১,০০০ × ১০ ÷ ১০০ = ১০০ টাকা। তাই দিতে হবে ৯০০ টাকা।", "The discount is 1,000 × 10 ÷ 100 = 100 taka, so you pay 900 taka."] },
+      { q: ["২০% বাড়িয়ে ২০% কমালে কি আগের দাম পাওয়া যায়?", "Do I get the old price back after +20% and −20%?"], a: ["না। ১০০ টাকা ১২০ হয়ে আবার ২০% কমে ৯৬ হয়। অর্থাৎ ৪% কম থাকে।", "No. 100 becomes 120 and then falls 20% to 96, which is 4% lower."] },
+      { q: ["লাভের শতাংশ কিসের ওপর ধরা হয়?", "What is the profit percentage based on?"], a: ["সাধারণত ক্রয়মূল্যের ওপর। বিক্রয়মূল্যের ওপর ধরলে সেটাকে মার্জিন বলা হয় এবং অঙ্ক আলাদা হয়।", "Normally on the cost price. Based on the selling price it is called margin and the figure is different."] },
+      { q: ["ছাড়ের পরের দাম থেকে আগের দাম কীভাবে বের করব?", "How do I find the original price from the discounted price?"], a: ["পরের দামকে (১ − ছাড়ের হার ÷ ১০০) দিয়ে ভাগ করুন। ১৫% ছাড়ের পর ১,০২০ হলে ১,০২০ ÷ ০.৮৫ = ১,২০০।", "Divide the new price by (1 − discount rate ÷ 100). If the price is 1,020 after 15% off, then 1,020 ÷ 0.85 = 1,200."] },
+    ],
+  },
+  {
+    slug: "sorol-sudh-chokrobriddhi-sudh-parthokko",
+    title: ["সরল সুদ ও চক্রবৃদ্ধি সুদের পার্থক্য: ১ লাখ টাকায় কত হয়", "Simple vs compound interest: what 1 lakh taka grows to"],
+    desc: ["সরল সুদ ও চক্রবৃদ্ধি সুদের সূত্র, ১ লাখ টাকার উদাহরণ এবং কত বছরে টাকা দ্বিগুণ হয় তার আনুমানিক নিয়ম।", "The formulas for simple and compound interest, a 1 lakh taka example, and the rule of thumb for how long money takes to double."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "fdr-dps-calculator-bd", name: ["FDR DPS ক্যালকুলেটর", "FDR DPS calculator"] },
+    sections: [
+      {
+        h: ["সরল সুদ", "Simple interest"],
+        p: [
+          ["সরল সুদে সুদ সবসময় শুধু মূল টাকার (আসল) ওপর হিসাব হয়। সূত্র: সুদ = আসল × হার × বছর ÷ ১০০। ১,০০,০০০ টাকা ৮% হারে ৩ বছরে সুদ দেয় ১,০০,০০০ × ৮ × ৩ ÷ ১০০ = ২৪,০০০ টাকা। মোট হয় ১,২৪,০০০ টাকা।", "In simple interest the interest is always worked out on the original amount (principal) only. Formula: interest = principal × rate × years ÷ 100. 100,000 taka at 8% for 3 years earns 100,000 × 8 × 3 ÷ 100 = 24,000 taka. The total is 124,000 taka."],
+        ],
+      },
+      {
+        h: ["চক্রবৃদ্ধি সুদ", "Compound interest"],
+        p: [
+          ["চক্রবৃদ্ধিতে প্রতি বছরের সুদ আসলের সঙ্গে যোগ হয়, পরের বছর সেই বড় অঙ্কের ওপর সুদ ধরা হয়। সূত্র (বছরে একবার যোগ হলে): মোট = আসল × (১ + হার ÷ ১০০)^বছর।", "In compound interest each year's interest is added to the principal and the next year's interest is worked out on that larger amount. Formula (when added once a year): total = principal × (1 + rate ÷ 100)^years."],
+          ["১,০০,০০০ টাকা ৮% হারে ৩ বছরে হয় ১,০০,০০০ × ১.০৮^৩ ≈ ১,২৫,৯৭১.২০ টাকা। সুদ প্রায় ২৫,৯৭১, যা সরল সুদের চেয়ে প্রায় ১,৯৭১ টাকা বেশি। ৫ বছরে হয় প্রায় ১,৪৬,৯৩৩ টাকা, আর সরল সুদে ১,৪০,০০০। পার্থক্য প্রায় ৬,৯৩৩ টাকা। সময় যত বাড়ে, পার্থক্য তত বড় হয়।", "100,000 taka at 8% for 3 years becomes 100,000 × 1.08^3 ≈ 125,971.20 taka. The interest is about 25,971, roughly 1,971 more than simple interest. After 5 years it is about 146,933 taka against 140,000 with simple interest, a difference of about 6,933 taka. The longer the time, the bigger the gap."],
+        ],
+      },
+      {
+        h: ["কত বছরে টাকা দ্বিগুণ হয় এবং কী খেয়াল রাখবেন", "How long to double, and what to watch for"],
+        p: [
+          ["৭২ এর নিয়ম: ৭২ ÷ বার্ষিক হার = আনুমানিক কত বছরে টাকা দ্বিগুণ হবে (চক্রবৃদ্ধিতে)। ৮% হলে ৭২ ÷ ৮ = ৯ বছর। যাচাই করলে ১.০৮^৯ ≈ ১.৯৯৯, অর্থাৎ প্রায় দ্বিগুণই হয়।", "The rule of 72: 72 ÷ annual rate gives roughly how many years money takes to double (with compounding). At 8% it is 72 ÷ 8 = 9 years. Checking, 1.08^9 ≈ 1.999, so it really is about double."],
+          ["ব্যাংক বা সঞ্চয় প্রকল্পে সুদ বছরে কতবার আসলের সঙ্গে যোগ হয় এবং সুদের ওপর কর বা অন্য কাটছাঁট আছে কি না, তা আলাদা হতে পারে। তাই আমানতের আগে নিজের ব্যাংকের শর্ত দেখে নিন। এখানের হিসাব আনুমানিক।", "How often a bank or savings scheme adds interest to the principal, and whether tax or other deductions apply, can differ. So check your own bank's terms before depositing. The figures here are estimates."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["সরল সুদ ও চক্রবৃদ্ধি সুদের মূল পার্থক্য কী?", "What is the main difference between simple and compound interest?"], a: ["সরল সুদ শুধু মূল টাকার ওপর হয়। চক্রবৃদ্ধিতে আগের সুদও আসলের সঙ্গে যোগ হয়ে তার ওপর সুদ হয়।", "Simple interest is on the original amount only. In compound interest earlier interest is added to the principal and earns interest too."] },
+      { q: ["১ লাখ টাকা ৮% হারে ৩ বছরে সরল সুদে কত হয়?", "What does 1 lakh taka become at 8% simple interest in 3 years?"], a: ["সুদ ২৪,০০০ টাকা, মোট ১,২৪,০০০ টাকা। চক্রবৃদ্ধিতে (বছরে একবার) প্রায় ১,২৫,৯৭১ টাকা।", "The interest is 24,000 taka and the total 124,000 taka. With annual compounding it is about 125,971 taka."] },
+      { q: ["টাকা দ্বিগুণ হতে কত বছর লাগে?", "How many years does it take to double money?"], a: ["৭২ কে বার্ষিক সুদের হার দিয়ে ভাগ করুন। ৯% হলে প্রায় ৮ বছর। এটি আনুমানিক নিয়ম।", "Divide 72 by the annual interest rate. At 9% that is about 8 years. It is only a rule of thumb."] },
+      { q: ["ঋণের সুদও কি একইভাবে হিসাব হয়?", "Is loan interest calculated the same way?"], a: ["ঋণে সাধারণত ফ্ল্যাট বা রিডিউসিং ব্যালেন্স পদ্ধতি থাকে, যা আলাদা। কিস্তির হিসাব করতে EMI ক্যালকুলেটর ব্যবহার করুন।", "Loans usually use a flat or reducing balance method, which is different. To work out instalments, use the EMI calculator."] },
+    ],
+  },
+  {
+    slug: "nirapod-password-toiri-niyom",
+    title: ["নিরাপদ পাসওয়ার্ড বানানোর নিয়ম: কত বড় ও কেমন হলে ভালো", "How to make a safe password: how long and what kind"],
+    desc: ["কেন লম্বা পাসওয়ার্ড বেশি নিরাপদ, কী এড়িয়ে চলবেন এবং ইমেইল, ব্যাংক ও সোশ্যাল অ্যাকাউন্ট সুরক্ষিত রাখার সহজ অভ্যাস।", "Why a longer password is safer, what to avoid, and simple habits to keep your email, bank and social accounts protected."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "password-generator", name: ["পাসওয়ার্ড জেনারেটর", "Password generator"] },
+    sections: [
+      {
+        h: ["দৈর্ঘ্য কেন সবচেয়ে বেশি গুরুত্বপূর্ণ", "Why length matters most"],
+        p: [
+          ["শুধু ছোট হাতের ইংরেজি অক্ষরে ৮ অক্ষরের পাসওয়ার্ডের সম্ভাব্য সংমিশ্রণ ২৬^৮, অর্থাৎ প্রায় ২০,৮০০ কোটি। এলোমেলোভাবে ১২ অক্ষরের পাসওয়ার্ড, যেখানে বড় হাতের, ছোট হাতের, সংখ্যা ও চিহ্ন মিলিয়ে প্রায় ৯৪টি অক্ষর থেকে বাছা হয়, তার সংখ্যা ৯৪^১২, অর্থাৎ প্রায় ৪.৮ × ১০^২৩। এটি আগেরটির প্রায় ২.৩ লক্ষ কোটি গুণ।", "An 8 character password of only lowercase English letters has 26^8 possible combinations, about 208 billion. A random 12 character password using about 94 characters (upper case, lower case, digits and symbols) has 94^12, about 4.8 × 10^23. That is roughly 2.3 trillion times more."],
+          ["মনে রাখবেন, এটি শুধু সম্ভাব্য সংমিশ্রণের সংখ্যা। কেউ যদি আপনার নাম, জন্মতারিখ বা ফোন নম্বর আন্দাজ করে বসে, তাহলে লম্বা হলেও পাসওয়ার্ড দুর্বল হয়। তাই লম্বা এবং এলোমেলো, দুটোই দরকার।", "Remember this is only the count of possible combinations. If someone guesses your name, birth date or phone number, a long password is still weak. So you need it to be both long and random."],
+        ],
+      },
+      {
+        h: ["যা এড়িয়ে চলবেন", "What to avoid"],
+        p: [
+          ["নিজের নাম, জন্মতারিখ, মোবাইল নম্বর, ১২৩৪৫৬ বা password এর মতো সহজ শব্দ ব্যবহার করবেন না। কেউ আপনাকে চিনলে এগুলো সহজে আন্দাজ করতে পারে।", "Do not use your name, birth date, mobile number, or easy words like 123456 or password. Anyone who knows you can guess them easily."],
+          ["সবচেয়ে বড় ভুল একই পাসওয়ার্ড অনেক অ্যাকাউন্টে ব্যবহার করা। একটি সাইট থেকে পাসওয়ার্ড ফাঁস হলে বাকি সব অ্যাকাউন্টও ঝুঁকিতে পড়ে।", "The biggest mistake is reusing one password on many accounts. If one site leaks it, all your other accounts are at risk too."],
+        ],
+      },
+      {
+        h: ["ভালো অভ্যাস", "Good habits"],
+        p: [
+          ["প্রতিটি অ্যাকাউন্টে আলাদা পাসওয়ার্ড দিন, অন্তত ১২ অক্ষরের এবং এলোমেলো। এত পাসওয়ার্ড মনে রাখা কঠিন, তাই একটি বিশ্বস্ত পাসওয়ার্ড ম্যানেজার ব্যবহার করা যায়। যেসব অ্যাকাউন্টে সুবিধা আছে সেখানে দুই ধাপের যাচাই (2FA) চালু করুন, বিশেষ করে ইমেইল ও ব্যাংক অ্যাকাউন্টে, কারণ ইমেইল দখল হলে অন্য অ্যাকাউন্টের পাসওয়ার্ডও রিসেট করে নেওয়া যায়।", "Give every account its own password, at least 12 characters and random. Remembering so many is hard, so you can use a trusted password manager. Turn on two step verification (2FA) wherever it is offered, especially on email and bank accounts, because if your email is taken over, the passwords of other accounts can be reset too."],
+          ["আমাদের পাসওয়ার্ড জেনারেটর আপনার ব্রাউজারে, ব্রাউজারের নিরাপদ র‍্যান্ডম ফাংশন দিয়ে পাসওয়ার্ড বানায়। দৈর্ঘ্য ও অক্ষরের ধরন বেছে নিয়ে তৈরি করে সঙ্গে সঙ্গে কপি করে নিন।", "Our password generator makes passwords in your browser using the browser's secure random function. Choose the length and character types, generate one, and copy it right away."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["পাসওয়ার্ড কত অক্ষরের হওয়া উচিত?", "How long should a password be?"], a: ["অন্তত ১২ অক্ষর, এলোমেলো হলে আরও ভালো। গুরুত্বপূর্ণ অ্যাকাউন্টে আরও বড় রাখা যায়।", "At least 12 characters, and better if random. You can go longer for important accounts."] },
+      { q: ["সব অ্যাকাউন্টে একই পাসওয়ার্ড দিলে সমস্যা কী?", "What is wrong with the same password everywhere?"], a: ["একটি সাইটে ফাঁস হলে বাকি সব অ্যাকাউন্টেও ঢোকা সম্ভব হয়ে যায়।", "If one site leaks it, the other accounts can be broken into as well."] },
+      { q: ["দুই ধাপের যাচাই (2FA) কী?", "What is two step verification (2FA)?"], a: ["পাসওয়ার্ডের পরে ফোনে আসা কোড বা অ্যাপের কোডের মতো দ্বিতীয় একটি ধাপ। পাসওয়ার্ড ফাঁস হলেও অ্যাকাউন্ট সুরক্ষিত থাকার সম্ভাবনা বাড়ে।", "A second step after the password, such as a code sent to your phone or generated by an app. Even if the password leaks, your account is more likely to stay safe."] },
+      { q: ["পাসওয়ার্ড কি খাতায় বা ফোনের নোটে রাখা যায়?", "Can I keep passwords in a notebook or phone notes?"], a: ["ফোনের সাধারণ নোটের চেয়ে একটি পাসওয়ার্ড ম্যানেজার নিরাপদ। খাতায় রাখলে সেটি অন্য কারও হাতে না পড়ে সেদিকে খেয়াল রাখুন।", "A password manager is safer than ordinary phone notes. If you use a notebook, make sure it does not fall into anyone else's hands."] },
+    ],
+  },
+  {
+    slug: "chhobir-size-komanor-upay",
+    title: ["ছবির সাইজ (KB/MB) কমানোর সহজ উপায় ও সঠিক ফরম্যাট", "How to reduce an image's file size (KB/MB) and pick the right format"],
+    desc: ["ফর্ম বা ওয়েবসাইটে ছবি আপলোডের জন্য মাপ ও কোয়ালিটি কমিয়ে ফাইল সাইজ ছোট করার ধাপ এবং JPG, PNG ও WebP এর পার্থক্য।", "Steps to shrink a file by lowering dimensions and quality before uploading to a form or website, and the difference between JPG, PNG and WebP."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "image-compressor", name: ["ইমেজ কম্প্রেসার", "Image compressor"] },
+    sections: [
+      {
+        h: ["ছবির সাইজ কেন বড় হয়", "Why image files are large"],
+        p: [
+          ["ফাইল সাইজ মূলত দুটি জিনিসের ওপর নির্ভর করে: ছবির মাপ (পিক্সেল সংখ্যা) এবং কোয়ালিটি। একটি ফোনের ছবি ৪০০০ × ৩০০০ হলে পিক্সেল থাকে ১,২০,০০,০০০। সেটি ১৬০০ × ১২০০ করলে থাকে ১৯,২০,০০০, অর্থাৎ প্রায় ৮৪% কম পিক্সেল। তাই ফাইলও সাধারণত অনেক ছোট হয়, যদিও ঠিক কতটা কমবে তা ছবির ধরনের ওপর নির্ভর করে।", "File size depends mainly on two things: the image dimensions (number of pixels) and the quality. A phone photo of 4000 × 3000 has 12,000,000 pixels. Resized to 1600 × 1200 it has 1,920,000, about 84% fewer pixels. The file usually becomes much smaller, although how much exactly depends on the image."],
+        ],
+      },
+      {
+        h: ["ধাপে ধাপে সাইজ কমানো", "Shrinking a file step by step"],
+        p: [
+          ["প্রথমে আসল ছবির একটি কপি রাখুন, তারপর কপিটির ওপর কাজ করুন। আগে মাপ কমান (রিসাইজ), কারণ এতেই সবচেয়ে বেশি সাইজ কমে। এরপর কোয়ালিটি প্রায় ৭০-৮০% এ নামিয়ে কম্প্রেস করুন। এই সীমায় সাধারণত চোখে পার্থক্য কম বোঝা যায়।", "First keep a copy of the original and work on the copy. Reduce the dimensions (resize) first, as that saves the most. Then compress with the quality lowered to around 70-80%. In that range the difference is usually hard to see."],
+          ["ফর্ম বা পোর্টালে সাইজ ও ফরম্যাটের নির্দিষ্ট শর্ত থাকলে তা আগে দেখে নিন। সাধারণ হিসাবে ১ MB = ১,০২৪ KB। কম্প্রেসের পর ফাইল সাইজ দেখে প্রয়োজনে কোয়ালিটি আরও একটু কমান।", "If a form or portal has set size and format limits, check them first. By the usual measure 1 MB = 1,024 KB. After compressing, look at the file size and lower the quality a little more if needed."],
+        ],
+      },
+      {
+        h: ["JPG, PNG নাকি WebP", "JPG, PNG or WebP"],
+        p: [
+          ["JPG ছবি ও ফটোর জন্য ভালো এবং সাইজ ছোট হয়। PNG স্ক্রিনশট, লেখা ও স্বচ্ছ (ট্রান্সপারেন্ট) ব্যাকগ্রাউন্ডের জন্য ভালো, কিন্তু ফটোর ক্ষেত্রে সাইজ বড় হয়। WebP সাধারণত ছোট সাইজ দেয়, তবে কিছু পুরোনো সফটওয়্যার বা ফর্ম তা নাও নিতে পারে। অনিশ্চিত হলে JPG নিরাপদ।", "JPG suits photos and gives small files. PNG suits screenshots, text and transparent backgrounds, but files are larger for photos. WebP usually gives smaller files, but some older software or forms may not accept it. When unsure, JPG is the safe choice."],
+          ["আমাদের ইমেজ টুলগুলো আপনার ব্রাউজারেই কাজ করে, ছবি কোথাও আপলোড হয় না। কম্প্রেসার, রিসাইজার ও কনভার্টার একসঙ্গে ব্যবহার করে সাইজ ও ফরম্যাট দুটোই ঠিক করে নিতে পারেন।", "Our image tools work in your browser and your image is not uploaded anywhere. You can use the compressor, resizer and converter together to fix both size and format."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["ছবি কম্প্রেস করলে কি কোয়ালিটি নষ্ট হয়?", "Does compressing an image lose quality?"], a: ["কিছুটা কমে, তবে ৭০-৮০% কোয়ালিটিতে সাধারণত চোখে পার্থক্য কম বোঝা যায়। বেশি কমালে ঝাপসা বা দানা দানা দেখা যায়।", "Some quality is lost, but at 70-80% the difference is usually hard to see. Lowering it too far makes the image blurry or grainy."] },
+      { q: ["ছবির মাপ ও ফাইল সাইজের পার্থক্য কী?", "What is the difference between image dimensions and file size?"], a: ["মাপ হলো পিক্সেলে দৈর্ঘ্য ও প্রস্থ, যেমন ১৬০০ × ১২০০। ফাইল সাইজ হলো KB বা MB এ ফাইলটি কত জায়গা নেয়। মাপ কমালে সাধারণত ফাইল সাইজও কমে।", "Dimensions are the width and height in pixels, like 1600 × 1200. File size is how much space the file takes in KB or MB. Reducing the dimensions usually reduces the file size too."] },
+      { q: ["১ MB কত KB?", "How many KB is 1 MB?"], a: ["প্রচলিত হিসাবে ১ MB = ১,০২৪ KB। কেউ কেউ সহজ করে ১,০০০ KB ধরেন।", "By the usual measure 1 MB = 1,024 KB. Some people simplify it to 1,000 KB."] },
+      { q: ["আবেদন ফর্মে কোন ফরম্যাট দেব?", "Which format should I use for an application form?"], a: ["ফর্মে যে ফরম্যাট চাওয়া হয়েছে সেটাই দিন। না থাকলে ফটোর জন্য JPG সাধারণত নিরাপদ।", "Use whatever format the form asks for. If it does not say, JPG is usually safe for photos."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
