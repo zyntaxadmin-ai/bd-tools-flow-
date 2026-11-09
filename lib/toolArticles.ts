@@ -1926,3 +1926,240 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
     ],
   },
 };
+
+// ---------------------------------------------------------------------------
+// Extra sections (added 9 Nov 2026): longer how-to and tips text for tools that
+// had the shortest articles. These are appended to the entries above.
+// ---------------------------------------------------------------------------
+const EXTRA: Record<string, ToolArticle> = {
+  "scientific-calculator": {
+    bn: [
+      { h: "ব্যবহারের ধাপ ও উদাহরণ", p: [
+        "বাটন চেপে বা কিবোর্ডে সরাসরি হিসাব লিখুন। লেখার সঙ্গে সঙ্গে নিচে ফলাফলের পূর্বরূপ (= চিহ্নের পরে) দেখা যায়, আর Enter বা সমান বাটন চাপলে ফলাফল বসে যায়। আগের ফলাফল আবার ব্যবহার করতে Ans বাটন চাপুন।",
+        "কিছু উদাহরণ: √(১৪৪) = ১২। ৫! = ১২০। ২^১০ = ১,০২৪। log(১০০০) = ৩ (log এখানে ১০ ভিত্তির)। ডিগ্রি মোডে sin(৩০) = ০.৫।",
+      ] },
+      { h: "ডিগ্রি ও রেডিয়ান, আর সাধারণ ভুল", p: [
+        "sin, cos ও tan এর উত্তর কোণ ডিগ্রিতে নাকি রেডিয়ানে ধরা হবে তা ওপরের Deg বা Rad বাটনে ঠিক হয়। ফলাফল মিলছে না মনে হলে প্রথমে এই মোড দেখুন।",
+        "ln হলো স্বাভাবিক (e ভিত্তির) লগারিদম, আর log হলো ১০ ভিত্তির। দুটির মান আলাদা। ০ বা ঋণাত্মক সংখ্যার log বা ln বের করা যায় না। কোষ বন্ধ করতে ভুলে গেলেও হিসাব ব্যর্থ হতে পারে, তাই ( ও ) মিলিয়ে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "Steps and examples", p: [
+        "Press the buttons or type your calculation straight from the keyboard. As you type, a preview of the result appears below (after the = sign), and pressing Enter or the equals button puts the result in place. Use the Ans button to reuse the previous result.",
+        "A few examples: √(144) = 12. 5! = 120. 2^10 = 1,024. log(1000) = 3 (log here is base 10). In degree mode sin(30) = 0.5.",
+      ] },
+      { h: "Degrees and radians, and common mistakes", p: [
+        "The Deg or Rad button at the top decides whether sin, cos and tan treat the angle as degrees or radians. If a result looks wrong, check this mode first.",
+        "ln is the natural (base e) logarithm and log is base 10, so their values differ. You cannot take the log or ln of zero or a negative number. A calculation can also fail if a bracket is left open, so check that ( and ) match.",
+      ] },
+    ],
+  },
+  "case-converter": {
+    bn: [
+      { h: "কোন ধরনের কেস কোথায় লাগে", p: [
+        "UPPERCASE সম্পূর্ণ বড় হাতের অক্ষর, lowercase সম্পূর্ণ ছোট হাতের। Title Case এ প্রতিটি শব্দের প্রথম অক্ষর বড় হয়, যা শিরোনামের জন্য ভালো। Sentence case এ বাক্যের প্রথম অক্ষর বড় হয়, যা সাধারণ লেখার জন্য ঠিক।",
+        "প্রোগ্রামিংয়ে নামের জন্য camelCase, snake_case ও kebab-case চলে। aLtErNaTiNg কেস মজার লেখা বা মিমের জন্য। উদাহরণ: hello world থেকে Title Case এ Hello World, camelCase এ helloWorld, snake_case এ hello_world এবং kebab-case এ hello-world।",
+      ] },
+      { h: "ব্যবহারের টিপস", p: [
+        "ক্যাপস লক চালু রেখে পুরো অনুচ্ছেদ লিখে ফেললে নতুন করে না লিখে lowercase বা Sentence case বাটন চাপুন। রূপান্তরের পর Copy বাটনে ট্যাপ করে অন্য জায়গায় পেস্ট করুন।",
+        "বাংলা অক্ষরে বড় বা ছোট হাতের ধারণা নেই, তাই এই টুল মূলত ইংরেজি লেখার জন্য কাজ করে।",
+      ] },
+    ],
+    en: [
+      { h: "Which case is used where", p: [
+        "UPPERCASE is all capital letters and lowercase is all small letters. Title Case capitalises the first letter of every word, which suits headings. Sentence case capitalises the first letter of a sentence, which suits normal writing.",
+        "In programming, camelCase, snake_case and kebab-case are used for names. aLtErNaTiNg case is for fun text or memes. Example: hello world becomes Hello World in Title Case, helloWorld in camelCase, hello_world in snake_case and hello-world in kebab-case.",
+      ] },
+      { h: "Tips", p: [
+        "If you typed a whole paragraph with Caps Lock on, press lowercase or Sentence case instead of retyping it. After converting, tap Copy and paste the text where you need it.",
+        "Bangla letters have no upper and lower case, so this tool is mainly for English text.",
+      ] },
+    ],
+  },
+  "todo-list": {
+    bn: [
+      { h: "কীভাবে ব্যবহার করবেন", p: [
+        "ঘরে কাজের নাম লিখে যোগ করুন চাপুন। কাজ শেষ হলে সম্পন্ন চিহ্ন দিন, আর দরকার না হলে মুছুন বাটন চাপুন। ওপরের সব, বাকি ও শেষ ট্যাব দিয়ে তালিকা ছেঁকে দেখা যায়। শেষ হওয়া কাজগুলো একসঙ্গে সরাতে শেষ হওয়াগুলো মুছুন বাটন আছে।",
+        "তালিকা শুধু আপনার ফোন বা ব্রাউজারে সেভ থাকে এবং কোথাও পাঠানো হয় না। তাই ইন্টারনেট ছাড়া কাজ দেখতে পারবেন, তবে ব্রাউজারের ডেটা মুছলে তালিকাও মুছে যাবে।",
+      ] },
+      { h: "কাজ গুছিয়ে রাখার ছোট টিপস", p: [
+        "বড় কাজকে ছোট ছোট ধাপে ভাগ করে আলাদা আইটেম হিসেবে লিখুন, যেমন \"অ্যাসাইনমেন্ট\" না লিখে \"অ্যাসাইনমেন্টের তথ্য জোগাড়\", \"খসড়া লেখা\", \"জমা দেওয়া\"। প্রতিদিন সকালে অল্প কয়েকটি জরুরি কাজ রাখুন, যাতে তালিকা বড় হয়ে হতাশা না আনে।",
+        "একই তালিকা অন্য ফোনে বা কম্পিউটারে দেখা যাবে না, কারণ তা প্রতিটি ডিভাইসের নিজস্ব ব্রাউজারে থাকে।",
+      ] },
+    ],
+    en: [
+      { h: "How to use it", p: [
+        "Type the task name in the box and press Add. Mark a task as done when finished and press Delete if you no longer need it. The All, Active and Done tabs at the top filter the list, and Clear completed removes all finished tasks at once.",
+        "The list is saved only on your phone or browser and is not sent anywhere. So you can view it without internet, but clearing your browser data also clears the list.",
+      ] },
+      { h: "Small tips for staying organised", p: [
+        "Break a big job into small steps and write each as a separate item, for example \"gather assignment material\", \"write the draft\" and \"submit\" instead of just \"assignment\". Keep only a few important tasks each morning so the list does not grow into a source of stress.",
+        "The same list will not show on another phone or computer, because it lives in each device's own browser.",
+      ] },
+    ],
+  },
+  "lorem-ipsum-generator": {
+    bn: [
+      { h: "Lorem Ipsum কী এবং কেন ব্যবহার হয়", p: [
+        "Lorem Ipsum হলো ল্যাটিন ধাঁচের নমুনা লেখা, যা ডিজাইন ও ওয়েবসাইটে আসল লেখা বসার আগে জায়গা ভরাতে ব্যবহার হয়। এতে পাঠক লেখার অর্থ নিয়ে ভাবেন না, ডিজাইনের বিন্যাস ও ফন্টের দিকে মন দিতে পারেন।",
+        "এই টুলে প্যারাগ্রাফ, বাক্য বা শব্দ, এই তিন ধরন থেকে একটি বেছে কতগুলো চান লিখুন, তারপর নতুন বাটনে ঢুকিয়ে Copy করে নিন।",
+      ] },
+      { h: "কখন কাজে লাগে এবং সতর্কতা", p: [
+        "ওয়েবসাইট বা অ্যাপের ডিজাইন, ব্যানার, ব্লগ টেমপ্লেট, বইয়ের লেআউট এবং প্রিন্ট করার নমুনায় এটি কাজে লাগে। ডেভেলপাররাও টেক্সট ফিল্ড পরীক্ষা করতে এটি ব্যবহার করেন।",
+        "লাইভ সাইটে নমুনা লেখা রেখে দেবেন না। সাইট প্রকাশের আগে সব জায়গায় আসল লেখা বসিয়ে নিন, নইলে ভিজিটর ও সার্চ ইঞ্জিন দুটোর কাছেই পেজটি অসম্পূর্ণ মনে হবে।",
+      ] },
+    ],
+    en: [
+      { h: "What Lorem Ipsum is and why it is used", p: [
+        "Lorem Ipsum is Latin-style dummy text used to fill space in designs and websites before the real text is ready. Readers do not get distracted by the meaning, so you can focus on the layout and fonts.",
+        "In this tool pick paragraphs, sentences or words, enter how many you want, press New to generate, and Copy the result.",
+      ] },
+      { h: "When it helps, and a warning", p: [
+        "It helps with website and app designs, banners, blog templates, book layouts and print samples. Developers also use it to test text fields.",
+        "Do not leave dummy text on a live site. Replace it with real text everywhere before publishing, otherwise the page looks unfinished to both visitors and search engines.",
+      ] },
+    ],
+  },
+  "random-number-generator": {
+    bn: [
+      { h: "তিনটি মোড ও ব্যবহার", p: [
+        "সংখ্যা মোডে সর্বনিম্ন ও সর্বোচ্চ সংখ্যা এবং কতগুলো চান লিখুন। প্রতিটি সংখ্যা আলাদা চাইলে সেই অপশন চালু করুন, আর ছোট থেকে বড় সাজাতে সাজানোর অপশন দিন। একসঙ্গে ১ থেকে ১,০০০টি সংখ্যা নেওয়া যায়, এবং সংখ্যাগুলো ১০০ কোটির মধ্যে হতে হবে। সব ফলাফল একবারে Copy করা যায়।",
+        "কয়েন টস মোডে হেড বা টেল আসে এবং কতবার কোনটি এল তার গণনা থাকে। ডাইস মোডে কতগুলো পাশ (sides) ও কয়টি ডাইস গড়াবেন ঠিক করে ফল ও মোট পাওয়া যায়।",
+      ] },
+      { h: "কোথায় কাজে লাগে", p: [
+        "ক্লাসে রোল নম্বর বেছে নেওয়া, কুইজ বা র‍্যাফেল ড্র, দলে ভাগ করা, বোর্ড গেমের ডাইস কিংবা সিদ্ধান্ত নিতে না পারলে কয়েন টস, এসব কাজে এটি ব্যবহার করা যায়। উদাহরণ: ১ থেকে ৫০ এর মধ্যে ৫টি আলাদা সংখ্যা চাইলে \"আলাদা\" অপশন চালু রাখুন।",
+        "ফলাফল আপনার ব্রাউজারের নিরাপদ র‍্যান্ডম জেনারেটর (crypto) দিয়ে তৈরি হয়। তবে অফিসিয়াল লটারি বা বড় অঙ্কের পুরস্কারের জন্য নির্ধারিত আইনি নিয়ম মানতে হবে।",
+      ] },
+    ],
+    en: [
+      { h: "The three modes and how to use them", p: [
+        "In the numbers mode enter the minimum, the maximum and how many numbers you want. Turn on the option for every number to be different if you want no repeats, and the sort option to arrange them from smallest to largest. You can take from 1 to 1,000 numbers at a time, and the numbers must be within 1 billion. You can copy all results at once.",
+        "The coin flip mode gives heads or tails and keeps a count of each. In the dice mode you choose the number of sides and how many dice to roll, and you get the results and the total.",
+      ] },
+      { h: "Where it helps", p: [
+        "You can use it to pick a roll number in class, run a quiz or raffle draw, split people into teams, roll dice for a board game, or flip a coin when you cannot decide. Example: to get 5 different numbers between 1 and 50, keep the \"different\" option on.",
+        "Results come from your browser's secure random generator (crypto). For an official lottery or a large prize, however, you must follow the legal rules that apply.",
+      ] },
+    ],
+  },
+  "word-counter": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও উদাহরণ", p: [
+        "বাক্সে লেখা পেস্ট করুন বা টাইপ করুন, গণনা সঙ্গে সঙ্গে বদলাবে। বাংলা ও ইংরেজি দুটোই কাজ করে। পড়ার সময় প্রতি মিনিটে ২০০ শব্দ ধরে হিসাব করা, তাই ৪০০ শব্দের লেখা পড়তে প্রায় ২ মিনিট লাগে।",
+        "কোনো ফর্ম বা প্রতিযোগিতায় ৫০০ শব্দের সীমা থাকলে লেখা শেষে এখানে মিলিয়ে নিন। জমা দেওয়ার আগে শব্দ ও অক্ষর দুটোই দেখে নেওয়া ভালো।",
+      ] },
+      { h: "মনে রাখার বিষয়", p: [
+        "বিভিন্ন টুল বা প্রোগ্রাম হাইফেন দেওয়া শব্দ, সংখ্যা বা চিহ্ন একটু আলাদাভাবে গোনে, তাই কয়েকটি শব্দের ব্যবধান হতে পারে। কঠোর সীমা থাকলে সীমার চেয়ে একটু কম রাখুন।",
+        "অক্ষর গণনায় ফাঁকা স্থান ধরা হবে কি না তা যে ফর্ম বা সাইটে জমা দিচ্ছেন তার নিয়মে দেখে নিন। এই টুলের লেখা আপনার ব্রাউজারেই থাকে, কোথাও জমা হয় না।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with an example", p: [
+        "Paste or type your text in the box and the counts change instantly. Both Bangla and English work. Reading time is worked out at 200 words per minute, so a 400-word text takes about 2 minutes to read.",
+        "If a form or competition has a 500-word limit, check your text here when you finish. It is wise to look at both the word and character counts before submitting.",
+      ] },
+      { h: "Things to remember", p: [
+        "Different tools and programs count hyphenated words, numbers and symbols slightly differently, so there can be a gap of a few words. If the limit is strict, stay a little under it.",
+        "Whether spaces count in a character total depends on the rules of the form or site you are submitting to, so check those. The text you enter here stays in your browser and is not stored anywhere.",
+      ] },
+    ],
+  },
+  "color-picker": {
+    bn: [
+      { h: "HEX, RGB ও HSL কী", p: [
+        "HEX কোড # দিয়ে শুরু হয় এবং তিন জোড়া অঙ্কে লাল, সবুজ ও নীলের পরিমাণ বোঝায়। RGB একই রঙকে ০ থেকে ২৫৫ সংখ্যায় দেখায়। HSL দেখায় রঙের ধরন (hue), ঘনত্ব (saturation) ও উজ্জ্বলতা (lightness)।",
+        "উদাহরণ: #4F46E5 মানে লাল ৭৯, সবুজ ৭০, নীল ২২৯, অর্থাৎ rgb(79, 70, 229)। #FFF হলো #FFFFFF এর ছোট রূপ, যা সাদা।",
+      ] },
+      { h: "কীভাবে ব্যবহার করবেন", p: [
+        "রং বাছুন অংশ থেকে রং ধরে নিন, অথবা নিজের HEX কোড লিখুন (যেমন #4F46E5 বা #FFF)। কোড ভুল হলে টুল জানিয়ে দেবে। ফলাফল থেকে HEX, RGB বা HSL কপি করে CSS বা ডিজাইন সফটওয়্যারে বসান।",
+        "ওয়েবসাইটের লেখা ও পটভূমির রং বাছাইয়ের সময় লেখাটি পড়তে যেন সুবিধা হয়, সেজন্য গাঢ় পটভূমিতে হালকা লেখা এবং হালকা পটভূমিতে গাঢ় লেখা বেছে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "What HEX, RGB and HSL are", p: [
+        "A HEX code starts with # and uses three pairs of digits for the amounts of red, green and blue. RGB shows the same colour as numbers from 0 to 255. HSL shows the type of colour (hue), its intensity (saturation) and its brightness (lightness).",
+        "Example: #4F46E5 means red 79, green 70, blue 229, which is rgb(79, 70, 229). #FFF is the short form of #FFFFFF, which is white.",
+      ] },
+      { h: "How to use it", p: [
+        "Pick a colour in the Pick a colour area, or type your own HEX code (for example #4F46E5 or #FFF). If the code is invalid, the tool tells you. Copy the HEX, RGB or HSL value from the result into your CSS or design software.",
+        "When choosing text and background colours for a website, keep the text easy to read: light text on a dark background, or dark text on a light background.",
+      ] },
+    ],
+  },
+  "expense-tracker": {
+    bn: [
+      { h: "কীভাবে ব্যবহার করবেন", p: [
+        "আয় বা খরচ বেছে টাকার পরিমাণ, তারিখ ও ক্যাটাগরি দিন, চাইলে একটি নোট লিখুন, তারপর যোগ করুন চাপুন। ওপরে মোট আয়, মোট খরচ ও ব্যালেন্স দেখা যায়। মাস অনুযায়ী বা সব সময়ের হিসাব দেখা যায়, আর কোন খাতে কত টাকা গেল তার ভাগও দেখানো হয়।",
+        "হিসাব শুধু আপনার ফোন বা ব্রাউজারে সেভ থাকে এবং কোথাও পাঠানো হয় না। ব্রাউজারের ডেটা মুছলে হিসাবও মুছে যায়, তাই দরকারে CSV ডাউনলোড করে রাখুন।",
+      ] },
+      { h: "খরচ নিয়ন্ত্রণের কিছু অভ্যাস", p: [
+        "প্রতিদিন রাতে কয়েক মিনিট বসে সেদিনের খরচ লিখে ফেলুন, না হলে ছোট খরচগুলো ভুলে যাওয়া সহজ। মাস শেষে ক্যাটাগরির ভাগ দেখে বুঝে নিন কোন খাতে বেশি যাচ্ছে।",
+        "একটি জনপ্রিয় নিয়ম হলো আয়ের প্রায় ৫০% প্রয়োজনে, ৩০% শখ বা ইচ্ছায় এবং ২০% সঞ্চয়ে রাখা। এটি কেবল একটি দিকনির্দেশনা, আপনার পরিস্থিতি অনুযায়ী ভাগ বদলাতে পারেন।",
+      ] },
+    ],
+    en: [
+      { h: "How to use it", p: [
+        "Choose income or expense, enter the amount, date and category, add a note if you like, and press Add. At the top you see total income, total expense and the balance. You can view the entries by month or for all time, and it also shows how the money was divided across categories.",
+        "Your entries are saved only on your phone or browser and are not sent anywhere. Clearing your browser data deletes them, so download a CSV if you want a backup.",
+      ] },
+      { h: "Habits for controlling spending", p: [
+        "Sit down for a few minutes each night and write down the day's spending, otherwise small expenses are easy to forget. At the end of the month look at the category split to see where most of the money goes.",
+        "One popular rule is to keep about 50% of income for needs, 30% for wants and 20% for savings. It is only a guide, and you can change the split to suit your situation.",
+      ] },
+    ],
+  },
+  "countdown-timer": {
+    bn: [
+      { h: "কীভাবে ব্যবহার করবেন", p: [
+        "ইভেন্টের নাম লিখুন, যেমন পরীক্ষা, বিয়ে বা ট্রিপ। এরপর তারিখ ও সময় বেছে নিন। টুল প্রতি সেকেন্ডে হিসাব করে কত দিন, ঘণ্টা, মিনিট ও সেকেন্ড বাকি তা দেখায়। রিসেট বাটনে নাম ও সময় মুছে নতুন করে শুরু করা যায়।",
+        "আপনার দেওয়া নাম ও সময় ব্রাউজারে সেভ থাকে, তাই পেজ বন্ধ করে আবার খুললেও কাউন্টডাউন চলতে থাকবে। এটি কোথাও পাঠানো হয় না।",
+      ] },
+      { h: "কোথায় কাজে লাগে", p: [
+        "পরীক্ষার আগে বাকি সময় দেখা, জন্মদিন বা অনুষ্ঠানের অপেক্ষা, চাকরির আবেদনের শেষ তারিখ, ভ্রমণের তারিখ বা কোনো প্রকল্পের ডেডলাইন মনে রাখতে এটি ভালো কাজ করে।",
+        "নির্দিষ্ট সময় পার হয়ে গেলে টুল তা জানিয়ে দেয়। সময়টি আপনার ডিভাইসের ঘড়ি ও টাইম জোন অনুযায়ী ধরা হয়, তাই ঘড়ি ঠিক আছে কি না দেখে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "How to use it", p: [
+        "Enter the event name, such as exam, wedding or trip, then choose the date and time. The tool calculates every second how many days, hours, minutes and seconds are left. The Reset button clears the name and time so you can start again.",
+        "The name and time you enter are saved in your browser, so the countdown keeps running even if you close and reopen the page. It is not sent anywhere.",
+      ] },
+      { h: "Where it helps", p: [
+        "It works well for seeing the time left before an exam, waiting for a birthday or event, remembering a job application deadline, a travel date or a project deadline.",
+        "When the set time has passed the tool tells you. The time follows your device's clock and time zone, so make sure your clock is correct.",
+      ] },
+    ],
+  },
+  "keyword-density-checker": {
+    bn: [
+      { h: "কীভাবে হিসাব হয় এবং ব্যবহার", p: [
+        "কিওয়ার্ড ডেনসিটি = (কোনো শব্দ বা বাক্যাংশ যতবার এসেছে ÷ লেখার মোট শব্দ) × ১০০। উদাহরণ: ৫০০ শব্দের লেখায় একটি শব্দ ১০ বার এলে ঘনত্ব ২%।",
+        "লেখা পেস্ট করে ১, ২ বা ৩ শব্দের বাক্যাংশ বেছে নিন। ছোট (২ অক্ষর বা কম) এবং the, and, এবং, এই জাতীয় সাধারণ শব্দ বাদ দেওয়ার অপশন আছে। ফলাফলে সবচেয়ে বেশি আসা প্রথম ২০টি দেখানো হয়।",
+      ] },
+      { h: "কত শতাংশ ভালো", p: [
+        "কোনো নির্দিষ্ট শতাংশ গুগলের র‍্যাঙ্কিংয়ের জন্য জরুরি নয়। কিওয়ার্ড জোর করে বারবার বসালে লেখা অস্বাভাবিক হয় এবং পাঠকের ক্ষতি করে। স্বাভাবিকভাবে লিখুন, তারপর এই টুল দিয়ে দেখুন কোনো শব্দ অতিরিক্ত বেশি এসেছে কি না।",
+        "এটি আপনার লেখার প্রধান বিষয় ঠিকমতো ফুটে উঠছে কি না তা যাচাইয়ের একটি সহজ উপায়। লেখা আপনার ব্রাউজারেই বিশ্লেষণ হয়, কোথাও জমা হয় না।",
+      ] },
+    ],
+    en: [
+      { h: "How it is worked out and how to use it", p: [
+        "Keyword density = (number of times a word or phrase appears ÷ total words in the text) × 100. Example: if a word appears 10 times in a 500-word text, its density is 2%.",
+        "Paste your text and choose 1, 2 or 3 word phrases. There are options to ignore short words (2 characters or fewer) and common words such as the, and, is and common Bangla words. The result shows the top 20 that appear most often.",
+      ] },
+      { h: "What percentage is good", p: [
+        "No particular percentage is required for Google rankings. Forcing a keyword in again and again makes the text unnatural and hurts readers. Write naturally, then use this tool to see whether any word appears far too often.",
+        "It is a simple way to check whether the main topic of your text comes through properly. The text is analysed in your browser and is not stored anywhere.",
+      ] },
+    ],
+  },
+};
+
+for (const [slug, extra] of Object.entries(EXTRA)) {
+  const base = TOOL_ARTICLES[slug];
+  if (base) {
+    base.bn.push(...extra.bn);
+    base.en.push(...extra.en);
+  } else {
+    TOOL_ARTICLES[slug] = extra;
+  }
+}
