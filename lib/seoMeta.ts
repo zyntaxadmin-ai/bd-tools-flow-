@@ -23,16 +23,16 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "এফডিআর ও ডিপিএস ক্যালকুলেটর। সুদের হার, মেয়াদ ও উৎসে কর ধরে মেয়াদ শেষে কত টাকা পাবেন, মোট সুদসহ হিসাব করুন। FDR interest calculator BD।",
   },
   "nagad-calculator": {
-    title: "Nagad Charge Calculator 2026 - নগদ ক্যাশ আউট চার্জ",
-    description: "Nagad charge calculator। নগদ ক্যাশ আউটে কত টাকা কাটবে, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
+    title: "নগদে হাজারে কত টাকা কাটে? Nagad Charge Calculator",
+    description: "নগদে ক্যাশ আউটে হাজারে কত টাকা কাটে? Nagad charge calculator দিয়ে যেকোনো অঙ্কের চার্জ, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে দেখুন। ফ্রি।",
   },
   "bkash-calculator": {
     title: "bKash Cash Out Charge Calculator - বিকাশ ক্যাশ আউট",
     description: "বিকাশ ক্যাশ আউট চার্জ ক্যালকুলেটর। bKash cash out charge কত কাটবে, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। ফ্রি টুল।",
   },
   "rocket-calculator": {
-    title: "Rocket Charge Calculator 2026 - রকেট ক্যাশ আউট চার্জ",
-    description: "Rocket charge calculator। রকেট ক্যাশ আউটে এজেন্ট বা ডাচ-বাংলা এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
+    title: "রকেটে হাজারে কত টাকা কাটে? Rocket Charge Calculator",
+    description: "রকেটে ক্যাশ আউটে হাজারে কত টাকা কাটে? Rocket charge calculator দিয়ে এজেন্ট বা ডাচ-বাংলা এটিএমে চার্জ, মোট কত লাগবে ও ব্যালেন্সে কত তোলা যাবে দেখুন। ফ্রি।",
   },
   "upay-calculator": {
     title: "Upay Charge Calculator 2026 - উপায় ক্যাশ আউট চার্জ",
@@ -167,8 +167,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "টাইটেল, ডেসক্রিপশন, Open Graph ও Twitter ট্যাগসহ SEO meta tag বানান। Blogger ও যেকোনো ওয়েবসাইটের জন্য। ফ্রি।",
   },
   "keyword-density-checker": {
-    title: "Keyword Density Checker - কিওয়ার্ড ডেনসিটি",
-    description: "আপনার লেখায় কোন শব্দ বা বাক্যাংশ কতবার এসেছে ও তার শতকরা হার দেখুন। বাংলা ও ইংরেজি দুটোতেই কাজ করে। ফ্রি।",
+    title: "Keyword Density Checker Tool - ফ্রি অনলাইন",
+    description: "ফ্রি keyword density checker। লেখা পেস্ট করলেই কোন শব্দ বা বাক্যাংশ কতবার এসেছে ও শতকরা হার দেখুন। বাংলা ও ইংরেজি দুটোতেই কাজ করে।",
   },
   "todo-list": {
     title: "To-Do List - দৈনিক কাজের তালিকা",
@@ -179,8 +179,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি random number generator।",
   },
   "time-zone-converter": {
-    title: "Time Zone Converter - আমেরিকা ও বাংলাদেশ সময়",
-    description: "আমেরিকার সময় বাংলাদেশে কত? Eastern time to Bangladesh time, USA time to BD time সহ যুক্তরাজ্য, সৌদি আরব, মালয়েশিয়ার সময় জানুন। ফ্রি time zone converter online।",
+    title: "আমেরিকায় এখন কয়টা বাজে? Time Zone Converter",
+    description: "আমেরিকার সময় বাংলাদেশে কত? USA time to BD time, Eastern time to Bangladesh time সহ ভারত, যুক্তরাজ্য, সৌদি আরব ও মালয়েশিয়ার সময় জানুন। ফ্রি time zone converter।",
   },
   "expense-tracker": {
     title: "খরচের হিসাব - Expense Tracker আয়-ব্যয়",

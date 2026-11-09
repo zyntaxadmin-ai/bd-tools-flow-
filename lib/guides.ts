@@ -1043,6 +1043,78 @@ export const GUIDES: Guide[] = [
       { q: ["আবেদন ফর্মে কোন ফরম্যাট দেব?", "Which format should I use for an application form?"], a: ["ফর্মে যে ফরম্যাট চাওয়া হয়েছে সেটাই দিন। না থাকলে ফটোর জন্য JPG সাধারণত নিরাপদ।", "Use whatever format the form asks for. If it does not say, JPG is usually safe for photos."] },
     ],
   },
+  {
+    slug: "bangladesh-india-uk-somoyer-parthokko",
+    title: ["বাংলাদেশ, ভারত ও যুক্তরাজ্যের সময়ের পার্থক্য কত (শীত ও গ্রীষ্মে)", "Time difference between Bangladesh, India and the UK (winter and summer)"],
+    desc: ["ভারত ও যুক্তরাজ্যের সময় বাংলাদেশ সময়ে কত, শীত ও গ্রীষ্মে ইউকের পার্থক্য কেন বদলায়, এবং নিজে হিসাব করার সহজ নিয়ম উদাহরণসহ।", "What India and UK time is in Bangladesh time, why the UK gap changes between winter and summer, and a simple way to work it out yourself, with examples."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "time-zone-converter", name: ["টাইম জোন কনভার্টার", "Time zone converter"] },
+    sections: [
+      {
+        h: ["বাংলাদেশ ও ভারতের পার্থক্য", "Bangladesh and India"],
+        p: [
+          ["বাংলাদেশের সময় UTC+৬ এবং ভারতের সময় UTC+৫:৩০। তাই বাংলাদেশ ভারতের চেয়ে ৩০ মিনিট এগিয়ে। বাংলাদেশে বিকেল ৪টা হলে ভারতে বিকেল ৩:৩০। ভারতে সকাল ১০টা হলে বাংলাদেশে সকাল ১০:৩০।", "Bangladesh time is UTC+6 and Indian time is UTC+5:30, so Bangladesh is 30 minutes ahead of India. When it is 4:00 PM in Bangladesh it is 3:30 PM in India. When it is 10:00 AM in India it is 10:30 AM in Bangladesh."],
+        ],
+      },
+      {
+        h: ["বাংলাদেশ ও যুক্তরাজ্য (ইউকে)", "Bangladesh and the UK"],
+        p: [
+          ["যুক্তরাজ্য শীতকালে GMT (UTC+০) ব্যবহার করে। তখন বাংলাদেশ ৬ ঘণ্টা এগিয়ে। যেমন বাংলাদেশে বিকেল ৪টা হলে ইউকেতে সকাল ১০টা।", "In winter the UK uses GMT (UTC+0). Then Bangladesh is 6 hours ahead. For example when it is 4:00 PM in Bangladesh it is 10:00 AM in the UK."],
+          ["গ্রীষ্মে যুক্তরাজ্য ঘড়ি এক ঘণ্টা এগিয়ে দেয় (BST, UTC+১)। তখন পার্থক্য হয় ৫ ঘণ্টা। বাংলাদেশে বিকেল ৪টা হলে ইউকেতে সকাল ১১টা। সাধারণত মার্চের শেষ রবিবার ঘড়ি এগোয় এবং অক্টোবরের শেষ রবিবার পিছোয়। বাংলাদেশ ও ভারতে সাধারণত ঘড়ি বদলানো হয় না, তাই বছরের মধ্যে শুধু ইউকের দিকের পার্থক্য বদলায়।", "In summer the UK moves its clocks forward an hour (BST, UTC+1). Then the gap is 5 hours. When it is 4:00 PM in Bangladesh it is 11:00 AM in the UK. Clocks normally go forward on the last Sunday of March and back on the last Sunday of October. Bangladesh and India normally do not change their clocks, so only the UK side of the gap changes during the year."],
+        ],
+      },
+      {
+        h: ["নিজে হিসাব করার সহজ নিয়ম", "A simple way to work it out yourself"],
+        p: [
+          ["প্রথমে যে সময়টা জানা আছে তা থেকে তার UTC অফসেট বাদ দিয়ে UTC সময় বের করুন। তারপর যে দেশের সময় চান তার অফসেট যোগ করুন। উদাহরণ: ইউকে (শীত) সকাল ৯টা মানে UTC ৯টা। বাংলাদেশে যোগ করুন ৬ ঘণ্টা, হয় বিকেল ৩টা। গ্রীষ্মে ইউকে সকাল ৯টা মানে UTC ৮টা, তাই বাংলাদেশে দুপুর ২টা।", "Take the time you know and subtract its UTC offset to get UTC. Then add the offset of the place you want. Example: UK (winter) 9:00 AM is 9:00 UTC. Add 6 hours for Bangladesh and you get 3:00 PM. In summer UK 9:00 AM is 8:00 UTC, so it is 2:00 PM in Bangladesh."],
+          ["ঘড়ি বদলানোর তারিখ কাছাকাছি হলে সঠিক পার্থক্য কাজের আগে আমাদের টাইম জোন কনভার্টারে দেখে নিন।", "When a clock change date is close, check the exact gap in our time zone converter before you plan anything."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["বাংলাদেশ ও ভারতের সময়ের পার্থক্য কত?", "What is the time difference between Bangladesh and India?"], a: ["৩০ মিনিট। বাংলাদেশ এগিয়ে আছে। ভারতে ৩:৩০ হলে বাংলাদেশে ৪:০০।", "30 minutes, with Bangladesh ahead. When it is 3:30 in India it is 4:00 in Bangladesh."] },
+      { q: ["বাংলাদেশ ও যুক্তরাজ্যের সময়ের পার্থক্য কত?", "What is the time difference between Bangladesh and the UK?"], a: ["শীতকালে (GMT) ৬ ঘণ্টা, গ্রীষ্মকালে (BST) ৫ ঘণ্টা। বাংলাদেশ এগিয়ে।", "6 hours in winter (GMT) and 5 hours in summer (BST). Bangladesh is ahead."] },
+      { q: ["বাংলাদেশে বিকেল ৪টা হলে ইউকেতে কয়টা?", "If it is 4 PM in Bangladesh, what time is it in the UK?"], a: ["শীতে সকাল ১০টা এবং গ্রীষ্মে সকাল ১১টা।", "10:00 AM in winter and 11:00 AM in summer."] },
+      { q: ["ভারত ও যুক্তরাজ্যের সময়ের পার্থক্য কত?", "What is the gap between India and the UK?"], a: ["শীতকালে সাড়ে ৫ ঘণ্টা এবং গ্রীষ্মকালে সাড়ে ৪ ঘণ্টা। ভারত এগিয়ে।", "5 and a half hours in winter and 4 and a half hours in summer, with India ahead."] },
+    ],
+  },
+  {
+    slug: "24-ghonta-theke-12-ghonta-somoy",
+    title: ["২৪ ঘণ্টার সময় থেকে ১২ ঘণ্টায় কীভাবে বদলাবেন (১৪ টা মানে কয়টা)", "How to convert 24-hour time to 12-hour time (what is 14:00?)"],
+    desc: ["১৩ থেকে ২৩ টা মানে কয়টা বাজে, ০০:০০ ও ১২:০০ এর পার্থক্য এবং ২৪ ঘণ্টার সময় ১২ ঘণ্টায় বদলানোর সহজ নিয়ম, উদাহরণসহ।", "What 13 to 23 o'clock means, the difference between 00:00 and 12:00, and a simple rule for converting 24-hour time to 12-hour time, with examples."],
+    updated: "2026-11-09",
+    updatedLabel: ["৯ নভেম্বর, ২০২৬", "9 November 2026"],
+    tool: { slug: "time-zone-converter", name: ["টাইম জোন কনভার্টার", "Time zone converter"] },
+    sections: [
+      {
+        h: ["সহজ নিয়ম", "The simple rule"],
+        p: [
+          ["২৪ ঘণ্টার ঘড়িতে দিন শুরু হয় ০০:০০ এ এবং শেষ হয় ২৩:৫৯ এ। ১২ ঘণ্টায় বদলাতে: ০১ থেকে ১১ পর্যন্ত একই থাকে, শুধু AM (ভোর বা সকাল) হয়। ১২:০০ হলো দুপুর ১২টা (PM)। ১৩ থেকে ২৩ হলে ১২ বাদ দিন এবং PM লিখুন।", "On a 24-hour clock the day starts at 00:00 and ends at 23:59. To convert to 12-hour: 01 to 11 stay the same and are AM (morning). 12:00 is 12 noon (PM). For 13 to 23, subtract 12 and write PM."],
+          ["০০:০০ হলো রাত ১২টা অর্থাৎ মধ্যরাত (12 AM)। ০০:১৫ হলো রাত ১২:১৫ (12:15 AM)।", "00:00 is 12 midnight (12 AM). 00:15 is 12:15 AM."],
+        ],
+      },
+      {
+        h: ["উদাহরণ", "Examples"],
+        p: [
+          ["১৪:০০ − ১২ = ২, তাই বিকেল ২টা (2 PM)। ১৯:০০ − ১২ = ৭, তাই সন্ধ্যা বা রাত ৭টা (7 PM)। ২৩:৩০ − ১২ = ১১:৩০, তাই রাত ১১:৩০ (11:30 PM)। ০৮:৪৫ একই থাকে, সকাল ৮:৪৫ (8:45 AM)।", "14:00 − 12 = 2, so 2 PM. 19:00 − 12 = 7, so 7 PM. 23:30 − 12 = 11:30, so 11:30 PM. 08:45 stays the same, 8:45 AM."],
+        ],
+      },
+      {
+        h: ["উল্টো দিকে: ১২ ঘণ্টা থেকে ২৪ ঘণ্টায়", "The other way: 12-hour to 24-hour"],
+        p: [
+          ["PM হলে ১২ যোগ করুন, তবে ১২ PM ১২ই থাকে। যেমন ৩ PM = ১৫:০০, ১১ PM = ২৩:০০, ১২ PM = ১২:০০। AM হলে একই থাকে, শুধু ১২ AM হয়ে যায় ০০। যেমন ১২:৩০ AM = ০০:৩০।", "For PM add 12, except that 12 PM stays 12. For example 3 PM = 15:00, 11 PM = 23:00, 12 PM = 12:00. For AM it stays the same, except 12 AM becomes 00. For example 12:30 AM = 00:30."],
+          ["ট্রেন, ফ্লাইট, হাসপাতাল ও সেনাবাহিনীতে ২৪ ঘণ্টার সময় বেশি চলে, কারণ AM বা PM নিয়ে বিভ্রান্তি হয় না।", "Trains, flights, hospitals and the military use the 24-hour clock more because there is no confusion over AM and PM."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১৯ টা মানে কয়টা বাজে?", "What time is 19:00?"], a: ["১৯ − ১২ = ৭, তাই রাত বা সন্ধ্যা ৭টা (7 PM)।", "19 − 12 = 7, so 7 PM."] },
+      { q: ["১৪ টা মানে কয়টা?", "What time is 14:00?"], a: ["১৪ − ১২ = ২, তাই বিকেল ২টা (2 PM)।", "14 − 12 = 2, so 2 PM."] },
+      { q: ["মধ্যরাত কি ১২ AM নাকি ১২ PM?", "Is midnight 12 AM or 12 PM?"], a: ["মধ্যরাত ১২ AM (০০:০০)। দুপুর ১২টা হলো ১২ PM (১২:০০)।", "Midnight is 12 AM (00:00). Noon is 12 PM (12:00)."] },
+      { q: ["০০:৩০ মানে কয়টা?", "What time is 00:30?"], a: ["রাত ১২:৩০ (12:30 AM), অর্থাৎ মধ্যরাতের আধা ঘণ্টা পর।", "12:30 AM, half an hour after midnight."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
