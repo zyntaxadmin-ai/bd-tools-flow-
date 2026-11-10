@@ -150,12 +150,18 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "govt-job-age-calculator": {
-    title: "Govt Job Age Calculator",
-    desc: "Check whether you are within the age limit using your date of birth, the circular's reference date and the maximum age.",
-    howTo: ["Enter your date of birth", "Enter the age-calculation date and maximum age from the circular", "See whether you are within the limit and your last eligible date"],
+    title: "Govt Job Age Calculator BD",
+    desc: "Enter your date of birth and the circular's age-calculation date to see if you are within the job age limit. Pick the 32-year limit in one tap and see your last eligible date.",
+    howTo: ["Enter your date of birth", "Enter the age-calculation date from the circular (the Today button fills in today's date)", "Pick a limit under quick pick, or type the maximum age from the circular", "Choose how the circular words the limit: maximum ... years, or not yet completed ... years", "See your age, whether you are eligible and your last eligible date"],
     faqs: [
-      { q: "Is the age limit built into the tool?", a: "No. The maximum age and reference date differ by circular and quota, so enter them from the circular." },
-      { q: "What if I am exactly on the limit day?", a: "The tool treats you as eligible up to the birthday of the maximum age. Always confirm with the official circular." },
+      { q: "What is the maximum age to enter government service?", a: "In 2024 the government raised the maximum entry age from 30 to 32 years, which applies to BCS and non-cadre direct recruitment. Law enforcement agencies have their own rules and every circular can differ, so check the circular before you apply." },
+      { q: "On which date is my age counted?", a: "On the date the circular gives, not the application date or today, unless the circular says so. Enter that date in the tool." },
+      { q: "Is maximum 32 years the same as not yet completed 32 years?", a: "No. With maximum 32 years, 32 years 0 months 0 days is still fine. With not yet completed 32 years, you are out from the day you turn 32. One day can flip the result, so pick the option that matches the circular." },
+      { q: "What if I am exactly on the limit day?", a: "With maximum ... years you stay eligible up to the birthday of that age. With not yet completed ... years you stay eligible up to the day before it. Always confirm with the circular." },
+      { q: "Can I apply if I am over the limit by one day?", a: "Age limits are usually enforced strictly. Any relaxation is written in the circular. Do not assume one will be allowed if the circular does not say so." },
+      { q: "How do I calculate with a quota age relaxation?", a: "The quota limit is written separately in the circular. Type that number in the maximum age box and the result follows. Check the quota proof and conditions in the circular." },
+      { q: "What about someone born on 29 February?", a: "In non-leap years this tool treats 28 February as the birthday. Some bodies may use 1 March, so if you are very close to the limit, check the circular's rule." },
+      { q: "Is my date of birth saved anywhere?", a: "No. Everything is calculated in your own browser. Nothing is sent to a server or saved." },
     ],
   },
   "scientific-calculator": {

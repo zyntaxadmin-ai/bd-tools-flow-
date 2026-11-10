@@ -63,8 +63,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "জন্ম তারিখ দিয়ে নিখুঁত বয়স বের করুন। বছর, মাস, দিন, মোট দিন ও পরবর্তী জন্মদিন সহ। বয়স হিসাব করার ফ্রি অনলাইন age calculator।",
   },
   "govt-job-age-calculator": {
-    title: "Govt Job Age Calculator - সরকারি চাকরির বয়স",
-    description: "সরকারি চাকরির বয়স ক্যালকুলেটর। জন্ম তারিখ, বিজ্ঞপ্তির বয়স গণনার তারিখ ও সর্বোচ্চ বয়স দিয়ে বয়সসীমা আছে কিনা দেখুন।",
+    title: "Govt Job Age Calculator BD - সরকারি চাকরির বয়স",
+    description: "সরকারি চাকরির বয়স ক্যালকুলেটর। জন্ম তারিখ ও বিজ্ঞপ্তির তারিখ দিয়ে ৩২ বছরের সীমার মধ্যে আছেন কিনা দেখুন, সঙ্গে শেষ যোগ্য দিন। Job age calculator BD।",
   },
   "land-calculator-bd": {
     title: "Land Calculator BD - শতাংশ, কাঠা, বিঘা, একর",

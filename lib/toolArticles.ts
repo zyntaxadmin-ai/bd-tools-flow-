@@ -399,9 +399,31 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         ],
       },
       {
-        h: "বিজ্ঞপ্তি দেখে নিশ্চিত হোন",
+        h: "বর্তমান সীমা: ৩২ বছর",
         p: [
-          "বয়সসীমা, গণনার তারিখ ও কোটা প্রতিটি চাকরির বিজ্ঞপ্তি ভেদে আলাদা। তাই আবেদনের আগে অফিসিয়াল বিজ্ঞপ্তি ভালো করে পড়ুন। এই টুল শুধু আনুমানিক হিসাব দেয়, চূড়ান্ত সিদ্ধান্ত বিজ্ঞপ্তির নিয়ম অনুযায়ী।",
+          "সরকার ২০২৪ সালে সরকারি চাকরিতে প্রবেশের সর্বোচ্চ বয়সসীমা ৩০ থেকে বাড়িয়ে ৩২ বছর করে। এটি বিসিএসের সব ক্যাডার ও ক্যাডারবহির্ভূত সরাসরি নিয়োগে প্রযোজ্য। আইনশৃঙ্খলা বাহিনীর নিজস্ব নিয়োগ নিয়ম আছে, তাই সেখানে বিজ্ঞপ্তির সীমাই চূড়ান্ত।",
+          "ঝটপট বেছে নিন তালিকা থেকে ৩২ বছর বাছলে সংখ্যাটি নিজে থেকে বসে যায়। ব্যাংক, এনজিও বা অন্য সংস্থার বিজ্ঞপ্তিতে আলাদা সীমা থাকলে সেটি নিজে লিখুন।",
+        ],
+      },
+      {
+        h: "‘সর্বোচ্চ ৩২ বছর’ আর ‘৩২ বছর পূর্ণ হয়নি’ এক নয়",
+        p: [
+          "বিজ্ঞপ্তিতে সীমা দুইভাবে লেখা হতে পারে। ‘সর্বোচ্চ ৩২ বছর’ হলে ৩২ বছর ০ মাস ০ দিন পর্যন্ত ঠিক। ‘৩২ বছর পূর্ণ হয়নি’ হলে জন্মদিনের আগের দিন পর্যন্তই যোগ্য। এই টুলে দুটোর জন্য আলাদা অপশন আছে।",
+          "উদাহরণ: জন্ম ১ ডিসেম্বর ১৯৯৪, গণনার তারিখ ১ ডিসেম্বর ২০২৬। বয়স ঠিক ৩২ বছর ০ মাস ০ দিন। প্রথম নিয়মে যোগ্য, দ্বিতীয় নিয়মে যোগ্য নন।",
+        ],
+      },
+      {
+        h: "একটি পুরো উদাহরণ",
+        p: [
+          "জন্ম ১০ জুন ১৯৯৫, বিজ্ঞপ্তির তারিখ ৩০ নভেম্বর ২০২৬ ধরলে বয়স হয় ৩১ বছর ৫ মাস ২০ দিন। ৩২ বছরের সীমায় শেষ যোগ্য দিন ১০ জুন ২০২৭, অর্থাৎ ওই তারিখ থেকে আরও ১৯২ দিন।",
+          "আরেকজনের জন্ম ১৫ মার্চ ১৯৯৪ হলে একই তারিখে বয়স ৩২ বছর ৮ মাস ১৫ দিন। তাঁর শেষ যোগ্য দিন ছিল ১৫ মার্চ ২০২৬, তাই এই বিজ্ঞপ্তিতে তিনি সীমা পেরিয়ে গেছেন।",
+        ],
+      },
+      {
+        h: "আবেদনের আগে চেকলিস্ট",
+        p: [
+          "বিজ্ঞপ্তিতে দেওয়া বয়স গণনার তারিখটি টুলে দিন, আজকের তারিখ নয়। সনদে যে জন্ম তারিখ আছে সেটিই ব্যবহার করুন। কোটার সীমা থাকলে সেই সংখ্যা সর্বোচ্চ বয়সের ঘরে লিখুন।",
+          "এই টুল শুধু আনুমানিক হিসাব দেয়। বয়সসীমা, গণনার তারিখ ও কোটা প্রতিটি বিজ্ঞপ্তিতে আলাদা হতে পারে, তাই চূড়ান্ত সিদ্ধান্ত অফিসিয়াল বিজ্ঞপ্তি দেখে নিন।",
         ],
       },
     ],
@@ -414,14 +436,35 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         ],
       },
       {
-        h: "Confirm with the circular",
+        h: "The current limit: 32 years",
         p: [
-          "Age limits, reference dates and quotas differ by job circular, so read the official circular carefully before applying. This tool gives only an estimate. The final decision follows the rules in the circular.",
+          "In 2024 the government raised the maximum age for entering government service from 30 to 32 years. It applies to all BCS cadres and non-cadre direct recruitment. Law enforcement agencies have their own recruitment rules, so for them the circular's limit is final.",
+          "Choosing 32 years from the quick pick list fills the number in for you. If a bank, NGO or other body's circular has a different limit, type it in yourself.",
+        ],
+      },
+      {
+        h: "Maximum 32 years and not yet completed 32 years are different",
+        p: [
+          "A circular can word the limit in two ways. With maximum 32 years, 32 years 0 months 0 days is still fine. With not yet completed 32 years, you are eligible only up to the day before that birthday. The tool has a separate option for each.",
+          "Example: born 1 December 1994, calculation date 1 December 2026. Your age is exactly 32 years 0 months 0 days. You are eligible under the first rule and not under the second.",
+        ],
+      },
+      {
+        h: "A full example",
+        p: [
+          "Born 10 June 1995 with a circular date of 30 November 2026, your age is 31 years 5 months 20 days. With a 32-year limit your last eligible day is 10 June 2027, which is 192 days after that date.",
+          "Someone born on 15 March 1994 is 32 years 8 months 15 days on the same date. Their last eligible day was 15 March 2026, so they are over the limit for this circular.",
+        ],
+      },
+      {
+        h: "Checklist before you apply",
+        p: [
+          "Enter the age-calculation date given in the circular, not today's date. Use the date of birth written on your certificate. If there is a quota limit, type that number in the maximum age box.",
+          "This tool gives only an estimate. Age limits, reference dates and quotas can differ in every circular, so confirm the final decision with the official circular.",
         ],
       },
     ],
   },
-
   "rocket-calculator": {
     bn: [
       {

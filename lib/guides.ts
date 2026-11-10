@@ -1370,6 +1370,132 @@ export const GUIDES: Guide[] = [
       { q: ["হটলাইন নম্বর কোথায় পাব?", "Where can I find the hotline numbers?"], a: ["বিদ্যুৎ বিল ক্যালকুলেটরের পাতার নিচে ডেসকো, ডিপিডিসি, নেসকো, বিপিডিবি, ডব্লিউজেডপিডিসিএল ও পল্লী বিদ্যুতের নম্বর ও অফিসিয়াল সাইট আছে। বিলে লেখা নম্বরের সঙ্গে মিলিয়ে নিন।", "Below the electricity bill calculator you will find the numbers and official sites for DESCO, DPDC, NESCO, BPDB, WZPDCL and Palli Bidyut. Check them against the number printed on your bill."] },
     ],
   },
+  {
+    slug: "sorkari-chakrir-boyosh-kivabe-hisab-korben",
+    title: ["সরকারি চাকরির বয়স কীভাবে হিসাব করবেন (উদাহরণসহ)", "How to calculate your age for a government job (with examples)"],
+    desc: ["বিজ্ঞপ্তির তারিখে বছর, মাস ও দিনে বয়স বের করা এবং শেষ যোগ্য তারিখ জানার সহজ নিয়ম, দুটি পুরো উদাহরণসহ।", "A simple way to work out your age in years, months and days on the circular's date and find your last eligible date, with two full examples."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "govt-job-age-calculator", name: ["Govt Job Age Calculator", "Govt Job Age Calculator"] },
+    sections: [
+      {
+        h: ["বয়স গণনার মূল নিয়ম", "The basic rule"],
+        p: [
+          ["সরকারি চাকরিতে বয়স গণনা হয় বিজ্ঞপ্তিতে দেওয়া নির্দিষ্ট তারিখে। আপনার জন্ম তারিখ থেকে সেই তারিখ পর্যন্ত পূর্ণ বছর, তারপর বাকি পূর্ণ মাস, তারপর বাকি দিন গুনলেই বয়স পাওয়া যায়। শুধু বছর বিয়োগ করলে ভুল হয়।", "In a government job, age is counted on the specific date given in the circular. Count the full years from your date of birth to that date, then the remaining full months, then the remaining days. Simply subtracting the years gives a wrong answer."],
+          ["যেমন ২০২৬ থেকে ১৯৯৪ বিয়োগ করলে ৩২ আসে। কিন্তু জন্ম মার্চে আর গণনার তারিখ নভেম্বরে হলে বয়স আসলে ৩২ বছরের বেশি, আবার জন্ম ডিসেম্বরে আর গণনার তারিখ নভেম্বরে হলে ৩২ বছর পূরণই হয়নি।", "For example 2026 minus 1994 gives 32. But if the birthday is in March and the calculation date is in November, the age is actually more than 32, and if the birthday is in December and the date is in November, the person has not completed 32 yet."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ১: সীমার মধ্যে", "Example 1: within the limit"],
+        p: [
+          ["জন্ম ১০ জুন ১৯৯৫, বিজ্ঞপ্তির তারিখ ৩০ নভেম্বর ২০২৬। ১০ জুন ২০২৬ এ ৩১ বছর পূর্ণ হয়, তারপর ৫ মাস ২০ দিন পার হয়েছে। বয়স ৩১ বছর ৫ মাস ২০ দিন।", "Born 10 June 1995, circular date 30 November 2026. You turn 31 on 10 June 2026 and then 5 months and 20 days pass. Your age is 31 years 5 months 20 days."],
+          ["৩২ বছরের সীমায় শেষ যোগ্য দিন ১০ জুন ২০২৭ (৩২তম জন্মদিন)। বিজ্ঞপ্তির তারিখ থেকে সেটি ১৯২ দিন পরে, তাই এই বিজ্ঞপ্তিতে আপনি যোগ্য।", "For a 32-year limit your last eligible day is 10 June 2027 (the 32nd birthday). That is 192 days after the circular date, so you are eligible for this circular."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ২: সীমা পেরিয়ে গেছে", "Example 2: over the limit"],
+        p: [
+          ["জন্ম ১৫ মার্চ ১৯৯৪, একই তারিখ ৩০ নভেম্বর ২০২৬। ৩২ বছর পূর্ণ হয়েছে ১৫ মার্চ ২০২৬ এ, তারপর ৮ মাস ১৫ দিন গেছে। বয়স ৩২ বছর ৮ মাস ১৫ দিন, সীমার বাইরে।", "Born 15 March 1994, same date 30 November 2026. You completed 32 on 15 March 2026 and 8 months 15 days have passed since. Your age is 32 years 8 months 15 days, which is over the limit."],
+        ],
+      },
+      {
+        h: ["শেষ যোগ্য তারিখ বের করার সূত্র", "Finding the last eligible date"],
+        p: [
+          ["সর্বোচ্চ বয়সের জন্মদিনই শেষ যোগ্য দিন, যদি বিজ্ঞপ্তিতে ‘সর্বোচ্চ ... বছর’ লেখা থাকে। আর ‘... বছর পূর্ণ হয়নি’ লেখা থাকলে সেই জন্মদিনের আগের দিন শেষ যোগ্য দিন। বিজ্ঞপ্তির তারিখ এর মধ্যে পড়লে আপনি যোগ্য।", "If the circular says maximum ... years, the birthday of that age is the last eligible day. If it says not yet completed ... years, the day before that birthday is the last eligible day. If the circular date falls on or before it, you are eligible."],
+          ["২৯ ফেব্রুয়ারি জন্ম হলে লিপ ইয়ার নয় এমন বছরে আমাদের টুল ২৮ ফেব্রুয়ারি ধরে। সীমার খুব কাছে হলে বিজ্ঞপ্তির নিয়ম আলাদা করে দেখুন।", "If you were born on 29 February, our tool uses 28 February in non-leap years. If you are very close to the limit, check the circular's own rule."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["হাতে হিসাব না করে কীভাবে মেলাব?", "How can I check without calculating by hand?"], a: ["জন্ম তারিখ ও বিজ্ঞপ্তির তারিখ Govt Job Age Calculator এ দিলে বছর, মাস, দিন ও শেষ যোগ্য তারিখ একসঙ্গে দেখা যায়।", "Enter your date of birth and the circular date in the Govt Job Age Calculator to see the years, months, days and last eligible date together."] },
+      { q: ["কোন জন্ম তারিখ ধরব?", "Which date of birth should I use?"], a: ["বিজ্ঞপ্তিতে যে সনদের কথা বলা আছে (সাধারণত এসএসসি বা সমমান) তার জন্ম তারিখ ধরুন। অন্য নথির সঙ্গে ফারাক থাকলে আবেদনের আগে বিজ্ঞপ্তির নির্দেশনা দেখুন।", "Use the date of birth on the certificate the circular names (usually SSC or equivalent). If other documents differ, read the circular's instructions before applying."] },
+    ],
+  },
+  {
+    slug: "sorkari-chakrir-boyosh-sima-32-bochor",
+    title: ["সরকারি চাকরিতে প্রবেশের বয়সসীমা ৩২ বছর: কী বদলেছে", "Government job entry age limit of 32: what changed"],
+    desc: ["৩০ থেকে ৩২ বছর হওয়ার ঘটনাক্রম, কোথায় প্রযোজ্য ও কোথায় নয়, এবং আবেদনের আগে কী দেখে নেবেন।", "The timeline of the change from 30 to 32, where it applies and where it does not, and what to check before you apply."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "govt-job-age-calculator", name: ["Govt Job Age Calculator", "Govt Job Age Calculator"] },
+    sections: [
+      {
+        h: ["আগে কত ছিল, এখন কত", "Before and now"],
+        p: [
+          ["আগে সরকারি চাকরিতে প্রবেশের সাধারণ সর্বোচ্চ বয়স ছিল ৩০ বছর। মুক্তিযোদ্ধাদের সন্তান ও নাতি-নাতনিদের জন্য ছিল ৩২ বছর।", "The general maximum entry age for government jobs used to be 30. For children and grandchildren of freedom fighters it was 32."],
+          ["২০২৪ সালের ২৪ অক্টোবর অন্তর্বর্তী সরকার সর্বোচ্চ বয়সসীমা ৩২ বছর করার সিদ্ধান্ত নেয়। ১৮ নভেম্বর ২০২৪ এ এ বিষয়ে অধ্যাদেশের গেজেট প্রকাশ হয়। পরে কিছু নিয়োগবিধিতে ভিন্ন বয়স থাকায় জটিলতা হলে ২০২৫ সালে অধ্যাদেশ সংশোধন করা হয়, আর পরে সংসদে এ বিষয়ে আইনও পাস হয়।", "On 24 October 2024 the interim government decided to set the maximum age at 32. A gazette for the ordinance followed on 18 November 2024. When some recruitment rules with different ages caused complications, the ordinance was amended in 2025, and parliament later passed a law on the matter."],
+        ],
+      },
+      {
+        h: ["কোথায় প্রযোজ্য", "Where it applies"],
+        p: [
+          ["খবর অনুযায়ী আইনটি বিসিএসের সব ক্যাডার ও ক্যাডারবহির্ভূত সব সরকারি চাকরিতে প্রযোজ্য। স্বায়ত্তশাসিত ও সংবিধিবদ্ধ সংস্থা এবং পাবলিক নন-ফাইন্যান্সিয়াল করপোরেশনের সরাসরি নিয়োগেও সীমা ৩২ বছর।", "According to news reports the law applies to all BCS cadres and all non-cadre government jobs. Direct recruitment in autonomous and statutory bodies and public non-financial corporations also has a 32-year limit."],
+          ["আইনশৃঙ্খলা বাহিনীর নিজস্ব নিয়ম আছে বলে সরকার ঘোষণায় জানিয়েছিল। ব্যাংক, এনজিও ও বেসরকারি প্রতিষ্ঠান এই সীমার আওতায় পড়ে না, তাদের নিজস্ব সীমা থাকে।", "The government said at the time that law enforcement agencies have their own rules. Banks, NGOs and private companies are not covered by this limit and set their own."],
+        ],
+      },
+      {
+        h: ["বিসিএসে তিনবারের সীমা", "The three-attempt rule for BCS"],
+        p: [
+          ["অক্টোবর ২০২৪ এর ঘোষণায় বলা হয়েছিল, কেউ তিনবারের বেশি বিসিএস পরীক্ষায় অংশ নিতে পারবেন না। এই নিয়মের সর্বশেষ রূপ ও প্রয়োগ বিপিএসসির সর্বশেষ বিজ্ঞপ্তিতে দেখে নিন।", "The October 2024 announcement said nobody could sit the BCS exam more than three times. Check the latest BPSC circular for the current form of this rule and how it is applied."],
+        ],
+      },
+      {
+        h: ["আবেদনের আগে কী দেখবেন", "What to check before applying"],
+        p: [
+          ["বিজ্ঞপ্তির বয়স গণনার তারিখ, সীমা কীভাবে লেখা (সর্বোচ্চ ৩২ নাকি ৩২ পূর্ণ হয়নি), কোটার সীমা এবং কোন সনদের জন্ম তারিখ ধরা হবে। এগুলো নিয়ে টুলে হিসাব করুন।", "Check the circular's age-calculation date, how the limit is worded (maximum 32 or not yet completed 32), any quota limit and which certificate's date of birth counts. Then run the numbers in the tool."],
+          ["এই লেখা প্রথম আলো, ডেইলি স্টার বাংলা, যুগান্তর ও দেশরূপান্তরের প্রতিবেদন মিলিয়ে তৈরি। আইনের চূড়ান্ত পাঠ ও প্রতিটি বিজ্ঞপ্তির শর্ত সরকারি গেজেট ও অফিসিয়াল বিজ্ঞপ্তিতে দেখুন।", "This page is based on reports from Prothom Alo, The Daily Star Bangla, Jugantor and Desh Rupantor. For the final text of the law and each circular's conditions, see the government gazette and the official circular."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["সব সরকারি চাকরিতেই কি এখন ৩২ বছর?", "Is it 32 years for every government job now?"], a: ["বিসিএস ও ক্যাডারবহির্ভূত সরাসরি নিয়োগে সাধারণ সীমা ৩২ বছর। আইনশৃঙ্খলা বাহিনী ও নির্দিষ্ট পদের নিজস্ব নিয়ম আছে, তাই বিজ্ঞপ্তি দেখুন।", "The general limit is 32 years for BCS and non-cadre direct recruitment. Law enforcement agencies and certain posts have their own rules, so read the circular."] },
+      { q: ["আমার বয়স ৩১ হলে কি এখনো সুযোগ আছে?", "I am 31. Do I still have a chance?"], a: ["বিজ্ঞপ্তির তারিখে আপনার বয়স ৩২ বছরের সীমার মধ্যে থাকলে আবেদন করা যায়। জন্ম তারিখ ও বিজ্ঞপ্তির তারিখ টুলে দিয়ে শেষ যোগ্য দিন দেখে নিন।", "If your age on the circular date is within 32 years you can apply. Enter your date of birth and the circular date in the tool to see your last eligible day."] },
+    ],
+  },
+  {
+    slug: "chakrir-boyosh-gonona-5-ta-bhul",
+    title: ["চাকরির বয়স গণনায় ৫টি সাধারণ ভুল", "5 common mistakes when counting age for a job"],
+    desc: ["এক দিনের ভুলে আবেদন বাতিল হতে পারে। কোন ভুলগুলো সবচেয়ে বেশি হয় এবং কীভাবে এড়াবেন।", "One day of error can get an application rejected. Which mistakes happen most and how to avoid them."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "govt-job-age-calculator", name: ["Govt Job Age Calculator", "Govt Job Age Calculator"] },
+    sections: [
+      {
+        h: ["১. বিজ্ঞপ্তির তারিখের বদলে আজকের বা আবেদনের তারিখ ধরা", "1. Using today's or the application date instead of the circular date"],
+        p: [
+          ["বয়স সাধারণত বিজ্ঞপ্তিতে দেওয়া নির্দিষ্ট তারিখে গণনা হয়। আজকের তারিখে সীমার মধ্যে থাকলেও ওই তারিখে বাইরে থাকতে পারেন, আবার উল্টোটাও হয়।", "Age is usually counted on the specific date in the circular. You can be within the limit today but outside it on that date, and the reverse can happen too."],
+        ],
+      },
+      {
+        h: ["২. ‘সর্বোচ্চ’ আর ‘পূর্ণ হয়নি’ গুলিয়ে ফেলা", "2. Mixing up maximum and not yet completed"],
+        p: [
+          ["‘সর্বোচ্চ ৩২ বছর’ হলে ৩২ বছর ০ মাস ০ দিন ঠিক। ‘৩২ বছর পূর্ণ হয়নি’ হলে ৩২তম জন্মদিনেই আপনি বাইরে। টুলে বিজ্ঞপ্তির লেখা অনুযায়ী অপশন বেছে নিন।", "With maximum 32 years, 32 years 0 months 0 days is fine. With not yet completed 32 years, you are out on the 32nd birthday itself. Pick the tool option that matches the circular."],
+        ],
+      },
+      {
+        h: ["৩. শুধু বছর বিয়োগ করা", "3. Only subtracting the years"],
+        p: [
+          ["জন্মসাল বিয়োগ করলে মাস ও দিন হারিয়ে যায়। ১৯৯৪ সালে মার্চে জন্ম আর ডিসেম্বরে জন্ম, দুজনের জন্য ২০২৬ সালের নভেম্বরে একই ৩২ আসে, অথচ বাস্তবে একজন ৩২ বছর পার করেছেন, আরেকজন করেননি।", "Subtracting birth years drops the months and days. Someone born in March 1994 and another born in December 1994 both get 32 for November 2026, yet one has passed 32 and the other has not."],
+        ],
+      },
+      {
+        h: ["৪. ভুল সনদের জন্ম তারিখ ধরা", "4. Using the wrong certificate's date of birth"],
+        p: [
+          ["বিজ্ঞপ্তিতে যে সনদের কথা বলা থাকে (সাধারণত এসএসসি বা সমমান) সেটির জন্ম তারিখই ধরুন। অন্য নথিতে ভিন্ন তারিখ থাকলে আবেদনের আগে সেটি জানা ও সমাধান করা দরকার।", "Use the date of birth on the certificate the circular names (usually SSC or equivalent). If another document shows a different date, it is better to know and resolve it before applying."],
+        ],
+      },
+      {
+        h: ["৫. কোটার সীমা আর সাধারণ সীমা গুলিয়ে ফেলা", "5. Confusing a quota limit with the general limit"],
+        p: [
+          ["কোটার সীমা বিজ্ঞপ্তিতে আলাদা লেখা থাকে এবং প্রমাণপত্র লাগে। সেই সংখ্যাটি টুলের সর্বোচ্চ বয়সের ঘরে লিখে হিসাব করুন, আর শর্ত বিজ্ঞপ্তি থেকে মিলিয়ে নিন।", "A quota limit is written separately in the circular and needs proof. Type that number in the tool's maximum age box and check the conditions in the circular."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["এক দিন বেশি হলে কি আবেদন করা যাবে?", "Can I apply if I am one day over?"], a: ["সাধারণত বয়সসীমা কঠোরভাবে মানা হয়। বিজ্ঞপ্তিতে ছাড়ের কথা না থাকলে ছাড় ধরে নেওয়া ঠিক নয়।", "Age limits are usually enforced strictly. Do not assume a relaxation unless the circular states one."] },
+      { q: ["কীভাবে নিশ্চিত হব হিসাব ঠিক?", "How do I make sure my calculation is right?"], a: ["Govt Job Age Calculator এ দুই অপশনেই (সর্বোচ্চ ও পূর্ণ হয়নি) ফল দেখে নিন, তারপর বিজ্ঞপ্তির লেখার সঙ্গে মিলিয়ে নিন।", "Check the result under both options (maximum and not yet completed) in the Govt Job Age Calculator, then match it with the circular's wording."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);
