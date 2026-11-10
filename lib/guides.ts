@@ -1227,6 +1227,149 @@ export const GUIDES: Guide[] = [
       { q: ["১ কানিতে কত গণ্ডা?", "How many gonda in 1 kani?"], a: ["২০ গণ্ডা।", "20 gonda."] },
     ],
   },
+  {
+    slug: "bidyut-bill-taka-theke-unit",
+    title: ["বিদ্যুৎ বিলের টাকা থেকে ইউনিট কীভাবে বের করবেন", "How to find the units used from your electricity bill amount"],
+    desc: ["বিলের মোট টাকা জানা আছে কিন্তু ইউনিট জানেন না? ভ্যাট ও ডিমান্ড চার্জ বাদ দিয়ে স্ল্যাব ধরে ইউনিট বের করার সহজ নিয়ম, উদাহরণসহ।", "Know the bill amount but not the units? A simple method to remove VAT and demand charge and work back through the slabs, with examples."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "electricity-bill-calculator-bd", name: ["বিদ্যুৎ বিল ক্যালকুলেটর", "Electricity bill calculator"] },
+    sections: [
+      {
+        h: ["কেন উল্টো হিসাব লাগে", "Why work backwards"],
+        p: [
+          ["অনেক সময় শুধু বিলের মোট টাকা হাতে থাকে। যেমন বাসা ভাড়ার চুক্তিতে বিদ্যুৎ বিল ভাগ করার সময়, বা পুরোনো বিল দেখে খরচ বোঝার সময়। তখন ইউনিট বের করতে বিলের ধাপগুলো উল্টো দিক থেকে হিসাব করতে হয়।", "Sometimes you only have the total amount. For example when splitting a bill with a landlord or checking an old bill. Then you work back through the steps of the bill in reverse to find the units."],
+        ],
+      },
+      {
+        h: ["তিন ধাপের নিয়ম", "The three step method"],
+        p: [
+          ["ধাপ ১: মোট টাকাকে ১.০৫ দিয়ে ভাগ করে ৫% ভ্যাট বাদ দিন। ধাপ ২: অনুমোদিত লোড (kW) × প্রতি kW ডিমান্ড চার্জ বাদ দিন (এখানে ৪২ টাকা ধরা হয়েছে, আপনার বিলে আলাদা হলে সেটি ধরুন)। যা থাকে সেটাই শুধু বিদ্যুতের মূল্য।", "Step 1: divide the total by 1.05 to remove 5% VAT. Step 2: subtract sanctioned load (kW) × demand charge per kW (42 taka is assumed here, use your own figure if different). What is left is the pure energy charge."],
+          ["ধাপ ৩: বিদ্যুতের মূল্য থেকে স্ল্যাব ধরে ধরে বাদ দিন। প্রথম ৭৫ ইউনিটে মূল্য ৩৯৪.৫০, ২০০ ইউনিট পর্যন্ত ১,৪৫৭, ৩০০ ইউনিট পর্যন্ত ২,৩৬৭, ৪০০ ইউনিট পর্যন্ত ৩,৩২৯। যে স্ল্যাবে আপনার সংখ্যাটি পড়ে, বাকি টাকাকে সেই স্ল্যাবের রেট দিয়ে ভাগ করুন।", "Step 3: subtract slab by slab from the energy charge. The energy charge is 394.50 for the first 75 units, 1,457 up to 200 units, 2,367 up to 300 units and 3,329 up to 400 units. Find the slab your figure falls in and divide the remainder by that slab's rate."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ১: বিল ১,৫৭৩.৯৫ টাকা (১ kW)", "Example 1: bill of 1,573.95 taka (1 kW)"],
+        p: [
+          ["১,৫৭৩.৯৫ ÷ ১.০৫ = ১,৪৯৯। এর থেকে ডিমান্ড চার্জ ৪২ বাদ দিলে ১,৪৫৭ টাকা। প্রথম ৭৫ ইউনিটের ৩৯৪.৫০ বাদ দিলে থাকে ১,০৬২.৫০, যাকে ৮.৫০ দিয়ে ভাগ করলে ১২৫ ইউনিট। মোট ৭৫ + ১২৫ = ২০০ ইউনিট।", "1,573.95 ÷ 1.05 = 1,499. Subtracting the 42 taka demand charge leaves 1,457. Taking off 394.50 for the first 75 units leaves 1,062.50, and dividing by 8.50 gives 125 units. Total: 75 + 125 = 200 units."],
+        ],
+      },
+      {
+        h: ["উদাহরণ ২: বিল ৩,০০০ টাকা (১ kW)", "Example 2: bill of 3,000 taka (1 kW)"],
+        p: [
+          ["৩,০০০ ÷ ১.০৫ ≈ ২,৮৫৭.১৪। ডিমান্ড চার্জ ৪২ বাদ দিলে ২,৮১৫.১৪ টাকা। এটি ৩০০ ইউনিটের মূল্য ২,৩৬৭ এর বেশি, তাই ৩০১-৪০০ স্ল্যাবে পড়ে। বাকি ৪৪৮.১৪ ÷ ৯.৬২ ≈ ৪৬.৫৮ ইউনিট। মোট প্রায় ৩৪৬.৬ ইউনিট।", "3,000 ÷ 1.05 ≈ 2,857.14. Subtracting the 42 taka demand charge leaves 2,815.14. That is above the 2,367 for 300 units, so it falls in the 301-400 slab. The remaining 448.14 ÷ 9.62 ≈ 46.58 units. Total: about 346.6 units."],
+        ],
+      },
+      {
+        h: ["৫০ ইউনিটের কাছাকাছি হলে", "Near the 50 unit line"],
+        p: [
+          ["বিদ্যুতের মূল্য ২৩১.৫০ টাকা বা কম হলে সব ইউনিট লাইফলাইন রেট ৪.৬৩ ধরা হয়, তাই ইউনিট = মূল্য ÷ ৪.৬৩। ৫১ ইউনিট হলে পুরো মাসের হিসাব স্ল্যাব রেটে চলে যায়, তাই ২৩১.৫০ থেকে ২৬৮.২৬ টাকার মাঝামাঝি কোনো মূল্য সাধারণ হিসাবে মেলে না।", "If the energy charge is 231.50 taka or less, all units are at the lifeline rate of 4.63, so units = charge ÷ 4.63. At 51 units the whole month moves to slab rates, so an energy charge between 231.50 and 268.26 taka does not match any normal month."],
+        ],
+      },
+      {
+        h: ["হাতে হিসাব না করে ক্যালকুলেটর", "Skip the maths with the calculator"],
+        p: [
+          ["আমাদের বিদ্যুৎ বিল ক্যালকুলেটরের “টাকা → ইউনিট” ট্যাবে টাকা, লোড ও ডিমান্ড চার্জ দিলেই ইউনিট ও গড় প্রতি ইউনিট দাম দেখাবে। এটি আনুমানিক, কারণ মিটার ভাড়া, বকেয়া ও দেরির জরিমানা বিলে থাকলে হিসাব কিছুটা বদলে যায়।", "In the “Taka → Units” tab of our electricity bill calculator, enter the amount, load and demand charge to see the units and average price per unit. It is an estimate, because meter rent, arrears and late fees on the bill would shift the result."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["বিলে মিটার ভাড়া বা বকেয়া থাকলে কী করব?", "What if my bill has meter rent or arrears?"], a: ["সেগুলো আগে মোট টাকা থেকে বাদ দিয়ে তারপর ১.০৫ দিয়ে ভাগ করুন। না হলে ইউনিট বেশি দেখাবে।", "Subtract them from the total first, then divide by 1.05. Otherwise the units will come out too high."] },
+      { q: ["লোড কত ধরব?", "What load should I use?"], a: ["বিলে লেখা অনুমোদিত লোড (kW) ধরুন। না জানলে ১ kW দিয়ে দেখুন, ফল কিছুটা আলাদা হতে পারে।", "Use the sanctioned load (kW) printed on your bill. If you do not know it, try 1 kW, but the result may differ a little."] },
+      { q: ["এটি কি সব ধরনের সংযোগে চলবে?", "Does this work for every connection type?"], a: ["না। এটি শুধু আবাসিক (LT-A) রেটের জন্য। দোকান, অফিস বা কারখানার রেট আলাদা।", "No. It is only for residential (LT-A) rates. Shop, office and factory rates are different."] },
+    ],
+  },
+  {
+    slug: "prepaid-meter-recharge-koto-unit",
+    title: ["প্রিপেইড মিটারে রিচার্জ করলে কত ইউনিট পাবেন (ভ্যাট ও ডিমান্ড চার্জসহ হিসাব)", "How many units a prepaid meter recharge gets you (with VAT and demand charge)"],
+    desc: ["১,০০০ বা ২,০০০ টাকা রিচার্জ করলে মিটারে কত ইউনিট জমা হবে? কেন মাসের প্রথম রিচার্জে কম ইউনিট আসে, উদাহরণসহ বুঝে নিন।", "How many units land on the meter when you recharge 1,000 or 2,000 taka? See, with examples, why the first recharge of the month buys fewer units."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "electricity-bill-calculator-bd", name: ["বিদ্যুৎ বিল ক্যালকুলেটর", "Electricity bill calculator"] },
+    sections: [
+      {
+        h: ["রিচার্জের টাকা পুরোটা ইউনিটে যায় না", "Not all of your recharge becomes units"],
+        p: [
+          ["প্রিপেইড মিটারে রিচার্জের টাকা থেকে আগে ৫% ভ্যাট কাটা হয়। মাসের প্রথম রিচার্জে অনুমোদিত লোড অনুযায়ী ডিমান্ড চার্জও কাটতে পারে। বাকি টাকাটা শুধু বিদ্যুতের মূল্য হিসেবে ইউনিটে রূপান্তর হয়।", "On a prepaid meter, 5% VAT comes out of your recharge first. On the first recharge of the month the demand charge based on your sanctioned load may also be deducted. Only what remains is turned into units as the energy charge."],
+        ],
+      },
+      {
+        h: ["হিসাবের নিয়ম", "The calculation"],
+        p: [
+          ["রিচার্জ ÷ ১.০৫ = ভ্যাট বাদে টাকা। মাসের প্রথম রিচার্জ হলে এর থেকে লোড × ৪২ বাদ দিন। যা থাকে তাকে স্ল্যাব রেট ধরে ইউনিটে বদলান: প্রথম ৭৫ ইউনিট ৫.২৬, ৭৬-২০০ ইউনিট ৮.৫০, ২০১-৩০০ ইউনিট ৯.১০ ইত্যাদি।", "Recharge ÷ 1.05 = amount without VAT. On the first recharge of the month, subtract load × 42. Convert what remains into units using the slab rates: the first 75 units at 5.26, 76-200 at 8.50, 201-300 at 9.10 and so on."],
+        ],
+      },
+      {
+        h: ["উদাহরণ: ১,০০০ টাকা রিচার্জ (১ kW)", "Example: 1,000 taka recharge (1 kW)"],
+        p: [
+          ["মাসের প্রথম রিচার্জ হলে: ১,০০০ ÷ ১.০৫ ≈ ৯৫২.৩৮, ডিমান্ড চার্জ ৪২ বাদ দিলে ৯১০.৩৮। প্রথম ৭৫ ইউনিটে ৩৯৪.৫০ যায়, বাকি ৫১৫.৮৮ ÷ ৮.৫০ ≈ ৬০.৬৯। মোট প্রায় ১৩৫.৭ ইউনিট।", "For the first recharge of the month: 1,000 ÷ 1.05 ≈ 952.38, minus the 42 taka demand charge gives 910.38. The first 75 units take 394.50, and the remaining 515.88 ÷ 8.50 ≈ 60.69. Total: about 135.7 units."],
+          ["পরের রিচার্জে ডিমান্ড চার্জ না কাটলে: ৯৫২.৩৮ এর ৩৯৪.৫০ বাদে ৫৫৭.৮৮ ÷ ৮.৫০ ≈ ৬৫.৬৩। মোট প্রায় ১৪০.৬ ইউনিট। অর্থাৎ প্রথম রিচার্জে প্রায় ৫ ইউনিট কম আসে।", "On a later recharge with no demand charge: 952.38 minus 394.50 leaves 557.88 ÷ 8.50 ≈ 65.63. Total: about 140.6 units. So the first recharge gives about 5 units fewer."],
+        ],
+      },
+      {
+        h: ["আরও দুটি উদাহরণ (১ kW, মাসের প্রথম রিচার্জ)", "Two more examples (1 kW, first recharge of the month)"],
+        p: [
+          ["৫০০ টাকায় প্রায় ৭৯.৭ ইউনিট, ২,০০০ টাকায় প্রায় ২৪৪.৬ ইউনিট। রিচার্জ যত ছোট হয়, নির্দিষ্ট ডিমান্ড চার্জের প্রভাব তত বেশি পড়ে।", "500 taka gets about 79.7 units and 2,000 taka about 244.6 units. The smaller the recharge, the bigger the effect of the fixed demand charge."],
+        ],
+      },
+      {
+        h: ["মিটারের সঙ্গে ফারাক কেন হতে পারে", "Why your meter may show a difference"],
+        p: [
+          ["কোম্পানিভেদে স্ল্যাব প্রতি রিচার্জে নাকি মাস ধরে গোনা হয় তা আলাদা হতে পারে। আমাদের হিসাবে ইউনিট শূন্য থেকে গোনা ধরা হয়েছে, আর কোনো রিবেট বা বকেয়া ধরা হয়নি। তাই এটি আনুমানিক, আপনার মিটার ও কোম্পানির নিয়মই চূড়ান্ত।", "Companies may differ on whether slabs are counted per recharge or per month. Our estimate counts units from zero and ignores any rebate or arrears. So it is an estimate, and your meter and your company's rules are final."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["মাসের প্রথম রিচার্জে কেন কম ইউনিট আসে?", "Why does the first recharge of the month give fewer units?"], a: ["কারণ সেই রিচার্জ থেকে ডিমান্ড চার্জ কাটতে পারে, যা অনুমোদিত লোড অনুযায়ী নির্দিষ্ট টাকা।", "Because the demand charge, a fixed amount based on your sanctioned load, may be deducted from that recharge."] },
+      { q: ["ছোট ছোট রিচার্জ করলে কি সুবিধা হয়?", "Do small recharges save money?"], a: ["ভ্যাটের হার রিচার্জ ছোট বা বড় যা-ই হোক একই (৫%)। তবে স্ল্যাব প্রতি রিচার্জে নাকি মাস ধরে গোনা হবে তা কোম্পানিভেদে আলাদা, তাই নিজের কোম্পানির নিয়ম দেখে নিন।", "The VAT rate is the same (5%) whether the recharge is small or large. But whether slabs are counted per recharge or per month differs by company, so check your own company's rules."] },
+      { q: ["প্রিপেইড মিটারের ব্যালেন্স কোডে দেখব কীভাবে?", "How do I check the balance on a prepaid meter?"], a: ["প্রতিটি মিটার মডেলের কোড আলাদা। আপনার মিটারের ম্যানুয়াল বা বিতরণ কোম্পানির হটলাইনে জেনে নিন।", "Codes differ by meter model. Check your meter manual or ask your distribution company's hotline."] },
+    ],
+  },
+  {
+    slug: "bidyut-bill-hothat-beshi-keno",
+    title: ["বিদ্যুৎ বিল হঠাৎ বেশি এলে কী কারণ হতে পারে ও কী করবেন", "Why your electricity bill suddenly jumped and what to do"],
+    desc: ["স্ল্যাব বদল, ৫১ ইউনিটের ধাপ, লোড ও পুরোনো যন্ত্রপাতি: বিল হঠাৎ বেশি এলে নিজে যাচাই করার পাঁচটি কারণ।", "Slab changes, the 51 unit line, sanctioned load and old appliances: five things to check yourself when your bill jumps."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "electricity-bill-calculator-bd", name: ["বিদ্যুৎ বিল ক্যালকুলেটর", "Electricity bill calculator"] },
+    sections: [
+      {
+        h: ["১. ৪০০ ইউনিটের পর রেট লাফিয়ে বাড়ে", "1. The rate jumps after 400 units"],
+        p: [
+          ["৩০১-৪০০ ইউনিটে রেট ৯.৬২, কিন্তু ৪০১-৬০০ ইউনিটে ১৫.০১ টাকা। গরমে এসি চালালে ৪০০ ইউনিট পার হওয়া সহজ। তখন বাড়তি প্রতিটি ইউনিটে প্রায় ৫.৩৯ টাকা বেশি লাগে।", "The rate is 9.62 for 301-400 units but 15.01 for 401-600. In summer, AC use can easily push you past 400, and every extra unit then costs about 5.39 taka more."],
+          ["উদাহরণ (১ kW লোড): ৪০০ ইউনিটে বিল প্রায় ৩,৫৩৯.৫৫ টাকা, ৫০০ ইউনিটে প্রায় ৫,১১৫.৬০ টাকা। ১০০ ইউনিট বাড়লে বিল বাড়ে প্রায় ১,৫৭৬ টাকা।", "Example (1 kW load): about 3,539.55 taka at 400 units and about 5,115.60 taka at 500 units. An extra 100 units adds about 1,576 taka."],
+        ],
+      },
+      {
+        h: ["২. ৫০ থেকে ৫১ ইউনিটে একটি বড় লাফ", "2. The big step from 50 to 51 units"],
+        p: [
+          ["মোট ৫০ ইউনিট বা কম হলে সব ইউনিট ৪.৬৩ টাকা। ৫১ ইউনিট হলে পুরো মাস স্ল্যাব রেটে চলে যায়, তাই মাত্র ১ ইউনিট বেশিতে বিল প্রায় ৩৮.৬০ টাকা বাড়ে। কম ব্যবহারের ঘরে মাসের শেষ সপ্তাহে ব্যবহার একটু কমালেই এটি এড়ানো যায়।", "At 50 units or fewer every unit costs 4.63. At 51 the whole month moves to slab rates, so just one extra unit raises the bill by about 38.60 taka. A low-use home can avoid this by trimming use a little in the last week."],
+        ],
+      },
+      {
+        h: ["৩. অনুমোদিত লোড বেশি লেখা", "3. A sanctioned load set too high"],
+        p: [
+          ["ডিমান্ড চার্জ প্রতি kW ৪২ টাকা ধরে (ভ্যাটসহ ৪৪.১০) আসে। ব্যবহার যা-ই হোক, লোড বেশি হলে প্রতি মাসেই বেশি টাকা কাটে। বিলে লেখা লোড আপনার প্রকৃত দরকারের সঙ্গে মিলছে কিনা দেখুন।", "The demand charge works out at 42 taka per kW (44.10 with VAT). Whatever you use, a higher load means more is charged every month. Check that the load on your bill matches what you actually need."],
+        ],
+      },
+      {
+        h: ["৪. যন্ত্রপাতি যা নিঃশব্দে ইউনিট খায়", "4. Appliances that quietly eat units"],
+        p: [
+          ["পুরোনো ফ্রিজ, বেশি ঠান্ডায় সেট করা ফ্রিজ বা এসি, সারাদিন চালু ওয়াটার হিটার এবং স্ট্যান্ডবাইয়ে থাকা ডিভাইস মাসে বেশ কিছু ইউনিট টেনে নেয়। এসি ২৪-২৬°C এ রাখা, ব্যবহার না থাকলে হিটার বন্ধ রাখা ও প্লাগ খুলে রাখা সবচেয়ে সহজ উপায়।", "Old fridges, fridges or ACs set too cold, water heaters left on all day and devices on standby can draw a good number of units a month. Setting the AC at 24-26°C, switching the heater off when not needed and unplugging devices are the easiest fixes."],
+        ],
+      },
+      {
+        h: ["৫. মিটার রিডিং বা বিল ভুল হওয়া", "5. A wrong meter reading or bill"],
+        p: [
+          ["আগের ও এখনকার মিটার রিডিং নিজে মিলিয়ে দেখুন। বিয়োগফলই ওই মাসের ইউনিট। এরপর আমাদের ক্যালকুলেটরে সেই ইউনিট দিয়ে বিল মেলান। বড় ফারাক থাকলে নিজের বিতরণ কোম্পানির হটলাইনে জানান। সমাধান না হলে সাধারণত পরের ধাপে নিয়ন্ত্রক সংস্থা বিইআরসিতে অভিযোগ করা যায়।", "Check the previous and current meter readings yourself. The difference is that month's units. Then enter those units in our calculator and compare the bill. If there is a big gap, report it to your distribution company's hotline. If it is not resolved, you can usually take the complaint to the regulator BERC as the next step."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["আমার বিলের সঙ্গে ক্যালকুলেটরের ফল না মিললে?", "What if the calculator does not match my bill?"], a: ["বিলে মিটার ভাড়া, বকেয়া, দেরির জরিমানা বা ভিন্ন ডিমান্ড চার্জ থাকতে পারে। ক্যালকুলেটরের ডিমান্ড চার্জ ঘরে বিলের অঙ্কটি দিয়ে আবার দেখুন।", "Your bill may include meter rent, arrears, late fees or a different demand charge. Enter the figure from your bill in the calculator's demand charge field and try again."] },
+      { q: ["হটলাইন নম্বর কোথায় পাব?", "Where can I find the hotline numbers?"], a: ["বিদ্যুৎ বিল ক্যালকুলেটরের পাতার নিচে ডেসকো, ডিপিডিসি, নেসকো, বিপিডিবি, ডব্লিউজেডপিডিসিএল ও পল্লী বিদ্যুতের নম্বর ও অফিসিয়াল সাইট আছে। বিলে লেখা নম্বরের সঙ্গে মিলিয়ে নিন।", "Below the electricity bill calculator you will find the numbers and official sites for DESCO, DPDC, NESCO, BPDB, WZPDCL and Palli Bidyut. Check them against the number printed on your bill."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);

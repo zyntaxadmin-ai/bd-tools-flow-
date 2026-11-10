@@ -484,14 +484,21 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "electricity-bill-calculator-bd": {
     title: "Electricity Bill Calculator BD",
-    desc: "Estimate your monthly residential (LT-A) electricity bill from units used, sanctioned load and 5% VAT, with a slab by slab breakdown.",
-    howTo: ["Enter the units you used in the month", "Enter your sanctioned load in kW and check the demand charge", "Tap Calculate Bill and compare the breakdown with your bill"],
+    desc: "Estimate your monthly residential (LT-A) electricity bill from units used, sanctioned load and 5% VAT, with a slab by slab breakdown, a reverse taka-to-units calculator, a prepaid recharge estimate and a 50 to 1000 unit bill table.",
+    howTo: ["Enter the units you used in the month and the bill appears as you type", "Enter your sanctioned load in kW and match the demand charge to your bill", "Know the taka amount? Use the Taka to Units tab. On a prepaid meter, use the Prepaid recharge tab"],
     faqs: [
       { q: "Which rates does it use?", a: "The residential (LT-A) rates effective from the June 2026 billing month: 5.26 taka up to 75 units, 8.50 for 76-200, 9.10 for 201-300, 9.62 for 301-400, 15.01 for 401-600 and 17.35 above 600. With 50 units or fewer, all units are charged 4.63 taka. BERC withdrew its 3 June hike for the 0-50 and 0-75 unit slabs on 4 June, so those two rates stay as before." },
       { q: "Is each rate applied to all my units?", a: "No. Each rate applies only to the units inside its slab. For example, with 200 units the first 75 are charged 5.26 and the next 125 are charged 8.50." },
       { q: "What is the demand charge?", a: "A fixed monthly charge based on your sanctioned load in kW, whatever your usage. This tool uses 42 taka per kW, and you can change it to match your bill." },
       { q: "Why is my bill different from the result?", a: "Your bill can include meter rent, arrears, late fees, rebates and a different demand charge, and your distribution company may apply its own rules. Use this as an estimate and trust the bill you receive." },
       { q: "Does it work for commercial or industrial connections?", a: "No. It is only for residential (LT-A) customers." },
+      { q: "How much is the electricity bill for 100 units?", a: "For a residential (LT-A) connection with a 1 kW load, a 42 taka demand charge and 5% VAT, the bill is about 681.45 taka for 100 units, 1,573.95 for 200 units, 2,529.45 for 300 units and 5,115.60 for 500 units. See the table under the tool for 50 to 1000 units." },
+      { q: "How do I find the units from my electricity bill amount?", a: "Divide the total by 1.05 to remove VAT, then subtract load × demand charge. Work back through the slab rates with what is left to get the units. The Taka to Units tab in the tool does this for you." },
+      { q: "How many units will I get for a 1,000 taka prepaid recharge?", a: "With a 1 kW load, about 135.7 units on the first recharge of the month and about 140.6 on a later recharge (estimate). Companies differ on how slabs are counted, so your meter may show a small difference." },
+      { q: "Why does the first recharge of the month give fewer units?", a: "Because besides VAT, the demand charge based on your sanctioned load may also be deducted from the first recharge. The same money therefore buys a few units less." },
+      { q: "Why does the bill jump just above 50 units?", a: "At 50 units or fewer every unit is charged the lifeline rate of 4.63 taka. At 51 units the whole month moves to slab rates, so one extra unit raises the bill by about 38.60 taka." },
+      { q: "Is the calculation different for DESCO, DPDC, NESCO and Palli Bidyut?", a: "This tool uses the same residential (LT-A) rates for all. Meter rent, arrears and a company's own rules can still differ on your bill, so the actual bill is final. The helplines and official sites of each company are listed below the tool." },
+      { q: "What should I do if my electricity bill suddenly rises?", a: "First check whether your units passed 400, because above 400 the rate goes from 9.62 to 15.01 taka. Then compare the load on your bill, the previous and current meter readings and any old appliances. If it still does not add up, report it to your distribution company's hotline." },
     ],
   },
   "number-to-words-bd": {

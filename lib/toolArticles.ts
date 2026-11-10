@@ -1778,6 +1778,20 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
           "ডিমান্ড চার্জ প্রতি kW ৪২ টাকা ধরা হয়েছে, তবে আপনার বিলে আলাদা হতে পারে, তাই ঘরটি বদলানো যায়। মিটার ভাড়া, বকেয়া, দেরির জরিমানা ও রিবেট ধরা হয়নি, তাই প্রকৃত বিল কিছুটা আলাদা হতে পারে। প্রকৃত বিলই চূড়ান্ত।",
         ],
       },
+      {
+        h: "১০০, ২০০, ৩০০ ও ৫০০ ইউনিটে কত বিল",
+        p: [
+          "১ kW লোড, ডিমান্ড চার্জ ৪২ টাকা ও ৫% ভ্যাটসহ আবাসিক বিল ১০০ ইউনিটে প্রায় ৬৮১.৪৫ টাকা, ২০০ ইউনিটে ১,৫৭৩.৯৫ টাকা, ৩০০ ইউনিটে ২,৫২৯.৪৫ টাকা এবং ৫০০ ইউনিটে ৫,১১৫.৬০ টাকা। ৪০০ ইউনিটের পর রেট ৯.৬২ থেকে ১৫.০১ টাকা হয়, তাই ৫০০ ইউনিটে বিল হঠাৎ অনেক বেড়ে যায়।",
+          "টুলের নিচের টেবিলে ৫০ থেকে ১০০০ ইউনিটের পুরো হিসাব আছে। যেকোনো সারিতে চাপ দিলে ওপরের ক্যালকুলেটরে সেই ইউনিটের বিস্তারিত ভাগ দেখাবে।",
+        ],
+      },
+      {
+        h: "টাকা থেকে ইউনিট ও প্রিপেইড রিচার্জ",
+        p: [
+          "বিলের টাকা জানা থাকলে “টাকা → ইউনিট” ট্যাবে ভ্যাট ও ডিমান্ড চার্জ বাদ দিয়ে ইউনিট বের হয়। প্রিপেইড মিটার হলে “প্রিপেইড রিচার্জ” ট্যাবে রিচার্জের টাকা দিলে আনুমানিক ইউনিট দেখা যায়। মাসের প্রথম রিচার্জে ডিমান্ড চার্জ কাটতে পারে বলে তখন কিছু ইউনিট কম আসে।",
+          "নিয়মগুলো ধাপে ধাপে বুঝতে আমাদের “বিদ্যুৎ বিলের টাকা থেকে ইউনিট”, “প্রিপেইড মিটারে রিচার্জে কত ইউনিট” ও “বিদ্যুৎ বিল হঠাৎ বেশি এলে” গাইডগুলো দেখুন।",
+        ],
+      },
     ],
     en: [
       {
@@ -1792,6 +1806,20 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         p: [
           "This tool uses the residential (LT-A) rates effective from the June 2026 billing month. BERC withdrew its 3 June hike for the 0-50 and 0-75 unit slabs on 4 June, so the lifeline rate (50 units or fewer) stays at 4.63 taka and the first slab at 5.26 taka.",
           "The demand charge is set at 42 taka per kW, but your bill may differ, so the field can be changed. Meter rent, arrears, late fees and rebates are not included, so your actual bill can be a little different. The bill you receive is final.",
+        ],
+      },
+      {
+        h: "What the bill is for 100, 200, 300 and 500 units",
+        p: [
+          "With a 1 kW load, a 42 taka demand charge and 5% VAT, a residential bill is about 681.45 taka for 100 units, 1,573.95 for 200 units, 2,529.45 for 300 units and 5,115.60 for 500 units. After 400 units the rate goes from 9.62 to 15.01 taka, so the bill rises sharply at 500 units.",
+          "The table under the tool lists every figure from 50 to 1000 units. Tap any row and the calculator above shows the detailed breakdown for that number of units.",
+        ],
+      },
+      {
+        h: "Taka to units and prepaid recharge",
+        p: [
+          "If you know the bill amount, the Taka to Units tab removes VAT and the demand charge and gives the units. On a prepaid meter, the Prepaid recharge tab turns a recharge amount into estimated units. The first recharge of the month may also pay the demand charge, so it buys a few units less.",
+          "To follow the rules step by step, read our guides on finding units from a bill amount, how many units a prepaid recharge gets you, and why a bill suddenly jumps.",
         ],
       },
     ],

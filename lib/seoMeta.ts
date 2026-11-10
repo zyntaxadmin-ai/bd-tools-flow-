@@ -43,8 +43,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ই-পাসপোর্ট ফি কত টাকা? ৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর মেয়াদ এবং সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি এক নজরে দেখুন।",
   },
   "electricity-bill-calculator-bd": {
-    title: "Electricity Bill Calculator BD - বিদ্যুৎ বিল হিসাব",
-    description: "বিদ্যুৎ বিল ক্যালকুলেটর। ইউনিট, অনুমোদিত লোড ও ৫% ভ্যাট ধরে আবাসিক (LT-A) বিদ্যুৎ বিলের আনুমানিক হিসাব, স্ল্যাব অনুযায়ী ভাগসহ।",
+    title: "Electricity Bill Calculator BD - বিদ্যুৎ বিল ২০২৬",
+    description: "বিদ্যুৎ বিল ক্যালকুলেটর বাংলাদেশ। জুন ২০২৬ রেটে ইউনিট থেকে বিল, বিলের টাকা থেকে ইউনিট এবং প্রিপেইড রিচার্জে কত ইউনিট পাবেন হিসাব করুন। ১০০ ও ২০০ ইউনিটের বিল টেবিলসহ, ফ্রি।",
   },
   "bdt-currency-converter": {
     title: "BDT Currency Converter - টাকার রেট কনভার্টার",
