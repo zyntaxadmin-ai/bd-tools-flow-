@@ -22,7 +22,7 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (32): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
+Live guides (35): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
 
 ## SEO
 
@@ -37,6 +37,12 @@ Live guides (32): cash out charges (and a charge table for 500 to 10,000 taka), 
 - Defaults: 1 shatak = 435.6 sq ft, 1 acre = 43,560 sq ft, 1 katha = 720 sq ft, 1 bigha = 20 katha, 1 kani = 40 shatak (17,424 sq ft) = 20 gonda, 1 gonda = 4 kora, 1 kora = 3 kranti, 1 kranti = 20 til. Katha size and katha per bigha can be changed by the visitor because they differ by area. Kani and the units under it are fixed at the common Chattogram/Noakhali measure.
 - It also has a length × width (rectangle or triangle) area section and a land price section (price per shatak, katha, bigha or acre gives the total, grouped in lakh/crore style).
 - The page text lives in `components/toolRegistry.tsx` (Bangla title, how-to, FAQs), `lib/toolContentEn.ts` (English), `lib/seoMeta.ts` (title and description) and `lib/toolArticles.ts` (longer text under the tool). Four guides link to it: square feet to shotangsho, katha to shatak, 1 bigha in shatak, and kani/gonda.
+
+## Electricity bill calculator
+
+- `components/tools/ElectricityBillCalculator.tsx` has three tabs: Units to Bill (live as you type, shows the next-unit cost and the average per unit), Taka to Units (reverse) and Prepaid recharge. It also has a 50 to 1000 unit bill table (built from `computeBill`, so it always matches the calculator), a "why is my bill high" checklist, and a helpline and official site list for DESCO, DPDC, NESCO, BPDB, WZPDCL and BREB.
+- When BERC changes the tariff, edit `SLABS`, `LIFELINE_RATE`, `DEFAULT_DEMAND_PER_KW` and `TARIFF_NOTE` at the top of that file. Also update the rates in the FAQ in `components/toolRegistryB9.tsx` and `lib/toolContentEn.ts`.
+- Helpline numbers and site links are in the `HELPLINES` array. Check them against a real bill now and then.
 
 ## Chat assistant (BD Flow Helper)
 
