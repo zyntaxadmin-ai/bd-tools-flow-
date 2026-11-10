@@ -1115,6 +1115,118 @@ export const GUIDES: Guide[] = [
       { q: ["০০:৩০ মানে কয়টা?", "What time is 00:30?"], a: ["রাত ১২:৩০ (12:30 AM), অর্থাৎ মধ্যরাতের আধা ঘণ্টা পর।", "12:30 AM, half an hour after midnight."] },
     ],
   },
+  {
+    slug: "katha-theke-shotangsho",
+    title: ["কাঠা থেকে শতাংশ কীভাবে হিসাব করবেন? সহজ নিয়ম ও উদাহরণ", "How to convert katha to shatak (shotangsho): a simple rule with examples"],
+    desc: ["১ কাঠায় কত শতাংশ, ৫ কাঠা বা ১০ কাঠা কত শতাংশ এবং শতাংশ থেকে কাঠার হিসাব, উদাহরণসহ।", "How many shatak in 1 katha, how many in 5 or 10 katha, and how to convert shatak back to katha, with examples."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "land-calculator-bd", name: ["জমি পরিমাপ ক্যালকুলেটর", "Land calculator"] },
+    sections: [
+      {
+        h: ["মূল সম্পর্ক", "The basic relationship"],
+        p: [
+          ["১ কাঠা = ৭২০ বর্গফুট ধরলে ১ কাঠা = ৭২০ ÷ ৪৩৫.৬ = প্রায় ১.৬৫ শতাংশ। উল্টো দিকে ১ শতাংশ = প্রায় ০.৬০৫ কাঠা।", "Taking 1 katha = 720 sq ft, 1 katha = 720 ÷ 435.6 = about 1.65 shatak. The other way, 1 shatak = about 0.605 katha."],
+        ],
+      },
+      {
+        h: ["কাঠা থেকে শতাংশ", "Katha to shatak"],
+        p: [
+          ["সূত্র: কাঠা × ৭২০ ÷ ৪৩৫.৬ (বা কাঠা × ১.৬৫২৯)। যেমন ৩ কাঠা = প্রায় ৪.৯৬ শতাংশ, ৫ কাঠা = প্রায় ৮.২৬ শতাংশ এবং ১০ কাঠা = প্রায় ১৬.৫৩ শতাংশ।", "Formula: katha × 720 ÷ 435.6 (or katha × 1.6529). For example 3 katha = about 4.96 shatak, 5 katha = about 8.26 shatak and 10 katha = about 16.53 shatak."],
+        ],
+      },
+      {
+        h: ["শতাংশ থেকে কাঠা", "Shatak to katha"],
+        p: [
+          ["সূত্র: শতাংশ × ৪৩৫.৬ ÷ ৭২০ (বা শতাংশ × ০.৬০৫)। যেমন ৫ শতাংশ = ৩.০২৫ কাঠা, ১০ শতাংশ = ৬.০৫ কাঠা এবং ২০ শতাংশ = ১২.১ কাঠা।", "Formula: shatak × 435.6 ÷ 720 (or shatak × 0.605). For example 5 shatak = 3.025 katha, 10 shatak = 6.05 katha and 20 shatak = 12.1 katha."],
+        ],
+      },
+      {
+        h: ["কাঠার মাপ আলাদা হলে", "If your katha is a different size"],
+        p: [
+          ["কাঠার মাপ এলাকাভেদে আলাদা হতে পারে। ধরুন আপনার এলাকায় ১ কাঠা = ৮০০ বর্গফুট, তাহলে ১ কাঠা = ৮০০ ÷ ৪৩৫.৬ = প্রায় ১.৮৪ শতাংশ। আমাদের ক্যালকুলেটরে ১ কাঠার বর্গফুট নিজে বদলে নেওয়া যায়, তাই আপনার এলাকার মাপেই হিসাব করতে পারবেন। দলিলের হিসাবের জন্য সার্ভেয়ারের মাপই চূড়ান্ত।", "The size of a katha can differ by area. Suppose 1 katha is 800 sq ft in your area; then 1 katha = 800 ÷ 435.6 = about 1.84 shatak. Our calculator lets you change the square feet per katha, so you can work with your local measure. For legal records the surveyor's measurement is final."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ কাঠায় কত শতাংশ?", "How many shatak in 1 katha?"], a: ["১ কাঠা = ৭২০ বর্গফুট ধরলে প্রায় ১.৬৫ শতাংশ।", "About 1.65 shatak, taking 1 katha = 720 sq ft."] },
+      { q: ["১০ কাঠা কত শতাংশ?", "How many shatak is 10 katha?"], a: ["প্রায় ১৬.৫৩ শতাংশ (৭,২০০ বর্গফুট)।", "About 16.53 shatak (7,200 sq ft)."] },
+      { q: ["১ শতাংশে কত কাঠা?", "How many katha in 1 shatak?"], a: ["প্রায় ০.৬০৫ কাঠা।", "About 0.605 katha."] },
+    ],
+  },
+  {
+    slug: "bigha-koto-shotangsho",
+    title: ["১ বিঘা কত শতাংশ, কত কাঠা ও কত একর? জমির হিসাব", "How many shatak, katha and acres in 1 bigha? A land conversion guide"],
+    desc: ["১ বিঘা কত শতাংশ ও কত বর্গফুট, ১ একরে কত বিঘা এবং বিঘার মাপ নিয়ে সতর্কতা, উদাহরণসহ।", "How many shatak and square feet in 1 bigha, how many bigha in 1 acre, and a caution about bigha sizes, with examples."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "land-calculator-bd", name: ["জমি পরিমাপ ক্যালকুলেটর", "Land calculator"] },
+    sections: [
+      {
+        h: ["১ বিঘার মাপ", "The size of 1 bigha"],
+        p: [
+          ["১ বিঘা = ২০ কাঠা এবং ১ কাঠা = ৭২০ বর্গফুট ধরলে ১ বিঘা = ১৪,৪০০ বর্গফুট। এটি ১৪,৪০০ ÷ ৪৩৫.৬ = প্রায় ৩৩.০৬ শতাংশ, অর্থাৎ প্রায় ০.৩৩ একর।", "Taking 1 bigha = 20 katha and 1 katha = 720 sq ft, 1 bigha = 14,400 sq ft. That is 14,400 ÷ 435.6 = about 33.06 shatak, or about 0.33 acre."],
+        ],
+      },
+      {
+        h: ["বিঘা থেকে শতাংশ ও একর", "Bigha to shatak and acres"],
+        p: [
+          ["সূত্র: বিঘা × ৩৩.০৬ = শতাংশ। যেমন ৩ বিঘা = প্রায় ৯৯.১৭ শতাংশ এবং ৫ বিঘা = প্রায় ১৬৫.২৯ শতাংশ (প্রায় ১.৬৫ একর)। উল্টো দিকে ১ একর = ১০০ শতাংশ = প্রায় ৩.০২৫ বিঘা।", "Formula: bigha × 33.06 = shatak. For example 3 bigha = about 99.17 shatak and 5 bigha = about 165.29 shatak (about 1.65 acres). The other way, 1 acre = 100 shatak = about 3.025 bigha."],
+        ],
+      },
+      {
+        h: ["বিঘার মাপ নিয়ে সতর্কতা", "A caution about bigha sizes"],
+        p: [
+          ["বিঘার মাপ অঞ্চলভেদে আলাদা হতে পারে, কারণ কাঠার মাপ এবং ১ বিঘায় কাঠার সংখ্যা দুটোই বদলাতে পারে। আমাদের ক্যালকুলেটরে ১ কাঠা কত বর্গফুট এবং ১ বিঘা কত কাঠা, দুটোই নিজে বদলে নেওয়া যায়। জমি কেনাবেচার আগে দলিল ও সার্ভেয়ারের মাপের সঙ্গে মিলিয়ে নিন।", "The size of a bigha can differ by region, because both the size of a katha and the number of katha in a bigha can change. Our calculator lets you change both the square feet per katha and the katha per bigha. Before buying or selling land, check against the deed and a surveyor's measurement."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ বিঘা কত শতাংশ?", "How many shatak is 1 bigha?"], a: ["১ বিঘা = ২০ কাঠা, ১ কাঠা = ৭২০ বর্গফুট ধরলে প্রায় ৩৩.০৬ শতাংশ।", "About 33.06 shatak, taking 1 bigha = 20 katha and 1 katha = 720 sq ft."] },
+      { q: ["১ একরে কত বিঘা?", "How many bigha in 1 acre?"], a: ["প্রায় ৩.০২৫ বিঘা।", "About 3.025 bigha."] },
+      { q: ["১ বিঘা কত বর্গফুট?", "How many square feet is 1 bigha?"], a: ["১৪,৪০০ বর্গফুট (২০ কাঠা × ৭২০ বর্গফুট)।", "14,400 sq ft (20 katha × 720 sq ft)."] },
+    ],
+  },
+  {
+    slug: "kani-gonda-kora-hisab",
+    title: ["কানি, গণ্ডা, কড়া, ক্রান্তি ও তিল কী? শতাংশে হিসাব", "What are kani, gonda, kora, kranti and til? Converting them to shatak"],
+    desc: ["১ কানি কত শতাংশ, ১ গণ্ডা কত শতাংশ এবং কানি থেকে তিল পর্যন্ত আঞ্চলিক জমির এককের হিসাব, উদাহরণসহ।", "How many shatak in 1 kani or 1 gonda, and how the traditional land units from kani down to til relate, with examples."],
+    updated: "2026-11-10",
+    updatedLabel: ["১০ নভেম্বর, ২০২৬", "10 November 2026"],
+    tool: { slug: "land-calculator-bd", name: ["জমি পরিমাপ ক্যালকুলেটর", "Land calculator"] },
+    sections: [
+      {
+        h: ["এই এককগুলো কোথায় চলে", "Where these units are used"],
+        p: [
+          ["চট্টগ্রাম ও নোয়াখালীসহ কিছু অঞ্চলের পুরোনো দলিলে জমি কানি, গণ্ডা, কড়া, ক্রান্তি ও তিলে লেখা থাকে। এগুলোকে শতাংশে রূপান্তর করলে আজকের হিসাবের সঙ্গে মেলানো সহজ হয়।", "In some areas, including Chattogram and Noakhali, older deeds record land in kani, gonda, kora, kranti and til. Converting them to shatak makes it easy to match today's measures."],
+        ],
+      },
+      {
+        h: ["এককগুলোর ক্রম", "How the units relate"],
+        p: [
+          ["১ কানি = ২০ গণ্ডা, ১ গণ্ডা = ৪ কড়া, ১ কড়া = ৩ ক্রান্তি এবং ১ ক্রান্তি = ২০ তিল। তাই ১ কানি = ৮০ কড়া = ২৪০ ক্রান্তি = ৪,৮০০ তিল।", "1 kani = 20 gonda, 1 gonda = 4 kora, 1 kora = 3 kranti and 1 kranti = 20 til. So 1 kani = 80 kora = 240 kranti = 4,800 til."],
+        ],
+      },
+      {
+        h: ["শতাংশ ও বর্গফুটে হিসাব", "In shatak and square feet"],
+        p: [
+          ["প্রচলিত হিসাবে ১ কানি = ৪০ শতাংশ (১৭,৪২৪ বর্গফুট), ১ গণ্ডা = ২ শতাংশ (৮৭১.২ বর্গফুট), ১ কড়া = ০.৫ শতাংশ (২১৭.৮ বর্গফুট), ১ ক্রান্তি = প্রায় ০.১৬৭ শতাংশ (৭২.৬ বর্গফুট) এবং ১ তিল = ৩.৬৩ বর্গফুট।", "In the common reckoning 1 kani = 40 shatak (17,424 sq ft), 1 gonda = 2 shatak (871.2 sq ft), 1 kora = 0.5 shatak (217.8 sq ft), 1 kranti = about 0.167 shatak (72.6 sq ft) and 1 til = 3.63 sq ft."],
+          ["উদাহরণ: ২ কানি ৫ গণ্ডা = (২ × ৪০) + (৫ × ২) = ৯০ শতাংশ।", "Example: 2 kani 5 gonda = (2 × 40) + (5 × 2) = 90 shatak."],
+        ],
+      },
+      {
+        h: ["মাপ এলাকাভেদে আলাদা হতে পারে", "Values can differ by area"],
+        p: [
+          ["এই মাপগুলো প্রচলিত ধরনের। অঞ্চলভেদে আলাদা হতে পারে, তাই স্থানীয় ভূমি অফিস বা সার্ভেয়ারের রেকর্ডের সঙ্গে মিলিয়ে নিন।", "These are the commonly used values and can differ between areas, so check them against the local land office or a surveyor's record."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ কানি কত শতাংশ?", "How many shatak is 1 kani?"], a: ["প্রচলিত হিসাবে ৪০ শতাংশ (১৭,৪২৪ বর্গফুট)।", "40 shatak (17,424 sq ft) in the common reckoning."] },
+      { q: ["১ গণ্ডা কত শতাংশ?", "How many shatak is 1 gonda?"], a: ["২ শতাংশ (৮৭১.২ বর্গফুট)।", "2 shatak (871.2 sq ft)."] },
+      { q: ["১ কানিতে কত গণ্ডা?", "How many gonda in 1 kani?"], a: ["২০ গণ্ডা।", "20 gonda."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);

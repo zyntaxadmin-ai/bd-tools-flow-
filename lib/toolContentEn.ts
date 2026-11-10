@@ -75,13 +75,17 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "land-calculator-bd": {
-    title: "Land Calculator (Shatak, Katha, Bigha, Acre)",
-    desc: "Convert land area between shatak (decimal), katha, bigha, acre, square feet and square metres in one place.",
-    howTo: ["Enter the area and pick its unit", "Change the square feet per katha to match your area if needed", "See every unit at once or copy a value"],
+    title: "Land Calculator Bangladesh (Shatak, Katha, Bigha, Acre)",
+    desc: "Free land calculator for Bangladesh. Convert shatak (decimal), katha, bigha, acre, kani, gonda, square feet and hectare, and work out land price. You can change the katha size for your area.",
+    howTo: ["Enter the land amount and pick its unit", "Open the settings line to change square feet per katha or katha per bigha for your area", "Read every unit at once, copy a value, or share the result", "Optionally enter a price per unit to get the total land price"],
     faqs: [
-      { q: "How many square feet is 1 shatak?", a: "1 shatak = 435.6 square feet. 100 shatak make 1 acre (43,560 square feet)." },
-      { q: "How many square feet is 1 katha?", a: "It is usually taken as 720 square feet, but katha and bigha sizes vary by area, so use your local measure." },
-      { q: "How many katha is 1 bigha?", a: "This tool assumes 1 bigha = 20 katha." },
+      { q: "How many square feet is 1 shatak?", a: "1 shatak (decimal) = 435.6 square feet. 100 shatak make 1 acre (43,560 square feet)." },
+      { q: "How many shatak are in 1 acre?", a: "1 acre = 100 shatak (decimal) = 43,560 square feet, which is about 60.5 katha at 720 square feet per katha." },
+      { q: "How many square feet is 1 katha?", a: "It is usually taken as 720 square feet, which is about 1.65 shatak. Katha and bigha sizes vary by area, so use your local measure." },
+      { q: "How many katha and shatak is 1 bigha?", a: "This tool assumes 1 bigha = 20 katha. At 720 square feet per katha that is 14,400 square feet, or about 33 shatak. You can change both numbers in the settings line." },
+      { q: "How many shatak is 1 kani?", a: "The common measure of Chattogram and Noakhali is 1 kani = 40 shatak (17,424 square feet) = 20 gonda. Other areas can use different values." },
+      { q: "Can I work out land price with this tool?", a: "Yes. Enter the land amount, then a price per shatak, katha, bigha or acre, and the total price is shown." },
+      { q: "Can I rely on this for a deed or registration?", a: "No. It gives a quick estimate. Always check the deed, khatian and your surveyor's measurement." },
     ],
   },
   "password-generator": {

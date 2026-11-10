@@ -326,6 +326,28 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
           "আয়তক্ষেত্রাকার জমির দৈর্ঘ্য ও প্রস্থ ফুটে দিলে টুল ক্ষেত্রফল বের করে সব এককে রূপান্তর করে দেখায়।",
         ],
       },
+      {
+        h: "সাধারণ রূপান্তর তালিকা (১ কাঠা = ৭২০ বর্গফুট ধরে)",
+        p: [
+          "১ শতাংশ = ৪৩৫.৬ বর্গফুট = ০.৬০৫ কাঠা। ১ কাঠা = ৭২০ বর্গফুট = প্রায় ১.৬৫ শতাংশ। ১ বিঘা = ২০ কাঠা = ১৪,৪০০ বর্গফুট = প্রায় ৩৩.০৬ শতাংশ। ১ একর = ১০০ শতাংশ = ৪৩,৫৬০ বর্গফুট = ৬০.৫ কাঠা = ৩.০২৫ বিঘা।",
+          "দ্রুত হিসাব: ৫ শতাংশ = ২,১৭৮ বর্গফুট = ৩.০২৫ কাঠা। ১০ শতাংশ = ৪,৩৫৬ বর্গফুট = ৬.০৫ কাঠা। ২০ শতাংশ = ৮,৭১২ বর্গফুট = ১২.১ কাঠা। উল্টো দিকে ৩ কাঠা = ২,১৬০ বর্গফুট = প্রায় ৪.৯৬ শতাংশ, ৫ কাঠা = ৩,৬০০ বর্গফুট = প্রায় ৮.২৬ শতাংশ এবং ১০ কাঠা = ৭,২০০ বর্গফুট = প্রায় ১৬.৫৩ শতাংশ।",
+          "১ হেক্টর = প্রায় ২.৪৭১ একর = প্রায় ২৪৭.১ শতাংশ। ১ বর্গমিটার = ১০.৭৬৩৯ বর্গফুট এবং ১ বর্গগজ = ৯ বর্গফুট।",
+        ],
+      },
+      {
+        h: "কানি, গণ্ডা, কড়া, ক্রান্তি ও তিল",
+        p: [
+          "চট্টগ্রাম ও নোয়াখালীসহ কিছু অঞ্চলে জমি কানি, গণ্ডা, কড়া, ক্রান্তি ও তিলেও মাপা হয়। প্রচলিত হিসাবে ১ কানি = ২০ গণ্ডা = ৪০ শতাংশ (১৭,৪২৪ বর্গফুট)। ১ গণ্ডা = ৪ কড়া = ২ শতাংশ, ১ কড়া = ৩ ক্রান্তি এবং ১ ক্রান্তি = ২০ তিল।",
+          "১ শতাংশ = ১০০ অযুতাংশ (১ অযুতাংশ হলো ১ একরের ১০,০০০ ভাগের ১ ভাগ)। এই মাপ এলাকাভেদে আলাদা হতে পারে, তাই স্থানীয় রেকর্ড দেখে নিশ্চিত হোন।",
+        ],
+      },
+      {
+        h: "জমির দাম হিসাব",
+        p: [
+          "প্রতি শতাংশ, কাঠা, বিঘা বা একরের দাম দিলে টুল উপরের জমির পরিমাণ অনুযায়ী মোট দাম বের করে। যেমন প্রতি কাঠা ১২,৫০,০০০ টাকা হলে ৫ শতাংশ (৩.০২৫ কাঠা) জমির দাম হয় ৩৭,৮১,২৫০ টাকা।",
+          "একই দাম থেকে প্রতি শতাংশ ও প্রতি বিঘার দামও দেখা যায়, যা দুটি জমির দাম তুলনা করতে কাজে লাগে।",
+        ],
+      },
     ],
     en: [
       {
@@ -340,6 +362,28 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
         p: [
           "Match the figures against the deed, khatian and a surveyor's measurement. Because katha and bigha differ by area, do not rely only on the tool's result. It is meant for a first estimate.",
           "For a rectangular plot, enter the length and width in feet and the tool works out the area and converts it into every unit.",
+        ],
+      },
+      {
+        h: "Common conversions (taking 1 katha = 720 sq ft)",
+        p: [
+          "1 shatak = 435.6 sq ft = 0.605 katha. 1 katha = 720 sq ft = about 1.65 shatak. 1 bigha = 20 katha = 14,400 sq ft = about 33.06 shatak. 1 acre = 100 shatak = 43,560 sq ft = 60.5 katha = 3.025 bigha.",
+          "Quick figures: 5 shatak = 2,178 sq ft = 3.025 katha. 10 shatak = 4,356 sq ft = 6.05 katha. 20 shatak = 8,712 sq ft = 12.1 katha. The other way round, 3 katha = 2,160 sq ft = about 4.96 shatak, 5 katha = 3,600 sq ft = about 8.26 shatak and 10 katha = 7,200 sq ft = about 16.53 shatak.",
+          "1 hectare = about 2.471 acres = about 247.1 shatak. 1 square metre = 10.7639 sq ft and 1 square yard (gaz) = 9 sq ft.",
+        ],
+      },
+      {
+        h: "Kani, gonda, kora, kranti and til",
+        p: [
+          "In Chattogram, Noakhali and some other areas land is also counted in kani, gonda, kora, kranti and til. In the common reckoning 1 kani = 20 gonda = 40 shatak (17,424 sq ft). 1 gonda = 4 kora = 2 shatak, 1 kora = 3 kranti and 1 kranti = 20 til.",
+          "1 shatak = 100 ojutangsho (1 ojutangsho is 1/10,000 of an acre). These values can differ by area, so check the local record.",
+        ],
+      },
+      {
+        h: "Working out land price",
+        p: [
+          "Enter a price per shatak, katha, bigha or acre and the tool works out the total for the land amount entered above. For example, at 12,50,000 taka per katha, 5 shatak (3.025 katha) costs 37,81,250 taka.",
+          "The same price is also shown per shatak and per bigha, which helps when comparing two plots quoted in different units.",
         ],
       },
     ],
