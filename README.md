@@ -10,7 +10,7 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 | Category | Tools |
 | --- | --- |
-| Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Weight Converter (ভরি/আনা/রতি), Income Tax Calculator |
+| Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা/একর/কানি, with land price), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Weight Converter (ভরি/আনা/রতি), Income Tax Calculator |
 | Education & Calculation (12) | Number to Words, FDR/DPS Calculator, Age, GPA (SSC/HSC), CGPA, BMI, EMI, Percentage, Scientific Calculator, Unit Converter, Bill Calculator, Date Difference |
 | Image & PDF (10) | Image Compressor, Image Resizer, Image Converter, Image to PDF, Merge PDF, Split PDF, Compress PDF, QR Code Generator, PDF to JPG, Rotate PDF |
 | Text & SEO (8) | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density |
@@ -22,13 +22,21 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (23): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, zakat, FDR/DPS, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, age, number to words, square feet to shotangsho, US time to Bangladesh time, and tracking monthly expenses.
+Live guides (32): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
 
 ## SEO
 
 - `lib/seoMeta.ts` holds the page title and description for every tool (Bangla and English keywords). Titles stay under about 52 characters because the layout adds " | BD Tools Flow".
 - Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
 - `public/ads.txt` holds the AdSense publisher line.
+- `app/sitemap.ts` uses a fixed `lastModified` date for the static pages, categories and tools. Update that date when you change content (last set to 2026-11-10 after the land calculator update).
+
+## Land calculator
+
+- `components/tools/LandCalculator.tsx` converts shatak, katha, bigha, acre, chatak, sq ft, sq yard (gaz), sq m, hectare and the traditional kani, gonda, kora, kranti, til and ojutangsho. It shows a result on first load (1 shatak) and has copy and share buttons.
+- Defaults: 1 shatak = 435.6 sq ft, 1 acre = 43,560 sq ft, 1 katha = 720 sq ft, 1 bigha = 20 katha, 1 kani = 40 shatak (17,424 sq ft) = 20 gonda, 1 gonda = 4 kora, 1 kora = 3 kranti, 1 kranti = 20 til. Katha size and katha per bigha can be changed by the visitor because they differ by area. Kani and the units under it are fixed at the common Chattogram/Noakhali measure.
+- It also has a length × width (rectangle or triangle) area section and a land price section (price per shatak, katha, bigha or acre gives the total, grouped in lakh/crore style).
+- The page text lives in `components/toolRegistry.tsx` (Bangla title, how-to, FAQs), `lib/toolContentEn.ts` (English), `lib/seoMeta.ts` (title and description) and `lib/toolArticles.ts` (longer text under the tool). Four guides link to it: square feet to shotangsho, katha to shatak, 1 bigha in shatak, and kani/gonda.
 
 ## Chat assistant (BD Flow Helper)
 
