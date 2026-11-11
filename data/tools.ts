@@ -23,7 +23,7 @@ const allTools: Tool[] = [
   { id: 31, name: "bKash Calculator", slug: "/tool/bkash-calculator", description: "Cash out charge হিসাব করুন", category: "Bangladesh Special", icon: "Wallet" },
   { id: 32, name: "Nagad Calculator", slug: "/tool/nagad-calculator", description: "Nagad charge calculator", category: "Bangladesh Special", icon: "Smartphone" },
   { id: 34, name: "Land Calculator", slug: "/tool/land-calculator-bd", description: "শতাংশ, কাঠা, বিঘা হিসাব", category: "Bangladesh Special", icon: "MapPinned" },
-  { id: 35, name: "BDT Currency Converter", slug: "/tool/bdt-currency-converter", description: "BDT to USD, SAR, INR", category: "Bangladesh Special", icon: "Banknote" },
+  { id: 35, name: "BDT Currency Converter", slug: "/tool/bdt-currency-converter", description: "USD, SAR, AED, KWD to BDT", category: "Bangladesh Special", icon: "Banknote" },
   { id: 36, name: "Electricity Bill Calculator", slug: "/tool/electricity-bill-calculator-bd", description: "DPDC, DESCO, REB bill check", category: "Bangladesh Special", icon: "Zap" },
   { id: 37, name: "Govt Job Age Calculator", slug: "/tool/govt-job-age-calculator", description: "চাকরির বয়স আছে কিনা দেখুন", category: "Bangladesh Special", icon: "Briefcase" },
   { id: 33, name: "Rocket Calculator", slug: "/tool/rocket-calculator", description: "Rocket charge হিসাব", category: "Bangladesh Special", icon: "Send" },
