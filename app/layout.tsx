@@ -1,4 +1,3 @@
-
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter } from "next/font/google";
@@ -52,6 +51,9 @@ export default function RootLayout({
   const adsenseId =
     process.env.NEXT_PUBLIC_ADSENSE_ID || "ca-pub-3581088994822973";
 
+  // Chat widget on/off switch (default: on)
+  const chatbotEnabled = process.env.NEXT_PUBLIC_CHATBOT !== "off";
+
   return (
     <html lang="bn" suppressHydrationWarning>
       <head>
@@ -92,10 +94,9 @@ export default function RootLayout({
           </LangProvider>
         </ThemeProvider>
 
-        {/* BD Flow Helper Chat Widget */}
-        <Script src="/chatbot.js?v=1" strategy="lazyOnload" />
+        {/* BD Flow Helper Chat Widget. Set NEXT_PUBLIC_CHATBOT=off in Vercel and redeploy to hide it. Remove it (or set on) and redeploy to show it again. */}
+        {chatbotEnabled ? <Script src="/chatbot.js?v=1" strategy="lazyOnload" /> : null}
       </body>
     </html>
   );
-  }
-        
+}
