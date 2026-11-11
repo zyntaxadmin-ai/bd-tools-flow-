@@ -22,14 +22,14 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (35): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
+Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, passport 5 years vs 10 years, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
 
 ## SEO
 
 - `lib/seoMeta.ts` holds the page title and description for every tool (Bangla and English keywords). Titles stay under about 52 characters because the layout adds " | BD Tools Flow".
 - Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
 - `public/ads.txt` holds the AdSense publisher line.
-- `app/sitemap.ts` uses a fixed `lastModified` date for the static pages, categories and tools. Update that date when you change content (last set to 2026-11-10 after the land calculator update).
+- `app/sitemap.ts` uses a fixed `lastModified` date for the static pages, categories and tools. Update that date when you change content (last set to 2026-11-11 after the passport fee update).
 
 ## Land calculator
 
@@ -43,6 +43,13 @@ Live guides (35): cash out charges (and a charge table for 500 to 10,000 taka), 
 - `components/tools/ElectricityBillCalculator.tsx` has three tabs: Units to Bill (live as you type, shows the next-unit cost and the average per unit), Taka to Units (reverse) and Prepaid recharge. It also has a 50 to 1000 unit bill table (built from `computeBill`, so it always matches the calculator), a "why is my bill high" checklist, and a helpline and official site list for DESCO, DPDC, NESCO, BPDB, WZPDCL and BREB.
 - When BERC changes the tariff, edit `SLABS`, `LIFELINE_RATE`, `DEFAULT_DEMAND_PER_KW` and `TARIFF_NOTE` at the top of that file. Also update the rates in the FAQ in `components/toolRegistryB9.tsx` and `lib/toolContentEn.ts`.
 - Helpline numbers and site links are in the `HELPLINES` array. Check them against a real bill now and then.
+
+## Passport fee calculator
+
+- `components/tools/PassportFeeCalculator.tsx` holds the fee table (48 or 64 pages, 5 or 10 years, regular, express or super express; 15% VAT included) and the date of the official schedule it is based on. Edit the `FEES` table and `FEES_UPDATED` there when the fees change.
+- The result card shows the total, the base fee (total / 1.15), the VAT, an approximate delivery time and the cost per year. An age switch turns off the 10 year option for people under 18 or over 65. Every cell of the 12 fee table can be tapped to load it, and there is a share button.
+- Delivery days (about 15–21 working days regular, 7–10 express, 2 super express) are approximate figures from published sources, not from the official portal.
+- Page text: `components/toolRegistryB8.tsx` (Bangla), `lib/toolContentEn.ts` (English), `lib/seoMeta.ts` and `lib/toolArticles.ts`. Two guides link to it: the passport fee guide and passport 5 years vs 10 years.
 
 ## Chat assistant (BD Flow Helper)
 
