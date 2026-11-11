@@ -39,8 +39,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "Upay charge calculator। উপায় ক্যাশ আউটে এজেন্ট বা ইউসিবি এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "passport-fee-calculator-bd": {
-    title: "Passport Fee Calculator BD - ই-পাসপোর্ট ফি ২০২৬",
-    description: "ই-পাসপোর্ট ফি ক্যালকুলেটর: ৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর, সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি ১৫% ভ্যাটসহ। মূল ফি, ভ্যাট ও আনুমানিক সময়সহ ১২টি ফির তালিকা।",
+    title: "Passport Fee BD - ই-পাসপোর্ট ফি কত",
+    description: "ই-পাসপোর্ট ফি কত টাকা? ৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর মেয়াদ এবং সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি এক নজরে দেখুন।",
   },
   "electricity-bill-calculator-bd": {
     title: "Electricity Bill Calculator BD - বিদ্যুৎ বিল ২০২৬",
@@ -48,7 +48,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "bdt-currency-converter": {
     title: "BDT Currency Converter - টাকার রেট কনভার্টার",
-    description: "ডলার, রিয়াল, দিরহাম, রুপি ও পাউন্ডকে টাকায় রূপান্তর করুন। USD to BDT সহ আজকের রেফারেন্স রেট অনুযায়ী ফ্রি কারেন্সি কনভার্টার।",
+    description: "ডলার, রিয়াল, দিরহাম, দিনার, রিংগিত, রুপি ও পাউন্ডকে টাকায় রূপান্তর করুন। USD, SAR, AED, KWD to BDT আজকের রেফারেন্স রেটে, টেবিলসহ ফ্রি কনভার্টার।",
   },
   "gpa-calculator-bd": {
     title: "GPA Calculator BD - SSC HSC জিপিএ ক্যালকুলেটর",
@@ -63,8 +63,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "জন্ম তারিখ দিয়ে নিখুঁত বয়স বের করুন। বছর, মাস, দিন, মোট দিন ও পরবর্তী জন্মদিন সহ। বয়স হিসাব করার ফ্রি অনলাইন age calculator।",
   },
   "govt-job-age-calculator": {
-    title: "Govt Job Age Calculator BD - সরকারি চাকরির বয়স",
-    description: "সরকারি চাকরির বয়স ক্যালকুলেটর। জন্ম তারিখ ও বিজ্ঞপ্তির তারিখ দিয়ে ৩২ বছরের সীমার মধ্যে আছেন কিনা দেখুন, সঙ্গে শেষ যোগ্য দিন। Job age calculator BD।",
+    title: "Govt Job Age Calculator - সরকারি চাকরির বয়স",
+    description: "সরকারি চাকরির বয়স ক্যালকুলেটর। জন্ম তারিখ, বিজ্ঞপ্তির বয়স গণনার তারিখ ও সর্বোচ্চ বয়স দিয়ে বয়সসীমা আছে কিনা দেখুন।",
   },
   "land-calculator-bd": {
     title: "Land Calculator BD - শতাংশ, কাঠা, বিঘা, একর",

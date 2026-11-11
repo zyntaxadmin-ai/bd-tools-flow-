@@ -86,7 +86,7 @@ export const DESC_EN: Record<string, string> = {
   "bkash-calculator": "Calculate bKash cash out charges",
   "nagad-calculator": "Nagad charge calculator",
   "land-calculator-bd": "Shatak, katha, bigha conversion",
-  "bdt-currency-converter": "BDT to USD, SAR, INR",
+  "bdt-currency-converter": "USD, SAR, AED, KWD to BDT",
   "electricity-bill-calculator-bd": "DPDC, DESCO, REB bill check",
   "zakat-calculator-bd": "Zakat and nisab calculator",
   "gold-weight-converter-bd": "Vori, ana, roti to grams",
