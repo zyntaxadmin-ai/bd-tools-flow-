@@ -1740,8 +1740,35 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "ই-পাসপোর্টের ফি কীভাবে দেখবেন",
         p: [
-          "পাসপোর্টের পৃষ্ঠা (৪৮ বা ৬৪), মেয়াদ (৫ বা ১০ বছর) এবং ডেলিভারির ধরন (সাধারণ, জরুরি বা অতি জরুরি) বেছে নিলে ফি দেখা যায়। যেমন ৪৮ পৃষ্ঠার ৫ বছরের সাধারণ ই-পাসপোর্টের ফি ৪,০২৫ টাকা, আর ৬৪ পৃষ্ঠার ১০ বছরের অতি জরুরি পাসপোর্টের ফি ১৩,৮০০ টাকা। সব ফি ১৫% ভ্যাটসহ।",
-          "নিচের তালিকায় একই পৃষ্ঠা ও মেয়াদের তিন ধরনের ডেলিভারির ফি পাশাপাশি দেখানো হয়, তাই কোনটিতে কত বাড়তি লাগবে তা সহজে তুলনা করা যায়।",
+          "আবেদনকারীর বয়স, পাসপোর্টের পৃষ্ঠা (৪৮ বা ৬৪), মেয়াদ (৫ বা ১০ বছর) এবং ডেলিভারির ধরন (সাধারণ, জরুরি বা অতি জরুরি) বেছে নিলে মোট ফি, মূল ফি, ভ্যাট, আনুমানিক সময় ও বছরপ্রতি খরচ দেখা যায়। সব ফি ১৫% ভ্যাটসহ।",
+          "নিচের তালিকার যেকোনো ঘরে চাপ দিলে ওপরের হিসাব সেই ফিতে বদলে যায়, তাই কোনটিতে কত বাড়তি লাগবে তা সহজে তুলনা করা যায়।",
+        ],
+      },
+      {
+        h: "সব ফি এক নজরে (১৫% ভ্যাটসহ)",
+        p: [
+          "৪৮ পৃষ্ঠা, ৫ বছর: সাধারণ ৪,০২৫ টাকা, জরুরি ৬,৩২৫ টাকা, অতি জরুরি ৮,৬২৫ টাকা। ৪৮ পৃষ্ঠা, ১০ বছর: সাধারণ ৫,৭৫০ টাকা, জরুরি ৮,০৫০ টাকা, অতি জরুরি ১০,৩৫০ টাকা।",
+          "৬৪ পৃষ্ঠা, ৫ বছর: সাধারণ ৬,৩২৫ টাকা, জরুরি ৮,৬২৫ টাকা, অতি জরুরি ১২,০৭৫ টাকা। ৬৪ পৃষ্ঠা, ১০ বছর: সাধারণ ৮,০৫০ টাকা, জরুরি ১০,৩৫০ টাকা, অতি জরুরি ১৩,৮০০ টাকা।",
+        ],
+      },
+      {
+        h: "মূল ফি ও ভ্যাট আলাদা কত",
+        p: [
+          "প্রতিটি ফিতে ১৫% ভ্যাট আছে। যেমন ৪৮ পৃষ্ঠার ৫ বছরের সাধারণ পাসপোর্টে মূল ফি ৩,৫০০ টাকা ও ভ্যাট ৫২৫ টাকা, মোট ৪,০২৫ টাকা। আর ৬৪ পৃষ্ঠার ১০ বছরের অতি জরুরি পাসপোর্টে মূল ফি ১২,০০০ টাকা ও ভ্যাট ১,৮০০ টাকা, মোট ১৩,৮০০ টাকা।",
+        ],
+      },
+      {
+        h: "৫ বছর নাকি ১০ বছর",
+        p: [
+          "১০ বছরের ফি বেশি হলেও বছরপ্রতি খরচ কম। ৪৮ পৃষ্ঠার সাধারণ পাসপোর্টে ৫ বছরে বছরপ্রতি প্রায় ৮০৫ টাকা, ১০ বছরে প্রায় ৫৭৫ টাকা। ৬৪ পৃষ্ঠায় তা যথাক্রমে প্রায় ১,২৬৫ ও ৮০৫ টাকা।",
+          "প্রকাশিত তথ্য অনুযায়ী ১৮ বছরের নিচে এবং ৬৫ বছরের বেশি বয়সীদের জন্য মেয়াদ ৫ বছর, তাই ওই বয়স বাছলে ১০ বছরের অপশন বন্ধ হয়ে যায়।",
+        ],
+      },
+      {
+        h: "ডেলিভারির সময় ও ফি জমা",
+        p: [
+          "প্রকাশিত তথ্য অনুযায়ী সাধারণ ডেলিভারিতে প্রায় ১৫–২১ কর্মদিবস, জরুরিতে ৭–১০ কর্মদিবস এবং অতি জরুরিতে ২ কর্মদিবস লাগে। এগুলো আনুমানিক, বর্তমান সময় অফিসিয়াল পোর্টালে দেখে নিন।",
+          "অনলাইন আবেদনের ধাপে অফিসিয়াল ই-পাসপোর্ট পোর্টালের নির্দেশনা অনুযায়ী ফি জমা দিতে হয়, যেমন এ-চালান বা ব্যাংকের মাধ্যমে। কোনো দালাল বা অনানুষ্ঠানিক উৎসকে টাকা দেবেন না।",
         ],
       },
       {
@@ -1756,8 +1783,35 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How to check the e-passport fee",
         p: [
-          "Choose the booklet pages (48 or 64), the validity (5 or 10 years) and the delivery type (regular, express or super express) to see the fee. For example, a 48 page, 5 year regular e-passport costs 4,025 taka, and a 64 page, 10 year super express passport costs 13,800 taka. All fees include 15% VAT.",
-          "The table below shows the fees for all three delivery types for the same pages and validity side by side, so you can easily compare how much extra each costs.",
+          "Choose the applicant's age group, the booklet pages (48 or 64), the validity (5 or 10 years) and the delivery type (regular, express or super express) to see the total fee, the base fee, the VAT, the estimated time and the cost per year. All fees include 15% VAT.",
+          "Tap any cell in the table below and the calculator above switches to that fee, so you can easily compare how much extra each option costs.",
+        ],
+      },
+      {
+        h: "All fees at a glance (15% VAT included)",
+        p: [
+          "48 pages, 5 years: regular 4,025 taka, express 6,325 taka, super express 8,625 taka. 48 pages, 10 years: regular 5,750 taka, express 8,050 taka, super express 10,350 taka.",
+          "64 pages, 5 years: regular 6,325 taka, express 8,625 taka, super express 12,075 taka. 64 pages, 10 years: regular 8,050 taka, express 10,350 taka, super express 13,800 taka.",
+        ],
+      },
+      {
+        h: "Base fee and VAT",
+        p: [
+          "Every fee includes 15% VAT. For example, a 48 page, 5 year regular passport has a base fee of 3,500 taka plus 525 taka VAT, 4,025 taka in total. A 64 page, 10 year super express passport has a base fee of 12,000 taka plus 1,800 taka VAT, 13,800 taka in total.",
+        ],
+      },
+      {
+        h: "5 years or 10 years",
+        p: [
+          "A 10 year passport costs more up front but less per year. For a 48 page regular passport, 5 years works out to about 805 taka a year and 10 years to about 575 taka a year. For 64 pages it is about 1,265 and 805 taka.",
+          "Published information says the validity is 5 years for people under 18 and over 65, so the 10 year option is turned off when you pick that age group.",
+        ],
+      },
+      {
+        h: "Delivery time and paying the fee",
+        p: [
+          "Published sources give roughly 15 to 21 working days for regular delivery, 7 to 10 for express and 2 for super express. These are estimates, so check the official portal for current times.",
+          "You pay the fee as the official e-passport portal instructs during the online application, for example through A-Challan or a bank. Do not pay any broker or unofficial source.",
         ],
       },
       {

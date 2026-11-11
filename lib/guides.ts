@@ -281,8 +281,8 @@ export const GUIDES: Guide[] = [
     slug: "passport-fee-2026",
     title: ["ই-পাসপোর্ট ফি কত (৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর, ডেলিভারিভেদে)", "How much is the e-passport fee (48 and 64 pages, 5 and 10 years, by delivery type)"],
     desc: ["৪৮ ও ৬৪ পৃষ্ঠার ই-পাসপোর্টের ৫ ও ১০ বছর মেয়াদের সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি এক জায়গায়।", "The fees for 48 and 64 page e-passports for 5 and 10 years, with regular, express and super express delivery, in one place."],
-    updated: "2026-11-03",
-    updatedLabel: ["৩ নভেম্বর, ২০২৬", "3 November 2026"],
+    updated: "2026-11-11",
+    updatedLabel: ["১১ নভেম্বর, ২০২৬", "11 November 2026"],
     tool: { slug: "passport-fee-calculator-bd", name: ["পাসপোর্ট ফি ক্যালকুলেটর", "Passport fee calculator"] },
     sections: [
       {
@@ -305,11 +305,31 @@ export const GUIDES: Guide[] = [
           ["শিশু, নবায়ন, জরুরি পাসপোর্ট, বিদেশের দূতাবাস এবং বিশেষ ছাড়ের (যেমন এনওসি) ক্ষেত্রে ফি আলাদা হতে পারে, যা এই তালিকায় নেই। আবেদন ও ফি জমার আগে সবসময় অফিসিয়াল পোর্টাল epassport.gov.bd এ বর্তমান ফি মিলিয়ে নিন।", "Fees can differ for children, renewals, emergency passports, overseas missions and special concessions (such as an NOC), which are not in this list. Before you apply and pay, always check the current fee on the official portal epassport.gov.bd."],
         ],
       },
+      {
+        h: ["মূল ফি ও ভ্যাট আলাদা কত", "Base fee and VAT"],
+        p: [
+          ["প্রতিটি ফিতে ১৫% ভ্যাট আছে। যেমন ৪৮ পৃষ্ঠার ৫ বছরের সাধারণ পাসপোর্টে মূল ফি ৩,৫০০ টাকা ও ভ্যাট ৫২৫ টাকা, মোট ৪,০২৫ টাকা। আর ৬৪ পৃষ্ঠার ১০ বছরের অতি জরুরি পাসপোর্টে মূল ফি ১২,০০০ টাকা ও ভ্যাট ১,৮০০ টাকা, মোট ১৩,৮০০ টাকা।", "Every fee includes 15% VAT. For example a 48 page, 5 year regular passport has a base fee of 3,500 taka plus 525 taka VAT, 4,025 taka in total. A 64 page, 10 year super express passport has a base fee of 12,000 taka plus 1,800 taka VAT, 13,800 taka in total."],
+        ],
+      },
+      {
+        h: ["ডেলিভারির আনুমানিক সময়", "Estimated delivery time"],
+        p: [
+          ["প্রকাশিত তথ্য অনুযায়ী সাধারণ ডেলিভারিতে প্রায় ১৫–২১ কর্মদিবস, জরুরিতে ৭–১০ কর্মদিবস এবং অতি জরুরিতে ২ কর্মদিবস লাগে। এগুলো আনুমানিক, তাই বর্তমান সময় আবেদনের আগে পোর্টালে দেখে নিন।", "Published sources give roughly 15 to 21 working days for regular delivery, 7 to 10 for express and 2 for super express. These are estimates, so check the portal for the current times before you apply."],
+        ],
+      },
+      {
+        h: ["মেয়াদ ও বয়সের নিয়ম", "Validity and age rule"],
+        p: [
+          ["প্রকাশিত তথ্য অনুযায়ী ১৮ থেকে ৬৫ বছর বয়সীরা ৫ বা ১০ বছর মেয়াদ নিতে পারেন। ১৮ বছরের নিচে এবং ৬৫ বছরের বেশি বয়সীদের মেয়াদ ৫ বছর। আমাদের ক্যালকুলেটরে ওই বয়স বাছলে ১০ বছরের অপশন বন্ধ হয়ে যায়।", "Published information says people aged 18 to 65 can choose 5 or 10 years, while those under 18 and over 65 get 5 years. Our calculator turns off the 10 year option when you pick that age group."],
+        ],
+      },
     ],
     faqs: [
       { q: ["৪৮ পৃষ্ঠার ৫ বছরের সাধারণ ই-পাসপোর্টের ফি কত?", "What is the fee for a 48 page, 5 year regular e-passport?"], a: ["এই তালিকা অনুযায়ী ৪,০২৫ টাকা, ১৫% ভ্যাটসহ। আবেদনের আগে epassport.gov.bd এ দেখে নিন।", "According to this list it is 4,025 taka including 15% VAT. Check epassport.gov.bd before you apply."] },
       { q: ["১০ বছরের ৬৪ পৃষ্ঠার পাসপোর্টের সবচেয়ে দ্রুত ডেলিভারির ফি কত?", "What is the fee for the fastest delivery of a 10 year, 64 page passport?"], a: ["অতি জরুরি ডেলিভারিতে ১৩,৮০০ টাকা, ১৫% ভ্যাটসহ।", "13,800 taka for super express delivery, including 15% VAT."] },
       { q: ["ফি কোথায় জমা দেব?", "Where do I pay the fee?"], a: ["আবেদনের ধাপে অফিসিয়াল ই-পাসপোর্ট পোর্টালের নির্দেশ অনুযায়ী ফি জমা দিতে হয়। কোনো দালাল বা অনানুষ্ঠানিক উৎসকে টাকা না দিয়ে পোর্টালের নির্দেশনা অনুসরণ করুন।", "You pay the fee according to the instructions of the official e-passport portal during the application. Follow the portal's instructions instead of paying any broker or unofficial source."] },
+      { q: ["ই-পাসপোর্টের ফিতে কত টাকা ভ্যাট?", "How much VAT is in the e-passport fee?"], a: ["ফির ওপর ১৫% ভ্যাট ধরা আছে। যেমন ৪৮ পৃষ্ঠার ৫ বছরের সাধারণ পাসপোর্টে ৫২৫ টাকা ভ্যাট (মূল ফি ৩,৫০০ টাকা)।", "The fees include 15% VAT. For example the 48 page, 5 year regular passport includes 525 taka VAT on a 3,500 taka base fee."] },
+      { q: ["অতি জরুরি পাসপোর্ট কত দিনে পাওয়া যায়?", "How long does a super express passport take?"], a: ["প্রকাশিত তথ্য অনুযায়ী প্রায় ২ কর্মদিবস। এটি আনুমানিক, পোর্টালে বর্তমান সময় দেখে নিন।", "About 2 working days according to published information. This is an estimate, so check the current time on the portal."] },
     ],
   },
   {
@@ -1494,6 +1514,45 @@ export const GUIDES: Guide[] = [
     faqs: [
       { q: ["এক দিন বেশি হলে কি আবেদন করা যাবে?", "Can I apply if I am one day over?"], a: ["সাধারণত বয়সসীমা কঠোরভাবে মানা হয়। বিজ্ঞপ্তিতে ছাড়ের কথা না থাকলে ছাড় ধরে নেওয়া ঠিক নয়।", "Age limits are usually enforced strictly. Do not assume a relaxation unless the circular states one."] },
       { q: ["কীভাবে নিশ্চিত হব হিসাব ঠিক?", "How do I make sure my calculation is right?"], a: ["Govt Job Age Calculator এ দুই অপশনেই (সর্বোচ্চ ও পূর্ণ হয়নি) ফল দেখে নিন, তারপর বিজ্ঞপ্তির লেখার সঙ্গে মিলিয়ে নিন।", "Check the result under both options (maximum and not yet completed) in the Govt Job Age Calculator, then match it with the circular's wording."] },
+    ],
+  },
+  {
+    slug: "passport-5-bochor-na-10-bochor",
+    title: ["পাসপোর্ট ৫ বছর নাকি ১০ বছর? কোনটি নেবেন ও বছরপ্রতি খরচের হিসাব", "Passport 5 years or 10 years? Which to take and the cost per year"],
+    desc: ["৫ ও ১০ বছর মেয়াদের ই-পাসপোর্টের ফি তুলনা, বছরপ্রতি খরচ এবং কোন বয়সে কোন মেয়াদ প্রযোজ্য, উদাহরণসহ।", "Compare the fees of 5 and 10 year e-passports, the cost per year, and which validity applies at which age, with examples."],
+    updated: "2026-11-11",
+    updatedLabel: ["১১ নভেম্বর, ২০২৬", "11 November 2026"],
+    tool: { slug: "passport-fee-calculator-bd", name: ["পাসপোর্ট ফি ক্যালকুলেটর", "Passport fee calculator"] },
+    sections: [
+      {
+        h: ["ফির তুলনা (১৫% ভ্যাটসহ)", "Fee comparison (15% VAT included)"],
+        p: [
+          ["সাধারণ ডেলিভারিতে ৪৮ পৃষ্ঠার ৫ বছরের পাসপোর্ট ৪,০২৫ টাকা, ১০ বছরের ৫,৭৫০ টাকা। ৬৪ পৃষ্ঠায় ৫ বছর ৬,৩২৫ টাকা এবং ১০ বছর ৮,০৫০ টাকা।", "With regular delivery a 48 page passport costs 4,025 taka for 5 years and 5,750 taka for 10 years. For 64 pages it is 6,325 taka for 5 years and 8,050 taka for 10 years."],
+        ],
+      },
+      {
+        h: ["বছরপ্রতি খরচ", "Cost per year"],
+        p: [
+          ["মোট ফিকে মেয়াদ দিয়ে ভাগ করলে বছরপ্রতি খরচ পাওয়া যায়। ৪৮ পৃষ্ঠার সাধারণ পাসপোর্টে ৫ বছরে ৪,০২৫ ÷ ৫ = ৮০৫ টাকা এবং ১০ বছরে ৫,৭৫০ ÷ ১০ = ৫৭৫ টাকা। ৬৪ পৃষ্ঠায় ৫ বছরে প্রায় ১,২৬৫ টাকা এবং ১০ বছরে প্রায় ৮০৫ টাকা।", "Divide the total fee by the validity to get the cost per year. For a 48 page regular passport, 5 years is 4,025 ÷ 5 = 805 taka a year and 10 years is 5,750 ÷ 10 = 575 taka a year. For 64 pages it is about 1,265 taka a year for 5 years and about 805 taka for 10 years."],
+        ],
+      },
+      {
+        h: ["বয়সের নিয়ম", "Age rule"],
+        p: [
+          ["প্রকাশিত তথ্য অনুযায়ী ১৮ থেকে ৬৫ বছর বয়সীরা ৫ বা ১০ বছর মেয়াদ বেছে নিতে পারেন। ১৮ বছরের নিচে এবং ৬৫ বছরের বেশি বয়সীদের জন্য মেয়াদ ৫ বছর। তাই শিশুদের জন্য ১০ বছরের হিসাব প্রযোজ্য নয়।", "Published information says people aged 18 to 65 can choose 5 or 10 years. For those under 18 and over 65 the validity is 5 years, so a 10 year figure does not apply to children."],
+        ],
+      },
+      {
+        h: ["কোনটি নেবেন", "Which to take"],
+        p: [
+          ["১৮ থেকে ৬৫ বছর বয়সী হলে এবং ভ্রমণ বা ভিসার জন্য নিয়মিত পাসপোর্ট লাগলে ১০ বছর সাধারণত সাশ্রয়ী, কারণ বছরপ্রতি খরচ কম। অল্প সময়ের জন্য বা শিগগির নাম, ছবি বা তথ্য বদলানোর সম্ভাবনা থাকলে ৫ বছর বেছে নিতে পারেন। আবেদনের আগে অফিসিয়াল পোর্টালে বর্তমান ফি মিলিয়ে নিন।", "If you are between 18 and 65 and need a passport regularly for travel or visas, 10 years is usually better value because the cost per year is lower. If you only need it for a short time, or expect to change your name, photo or details soon, you can pick 5 years. Confirm the current fee on the official portal before you apply."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["পাসপোর্ট ৫ বছর নাকি ১০ বছর নেওয়া ভালো?", "Is it better to take a 5 year or 10 year passport?"], a: ["১০ বছরে মোট ফি বেশি হলেও বছরপ্রতি খরচ কম। ৪৮ পৃষ্ঠার সাধারণ পাসপোর্টে ৫ বছরে প্রায় ৮০৫ টাকা এবং ১০ বছরে প্রায় ৫৭৫ টাকা।", "A 10 year passport costs more in total but less per year. For a 48 page regular passport it is about 805 taka a year for 5 years and about 575 taka for 10 years."] },
+      { q: ["১৮ বছরের নিচে কি ১০ বছরের পাসপোর্ট পাওয়া যায়?", "Can someone under 18 get a 10 year passport?"], a: ["প্রকাশিত তথ্য অনুযায়ী না। ১৮ বছরের নিচে এবং ৬৫ বছরের বেশি বয়সীদের জন্য মেয়াদ ৫ বছর।", "According to published information, no. For people under 18 and over 65 the validity is 5 years."] },
+      { q: ["১০ বছরের ৪৮ পৃষ্ঠার পাসপোর্টের ফি কত?", "What is the fee for a 10 year, 48 page passport?"], a: ["সাধারণ ডেলিভারিতে ৫,৭৫০ টাকা, জরুরিতে ৮,০৫০ টাকা এবং অতি জরুরিতে ১০,৩৫০ টাকা, ১৫% ভ্যাটসহ।", "5,750 taka for regular, 8,050 taka for express and 10,350 taka for super express, with 15% VAT."] },
     ],
   },
 ];

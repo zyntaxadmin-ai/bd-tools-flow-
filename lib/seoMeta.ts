@@ -39,8 +39,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "Upay charge calculator। উপায় ক্যাশ আউটে এজেন্ট বা ইউসিবি এটিএমে কত টাকা কাটবে ও ব্যালেন্সে কত তোলা যাবে, এক সেকেন্ডে দেখুন। চার্জ টেবিলসহ, ফ্রি।",
   },
   "passport-fee-calculator-bd": {
-    title: "Passport Fee BD - ই-পাসপোর্ট ফি কত",
-    description: "ই-পাসপোর্ট ফি কত টাকা? ৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর মেয়াদ এবং সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি এক নজরে দেখুন।",
+    title: "Passport Fee Calculator BD - ই-পাসপোর্ট ফি ২০২৬",
+    description: "ই-পাসপোর্ট ফি ক্যালকুলেটর: ৪৮ ও ৬৪ পৃষ্ঠা, ৫ ও ১০ বছর, সাধারণ, জরুরি ও অতি জরুরি ডেলিভারির ফি ১৫% ভ্যাটসহ। মূল ফি, ভ্যাট ও আনুমানিক সময়সহ ১২টি ফির তালিকা।",
   },
   "electricity-bill-calculator-bd": {
     title: "Electricity Bill Calculator BD - বিদ্যুৎ বিল ২০২৬",
