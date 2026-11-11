@@ -7,7 +7,7 @@ import { GUIDES } from "@/lib/guides";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = siteConfig.url;
   // A fixed date, not "now", so the sitemap does not claim every page changed on every build. Update it when you change content.
-  const now = new Date("2026-11-10");
+  const now = new Date("2026-11-11");
   const statics = ["", "/about", "/contact", "/privacy-policy", "/terms", "/disclaimer"].map((p) => ({
     url: `${base}${p}`, lastModified: now, changeFrequency: "monthly" as const, priority: p === "" ? 1 : 0.4,
   }));
