@@ -179,8 +179,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি random number generator।",
   },
   "time-zone-converter": {
-    title: "আমেরিকায় এখন কয়টা বাজে? Time Zone Converter",
-    description: "আমেরিকার সময় বাংলাদেশে কত? USA time to BD time, Eastern time to Bangladesh time সহ ভারত, যুক্তরাজ্য, সৌদি আরব ও মালয়েশিয়ার সময় জানুন। ফ্রি time zone converter।",
+    title: "BD Time to USA Time - আমেরিকায় এখন কয়টা বাজে?",
+    description: "বাংলাদেশের সময় থেকে আমেরিকা, যুক্তরাজ্য, সৌদি, দুবাই ও মালয়েশিয়ার সময় জানুন। মিটিংয়ের সুবিধাজনক সময় ও ২৪ ঘণ্টার টেবিলসহ ফ্রি time zone converter।",
   },
   "expense-tracker": {
     title: "খরচের হিসাব - Expense Tracker আয়-ব্যয়",

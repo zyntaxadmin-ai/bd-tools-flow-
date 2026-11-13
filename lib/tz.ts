@@ -39,3 +39,46 @@ export function splitDuration(ms: number): { d: number; h: number; m: number; s:
   const t = Math.floor(Math.abs(ms) / 1000);
   return { d: Math.floor(t / 86400), h: Math.floor((t % 86400) / 3600), m: Math.floor((t % 3600) / 60), s: t % 60 };
 }
+
+// ---------- extra helpers for the Time Zone Converter ----------
+const pad2 = (n: number) => String(n).padStart(2, "0");
+
+// "09:30 PM" (12-hour) or "21:30" (24-hour) in a zone
+export function hmInZone(ms: number, tz: string, h12: boolean): string {
+  const w = wallParts(ms, tz);
+  if (!h12) return `${pad2(w.h)}:${pad2(w.mi)}`;
+  const ap = w.h >= 12 ? "PM" : "AM";
+  const hh = w.h % 12 === 0 ? 12 : w.h % 12;
+  return `${pad2(hh)}:${pad2(w.mi)} ${ap}`;
+}
+
+// how many calendar days the date in toTz is after the date in fromTz at the same instant (-1, 0, +1 ...)
+export function dayShift(ms: number, fromTz: string, toTz: string): number {
+  const a = wallParts(ms, fromTz), b = wallParts(ms, toTz);
+  return Math.round((Date.UTC(b.y, b.mo - 1, b.d) - Date.UTC(a.y, a.mo - 1, a.d)) / 86400000);
+}
+
+export type OverlapRun = { fromStart: number; fromEnd: number; toStartMs: number; toEndMs: number };
+// Hours of one day (counted in fromTz) when it is working time (startH to endH) in BOTH zones.
+// Works on whole hours, so it is approximate in zones with half-hour offsets and around DST changes.
+export function overlapRuns(y: number, mo: number, d: number, fromTz: string, toTz: string, startH = 9, endH = 18): OverlapRun[] {
+  const ok: boolean[] = [];
+  const at: number[] = [];
+  for (let h = 0; h < 24; h++) {
+    const ms = zonedToInstant(y, mo, d, h, 0, fromTz);
+    at.push(ms);
+    const t = wallParts(ms, toTz);
+    const toH = t.h + t.mi / 60;
+    ok.push(h >= startH && h < endH && toH >= startH && toH < endH);
+  }
+  const runs: OverlapRun[] = [];
+  let s = -1;
+  for (let h = 0; h <= 24; h++) {
+    if (h < 24 && ok[h]) { if (s < 0) s = h; }
+    else if (s >= 0) {
+      runs.push({ fromStart: s, fromEnd: h, toStartMs: at[s], toEndMs: at[h - 1] + 3600000 });
+      s = -1;
+    }
+  }
+  return runs;
+}

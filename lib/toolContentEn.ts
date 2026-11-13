@@ -295,12 +295,23 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "time-zone-converter": {
-    title: "Time Zone Converter",
-    desc: "Convert Bangladesh time to the UK, US, Saudi Arabia, Malaysia and other countries.",
-    howTo: ["Choose the country to convert from", "Enter the date and time, or use the current time", "See the time in all countries together"],
+    title: "Time Zone Converter for Bangladesh (BD Time to USA, UK Time)",
+    desc: "Convert Bangladesh time to the time in the USA, UK, Saudi Arabia, Dubai, Malaysia and 30+ other places. See a good meeting time for two places and a 24-hour table.",
+    howTo: [
+      "Pick the place to convert from (for example Dhaka) and the place to convert to (for example New York)",
+      "Enter the date and time, or use the current time. Tap Swap if you want to reverse them",
+      "See the result, the time difference, a good meeting time and the 24-hour table",
+    ],
     faqs: [
-      { q: "Is daylight saving handled?", a: "Yes. It uses your browser's time zone data, so daylight saving is handled by date. For example, London is UTC+1 in summer and UTC+0 in winter." },
-      { q: "What is Bangladesh time?", a: "Bangladesh Standard Time is UTC+6, and Bangladesh currently does not use daylight saving." },
+      { q: "What is the time difference between Bangladesh and the USA?", a: "Bangladesh is UTC+6. The US East Coast (New York) is UTC-5 in winter, so the difference is 11 hours. In summer on daylight saving time (UTC-4) it is 10 hours. The West Coast (Los Angeles) is 14 hours in winter and 13 in summer. Bangladesh is always ahead." },
+      { q: "What time is 9 AM in the USA in Bangladesh?", a: "9 AM on the East Coast is 8 PM in Bangladesh in winter and 7 PM in summer. Enter the date in the tool for the exact time." },
+      { q: "What is the time difference between Bangladesh and the UK?", a: "London is UTC+0 in winter, so Bangladesh is 6 hours ahead. In summer London is UTC+1 and the difference is 5 hours." },
+      { q: "What is the difference with Saudi Arabia, Dubai and Malaysia?", a: "Saudi Arabia, Qatar, Kuwait and Bahrain (UTC+3) are 3 hours behind Bangladesh. Dubai and Oman (UTC+4) are 2 hours behind. Malaysia and Singapore (UTC+8) are 2 hours ahead. India (UTC+5:30) is half an hour behind." },
+      { q: "What is Bangladesh time compared with UTC?", a: "Bangladesh is UTC+6, which means 6 hours ahead of UTC. When it is 12 noon UTC it is 6 PM in Bangladesh. Add 6 hours to UTC to get Bangladesh time." },
+      { q: "What are BST and BDT?", a: "Bangladesh time is called Bangladesh Standard Time (BST), and many sites write BDT. BST also means British Summer Time, so writing UTC+6 avoids confusion." },
+      { q: "Is daylight saving time calculated?", a: "Yes, it is worked out from your browser's time zone data for the date you choose. For example London is UTC+1 in summer and UTC+0 in winter. Bangladesh currently has no daylight saving time." },
+      { q: "How do I find a meeting time for two countries?", a: "Pick the two places and the date and the tool shows when it is between 9:00 and 18:00 in both places. It also tells you if there is no overlap. The calculation is approximate, in whole hours." },
+      { q: "Which places were added?", a: "Qatar, Kuwait, Oman, Bahrain, Nepal, Pakistan, Sri Lanka, Maldives, Thailand, Hong Kong, China, South Korea, France, Germany, Italy, Canada, New Zealand, more US regions and UTC." },
     ],
   },
   "expense-tracker": {

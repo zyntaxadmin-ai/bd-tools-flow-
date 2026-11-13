@@ -1144,33 +1144,75 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "time-zone-converter": {
     bn: [
       {
-        h: "কীভাবে ব্যবহার করবেন",
+        h: "বাংলাদেশের সময় থেকে অন্য দেশের সময় কীভাবে জানবেন",
         p: [
-          "যে দেশের সময় থেকে বদলাবেন তা বেছে নিন, তারিখ ও সময় লিখুন বা বর্তমান সময় নিন। তারপর সব দেশের সময় একসঙ্গে দেখুন। বাংলাদেশ, যুক্তরাজ্য, যুক্তরাষ্ট্র, সৌদি আরব, মালয়েশিয়া ও আরও কিছু দেশ আছে।",
-          "বাংলাদেশ স্ট্যান্ডার্ড টাইম UTC+৬ এবং বাংলাদেশ বর্তমানে ডে-লাইট সেভিং ব্যবহার করে না।",
+          "প্রথমে কোন জায়গার সময় থেকে বদলাবেন (যেমন ঢাকা) এবং কোন জায়গার সময়ে (যেমন নিউ ইয়র্ক) তা বাছুন। তারপর তারিখ ও সময় দিন বা এখনকার সময় বসান। টুল ফলাফল, দিন বদলেছে কি না এবং দুই জায়গার ঘণ্টার পার্থক্য দেখাবে। অদলবদল বাটনে উল্টোদিকের হিসাবও করা যায়।",
+          "নিচে ২৪ ঘণ্টার টেবিলে ঢাকার প্রতি ঘণ্টা অন্য জায়গায় কয়টা, তা পাশাপাশি দেখা যায়। ১২ ঘণ্টা (AM/PM) ও ২৪ ঘণ্টা ফরম্যাট বদলানো যায়।",
         ],
       },
       {
-        h: "ডে-লাইট সেভিং",
+        h: "বাংলাদেশের সঙ্গে প্রধান দেশগুলোর সময়ের পার্থক্য",
         p: [
-          "টুলটি ব্রাউজারের টাইম জোন ডেটা ব্যবহার করে, তাই তারিখ অনুযায়ী ডে-লাইট সেভিং নিজেই হিসাব হয়। যেমন লন্ডন গ্রীষ্মে UTC+১ এবং শীতে UTC+০।",
-          "প্রবাসী আত্মীয়ের সঙ্গে কথা, অনলাইন মিটিং বা বিদেশি অফিসের সময় মেলাতে এটি কাজে লাগে।",
+          "বাংলাদেশ UTC+6। যুক্তরাষ্ট্রের পূর্ব উপকূলের সঙ্গে শীতে ১১ ঘণ্টা ও গ্রীষ্মে ১০ ঘণ্টা, পশ্চিম উপকূলের সঙ্গে শীতে ১৪ ও গ্রীষ্মে ১৩ ঘণ্টা পার্থক্য। যুক্তরাজ্যের সঙ্গে শীতে ৬ ও গ্রীষ্মে ৫ ঘণ্টা। এই সব জায়গা বাংলাদেশের পিছনে।",
+          "সৌদি আরব, কাতার, কুয়েত ও বাহরাইন ৩ ঘণ্টা পিছনে, দুবাই ও ওমান ২ ঘণ্টা পিছনে। মালয়েশিয়া ও সিঙ্গাপুর ২ ঘণ্টা এগিয়ে। ভারত আধা ঘণ্টা পিছনে। প্রবাসীদের পরিবারের সঙ্গে কথা বলার সময় ঠিক করতে এই হিসাব কাজে লাগে।",
+        ],
+      },
+      {
+        h: "ডে-লাইট সেভিং কী এবং কেন পার্থক্য বদলায়",
+        p: [
+          "যুক্তরাষ্ট্র, যুক্তরাজ্য ও ইউরোপের অনেক দেশে গ্রীষ্মে ঘড়ি এক ঘণ্টা এগিয়ে দেওয়া হয়, একে ডে-লাইট সেভিং (DST) বলে। তাই এসব দেশের সঙ্গে বাংলাদেশের সময়ের পার্থক্য বছরে দুবার এক ঘণ্টা বদলায়। বাংলাদেশে এখন DST চালু নেই।",
+          "এই টুল আপনার ব্রাউজারের টাইম জোন ডেটা থেকে তারিখ অনুযায়ী DST হিসাব করে, তাই আগামী মাসের বা আগামী বছরের তারিখ দিলেও সঠিক ফল পাবেন। DST বদলের দিনের কাছাকাছি সময়ে ফল এক ঘণ্টা আলাদা হতে পারে।",
+        ],
+      },
+      {
+        h: "দুই দেশের মিটিংয়ের সময় ঠিক করা",
+        p: [
+          "ঢাকা ও লন্ডনের মতো দুটি জায়গা ও একটি তারিখ বাছলে টুল দেখায় কোন সময়টা দুই জায়গাতেই সকাল ৯টা থেকে সন্ধ্যা ৬টার মধ্যে পড়ে। যেমন শীতে ঢাকার বিকেল ৩টা থেকে ৬টা লন্ডনের সকাল ৯টা থেকে ১২টা।",
+          "কিছু জায়গার সঙ্গে (যেমন যুক্তরাষ্ট্রের পূর্ব উপকূল) অফিস সময় মেলেই না, তখন টুল তা জানিয়ে দেয়। তখন একজনকে সকালে বা রাতে বসতে হবে। হিসাবটি পূর্ণ ঘণ্টা ধরে আনুমানিক।",
+        ],
+      },
+      {
+        h: "UTC থেকে বাংলাদেশের সময়",
+        p: [
+          "UTC থেকে বাংলাদেশের সময় পেতে ৬ ঘণ্টা যোগ করুন। যেমন UTC ০০:০০ হলে বাংলাদেশে ০৬:০০, UTC ১২:০০ হলে ১৮:০০, আর UTC ১৮:০০ হলে পরের দিন ০০:০০। বাংলাদেশের সময়কে বাংলাদেশ স্ট্যান্ডার্ড টাইম (BST) বলা হয়, অনেক সাইট BDT-ও লেখে।",
+          "ব্রিটিশ সামার টাইমও BST সংক্ষেপে লেখা হয়, তাই বিভ্রান্তি এড়াতে UTC+6 লেখা ভালো।",
         ],
       },
     ],
     en: [
       {
-        h: "How to use it",
+        h: "How to find another place's time from Bangladesh time",
         p: [
-          "Choose the country to convert from, enter the date and time or use the current time, then see the time in all countries together. Bangladesh, the UK, the US, Saudi Arabia, Malaysia and a few more are included.",
-          "Bangladesh Standard Time is UTC+6, and Bangladesh currently does not use daylight saving.",
+          "First pick the place to convert from (for example Dhaka) and the place to convert to (for example New York). Then enter the date and time or use the current time. The tool shows the result, whether the day changes, and the hour difference between the two places. The Swap button reverses the conversion.",
+          "The 24-hour table below shows each Dhaka hour next to the time in the other place. You can switch between 12-hour (AM/PM) and 24-hour formats.",
         ],
       },
       {
-        h: "Daylight saving",
+        h: "Time difference between Bangladesh and the main countries",
         p: [
-          "The tool uses your browser's time zone data, so daylight saving is handled by date. For example, London is UTC+1 in summer and UTC+0 in winter.",
-          "It helps with calls to relatives abroad, online meetings or matching an overseas office's hours.",
+          "Bangladesh is UTC+6. The difference is 11 hours with the US East Coast in winter and 10 in summer, and 14 with the West Coast in winter and 13 in summer. With the UK it is 6 hours in winter and 5 in summer. All of these places are behind Bangladesh.",
+          "Saudi Arabia, Qatar, Kuwait and Bahrain are 3 hours behind, and Dubai and Oman 2 hours behind. Malaysia and Singapore are 2 hours ahead. India is half an hour behind. This helps you choose a time to talk to family abroad.",
+        ],
+      },
+      {
+        h: "What daylight saving time is and why the difference changes",
+        p: [
+          "In the USA, the UK and many European countries clocks go one hour forward in summer, which is called daylight saving time (DST). So the difference between Bangladesh and these places changes by an hour twice a year. Bangladesh currently has no DST.",
+          "This tool works out DST from your browser's time zone data for the date you choose, so a date next month or next year also gives the right result. Near a DST change the result may differ by an hour.",
+        ],
+      },
+      {
+        h: "Choosing a meeting time for two countries",
+        p: [
+          "Pick two places such as Dhaka and London and one date, and the tool shows which time falls between 9:00 and 18:00 in both places. In winter, 3 PM to 6 PM in Dhaka is 9 AM to 12 noon in London.",
+          "With some places (such as the US East Coast) working hours do not overlap at all, and the tool says so. Then one person has to meet early in the morning or late at night. The calculation is approximate, in whole hours.",
+        ],
+      },
+      {
+        h: "From UTC to Bangladesh time",
+        p: [
+          "To get Bangladesh time from UTC, add 6 hours. For example UTC 00:00 is 06:00 in Bangladesh, UTC 12:00 is 18:00, and UTC 18:00 is 00:00 the next day. Bangladesh time is called Bangladesh Standard Time (BST), and many sites write BDT.",
+          "British Summer Time is also abbreviated BST, so writing UTC+6 avoids confusion.",
         ],
       },
     ],
