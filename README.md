@@ -10,7 +10,7 @@ Free online tools for Bangladesh. Fast, no signup, and everything runs in your b
 
 | Category | Tools |
 | --- | --- |
-| Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা/একর/কানি, with land price), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Weight Converter (ভরি/আনা/রতি), Income Tax Calculator |
+| Bangladesh Special (12) | bKash, Nagad, Rocket and Upay cash out calculators, Land Calculator (শতাংশ/কাঠা/বিঘা/একর/কানি, with land price), BDT Currency Converter, Electricity Bill Calculator, Govt Job Age Calculator, Passport Fee Calculator, Zakat Calculator, Gold Price Calculator (সোনার দাম, গয়নার মজুরি, ভরি/আনা/রতি ↔ গ্রাম), Income Tax Calculator |
 | Education & Calculation (12) | Number to Words, FDR/DPS Calculator, Age, GPA (SSC/HSC), CGPA, BMI, EMI, Percentage, Scientific Calculator, Unit Converter, Bill Calculator, Date Difference |
 | Image & PDF (10) | Image Compressor, Image Resizer, Image Converter, Image to PDF, Merge PDF, Split PDF, Compress PDF, QR Code Generator, PDF to JPG, Rotate PDF |
 | Text & SEO (8) | Word Counter, Character Counter, Case Converter, Password Generator, Color Picker, Lorem Ipsum, Meta Tag Generator, Keyword Density |
@@ -58,6 +58,38 @@ Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), 
 - Delivery days (about 15–21 working days regular, 7–10 express, 2 super express) are approximate figures from published sources, not from the official portal.
 - Page text: `components/toolRegistryB8.tsx` (Bangla), `lib/toolContentEn.ts` (English), `lib/seoMeta.ts` and `lib/toolArticles.ts`. Two guides link to it: the passport fee guide and passport 5 years vs 10 years.
 
+## Zakat calculator
+
+- `components/tools/ZakatCalculator.tsx` works out zakat from cash and bank savings, gold, silver, business stock, money owed to you, other savings, minus debts. Nisab is 7.5 vori of gold or 52.5 vori of silver, the rate is 2.5% and 1 vori is 11.664 g. The constants (`GOLD_NISAB_VORI`, `SILVER_NISAB_VORI`, `ZAKAT_RATE`) and the pure `computeZakat` function are at the top of the file.
+- The visitor types today's price per vori for the chosen nisab basis (silver by default). There is no live price, because prices change daily and no free source is reliable.
+- An optional helper turns a weight (vori, ana, roti) and a price into a taka value and can fill the gold or silver box. A tick box asks if one lunar year has passed (if not, the result says zakat is generally not due yet). The result has a copy button.
+- Page text: `components/toolRegistryB10.tsx` (Bangla title, how-to and 13 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. A group in `lib/relatedTools.ts` links it with the Gold Price Calculator and Percentage.
+- The wording on jewellery, debts, FDR/DPS and who can receive zakat is general and tells the reader to ask a scholar. Have a scholar check it before you change it.
+
+## Gold price calculator
+
+- The tool is called Gold Price Calculator, but the slug stays `gold-weight-converter-bd` so the old URL keeps working, and the component file is still `components/tools/GoldWeightConverter.tsx`.
+- `lib/goldCalc.ts` holds the pure logic: `toGrams`, `fromGrams`, `computeJewellery` and `computeSell`. 1 vori = 16 ana = 96 roti = 11.664 g (so 1 ana = 6 roti = 0.729 g).
+- Three tabs. **Price**: carat chips (22K, 21K, 18K, Sonaton) that each remember their own price per vori, weight in vori-ana-roti or grams, then wastage %, making charge (% of gold value or taka per vori) and VAT % (on the making charge only, or on the total). **Sell**: estimated cash for old gold after the jeweller's deduction %. **Convert**: vori-ana-roti to grams and back, plus a vori to gram table.
+- Wastage, making charge, VAT and the deduction start empty (0) on purpose, because jewellers differ. There is no live gold price; the visitor types the BAJUS price for their carat.
+- Page text: `components/toolRegistryB10.tsx` (10 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. The card name is in `data/tools.ts` and the English card text in `lib/i18nData.ts`. The "how many grams in a vori" guide links to it.
+
+## Text to Speech
+
+- `components/tools/TextToSpeech.tsx` uses the browser's `speechSynthesis` (voices installed on the device). It needs no server and cannot save an MP3, so the page says so.
+- `lib/tts.ts` splits text into sentences, detects the script or language and picks a voice. `lib/ttsEngine.ts` queues the speech and reports real errors (missing voice, network, audio busy) or "nothing started". It is tuned for many browser quirks, so change it carefully and test on a real Android phone and in Chrome on desktop.
+- Limits: 5,000 characters at a time (`MAX`), and a `.txt` upload up to 1 MB (only the first 5,000 characters are used). There are Bangla and English sample buttons and a word count with an approximate listening time (150 words a minute, adjusted by speed).
+- Voices marked "online" in the list can use the servers of the browser or phone maker, so the FAQ says the tool itself sends nothing but online voices may. The in-app browsers of Instagram and Facebook have no voice support, and the tool shows how to open the page in Chrome.
+- Page text: `components/toolRegistryB4.tsx` (10 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`.
+
+## Time zone converter
+
+- `components/tools/TimeZoneConverter.tsx` has a From place, a To place and a Swap button, a date and time (or the current time), and a 12h/24h switch. The result shows the time in the To place, the hour difference and whether the day changes.
+- It also shows a meeting helper (hours that fall between 9:00 and 18:00 in both places, counted in whole hours so it is approximate), a 24-hour table for the chosen date, and the same moment in other places (11 popular ones, or all 31 with a button).
+- To add a place, add one entry to the `ZONES` array at the top of the file (IANA id, Bangla name, English name, group, and `popular: true` if it should show by default). `GROUPS` sets the headings in the dropdowns. Daylight saving comes from the browser's own time zone data, and Bangladesh is UTC+6 with no DST.
+- `lib/tz.ts` holds the helpers: `wallParts`, `offsetMinutes`, `zonedToInstant`, `fmtOffset`, `formatInZone`, `hmInZone`, `dayShift` and `overlapRuns`.
+- Page text: `components/toolRegistryB3.tsx` (9 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. Three guides about US time, UTC/India/UK time difference and 12/24-hour time link to it.
+
 ## Chat assistant (BD Flow Helper)
 
 - `pages/api/chat.js` is the server route. It holds the system prompt, FAQ knowledge, a link allowlist (only bdtoolsflow.cyou pages are kept in replies), an origin check and a soft per-IP rate limit. Message text is never logged.
@@ -80,6 +112,7 @@ app/
   layout.tsx                Root layout (header, footer, theme, optional AdSense script)
   tool/[slug]/page.tsx      Renders any tool from the registry (+ SEO metadata, JSON-LD)
   category/[categorySlug]/  Category pages
+  currency/[pair]/          Currency pair pages such as /currency/sar-to-bdt
   guides/, guides/[slug]/   Guides list and guide pages
   about, contact, privacy-policy, disclaimer
   sitemap.ts, robots.ts
@@ -96,8 +129,10 @@ lib/
   live.ts                   Slugs that are actually built (sitemap and related tools use this)
   seo.ts                    Site URL and name
   dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts,
-  keywords.ts, metaTags.ts, rand.ts, tz.ts,
+  keywords.ts, metaTags.ts, rand.ts, tz.ts, goldCalc.ts, pdfUtil.ts, pdfjs.ts,
   banglaDate.ts, expense.ts, invoice.ts, scan.ts, tts.ts, ttsEngine.ts   Shared, tested logic
+  currencyData.ts, currencyPairs.ts   Currency list, rate helpers and pair pages
+  relatedTools.ts           Groups of related tools (the tool page shows similar tools first)
   lang.tsx                  Language provider (BN default, EN) saved in localStorage
   i18nData.ts               UI strings, category names, English card descriptions
   guides.ts                 Guide articles (Bangla and English)
@@ -109,7 +144,7 @@ lib/
 
 ## Languages (Bangla default, English toggle)
 
-The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated. The text inside each tool (labels and buttons) is still Bangla only.
+The header has a BN | EN toggle. The choice is saved in the browser. The page frame (header, footer, homepage, categories, tool title, description, how-to and FAQ) is translated, and so is the text inside the tools (labels, buttons and messages, through the `useTr` helper from `lib/lang.tsx`). When you write a tool, wrap every visible string as `tr("বাংলা", "English")`.
 
 ## Add a new tool
 
@@ -147,10 +182,12 @@ Public sources for these disagree or change often, and none is official, so chec
 - Electricity slabs and demand charge: top of `ElectricityBillCalculator.tsx` (June 2026 billing rates).
 - Income tax slabs, rebate and minimum tax: top of `IncomeTaxCalculator.tsx` (Finance Act 2026, FY 2026-27).
 - Zakat nisab (7.5 vori gold, 52.5 vori silver) is in `ZakatCalculator.tsx`.
+- Gold: there is no live price. The unit sizes (1 vori = 11.664 g) are in `lib/goldCalc.ts`; making charge, wastage and VAT are typed by the visitor.
+- Time zones: places and their names are in the `ZONES` array of `TimeZoneConverter.tsx`. If Bangladesh ever brings back daylight saving, the browser data handles it, but update the notes in the tool and the FAQs.
 - Passport fees: `PassportFeeCalculator.tsx`.
 
 ## Notes
 
-- All calculations happen in the browser. Images and text never leave the device.
+- All calculations happen in the browser. Images and text never leave the device, with three exceptions: the currency page fetches daily rates, the chat assistant sends the visitor's message to the LLM provider, and "online" voices in Text to Speech may use the browser or phone maker's servers.
 - Rates and rules (bKash charges, govt job age limits, loan fees) change over time. Always check the official source. Each tool says so on its page.
 - Google Search Console verification file is kept in `public/`. Do not delete it.
