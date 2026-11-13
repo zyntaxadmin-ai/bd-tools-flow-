@@ -28,7 +28,7 @@ const allTools: Tool[] = [
   { id: 37, name: "Govt Job Age Calculator", slug: "/tool/govt-job-age-calculator", description: "চাকরির বয়স আছে কিনা দেখুন", category: "Bangladesh Special", icon: "Briefcase" },
   { id: 33, name: "Rocket Calculator", slug: "/tool/rocket-calculator", description: "Rocket charge হিসাব", category: "Bangladesh Special", icon: "Send" },
   { id: 38, name: "Passport Fee Calculator", slug: "/tool/passport-fee-calculator-bd", description: "E-Passport fee check", category: "Bangladesh Special", icon: "Plane" },
-  { id: 51, name: "Zakat Calculator", slug: "/tool/zakat-calculator-bd", description: "যাকাত ও নিসাব হিসাব", category: "Bangladesh Special", icon: "Coins" },
+  { id: 51, name: "Zakat Calculator", slug: "/tool/zakat-calculator-bd", description: "যাকাত ক্যালকুলেটর, নিসাব ও ২.৫% হিসাব", category: "Bangladesh Special", icon: "Coins" },
   { id: 52, name: "Gold Weight Converter", slug: "/tool/gold-weight-converter-bd", description: "ভরি, আনা, রতি থেকে গ্রাম", category: "Bangladesh Special", icon: "Gem" },
   { id: 53, name: "Number to Words", slug: "/tool/number-to-words-bd", description: "টাকার অঙ্ক কথায় লিখুন", category: "Education & Calculation", icon: "Hash" },
   { id: 54, name: "Income Tax Calculator", slug: "/tool/income-tax-calculator-bd", description: "ব্যক্তি করদাতার আয়কর হিসাব", category: "Bangladesh Special", icon: "Landmark" },

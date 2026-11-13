@@ -3,8 +3,8 @@
 // Descriptions: aim for 120-155 characters. Only say what the tool really does.
 export const SEO_META: Record<string, { title: string; description: string }> = {
   "zakat-calculator-bd": {
-    title: "Zakat Calculator BD - যাকাত ক্যালকুলেটর",
-    description: "যাকাত ক্যালকুলেটর। নগদ, সোনা, রুপা ও ব্যবসার মজুত থেকে ঋণ বাদ দিয়ে যাকাত হিসাব করুন। নিসাব ৭.৫ ভরি সোনা বা ৫২.৫ ভরি রুপা, হার ২.৫%।",
+    title: "যাকাত ক্যালকুলেটর - Zakat Calculator BD",
+    description: "ফ্রি যাকাত ক্যালকুলেটর। নিসাব (৭.৫ ভরি সোনা বা ৫২.৫ ভরি রুপা), ২.৫% হার, ঋণ বাদ ও সোনা-রুপার ভরি থেকে মূল্য, এক জায়গায়। Zakat calculator BD।",
   },
   "gold-weight-converter-bd": {
     title: "ভরি আনা রতি থেকে গ্রাম - Gold Weight Converter",
