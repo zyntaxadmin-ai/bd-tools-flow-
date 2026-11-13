@@ -7,8 +7,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি যাকাত ক্যালকুলেটর। নিসাব (৭.৫ ভরি সোনা বা ৫২.৫ ভরি রুপা), ২.৫% হার, ঋণ বাদ ও সোনা-রুপার ভরি থেকে মূল্য, এক জায়গায়। Zakat calculator BD।",
   },
   "gold-weight-converter-bd": {
-    title: "ভরি আনা রতি থেকে গ্রাম - Gold Weight Converter",
-    description: "ভরি, আনা, রতি থেকে গ্রাম এবং গ্রাম থেকে ভরি-আনা-রতিতে সোনা ও রুপার ওজন রূপান্তর করুন। ১ ভরি = ১১.৬৬৪ গ্রাম। Vori to gram converter।",
+    title: "সোনার দাম ক্যালকুলেটর - ভরি গ্রাম হিসাব",
+    description: "সোনার দাম ক্যালকুলেটর। ২২, ২১, ১৮ ক্যারেটের ভরি-আনা-রতি বা গ্রাম থেকে মজুরি ও ভ্যাটসহ গয়নার মোট দাম, পুরোনো সোনা বিক্রির হিসাব এবং ভরি থেকে গ্রাম। Gold price calculator BD।",
   },
   "number-to-words-bd": {
     title: "টাকার অঙ্ক কথায় - Number to Words BD",

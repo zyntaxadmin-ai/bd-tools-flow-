@@ -1945,33 +1945,91 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "zakat-calculator-bd": {
     bn: [
       {
-        h: "যাকাত কীভাবে হিসাব হয়",
+        h: "যাকাত ক্যালকুলেটর বাংলাদেশ: কীভাবে হিসাব হয়",
         p: [
-          "এই টুলে আপনার নগদ টাকা, সোনা ও রুপার বাজার মূল্য, ব্যবসার মজুত এবং ফেরত পাওয়ার মতো পাওনা যোগ করা হয়, তারপর আপনার ঋণ বাদ দিয়ে নিট সম্পদ বের হয়। নিট সম্পদ নিসাবের সমান বা বেশি হলে তার ২.৫% যাকাত হিসেবে দেখায়।",
-          "নিসাব হলো ৭.৫ ভরি সোনা অথবা ৫২.৫ ভরি রুপার দাম। ১ ভরি ১১.৬৬৪ গ্রাম ধরে এটি প্রায় ৮৭.৪৮ গ্রাম সোনা বা ৬১২.৩৬ গ্রাম রুপা। সোনা-রুপার দাম রোজ বদলায়, তাই আপনি আজকের প্রতি ভরির দাম নিজে লিখবেন।",
+          "এই টুলে আপনার নগদ টাকা, ব্যাংকে জমা, সোনা ও রুপার বাজার মূল্য, ব্যবসার মজুত এবং ফেরত পাওয়ার মতো পাওনা যোগ করা হয়, তারপর আপনার ঋণ বাদ দিয়ে নিট সম্পদ বের হয়। নিট সম্পদ নিসাবের সমান বা বেশি হলে তার ২.৫% যাকাত হিসেবে দেখায়।",
+          "সোনা বা রুপার ওজন ভরি, আনা ও রতিতে জানা থাকলে টুলের ঐচ্ছিক অংশে সেটি দিন। আজকের প্রতি ভরির দাম দিলে টুল নিজেই মূল্য বের করে সোনা বা রুপার ঘরে বসিয়ে দেয়।",
+        ],
+      },
+      {
+        h: "নিসাব কত এবং ভরি-গ্রামের হিসাব",
+        p: [
+          "নিসাব হলো যাকাত ফরজ হওয়ার ন্যূনতম সম্পদ। এটি ৭.৫ ভরি সোনা অথবা ৫২.৫ ভরি রুপার দামের সমান ধরা হয়। ১ ভরি ১১.৬৬৪ গ্রাম ধরলে ৭.৫ ভরি সোনা ৮৭.৪৮ গ্রাম এবং ৫২.৫ ভরি রুপা ৬১২.৩৬ গ্রাম।",
+          "১ ভরি = ১৬ আনা = ৯৬ রতি, অর্থাৎ ১ আনা = ০.৭২৯ গ্রাম এবং ১ রতি = ০.১২১৫ গ্রাম। সোনা-রুপার দাম রোজ বদলায়, তাই নিসাবের টাকার অঙ্কও বদলায়। বাজুসের আজকের দাম দেখে প্রতি ভরির দাম লিখুন।",
+          "রুপার নিসাবের দাম সোনার চেয়ে অনেক কম, তাই রুপা দিয়ে ধরলে বেশি মানুষের ওপর যাকাত আসে। কোনটি ধরবেন তা নিয়ে আলিমদের মত আছে। আপনার স্থানীয় আলিমের পরামর্শ নিন।",
+        ],
+      },
+      {
+        h: "কোন সম্পদে যাকাত লাগে",
+        p: [
+          "সাধারণভাবে নগদ টাকা, ব্যাংকে জমা, সোনা ও রুপা (গয়নাসহ, হানাফি মতে), ব্যবসার পণ্য ও মজুত, ফেরত পাওয়ার মতো পাওনা এবং অন্যান্য সঞ্চয় ও বিনিয়োগ যাকাতের হিসাবে ধরা হয়।",
+          "যে বাড়িতে থাকেন, ব্যক্তিগত কাজে ব্যবহারের গাড়ি, আসবাব ও পোশাকে যাকাত লাগে না। তবে ব্যবসার উদ্দেশ্যে কেনা জমি বা পণ্যে লাগে। FDR, DPS বা শেয়ারের মতো বিনিয়োগের ক্ষেত্রে বিস্তারিত নিয়ম আলিমের কাছ থেকে জেনে নিন।",
+        ],
+      },
+      {
+        h: "উদাহরণ: যাকাত কত হয়",
+        p: [
+          "ধরুন নগদ ও ব্যাংকে জমা ১,৫০,০০০ টাকা, সোনার মূল্য ২,০০,০০০ টাকা এবং ফেরত পাওয়ার মতো পাওনা ৫০,০০০ টাকা। মোট সম্পদ ৪,০০,০০০ টাকা। এখান থেকে ৬০,০০০ টাকা ঋণ বাদ দিলে নিট সম্পদ ৩,৪০,০০০ টাকা।",
+          "নিট সম্পদ নিসাবের সমান বা বেশি হলে যাকাত = ৩,৪০,০০০ × ২.৫% = ৮,৫০০ টাকা। সহজ হিসাবে, নিট সম্পদ নিসাব পরিমাণ হলে ১ লাখ টাকায় ২,৫০০, ৫ লাখে ১২,৫০০ এবং ১০ লাখে ২৫,০০০ টাকা। নিট সম্পদ নিসাবের কম হলে যাকাত ফরজ হয় না।",
+        ],
+      },
+      {
+        h: "এক চান্দ্র বছর ও যাকাত কাকে দেবেন",
+        p: [
+          "যেদিন আপনার সম্পদ প্রথম নিসাব পরিমাণ হয়, সেদিন থেকে হিজরি পঞ্জিকায় পূর্ণ এক বছর গেলে যাকাত ফরজ হয়। চান্দ্র বছর সৌর বছরের চেয়ে প্রায় ১০-১১ দিন ছোট, তাই প্রতি বছর তারিখ একটু এগিয়ে আসে। টুলের টিক-বক্সে এক বছর পূর্ণ হয়েছে কি না জানিয়ে দিন।",
+          "কুরআনে যাকাতের আটটি খাত বলা আছে: ফকির, মিসকিন, যাকাত আদায়ে নিয়োজিত কর্মী, যাদের মন জয় করা প্রয়োজন, দাসমুক্তি, ঋণগ্রস্ত, আল্লাহর পথে এবং মুসাফির। নিজের পিতা-মাতা ও সন্তানকে যাকাত দেওয়া যায় না।",
         ],
       },
       {
         h: "কিছু জরুরি কথা",
         p: [
-          "সাধারণ নিয়মে নিট সম্পদ নিসাব পরিমাণ হলে এবং এক চান্দ্র বছর আপনার কাছে থাকলে যাকাত দিতে হয়। রুপা না সোনা দিয়ে নিসাব ধরবেন, তা নিয়ে আলিমদের মত আছে।",
-          "এই টুল একটি সাধারণ হিসাবের সহায়ক, ফতোয়া নয়। ব্যক্তিগত অবস্থায় কোনো সন্দেহ থাকলে আপনার স্থানীয় আলিম বা ইসলামী প্রতিষ্ঠানের সঙ্গে কথা বলুন।",
+          "এই টুল একটি সাধারণ হিসাবের সহায়ক, ফতোয়া নয়। মাজহাব ও ব্যক্তিগত অবস্থায় নিয়ম আলাদা হতে পারে। কোনো সন্দেহ থাকলে আপনার স্থানীয় আলিম বা ইসলামী প্রতিষ্ঠানের সঙ্গে কথা বলুন।",
+          "আপনার দেওয়া কোনো তথ্য সার্ভারে যায় না, সব হিসাব আপনার ফোন বা ব্রাউজারেই হয়।",
         ],
       },
     ],
     en: [
       {
-        h: "How zakat is worked out",
+        h: "Zakat calculator Bangladesh: how it is worked out",
         p: [
-          "This tool adds your cash, the market value of your gold and silver, business stock and money owed to you that is likely to be repaid, then subtracts your debts to get net wealth. If net wealth is at least the nisab, it shows 2.5% of it as zakat.",
-          "The nisab is the price of 7.5 vori of gold or 52.5 vori of silver. With 1 vori = 11.664 g, that is about 87.48 g of gold or 612.36 g of silver. Gold and silver prices change every day, so you type today's price per vori yourself.",
+          "This tool adds your cash, bank savings, the market value of your gold and silver, business stock and money owed to you that is likely to be repaid, then subtracts your debts to get net wealth. If net wealth is at least the nisab, it shows 2.5% of it as zakat.",
+          "If you know your gold or silver weight in vori, ana and roti, enter it in the optional section. Give today's price per vori and the tool works out the value and places it in the gold or silver box for you.",
+        ],
+      },
+      {
+        h: "The nisab and the vori-to-gram figures",
+        p: [
+          "The nisab is the minimum wealth at which zakat becomes due. It is taken as the price of 7.5 vori of gold or 52.5 vori of silver. With 1 vori = 11.664 g, 7.5 vori of gold is 87.48 g and 52.5 vori of silver is 612.36 g.",
+          "1 vori = 16 ana = 96 roti, so 1 ana = 0.729 g and 1 roti = 0.1215 g. Gold and silver prices change every day, so the nisab in taka changes too. Type today's per-vori price from BAJUS.",
+          "The silver nisab is far lower in value than the gold nisab, so more people owe zakat if silver is used. Scholars differ on which to follow. Ask your local scholar.",
+        ],
+      },
+      {
+        h: "Which wealth is counted",
+        p: [
+          "In general, cash, bank savings, gold and silver (including jewellery under the Hanafi view), business goods and stock, money owed to you that is likely to be repaid, and other savings and investments are counted.",
+          "The home you live in, a car for personal use, furniture and clothes are not counted. Land or goods bought for trade are. For investments such as FDR, DPS or shares, ask a scholar for the detailed rules.",
+        ],
+      },
+      {
+        h: "Example: how much zakat is due",
+        p: [
+          "Say you have 1,50,000 taka in cash and bank savings, gold worth 2,00,000 taka and 50,000 taka owed to you that is likely to be repaid. Total wealth is 4,00,000 taka. Subtract 60,000 taka of debts and net wealth is 3,40,000 taka.",
+          "If net wealth is at or above the nisab, zakat = 3,40,000 × 2.5% = 8,500 taka. As a quick guide, once the nisab is reached, 1 lakh taka gives 2,500, 5 lakh gives 12,500 and 10 lakh gives 25,000 taka. If net wealth is below the nisab, zakat is not due.",
+        ],
+      },
+      {
+        h: "The lunar year and who can receive zakat",
+        p: [
+          "Zakat becomes due after one full Hijri year has passed since your wealth first reached the nisab. A lunar year is about 10 to 11 days shorter than a solar year, so the date moves earlier each year. Use the tick box in the tool to say whether the year is complete.",
+          "The Quran names eight categories: the poor, the needy, zakat collectors, those whose hearts are to be reconciled, freeing slaves, those in debt, in the way of Allah and travellers. Zakat cannot be given to your own parents or children.",
         ],
       },
       {
         h: "A few important points",
         p: [
-          "As a general rule, zakat is due when your net wealth reaches the nisab and you have held it for one lunar year. Scholars differ on whether to use silver or gold for the nisab.",
-          "This tool is a general calculation aid, not a religious ruling. If you have doubts about your own situation, speak to your local scholar or an Islamic institution.",
+          "This tool is a general calculation aid, not a religious ruling. Rules can differ by school of thought and personal situation. If you have doubts, speak to your local scholar or an Islamic institution.",
+          "Nothing you enter is sent to a server. All calculation happens on your phone or browser.",
         ],
       },
     ],
@@ -1980,31 +2038,87 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "gold-weight-converter-bd": {
     bn: [
       {
-        h: "ভরি, আনা, রতি ও গ্রাম",
+        h: "সোনার দাম হিসাব: গয়নার মোট দাম কীভাবে বের হয়",
         p: [
-          "বাংলাদেশে সোনা-রুপা ভরি, আনা ও রতিতে মাপা হয়, কিন্তু ওজন যন্ত্রে ও দামের তালিকায় গ্রামও দেখা যায়। এই টুল দুই দিকেই রূপান্তর করে।",
-          "১ ভরি = ১৬ আনা = ৯৬ রতি = ১১.৬৬৪ গ্রাম। তাই ১ আনা = ০.৭২৯ গ্রাম এবং ১ রতি = ০.১২১৫ গ্রাম। যেমন ২ ভরি ৮ আনা ৩ রতি হলো ২৯.৫২৪৫ গ্রাম।",
+          "সোনার মূল্য = ওজন (ভরি) × প্রতি ভরির দাম। ওজন গ্রামে থাকলে ১১.৬৬৪ দিয়ে ভাগ করে ভরিতে বদলে নেওয়া হয়। এর সঙ্গে জুয়েলার্সের ক্ষয়, মজুরি এবং ভ্যাট যোগ করলে গয়নার মোট দাম পাওয়া যায়।",
+          "এই টুলে ক্যারেট বেছে সেই ক্যারেটের প্রতি ভরির দাম লিখুন। প্রতিটি ক্যারেটের দাম আলাদা করে মনে থাকে, তাই ২২ ও ২১ ক্যারেটের দাম পাশাপাশি তুলনা করা সহজ।",
         ],
       },
       {
-        h: "দামের হিসাব",
+        h: "২২, ২১ ও ১৮ ক্যারেট কী",
         p: [
-          "প্রতি ভরির দাম লিখলে আপনার ওজনের মোট দাম দেখায়। আজকের দাম এই টুলে নেই, তাই বাজুসের আজকের দাম দেখে নিজে লিখুন। ক্যারেট অনুযায়ী দাম আলাদা, আর গয়নার মজুরি ও ভ্যাট এখানে ধরা হয়নি।",
+          "ক্যারেট সোনার বিশুদ্ধতা মাপে। ২৪ ক্যারেট প্রায় খাঁটি সোনা, কিন্তু খুব নরম বলে গয়নায় সাধারণত কম ক্যারেট ব্যবহার হয়। ২২ ক্যারেটে ২৪ ভাগের ২২ ভাগ সোনা থাকে, ২১ ক্যারেটে ২১ ভাগ আর ১৮ ক্যারেটে ১৮ ভাগ।",
+          "বিশুদ্ধতা কম হলে প্রতি ভরির দামও কম হয়। তাই গয়না কেনার সময় ক্যারেট জেনে নিয়ে সেই ক্যারেটের আজকের দাম দিয়ে হিসাব করুন। বাজুসের দামের তালিকায় ক্যারেট অনুযায়ী আলাদা দাম থাকে।",
+        ],
+      },
+      {
+        h: "মজুরি, ক্ষয় ও ভ্যাট",
+        p: [
+          "মজুরি বা মেকিং চার্জ হলো গয়না বানানোর কারিগরি খরচ। কিছু জুয়েলার্স সোনার দামের শতাংশে ধরে, কিছু প্রতি ভরিতে নির্দিষ্ট টাকায়। ক্ষয় বা অপচয় হলো বানানোর সময় নষ্ট হওয়া সোনার বাবদ যোগ করা একটি অংশ। সব দোকান এটি আলাদা করে ধরে না।",
+          "এসব নিয়ম জুয়েলার্সভেদে আলাদা, তাই টুলে ঘরগুলো খালি রাখা হয়েছে। কেনার আগে দোকানকে জিজ্ঞেস করে মজুরি, ক্ষয় ও ভ্যাট কীভাবে ধরছে জেনে নিন এবং সেই সংখ্যা বসিয়ে মোট দাম মিলিয়ে দেখুন।",
+        ],
+      },
+      {
+        h: "পুরোনো সোনা বিক্রির হিসাব",
+        p: [
+          "পুরোনো গয়না বিক্রি বা বদল করলে জুয়েলার্স সাধারণত ক্ষয় ও মজুরি বাবদ কিছু অংশ কেটে নেয়। আগে কেনার সময় যে মজুরি দিয়েছিলেন তা ফেরত আসে না। তাই গয়নার ওজনের সোনার মূল্যের চেয়ে কম টাকা পাওয়া স্বাভাবিক।",
+          "'বিক্রি' ট্যাবে ওজন, ক্যারেটের আজকের দাম এবং জুয়েলার্সের কর্তন (%) লিখলে আনুমানিক টাকা দেখা যায়। এটি শুধু আন্দাজের জন্য, দোকানে গিয়ে দাম যাচাই করে নিন।",
+        ],
+      },
+      {
+        h: "ভরি, আনা, রতি ও গ্রাম",
+        p: [
+          "বাংলাদেশে সোনা-রুপা ভরি, আনা ও রতিতে মাপা হয়, কিন্তু ওজন যন্ত্রে ও দামের তালিকায় গ্রামও দেখা যায়। ১ ভরি = ১৬ আনা = ৯৬ রতি = ১১.৬৬৪ গ্রাম। তাই ১ আনা = ০.৭২৯ গ্রাম এবং ১ রতি = ০.১২১৫ গ্রাম। যেমন ২ ভরি ৮ আনা ৩ রতি হলো ২৯.৫২৪৫ গ্রাম।",
+          "উল্টো দিকে, ১০ গ্রাম সোনা ০.৮৫৭ ভরি, অর্থাৎ ০ ভরি ১৩ আনা প্রায় ৪.৩ রতি। ভরি-গ্রাম ট্যাবে টেবিলসহ দুই দিকেই রূপান্তর করা যায়।",
+        ],
+      },
+      {
+        h: "কিছু জরুরি কথা",
+        p: [
+          "এই টুলে সোনার লাইভ দাম নেই, আপনি বাজুসের আজকের দাম দেখে নিজে লিখবেন। এটি আনুমানিক হিসাবের জন্য। কেনা বা বেচার আগে জুয়েলার্সের বিল ও দাম নিজে মিলিয়ে নিন। আপনার দেওয়া কোনো তথ্য সার্ভারে যায় না।",
         ],
       },
     ],
     en: [
       {
-        h: "Vori, ana, roti and grams",
+        h: "Gold price calculation: how the total jewellery price is worked out",
         p: [
-          "In Bangladesh gold and silver are weighed in vori, ana and roti, while scales and price lists often show grams. This tool converts in both directions.",
-          "1 vori = 16 ana = 96 roti = 11.664 grams, so 1 ana = 0.729 g and 1 roti = 0.1215 g. For example 2 vori 8 ana 3 roti is 29.5245 grams.",
+          "Gold value = weight in vori x price per vori. If the weight is in grams, divide by 11.664 to get vori. Add the jeweller's wastage, making charge and VAT and you get the total price of the jewellery.",
+          "In this tool, pick the carat and type that carat's price per vori. Each carat keeps its own price, so it is easy to compare 22K and 21K side by side.",
         ],
       },
       {
-        h: "Working out the price",
+        h: "What 22K, 21K and 18K mean",
         p: [
-          "Type the price per vori and the tool shows the total value of your weight. Today's price is not in this tool, so check the BAJUS rate and type it yourself. Price differs by carat, and jewellery making charges and VAT are not included.",
+          "Carat measures the purity of gold. 24K is almost pure gold but very soft, so jewellery usually uses a lower carat. 22K has 22 parts of gold in 24, 21K has 21 and 18K has 18.",
+          "Lower purity means a lower price per vori. So find out the carat when you buy jewellery and use that carat's price for today. The BAJUS price list shows a separate price for each carat.",
+        ],
+      },
+      {
+        h: "Making charge, wastage and VAT",
+        p: [
+          "The making charge is the cost of crafting the jewellery. Some jewellers charge a percentage of the gold value and some a fixed amount per vori. Wastage is an amount added for gold lost while making the piece. Not every shop charges it separately.",
+          "These rules differ between jewellers, so the boxes in the tool start empty. Ask the shop how it applies making charge, wastage and VAT, enter those figures and check the total against the bill.",
+        ],
+      },
+      {
+        h: "Estimating the cash for old gold",
+        p: [
+          "When you sell or exchange old jewellery, the jeweller usually deducts something for wastage and making. The making charge you paid when you bought it is not returned. So getting less than the gold value of your weight is normal.",
+          "In the Sell tab, enter the weight, today's price for the carat and the jeweller's deduction (%) to see an estimate. It is only a guide, so confirm the price at the shop.",
+        ],
+      },
+      {
+        h: "Vori, ana, roti and grams",
+        p: [
+          "In Bangladesh gold and silver are weighed in vori, ana and roti, while scales and price lists often show grams. 1 vori = 16 ana = 96 roti = 11.664 grams, so 1 ana = 0.729 g and 1 roti = 0.1215 g. For example 2 vori 8 ana 3 roti is 29.5245 grams.",
+          "In the other direction, 10 grams of gold is 0.857 vori, which is 0 vori 13 ana and about 4.3 roti. The Convert tab does both directions and includes a table.",
+        ],
+      },
+      {
+        h: "A few important points",
+        p: [
+          "This tool has no live gold price, so type today's price from BAJUS yourself. It is for estimates. Check the jeweller's bill and price yourself before you buy or sell. Nothing you enter is sent to a server.",
         ],
       },
     ],

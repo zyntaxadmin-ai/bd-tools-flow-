@@ -89,7 +89,7 @@ export const DESC_EN: Record<string, string> = {
   "bdt-currency-converter": "USD, SAR, AED, KWD to BDT",
   "electricity-bill-calculator-bd": "DPDC, DESCO, REB bill check",
   "zakat-calculator-bd": "Zakat and nisab calculator",
-  "gold-weight-converter-bd": "Vori, ana, roti to grams",
+  "gold-weight-converter-bd": "Gold price, making charge and vori to grams",
   "number-to-words-bd": "Write taka amount in words",
   "income-tax-calculator-bd": "Individual income tax estimate",
   "fdr-dps-calculator-bd": "FDR and DPS interest",
