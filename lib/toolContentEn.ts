@@ -333,14 +333,24 @@ export const TOOL_EN: Record<string, ToolEn> = {
     ],
   },
   "text-to-speech": {
-    title: "Text to Speech",
-    desc: "Paste text and have it read aloud in Bangla, English and other languages installed on your device. Adjust voice, speed and pitch. Your text is never sent anywhere.",
-    howTo: ["Type or paste your text", "Choose the language and voice (leave it on Automatic to detect the language from the text), then set speed and pitch", "Tap Speak"],
+    title: "Bangla Text to Speech",
+    desc: "Paste text or add a .txt file and have it read aloud in Bangla, English and other languages installed on your device. Adjust voice, speed and pitch. No sign-up, and the tool never sends your text anywhere.",
+    howTo: [
+      "Type or paste your text, add a .txt file, or tap a sample",
+      "Choose the language and voice (leave it on Automatic to detect the language from the text), then set speed and pitch",
+      "Tap Speak. The word count and approximate listening time show below the box",
+    ],
     faqs: [
+      { q: "How do I do Bangla text to speech?", a: "Type or paste Bangla text in the box and tap Speak. In Automatic mode the tool sees the Bangla letters and picks a Bangla voice itself. If Bangla is not read aloud, see the next questions." },
       { q: "Which languages work?", a: "The languages that have a voice installed on your phone or browser. In Automatic mode the tool detects the language from the writing system (for example Bangla, Hindi, Arabic, English). For other languages written in Latin letters, such as Spanish, choose that language from the Language list." },
       { q: "What if Bangla or another language is not read aloud?", a: "Install a voice for that language in Settings → Language → Text-to-speech. Voices marked \"online\" need internet and start slowly, so pick an offline voice if you can." },
+      { q: "How much text can I read at once?", a: "Up to 5,000 characters at a time. Split longer text into parts. If you add a .txt file, the first 5,000 characters are used." },
+      { q: "Can I read text from a file?", a: "Yes. Add a .txt text file (up to 1 MB) and its text appears in the box, then tap Speak. PDF and Word files do not work directly, so copy their text and paste it." },
+      { q: "Do I need to sign up or log in?", a: "No. You can use it without any sign-up, login or payment." },
+      { q: "Is my text sent anywhere?", a: "The tool itself does not send your text to any server. However, voices marked \"online\" in the voice list may use the servers of your browser or phone maker. Pick an offline voice to keep everything on your device." },
+      { q: "How will the voice sound?", a: "The voice depends on the voices of your device and browser, so it sounds different on different phones. This tool has no AI voices of its own." },
       { q: "Why does it not work when I open it from Instagram or Facebook?", a: "The built-in browser of those apps does not support voice. Use the ⋯ menu and choose \"Open in browser\" to open it in Chrome." },
-      { q: "Can I download the audio?", a: "No. The browser voice can only play the sound and cannot save it as a file." },
+      { q: "Can I download the audio (MP3)?", a: "No. The browser voice can only play the sound and cannot save it as a file." },
     ],
   },
   "nagad-calculator": {

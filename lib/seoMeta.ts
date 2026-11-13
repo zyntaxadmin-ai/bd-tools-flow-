@@ -195,8 +195,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফোনের ক্যামেরা দিয়ে QR কোড স্ক্যান করুন, অথবা QR এর ছবি আপলোড করুন। কোনো ছবি সার্ভারে যায় না। ফ্রি QR scanner।",
   },
   "text-to-speech": {
-    title: "Text to Speech - লেখা থেকে ভয়েস (বাংলা)",
-    description: "লেখা পেস্ট করে বাংলা, ইংরেজি ও আপনার ডিভাইসে থাকা অন্যান্য ভাষায় পড়ে শোনান। কণ্ঠ, গতি ও সুর ঠিক করা যায়। ফ্রি text to speech।",
+    title: "বাংলা Text to Speech - লেখা থেকে ভয়েস",
+    description: "ফ্রি বাংলা টেক্সট টু স্পিচ। লেখা পেস্ট বা .txt ফাইল দিয়ে বাংলা, ইংরেজি ও অন্য ভাষায় পড়ে শোনান। গতি ও সুর ঠিক করুন, সাইন-আপ লাগে না।",
   },
   "rotate-pdf": {
     title: "Rotate PDF - পিডিএফ ঘুরান",

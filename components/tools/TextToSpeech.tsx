@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Play, Pause, Square, RotateCcw, Copy, Check } from "lucide-react";
+import { Play, Pause, Square, RotateCcw, Copy, Check, Upload } from "lucide-react";
 import { useLang, useTr } from "@/lib/lang";
 import { planSpeech, pickVoice, languagesFromVoices, baseLang, voiceId, fallbackLocale } from "@/lib/tts";
 import { speakPlan, SynthLike, UtteranceLike } from "@/lib/ttsEngine";
@@ -8,6 +8,9 @@ import { speakPlan, SynthLike, UtteranceLike } from "@/lib/ttsEngine";
 type Status = "idle" | "speaking" | "paused";
 const MAX = 5000;
 const FIRST_CHUNK = 70;
+const MAX_FILE = 1_000_000; // 1 MB text file
+const SAMPLE_BN = "আসসালামু আলাইকুম। এটি বাংলা টেক্সট টু স্পিচ টুলের একটি নমুনা। এখানে যা লিখবেন, আপনার ডিভাইসের ভয়েস সেটি পড়ে শোনাবে।";
+const SAMPLE_EN = "Hello! This is a sample of the text to speech tool. Type or paste any text and your device voice will read it aloud.";
 const IN_APP = /Instagram|FBAN|FBAV|FB_IAB|FBIOS|Messenger|TikTok|musical_ly|Snapchat|Line\/|MicroMessenger|Twitter/i;
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 
@@ -29,6 +32,8 @@ export default function TextToSpeech() {
   const [inApp, setInApp] = useState(false);
   const [copied, setCopied] = useState(false);
   const speakerRef = useRef<{ stop(): void } | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+  const [fileMsg, setFileMsg] = useState("");
 
   useEffect(() => {
     const ua = navigator.userAgent || "";
@@ -61,6 +66,23 @@ export default function TextToSpeech() {
     ? `${tr("স্বয়ংক্রিয়", "Automatic")} • ${langName(langsInPlan[0])}: ${automaticVoice.name} (${automaticVoice.lang})`
     : tr("স্বয়ংক্রিয় (লেখার ভাষা অনুযায়ী কণ্ঠ)", "Automatic (voice for detected language)");
 
+  const onFile = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0];
+    e.target.value = "";
+    if (!f) return;
+    setFileMsg("");
+    if (f.size > MAX_FILE) return setFileMsg(tr("ফাইলটি ১ MB এর বেশি বড়। ছোট ফাইল দিন।", "The file is larger than 1 MB. Use a smaller file."));
+    try {
+      const t = (await f.text()).replace(/\r/g, "");
+      if (!t.trim()) return setFileMsg(tr("ফাইলে কোনো লেখা পাওয়া যায়নি।", "No text was found in the file."));
+      setText(t.slice(0, MAX));
+      setFileMsg(t.length > MAX ? tr(`ফাইলের প্রথম ${MAX} অক্ষর নেওয়া হয়েছে।`, `Only the first ${MAX} characters of the file were used.`) : "");
+    } catch {
+      setFileMsg(tr("ফাইলটি পড়া যায়নি। শুধু .txt ফাইল দিন।", "Could not read the file. Use a .txt file."));
+    }
+  };
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+  const minutes = words / (150 * rate);
   const speak = () => {
     speakerRef.current?.stop();
     setError(""); setSlow(false); setStarted(false);
@@ -132,11 +154,19 @@ export default function TextToSpeech() {
         <p className="text-xs text-amber-700 dark:text-amber-400 border border-amber-300 dark:border-amber-700 rounded-xl p-3">{tr("আপনি অ্যাপের ভেতরের ব্রাউজারে আছেন। শব্দ না এলে Chrome এ খুলুন (⋯ → Open in browser)।", "You are in an app's built-in browser. If there is no sound, open this page in Chrome (⋯ → Open in browser).")}</p>
       )}
       <div>
+        <div className="flex flex-wrap gap-2 mb-2">
+          <input ref={fileRef} type="file" accept=".txt,text/plain" onChange={onFile} className="hidden" />
+          <button onClick={() => fileRef.current?.click()} className="px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-xs flex items-center gap-1.5 dark:text-white"><Upload className="w-3.5 h-3.5" />{tr("টেক্সট ফাইল (.txt)", "Text file (.txt)")}</button>
+          <button onClick={() => { setText(SAMPLE_BN); setFileMsg(""); }} className="px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-xs dark:text-white">{tr("বাংলা নমুনা", "Bangla sample")}</button>
+          <button onClick={() => { setText(SAMPLE_EN); setFileMsg(""); }} className="px-3 py-2 border border-slate-200 dark:border-slate-700 rounded-xl text-xs dark:text-white">{tr("ইংরেজি নমুনা", "English sample")}</button>
+        </div>
+        {fileMsg && <p className="text-xs text-amber-700 dark:text-amber-400 mb-2">{fileMsg}</p>}
         <textarea value={text} onChange={(e) => setText(e.target.value.slice(0, MAX))} rows={7} placeholder={tr("এখানে যা শুনতে চান তা লিখুন বা পেস্ট করুন...", "Type or paste what you want to hear...")} className="w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none resize-none" />
         <div className="flex justify-between text-xs text-slate-500">
           <span>{text.trim() && langSel === "auto" && !chosen && langsInPlan.length > 0 ? `${tr("চেনা ভাষা", "Detected")}: ${langsInPlan.map(langName).join(", ")}` : ""}</span>
           <span>{text.length}/{MAX}</span>
         </div>
+        {words > 0 && <p className="text-xs text-slate-500">{words} {tr("শব্দ", "words")} • {tr("প্রায়", "about")} {minutes < 1 ? tr("১ মিনিটের কম", "under 1 minute") : `${Math.round(minutes)} ${tr("মিনিট", "min")}`} {tr("লাগবে", "to listen")}</p>}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

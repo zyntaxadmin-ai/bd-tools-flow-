@@ -1284,33 +1284,73 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "text-to-speech": {
     bn: [
       {
-        h: "কীভাবে ব্যবহার করবেন",
+        h: "বাংলা টেক্সট টু স্পিচ কীভাবে ব্যবহার করবেন",
         p: [
-          "লেখা টাইপ বা পেস্ট করুন, ভাষা ও ভয়েস বেছে নিন (Automatic রাখলে লেখার বর্ণমালা দেখে ভাষা ধরা হয়), গতি ও পিচ ঠিক করুন এবং Speak চাপুন। আপনার লেখা কোথাও পাঠানো হয় না।",
-          "যে ভাষার ভয়েস আপনার ফোন বা ব্রাউজারে ইনস্টল আছে সেই ভাষাই চলে। ল্যাটিন অক্ষরে লেখা অন্য ভাষার (যেমন স্প্যানিশ) জন্য Language তালিকা থেকে সেই ভাষা বেছে নিন।",
+          "লেখা টাইপ বা পেস্ট করুন, অথবা .txt ফাইল দিন। ভাষা ও ভয়েস বেছে নিন (Automatic রাখলে লেখার বর্ণমালা দেখে ভাষা ধরা হয়, তাই বাংলা লিখলে বাংলা ভয়েসই বাছা হয়), গতি ও সুর ঠিক করুন এবং পড়ে শোনান চাপুন। লেখার নিচে শব্দ সংখ্যা ও আনুমানিক শোনার সময় দেখা যায়।",
+          "নমুনা বাটন চাপলে একটি বাংলা বা ইংরেজি নমুনা লেখা বসে যায়, ভয়েস ঠিকমতো চলছে কি না দেখে নিতে এটি কাজে লাগে।",
+        ],
+      },
+      {
+        h: "কোন ভাষা ও কেমন কণ্ঠ পাবেন",
+        p: [
+          "যে ভাষার ভয়েস আপনার ফোন বা ব্রাউজারে ইনস্টল আছে সেই ভাষাই চলে। ল্যাটিন অক্ষরে লেখা অন্য ভাষার (যেমন স্প্যানিশ) জন্য ভাষা তালিকা থেকে সেই ভাষা বেছে নিন।",
+          "এই টুলের নিজস্ব কোনো AI কণ্ঠ নেই। কণ্ঠ আপনার ডিভাইস ও ব্রাউজারের ভয়েসের উপর নির্ভর করে, তাই ফোনভেদে আলাদা শোনাবে। MP3 ডাউনলোডও নেই, শুধু শোনা যায়।",
         ],
       },
       {
         h: "বাংলা না পড়লে",
         p: [
-          "ফোনের Settings → Language → Text-to-speech থেকে সেই ভাষার ভয়েস ইনস্টল করুন। \"অনলাইন\" চিহ্নিত ভয়েসের জন্য ইন্টারনেট লাগতে পারে।",
-          "পড়াশোনা, বানান শোনা বা চোখ বন্ধ করে লেখা শুনতে এটি কাজে লাগে।",
+          "ফোনের Settings → Language → Text-to-speech থেকে বাংলা ভয়েস ইনস্টল করুন। \"অনলাইন\" চিহ্নিত ভয়েসের জন্য ইন্টারনেট লাগে ও শুরু হতে দেরি হতে পারে, তাই সম্ভব হলে অফলাইন ভয়েস বেছে নিন।",
+          "Instagram বা Facebook এর ভেতরের ব্রাউজারে ভয়েস চলে না। ⋯ মেনু থেকে Open in browser বেছে Chrome এ খুলুন।",
+        ],
+      },
+      {
+        h: "লেখার সীমা ও গোপনীয়তা",
+        p: [
+          "একবারে সর্বোচ্চ ৫,০০০ অক্ষর পড়ানো যায়। বড় লেখা ভাগ করে নিন। .txt ফাইল ১ MB পর্যন্ত নেওয়া হয়, তবে প্রথম ৫,০০০ অক্ষরই বক্সে আসে।",
+          "টুল নিজে আপনার লেখা কোনো সার্ভারে পাঠায় না। তবে \"অনলাইন\" চিহ্নিত ভয়েস আপনার ব্রাউজার বা ফোনের নির্মাতার সার্ভার ব্যবহার করতে পারে। সব ডিভাইসের ভেতরে রাখতে অফলাইন ভয়েস বাছুন।",
+        ],
+      },
+      {
+        h: "কাদের কাজে লাগে",
+        p: [
+          "পড়াশোনা, বানান ও উচ্চারণ শোনা, লেখা প্রুফ শোনা বা চোখ বন্ধ করে লেখা শুনতে এটি কাজে লাগে। সাইন-আপ বা লগইন ছাড়াই ফোন ও কম্পিউটারে চলে।",
         ],
       },
     ],
     en: [
       {
-        h: "How to use it",
+        h: "How to use Bangla text to speech",
         p: [
-          "Type or paste your text, choose the language and voice (leave it on Automatic to detect the language from the writing system), set speed and pitch, then tap Speak. Your text is never sent anywhere.",
+          "Type or paste your text, or add a .txt file. Choose the language and voice (on Automatic the tool detects the language from the writing system, so Bangla text gets a Bangla voice), set speed and pitch, then tap Speak. Below the box you see the word count and approximate listening time.",
+          "The sample buttons put in a Bangla or English sample, which helps you check that the voice works properly.",
+        ],
+      },
+      {
+        h: "Which languages and what kind of voice",
+        p: [
           "It works for languages that have a voice installed on your phone or browser. For other languages written in Latin letters, such as Spanish, choose that language from the Language list.",
+          "This tool has no AI voices of its own. The voice depends on your device and browser, so it sounds different on different phones. There is no MP3 download, you can only listen.",
         ],
       },
       {
         h: "If Bangla is not read aloud",
         p: [
-          "Install a voice for that language in Settings → Language → Text-to-speech. Voices marked \"online\" may need an internet connection.",
-          "It helps with studying, hearing how words sound, or listening to text with your eyes closed.",
+          "Install a Bangla voice in Settings → Language → Text-to-speech. Voices marked \"online\" need internet and may start slowly, so pick an offline voice if you can.",
+          "Voice does not work inside the built-in browser of Instagram or Facebook. Use the ⋯ menu, choose Open in browser and open it in Chrome.",
+        ],
+      },
+      {
+        h: "Text limit and privacy",
+        p: [
+          "You can read up to 5,000 characters at a time. Split longer text. A .txt file up to 1 MB is accepted, but only its first 5,000 characters come into the box.",
+          "The tool itself does not send your text to any server. However, voices marked \"online\" may use the servers of your browser or phone maker. Pick an offline voice to keep everything on your device.",
+        ],
+      },
+      {
+        h: "Who it helps",
+        p: [
+          "It helps with studying, hearing spelling and pronunciation, proofreading by ear, or listening to text with your eyes closed. It works on phone and computer without sign-up or login.",
         ],
       },
     ],
