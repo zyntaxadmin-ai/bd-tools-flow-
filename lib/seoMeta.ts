@@ -11,8 +11,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "সোনার দাম ক্যালকুলেটর। ২২, ২১, ১৮ ক্যারেটের ভরি-আনা-রতি বা গ্রাম থেকে মজুরি ও ভ্যাটসহ গয়নার মোট দাম, পুরোনো সোনা বিক্রির হিসাব এবং ভরি থেকে গ্রাম। Gold price calculator BD।",
   },
   "number-to-words-bd": {
-    title: "টাকার অঙ্ক কথায় - Number to Words BD",
-    description: "টাকার অঙ্ক বাংলা ও ইংরেজি কথায় লিখুন। চেক ও ভাউচারের জন্য সুবিধাজনক। লাখ-কোটি পদ্ধতি, পয়সাসহ। Taka amount in words, ফ্রি।",
+    title: "টাকার অঙ্ক কথায় - Number to Words Bangla",
+    description: "টাকার অঙ্ক কথায় লিখুন। সংখ্যা থেকে বাংলা ও ইংরেজি কথা, লাখ-কোটি ও মিলিয়ন পদ্ধতি, পয়সাসহ, একসাথে অনেক সংখ্যা। চেক লেখার ফ্রি টুল।",
   },
   "income-tax-calculator-bd": {
     title: "Income Tax Calculator BD - আয়কর ক্যালকুলেটর",

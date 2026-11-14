@@ -2033,38 +2033,89 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "number-to-words-bd": {
     bn: [
       {
-        h: "টাকার অঙ্ক কথায় লেখা কেন দরকার",
+        h: "টাকার অঙ্ক কথায় লেখার সহজ উপায়",
         p: [
-          "চেক, ভাউচার, চালান ও চুক্তিতে টাকার অঙ্কের পাশাপাশি কথায়ও লিখতে হয়, যাতে অঙ্কে কোনো বদল বা ভুল সহজে ধরা পড়ে। এই টুল আপনার অঙ্ক বাংলা ও ইংরেজি দুই ভাষায় কথায় লিখে দেয়।",
-          "যেমন ১২,৩৪,৫৬৭ টাকা কথায় হয় \"বারো লাখ চৌত্রিশ হাজার পাঁচশ সাতষট্টি টাকা মাত্র\"। পয়সা থাকলে \"টাকা ... পয়সা মাত্র\" আকারে দেখায়।",
+          "অঙ্ক লিখলে টুল বাংলা ও ইংরেজি কথা দেখায়। 'টাকা' বেছে রাখলে ফল 'বারো লাখ চৌত্রিশ হাজার পাঁচশ সাতষট্টি টাকা পঞ্চাশ পয়সা মাত্র'-এর মতো হয়। 'সাধারণ সংখ্যা' বেছে নিলে টাকা-পয়সা ছাড়া শুধু সংখ্যার কথা পাবেন, দশমিক থাকলে অঙ্ক ধরে ধরে পড়া হয়।",
+          "কমা ও বাংলা অঙ্ক দুটোই চলে, তাই ১২,৩৪,৫৬৭ লিখলেও সমস্যা নেই। পূর্ণ সংখ্যায় ১৪ অঙ্ক পর্যন্ত নেওয়া হয়।",
         ],
       },
       {
-        h: "লাখ-কোটি পদ্ধতি",
+        h: "চেকে কথায় লেখার নিয়ম",
         p: [
-          "বাংলাদেশে সংখ্যা গোনা হয় হাজার, লাখ ও কোটি দিয়ে। এক লাখ মানে ১,০০,০০০ এবং এক কোটি মানে ১,০০,০০,০০০। ইংরেজিতেও তাই Lakh ও Crore ব্যবহার করা হয়েছে।",
-          "চেকে লেখার আগে বানান একবার মিলিয়ে নিন। কিছু ব্যাংকে \"শ\" এর বদলে \"শত\" লেখার চল থাকলে নিজে বদলে নিন।",
+          "চেকে অঙ্কের পাশাপাশি কথায় টাকার পরিমাণ লিখতে হয়, শেষে 'মাত্র' দিয়ে। কথায় লেখা অঙ্ক সাধারণত প্রাধান্য পায়, তবে অঙ্ক ও কথায় অমিল থাকলে ব্যাংক চেক ফেরত দিতে পারে। তাই দুটো ঠিকমতো মিলিয়ে নিন।",
+          "কথার আগে-পরে ফাঁকা না রেখে লিখুন বা সরলরেখা টেনে দিন, যাতে পরে কেউ কিছু যোগ করতে না পারে। বিস্তারিত নিয়ম আপনার ব্যাংকের কাছে জেনে নিন। ইংরেজিতে লিখলে UPPERCASE বাটনে বড় হাতের অক্ষর পাবেন।",
+        ],
+      },
+      {
+        h: "লাখ-কোটি ও মিলিয়ন-বিলিয়ন",
+        p: [
+          "বাংলাদেশে সংখ্যা পড়া হয় হাজার, লাখ ও কোটি দিয়ে, আর কমা বসে শেষ তিন অঙ্কের পর, তারপর দুই অঙ্ক পরপর (১২,৩৪,৫৬৭)। আন্তর্জাতিক পদ্ধতিতে মিলিয়ন ও বিলিয়ন ব্যবহার হয় এবং কমা বসে তিন অঙ্ক পরপর (1,234,567)।",
+          "১ মিলিয়ন = ১০ লাখ এবং ১ বিলিয়ন = ১০০ কোটি। টুল একই সংখ্যার ইংরেজি কথা দুই পদ্ধতিতেই দেখায়, আর নিচে বাংলা অঙ্ক, লাখ-কোটি কমা ও আন্তর্জাতিক কমাও দেখায়।",
+        ],
+      },
+      {
+        h: "শূন্যের হিসাব",
+        p: [
+          "১ লাখে ৫টি শূন্য (১,০০,০০০), ১০ লাখে ৬টি, ১ কোটিতে ৭টি (১,০০,০০,০০০) এবং ১০ কোটিতে ৮টি শূন্য। শূন্য গুনতে ভুল হলে টাকার অঙ্ক বদলে যায়, তাই বড় অঙ্কে কথায় একবার মিলিয়ে দেখা ভালো।",
+        ],
+      },
+      {
+        h: "অনেক সংখ্যা ও ফোন নম্বর",
+        p: [
+          "'অনেক সংখ্যা' ট্যাবে প্রতি লাইনে একটি করে সংখ্যা দিন (সর্বোচ্চ ১০০টি)। প্রতিটির বাংলা ও ইংরেজি কথা দেখা যাবে এবং একবারে সব কপি করা যাবে। বিল, ভাউচার বা তালিকার জন্য এটি কাজে লাগে।",
+          "'ফোন নম্বর' ট্যাবে প্রতিটি অঙ্ক আলাদা করে পড়া হয়, যেমন ০১৭ = শূন্য এক সাত। শুরুতে + থাকলে 'প্লাস' লেখা হয়।",
+        ],
+      },
+      {
+        h: "বানান নিয়ে সতর্কতা",
+        p: [
+          "টুল 'একশ, দুইশ, তিনশ' রূপ ব্যবহার করে। কেউ কেউ 'একশো' বা 'একশত' লেখেন। আপনার ব্যাংক বা প্রতিষ্ঠানের নিয়ম অনুযায়ী দরকারে বদলে নিন। গুরুত্বপূর্ণ কাগজে লেখার আগে বানান একবার মিলিয়ে নিন। আপনার দেওয়া সংখ্যা কোথাও জমা হয় না, সব রূপান্তর ব্রাউজারেই হয়।",
         ],
       },
     ],
     en: [
       {
-        h: "Why write an amount in words",
+        h: "An easy way to write a taka amount in words",
         p: [
-          "Cheques, vouchers, invoices and contracts ask for the amount in words as well as numbers, so that any change or mistake in the digits is easy to spot. This tool writes your amount in words in both Bangla and English.",
-          "For example 12,34,567 taka reads \"Twelve Lakh Thirty Four Thousand Five Hundred Sixty Seven Taka Only\". If there are paisa, it reads \"Taka ... Paisa Only\".",
+          "Enter the figures and the tool shows the words in Bangla and English. With 'Taka' selected the result reads like 'Twelve Lakh Thirty Four Thousand Five Hundred Sixty Seven Taka Fifty Paisa Only'. With 'Plain number' you get just the number in words, and any decimals are read digit by digit.",
+          "Commas and Bangla digits both work, so 12,34,567 is fine. Up to 14 digits are accepted in the whole part.",
         ],
       },
       {
-        h: "The lakh and crore system",
+        h: "Rules for writing words on a cheque",
         p: [
-          "Numbers in Bangladesh are counted in thousands, lakhs and crores. One lakh is 1,00,000 and one crore is 1,00,00,000. That is why the English words use Lakh and Crore too.",
-          "Check the spelling once before you write it on a cheque. If your bank prefers a different Bangla spelling for hundreds, change it yourself.",
+          "On a cheque you write the amount in words as well as figures, ending with 'Only'. The amount in words usually takes priority, but if the figures and words differ the bank may return the cheque. So make sure they match.",
+          "Write the words with no gap before or after, or draw a line, so nothing can be added later. Ask your bank for the exact rules. For English, the UPPERCASE button gives capital letters.",
+        ],
+      },
+      {
+        h: "Lakh-crore and million-billion",
+        p: [
+          "In Bangladesh numbers are read with thousand, lakh and crore, and commas go after the last three digits and then every two digits (12,34,567). The international system uses million and billion with commas every three digits (1,234,567).",
+          "1 million = 10 lakh and 1 billion = 100 crore. The tool shows the English words for the same number in both systems, and below it the Bangla digits, lakh-crore commas and international commas.",
+        ],
+      },
+      {
+        h: "Counting the zeros",
+        p: [
+          "1 lakh has 5 zeros (1,00,000), 10 lakh has 6, 1 crore has 7 (1,00,00,000) and 10 crore has 8. A mistake in the zeros changes the amount, so for large figures it is good to check the words once.",
+        ],
+      },
+      {
+        h: "Many numbers and phone numbers",
+        p: [
+          "In the 'Many numbers' tab, enter one number per line (up to 100). You see the Bangla and English words for each and can copy them all at once. It helps with bills, vouchers and lists.",
+          "The 'Digits' tab reads each digit separately, such as 017 = Zero One Seven. A leading + is written as 'Plus'.",
+        ],
+      },
+      {
+        h: "A note on spelling",
+        p: [
+          "The tool uses forms like 'একশ, দুইশ, তিনশ'. Some people write 'একশো' or 'একশত'. Change it to match your bank or organisation. Check the spelling once before writing on an important document. The numbers you enter are not stored anywhere, and all conversion happens in your browser.",
         ],
       },
     ],
   },
-
   "zakat-calculator-bd": {
     bn: [
       {

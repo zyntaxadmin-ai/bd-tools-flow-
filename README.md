@@ -98,6 +98,13 @@ Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), 
 - There is no URL mode, because fetching other sites needs a server route (and brings abuse risks). The visitor pastes the page text instead.
 - Page text: `components/toolRegistryB3.tsx` (11 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. Note: `toolArticles.ts` has a second map, `EXTRA`, whose sections are appended to the main entry for the same slug, so check both when you edit an article.
 
+## Number to words
+
+- `components/tools/NumberToWords.tsx` has three tabs. **One number**: Bangla words, English words in the lakh-crore system and in the international (million-billion) system, plus the number with Bangla digits, lakh-crore commas and international commas. **Many numbers**: one number per line (up to 100) with a Copy all button. **Digits**: reads a phone number or digit string digit by digit (a leading + is read as plus).
+- Two modes: **Taka** (up to 2 decimal places read as paisa, ends with "মাত্র" or "Only", for cheques) and **Plain number** (up to 10 decimal places, read digit by digit). English can be Title Case, UPPERCASE or lowercase. The whole part can have up to 14 digits.
+- `lib/numWords.ts` holds the logic: `bnWords`, `enWords` (lakh-crore), `enIntlWords`, `parseNumber`, `toWords`, `readDigits`, `groupLakh`, `groupIntl`, `toBnDigits` and `applyCase`. `bnWords`, `enWords` and `convert` are still exported from the component file for compatibility. The Bangla hundreds use the "একশ, দুইশ" form; some people write "একশো" or "একশত", and the page tells the visitor so.
+- Page text: `components/toolRegistryB10.tsx` (12 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. The "number to words" guide links to it.
+
 ## Chat assistant (BD Flow Helper)
 
 - `pages/api/chat.js` is the server route. It holds the system prompt, FAQ knowledge, a link allowlist (only bdtoolsflow.cyou pages are kept in replies), an origin check and a soft per-IP rate limit. Message text is never logged.
