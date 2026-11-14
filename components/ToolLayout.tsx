@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import ToolCard from "./ToolCard";
 import AdSlot from "./AdSlot";
+import SourceNote from "./SourceNote";
 import { tools } from "@/data/tools";
 import { LIVE_SLUGS } from "@/lib/live";
 import { preferredRelated } from "@/lib/relatedTools";
@@ -69,6 +70,8 @@ export default function ToolLayout({ title, description, category, categorySlug,
       <AdSlot label="Advertisement" />
 
       <div className="mt-6 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-6 md:p-8">{children}</div>
+
+      <SourceNote slug={slug.replace("/tool/", "")} />
 
       <div className="mt-6"><AdSlot label="Advertisement" /></div>
 
