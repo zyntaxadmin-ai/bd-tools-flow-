@@ -45,12 +45,20 @@ export default function ToolLayout({ title, description, category, categorySlug,
 
   return (
     <div className="max-w-[900px] mx-auto px-4 sm:px-6 py-6">
-      <nav className="flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400 mb-6 flex-wrap">
-        <Link href="/" className="hover:text-indigo-600 flex items-center gap-1"><Home className="w-4 h-4" /> {ui.home}</Link>
-        <ChevronRight className="w-4 h-4" />
-        <Link href={`/category/${categorySlug}`} className="hover:text-indigo-600">{catLabel}</Link>
-        <ChevronRight className="w-4 h-4" />
-        <span className="text-slate-900 dark:text-white font-medium">{t}</span>
+      <nav aria-label="Breadcrumb" className="mb-6">
+        <ol className="flex items-center gap-1.5 text-[13px] text-slate-500 dark:text-slate-400 whitespace-nowrap overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <li className="shrink-0">
+            <Link href="/" aria-label={ui.home} className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 dark:bg-slate-800 hover:text-indigo-600">
+              <Home className="w-4 h-4" />
+            </Link>
+          </li>
+          <li aria-hidden="true" className="shrink-0 text-slate-400">/</li>
+          <li className="shrink-0">
+            <Link href={`/category/${categorySlug}`} className="inline-flex items-center h-8 px-3 rounded-full bg-slate-100 dark:bg-slate-800 hover:text-indigo-600">{catLabel}</Link>
+          </li>
+          <li aria-hidden="true" className="shrink-0 text-slate-400">/</li>
+          <li aria-current="page" className="min-w-0 truncate font-medium text-slate-900 dark:text-white">{t}</li>
+        </ol>
       </nav>
 
       <div className="text-center mb-6">
