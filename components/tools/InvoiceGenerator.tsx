@@ -137,7 +137,7 @@ export default function InvoiceGenerator() {
             <thead><tr className="border-b-2 border-slate-300 text-left"><th className="py-2">{tr("বিবরণ", "Description")}</th><th className="py-2 text-right">{tr("পরিমাণ", "Qty")}</th><th className="py-2 text-right">{tr("দাম", "Price")}</th><th className="py-2 text-right">{tr("মোট", "Amount")}</th></tr></thead>
             <tbody>
               {c.rows.length === 0 ? (
-                <tr><td colSpan={4} className="py-4 text-center text-slate-400">{tr("আইটেম যোগ করুন", "Add items above")}</td></tr>
+                <tr><td colSpan={4} className="py-4 text-center text-slate-500">{tr("আইটেম যোগ করুন", "Add items above")}</td></tr>
               ) : c.rows.map((r, i) => (
                 <tr key={i} className="border-b border-slate-200"><td className="py-2 break-words">{r.desc || "-"}</td><td className="py-2 text-right">{r.qty}</td><td className="py-2 text-right">{money(r.price)}</td><td className="py-2 text-right">{money(r.total)}</td></tr>
               ))}

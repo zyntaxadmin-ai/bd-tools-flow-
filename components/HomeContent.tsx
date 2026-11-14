@@ -1,5 +1,5 @@
 "use client";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import ToolCard from "@/components/ToolCard";
 import SiteJsonLd from "@/components/SiteJsonLd";
 import SearchBar from "@/components/SearchBar";
@@ -14,6 +14,13 @@ const ICONS = [Zap, ShieldCheck, Users, Sparkles];
 
 export default function HomeContent({ guides }: { guides: GuideLink[] }) {
   const [search, setSearch] = useState("");
+  // Lets /?q=bkash open the home page with the search filled in (used by the WebSite SearchAction schema).
+  useEffect(() => {
+    try {
+      const q = new URLSearchParams(window.location.search).get("q");
+      if (q) setSearch(q.slice(0, 80));
+    } catch { /* ignore */ }
+  }, []);
   const { lang } = useLang();
   const ui = useUI();
 

@@ -6,6 +6,7 @@ import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 import { LangProvider } from "@/lib/lang";
 import { siteConfig } from "@/lib/seo";
 
@@ -19,6 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "ফ্রি অনলাইন টুলস: Age Calculator, GPA Calculator, bKash Calculator, Word Counter ও আরও অনেক কিছু। Fast, Free, No Signup.",
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: siteConfig.name,
@@ -58,6 +60,16 @@ export default function RootLayout({
   return (
     <html lang="bn" suppressHydrationWarning>
       <head>
+        {/* Google Consent Mode v2. Denied by default in EEA/UK/CH until the visitor accepts; granted elsewhere unless the visitor declined. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+var c=null;try{c=localStorage.getItem('bdtf-consent');}catch(e){}
+var d=c==='denied'?'denied':'granted';
+if(c!=='granted'&&c!=='denied'){gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',region:['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IE','IT','LV','LT','LU','MT','NL','PL','PT','RO','SK','SI','ES','SE','IS','LI','NO','GB','CH'],wait_for_update:500});}
+gtag('consent','default',{ad_storage:d,ad_user_data:d,ad_personalization:d,analytics_storage:d});`,
+          }}
+        />
         {adsenseId ? (
           <script
             async
@@ -79,19 +91,19 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-N78SKNNJ9Z');
             `,
           }}
         />
 
+        <a href="#main" className="skip-link">Skip to content</a>
         <ThemeProvider>
           <LangProvider>
             <Header />
-            <main>{children}</main>
+            <main id="main">{children}</main>
             <Footer />
+            <CookieConsent />
           </LangProvider>
         </ThemeProvider>
 

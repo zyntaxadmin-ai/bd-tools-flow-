@@ -8,7 +8,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "gold-weight-converter-bd": {
     title: "সোনার দাম ক্যালকুলেটর - ভরি গ্রাম হিসাব",
-    description: "সোনার দাম ক্যালকুলেটর। ২২, ২১, ১৮ ক্যারেটের ভরি-আনা-রতি বা গ্রাম থেকে মজুরি ও ভ্যাটসহ গয়নার মোট দাম, পুরোনো সোনা বিক্রির হিসাব এবং ভরি থেকে গ্রাম। Gold price calculator BD।",
+    description: "সোনার দাম ক্যালকুলেটর। ২২, ২১, ১৮ ক্যারেটের ভরি-আনা-রতি বা গ্রাম থেকে মজুরি ও ভ্যাটসহ গয়নার দাম, পুরোনো সোনা বিক্রির হিসাব ও ভরি থেকে গ্রাম।",
   },
   "number-to-words-bd": {
     title: "টাকার অঙ্ক কথায় - Number to Words Bangla",
@@ -44,7 +44,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "electricity-bill-calculator-bd": {
     title: "Electricity Bill Calculator BD - বিদ্যুৎ বিল ২০২৬",
-    description: "বিদ্যুৎ বিল ক্যালকুলেটর বাংলাদেশ। জুন ২০২৬ রেটে ইউনিট থেকে বিল, বিলের টাকা থেকে ইউনিট এবং প্রিপেইড রিচার্জে কত ইউনিট পাবেন হিসাব করুন। ১০০ ও ২০০ ইউনিটের বিল টেবিলসহ, ফ্রি।",
+    description: "বিদ্যুৎ বিল ক্যালকুলেটর বাংলাদেশ। জুন ২০২৬ রেটে ইউনিট থেকে বিল, বিলের টাকা থেকে ইউনিট এবং প্রিপেইড রিচার্জে কত ইউনিট পাবেন হিসাব করুন। ফ্রি।",
   },
   "bdt-currency-converter": {
     title: "BDT Currency Converter - টাকার রেট কনভার্টার",
@@ -72,11 +72,11 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "emi-calculator-bd": {
     title: "EMI Calculator BD - লোন কিস্তি ক্যালকুলেটর",
-    description: "লোনের কিস্তি ক্যালকুলেটর। লোনের পরিমাণ, সুদের হার ও মেয়াদ দিয়ে মাসিক EMI, মোট সুদ ও পরিশোধের হিসাব করুন।",
+    description: "লোনের কিস্তি ক্যালকুলেটর। লোনের পরিমাণ, সুদের হার ও মেয়াদ দিয়ে মাসিক EMI, মোট সুদ ও মোট পরিশোধের হিসাব করুন। ফ্রি, সাইনআপ ছাড়াই।",
   },
   "bangla-calendar": {
     title: "Bangla Calendar - আজকের বাংলা তারিখ",
-    description: "আজকের বাংলা তারিখ দেখুন। ইংরেজি-বাংলা ক্যালেন্ডার ও তারিখ রূপান্তর, বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী।",
+    description: "আজকের বাংলা তারিখ দেখুন। ইংরেজি-বাংলা ক্যালেন্ডার ও তারিখ রূপান্তর, বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী। ফ্রি Bangla calendar টুল।",
   },
   "countdown-timer": {
     title: "Countdown - কাউন্টডাউন টাইমার অনলাইন",
@@ -92,11 +92,11 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "compress-pdf": {
     title: "Compress PDF - পিডিএফ সাইজ কমান",
-    description: "PDF-এর সাইজ কমান ফ্রিতে। ফাইল আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়। স্ক্যান করা PDF-এর জন্য ভালো।",
+    description: "PDF-এর সাইজ ফ্রিতে কমান। ফাইল আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়। স্ক্যান করা PDF-এর জন্য ভালো। Free PDF compressor।",
   },
   "merge-pdf": {
     title: "Merge PDF - পিডিএফ জোড়া দিন",
-    description: "একাধিক PDF ফাইল জোড়া দিয়ে একটি PDF বানান, ক্রম নিজে ঠিক করুন। ফাইল আপলোড হয় না। ফ্রি merge PDF টুল।",
+    description: "একাধিক PDF ফাইল জোড়া দিয়ে একটি PDF বানান, ক্রম নিজে ঠিক করুন। ফাইল আপলোড হয় না, সব কাজ ব্রাউজারে হয়। ফ্রি merge PDF টুল।",
   },
   "image-to-pdf": {
     title: "Image to PDF - ছবি থেকে পিডিএফ",
@@ -104,7 +104,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "qr-code-generator": {
     title: "QR Code Generator - ফ্রি কিউআর কোড",
-    description: "লিংক বা লেখা থেকে ফ্রি QR কোড বানান, রং ও সাইজ ঠিক করে PNG ডাউনলোড করুন। Free QR code generator।",
+    description: "লিংক বা লেখা থেকে ফ্রি QR কোড বানান, রং ও সাইজ ঠিক করে PNG ডাউনলোড করুন। সাইনআপ লাগে না, সব কাজ ব্রাউজারে হয়। Free QR code generator।",
   },
   "word-counter": {
     title: "Word Counter - শব্দ গণনা (বাংলা ও ইংরেজি)",
@@ -128,7 +128,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "unit-converter": {
     title: "Unit Converter - একক রূপান্তর",
-    description: "দৈর্ঘ্য, ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটা সাইজ এক জায়গায় রূপান্তর করুন। ফ্রি unit converter।",
+    description: "দৈর্ঘ্য, ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটা সাইজ এক জায়গায় দ্রুত রূপান্তর করুন। ফ্রি, সাইনআপ ছাড়া। Free unit converter।",
   },
   "bill-calculator": {
     title: "Bill Split Calculator - বিল ভাগ করুন",
@@ -140,7 +140,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "scientific-calculator": {
     title: "Scientific Calculator - সায়েন্টিফিক ক্যালকুলেটর",
-    description: "sin, cos, tan, log, ln, বর্গমূল, পাওয়ার, ফ্যাক্টোরিয়াল ও বন্ধনীসহ ফ্রি অনলাইন সায়েন্টিফিক ক্যালকুলেটর।",
+    description: "sin, cos, tan, log, ln, বর্গমূল, পাওয়ার, ফ্যাক্টোরিয়াল ও বন্ধনীসহ ফ্রি অনলাইন সায়েন্টিফিক ক্যালকুলেটর। মোবাইলে ব্যবহার করা সহজ।",
   },
   "image-resizer": {
     title: "Image Resizer - ছবির সাইজ পরিবর্তন",
@@ -148,15 +148,15 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "image-converter": {
     title: "Image Converter - JPG PNG WebP কনভার্টার",
-    description: "ছবি JPG, PNG ও WebP এর মধ্যে বদলান। ছবি আপলোড হয় না, সব কাজ ব্রাউজারেই হয়। ফ্রি image converter।",
+    description: "ছবি JPG, PNG ও WebP এর মধ্যে বদলান। ছবি আপলোড হয় না, সব কাজ ব্রাউজারেই হয়। ফ্রি, সাইনআপ ছাড়া। Free image format converter।",
   },
   "character-counter": {
     title: "Character Counter - অক্ষর গণনা",
-    description: "স্পেসসহ ও স্পেস ছাড়া অক্ষর গুনুন। SMS, X, SEO Title ও Description এর লিমিট চেক করুন। ফ্রি character counter।",
+    description: "স্পেসসহ ও স্পেস ছাড়া অক্ষর গুনুন। SMS, X, SEO Title ও Description এর লিমিট চেক করুন। ফ্রি, সাইনআপ ছাড়া। Free character counter।",
   },
   "color-picker": {
     title: "Color Picker - HEX RGB HSL কালার কোড",
-    description: "রং বেছে নিন বা HEX লিখুন, HEX, RGB ও HSL কোড দেখুন এবং এক ক্লিকে কপি করুন। ফ্রি color picker।",
+    description: "রং বেছে নিন বা HEX লিখুন, HEX, RGB ও HSL কোড দেখুন এবং এক ক্লিকে কপি করুন। ডিজাইনার ও ডেভেলপারদের জন্য ফ্রি color picker।",
   },
   "lorem-ipsum-generator": {
     title: "Lorem Ipsum Generator - ডামি টেক্সট",
@@ -164,7 +164,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "meta-tag-generator": {
     title: "Meta Tag Generator - SEO মেটা ট্যাগ",
-    description: "টাইটেল, ডেসক্রিপশন, Open Graph ও Twitter ট্যাগসহ SEO meta tag বানান। Blogger ও যেকোনো ওয়েবসাইটের জন্য। ফ্রি।",
+    description: "টাইটেল, ডেসক্রিপশন, Open Graph ও Twitter ট্যাগসহ SEO meta tag বানান। Blogger ও যেকোনো ওয়েবসাইটের জন্য, কপি করে সরাসরি বসান। ফ্রি।",
   },
   "keyword-density-checker": {
     title: "Keyword Density Checker - কীওয়ার্ড ঘনত্ব যাচাই",
@@ -176,7 +176,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "random-number-generator": {
     title: "Random Number Generator - র‍্যান্ডম সংখ্যা",
-    description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি random number generator।",
+    description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি, সাইনআপ ছাড়া। Free random number generator।",
   },
   "time-zone-converter": {
     title: "BD Time to USA Time - আমেরিকায় এখন কয়টা বাজে?",

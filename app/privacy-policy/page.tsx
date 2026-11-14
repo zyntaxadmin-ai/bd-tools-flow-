@@ -73,6 +73,22 @@ const sections: Sec[] = [
     ],
   },
   {
+    h: ["Google Analytics, AdSense ও আপনার পছন্দ", "Google Analytics, AdSense and your choices"],
+    p: [
+      ["এই ওয়েবসাইটে Google Analytics (GA4) ভিজিটর পরিসংখ্যানের জন্য এবং Google AdSense বিজ্ঞাপন দেখানোর জন্য ব্যবহার হয়। Google ও তার বিজ্ঞাপন অংশীদাররা কুকি, IP address ও ডিভাইস-সংক্রান্ত তথ্য প্রক্রিয়াকরণ করতে পারে।", "This website uses Google Analytics (GA4) for visitor statistics and Google AdSense to show ads. Google and its advertising partners may process cookies, IP addresses and device-related information."],
+      ["ইউরোপীয় ইউনিয়ন, যুক্তরাজ্য ও সুইজারল্যান্ডের ভিজিটরদের ক্ষেত্রে আপনি কুকি ব্যানারে গ্রহণ না করা পর্যন্ত Analytics ও বিজ্ঞাপন-সংক্রান্ত কুকি বন্ধ থাকে (Google Consent Mode)। অন্য দেশে প্রত্যাখ্যান করলে সেই পছন্দ মানা হয়।", "For visitors in the EU, UK and Switzerland, analytics and advertising cookies stay off until you accept them in the cookie banner (Google Consent Mode). Elsewhere, a decline is respected."],
+      ["আমরা ব্যবহারকারীর নাম, ইমেইল বা ফোন নম্বর সংগ্রহ করি না, যদি না আপনি নিজে ইমেইলে আমাদের সঙ্গে যোগাযোগ করেন। আপনার ডেটা বিক্রি করা হয় না।", "We do not collect names, emails or phone numbers unless you contact us by email yourself. We do not sell your data."],
+      ["বিস্তারিত জানতে আমাদের Cookie Policy দেখুন: /cookie-policy", "For details, see our Cookie Policy: /cookie-policy"],
+    ],
+    extra: (
+      <p>
+        <a href="/cookie-policy" className="font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"><T bn="কুকি নীতি দেখুন" en="Read the Cookie Policy" /></a>
+        {" · "}
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-400 hover:underline"><T bn="Google পার্টনার সাইটের ডেটা নীতি" en="How Google uses partner-site data" /></a>
+      </p>
+    ),
+  },
+  {
     h: ["নীতির পরিবর্তন", "Changes to this policy"],
     p: [
       ["ওয়েবসাইটের ফিচার, ব্যবহৃত সেবা বা প্রযোজ্য নিয়ম পরিবর্তিত হলে এই Privacy Policy হালনাগাদ করা হতে পারে। পরিবর্তনগুলো এই পেজে প্রকাশ করা হবে।", "If the website's features, services used or applicable rules change, this Privacy Policy may be updated. Changes will be published on this page."],
@@ -92,7 +108,7 @@ export default function Page() {
     <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10">
       <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-3">Privacy Policy</h1>
       <p className="text-sm text-slate-500 dark:text-slate-400 mb-8">
-        <T bn="সর্বশেষ আপডেট: ২০ অক্টোবর, ২০২৬" en="Last updated: 20 October 2026" />
+        <T bn="সর্বশেষ আপডেট: ১৪ নভেম্বর, ২০২৬" en="Last updated: 14 November 2026" />
       </p>
       <div className="space-y-5 text-slate-600 dark:text-slate-400 leading-7">
         <p><T bn="BD Tools Flow-এ আপনাকে স্বাগতম। আপনার গোপনীয়তা রক্ষা করা আমাদের কাছে গুরুত্বপূর্ণ। এই নীতিতে আমাদের ওয়েবসাইট ব্যবহার করার সময় তথ্য কীভাবে প্রক্রিয়াকৃত হতে পারে, তা ব্যাখ্যা করা হয়েছে।" en="Welcome to BD Tools Flow. Protecting your privacy is important to us. This policy explains how information may be processed when you use our website." /></p>

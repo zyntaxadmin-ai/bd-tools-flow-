@@ -143,11 +143,11 @@ export default function ExpenseTracker() {
           {shown.map((e) => (
             <li key={e.id} className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800">
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium dark:text-white">{catLabel(e.type, e.category)} <span className="text-xs text-slate-400 font-normal">{e.date}</span></p>
+                <p className="text-sm font-medium dark:text-white">{catLabel(e.type, e.category)} <span className="text-xs text-slate-500 font-normal">{e.date}</span></p>
                 {e.note && <p className="text-xs text-slate-500 break-words">{e.note}</p>}
               </div>
               <span className={`text-sm font-semibold shrink-0 ${e.type === "income" ? "text-emerald-600" : "text-red-600"}`}>{e.type === "income" ? "+" : "-"}{e.amount.toLocaleString("en-IN", { maximumFractionDigits: 2 })}</span>
-              <button onClick={() => remove(e.id)} aria-label={tr("মুছুন", "Delete")} className="p-1.5 text-slate-400 hover:text-red-500"><Trash2 className="w-4 h-4" /></button>
+              <button onClick={() => remove(e.id)} aria-label={tr("মুছুন", "Delete")} className="p-1.5 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4" /></button>
             </li>
           ))}
         </ul>

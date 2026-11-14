@@ -81,8 +81,8 @@ export default function TodoList() {
           {shown.map((i) => (
             <li key={i.id} className="flex items-center gap-3 px-4 py-3 bg-white dark:bg-slate-800 first:rounded-t-xl last:rounded-b-xl">
               <input type="checkbox" checked={i.done} onChange={() => toggle(i.id)} className="w-5 h-5 accent-indigo-600 shrink-0" aria-label={tr("সম্পন্ন", "Done")} />
-              <span className={`flex-1 min-w-0 break-words text-sm ${i.done ? "line-through text-slate-400" : "dark:text-white"}`}>{i.text}</span>
-              <button onClick={() => remove(i.id)} aria-label={tr("মুছুন", "Delete")} className="p-1.5 text-slate-400 hover:text-red-500"><Trash2 className="w-4 h-4" /></button>
+              <span className={`flex-1 min-w-0 break-words text-sm ${i.done ? "line-through text-slate-500" : "dark:text-white"}`}>{i.text}</span>
+              <button onClick={() => remove(i.id)} aria-label={tr("মুছুন", "Delete")} className="p-1.5 text-slate-500 hover:text-red-500"><Trash2 className="w-4 h-4" /></button>
             </li>
           ))}
         </ul>

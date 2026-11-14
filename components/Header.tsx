@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Moon, Sun, Wrench } from "lucide-react";
+import { Moon, Sun, Wrench, Search } from "lucide-react";
 import { useTheme } from "next-themes";
 import LangToggle from "@/components/LangToggle";
 import { useUI } from "@/lib/lang";
@@ -9,6 +9,8 @@ import { useUI } from "@/lib/lang";
 export default function Header() {
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [q, setQ] = useState("");
   const ui = useUI();
   useEffect(() => setMounted(true), []);
 
@@ -24,6 +26,15 @@ export default function Header() {
           </Link>
           <div className="flex items-center gap-2">
             <Link href="/guides" className="text-sm font-medium text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 px-2 py-1">{ui.guides}</Link>
+            <button
+              type="button"
+              onClick={() => setSearchOpen((v) => !v)}
+              aria-label={ui.searchPh}
+              aria-expanded={searchOpen}
+              className="w-9 h-9 rounded-full border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center justify-center hover:bg-slate-50 dark:hover:bg-slate-800"
+            >
+              <Search className="w-4 h-4" />
+            </button>
             <LangToggle />
             {mounted && (
               <button
@@ -36,6 +47,27 @@ export default function Header() {
             )}
           </div>
         </div>
+        {searchOpen && (
+          <form
+            role="search"
+            className="pb-3"
+            onSubmit={(e) => {
+              e.preventDefault();
+              const v = q.trim();
+              if (v) window.location.href = `/?q=${encodeURIComponent(v)}`;
+            }}
+          >
+            <input
+              type="search"
+              autoFocus
+              value={q}
+              onChange={(e) => setQ(e.target.value)}
+              placeholder={ui.searchPh}
+              aria-label={ui.searchPh}
+              className="w-full px-4 py-3 text-[15px] rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-500"
+            />
+          </form>
+        )}
       </div>
     </header>
   );

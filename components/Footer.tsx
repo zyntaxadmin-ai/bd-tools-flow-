@@ -5,6 +5,7 @@ import { categories } from "@/data/tools";
 import { CAT_I18N } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
 import AdSlot from "./AdSlot";
+import T from "./T";
 
 export default function Footer() {
   const { lang } = useLang();
@@ -44,6 +45,8 @@ export default function Footer() {
               <li><Link href="/privacy-policy" className="hover:text-indigo-600">{ui.privacy}</Link></li>
               <li><Link href="/about" className="hover:text-indigo-600">{ui.about}</Link></li>
               <li><Link href="/contact" className="hover:text-indigo-600">{ui.contact}</Link></li>
+              <li><Link href="/editorial-policy" className="hover:text-indigo-600"><T bn="সম্পাদকীয় নীতি" en="Editorial Policy" /></Link></li>
+              <li><Link href="/cookie-policy" className="hover:text-indigo-600"><T bn="কুকি নীতি" en="Cookie Policy" /></Link></li>
               <li><Link href="/terms" className="hover:text-indigo-600">{ui.terms}</Link></li>
               <li><Link href="/disclaimer" className="hover:text-indigo-600">{ui.disclaimer}</Link></li>
             </ul>

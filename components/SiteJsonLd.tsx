@@ -13,6 +13,11 @@ export default function SiteJsonLd() {
         url: `${siteConfig.url}/`,
         inLanguage: ["bn", "en"],
         publisher: { "@id": `${siteConfig.url}/#organization` },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: { "@type": "EntryPoint", urlTemplate: `${siteConfig.url}/?q={search_term_string}` },
+          "query-input": "required name=search_term_string",
+        },
       },
       {
         "@type": "Organization",
@@ -21,6 +26,7 @@ export default function SiteJsonLd() {
         url: `${siteConfig.url}/`,
         description: "বাংলাদেশের মানুষের জন্য বিনামূল্যের অনলাইন ক্যালকুলেটর ও ইউটিলিটি টুলস প্ল্যাটফর্ম।",
         email: CONTACT_EMAIL,
+        logo: { "@type": "ImageObject", url: `${siteConfig.url}/icon.png` },
         founder: {
           "@type": "Person",
           name: "Md Rohan Islam",

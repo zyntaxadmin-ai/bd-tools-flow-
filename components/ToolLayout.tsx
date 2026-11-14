@@ -96,7 +96,7 @@ export default function ToolLayout({ title, description, category, categorySlug,
             <details key={i} className="py-3 group">
               <summary className="flex justify-between items-center cursor-pointer list-none text-sm font-medium text-slate-900 dark:text-white">
                 {f.q}
-                <ChevronRight className="w-4 h-4 text-slate-400 group-open:rotate-90 transition-transform" />
+                <ChevronRight className="w-4 h-4 text-slate-500 group-open:rotate-90 transition-transform" />
               </summary>
               <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 leading-relaxed">{f.a}</p>
             </details>

@@ -84,7 +84,7 @@ function CoinMode() {
   };
   return (
     <div className="space-y-4 text-center">
-      <div className={`mx-auto w-32 h-32 rounded-full flex items-center justify-center text-xl font-bold border-4 ${last === "head" ? "bg-amber-100 border-amber-400 text-amber-700" : last === "tail" ? "bg-slate-100 border-slate-400 text-slate-700" : "bg-slate-50 border-slate-200 text-slate-400 dark:bg-slate-800 dark:border-slate-700"}`}>
+      <div className={`mx-auto w-32 h-32 rounded-full flex items-center justify-center text-xl font-bold border-4 ${last === "head" ? "bg-amber-100 border-amber-400 text-amber-700" : last === "tail" ? "bg-slate-100 border-slate-400 text-slate-700" : "bg-slate-50 border-slate-200 text-slate-500 dark:bg-slate-800 dark:border-slate-700"}`}>
         {last === "head" ? tr("হেড", "Heads") : last === "tail" ? tr("টেল", "Tails") : "?"}
       </div>
       <button onClick={flip} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700">{tr("টস করুন", "Flip")}</button>
