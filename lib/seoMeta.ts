@@ -59,8 +59,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "CGPA calculator Bangladesh। কোর্সের গ্রেড ও ক্রেডিট দিয়ে সেমিস্টার GPA ও CGPA বের করুন, আগের CGPA যোগ করুন। গ্রেড পয়েন্ট টেবিলসহ। ফ্রি।",
   },
   "age-calculator": {
-    title: "Age Calculator - বয়স ক্যালকুলেটর",
-    description: "জন্ম তারিখ দিয়ে নিখুঁত বয়স বের করুন। বছর, মাস, দিন, মোট দিন ও পরবর্তী জন্মদিন সহ। বয়স হিসাব করার ফ্রি অনলাইন age calculator।",
+    title: "Age Calculator BD - জন্ম তারিখ থেকে বয়স",
+    description: "জন্ম তারিখ থেকে আজকের বা যেকোনো তারিখের বয়স বের করুন: বছর, মাস, দিন, মোট সপ্তাহ-ঘণ্টা ও পরবর্তী জন্মদিন। ফ্রি Age Calculator, বয়স ক্যালকুলেটর।",
   },
   "govt-job-age-calculator": {
     title: "Govt Job Age Calculator - সরকারি চাকরির বয়স",

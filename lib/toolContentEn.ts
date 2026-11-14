@@ -4,11 +4,20 @@ export type ToolEn = { title: string; desc: string; howTo: string[]; faqs: { q: 
 export const TOOL_EN: Record<string, ToolEn> = {
   "age-calculator": {
     title: "Age Calculator",
-    desc: "Find your exact age from your date of birth in years, months and days, plus total days and days until your next birthday.",
-    howTo: ["Select your date of birth", "Click Calculate", "See your age in years, months, days and total days"],
+    desc: "Find your exact age from your date of birth today or on any date, in years, months and days, with total months, weeks and hours, the weekday you were born and your next birthday.",
+    howTo: ["Select your date of birth", "Keep the \"Age as on\" date as today, or enter the date a form asks for", "Click Calculate", "Read your age in years, months and days, the totals, your birth weekday and your next birthday"],
     faqs: [
+      { q: "How do I calculate my age from my date of birth?", a: "Select your date of birth and click Calculate. The tool counts completed years first, then completed months, then the days left over." },
+      { q: "What is my age today?", a: "The \"Age as on\" date is today by default, so entering only your date of birth gives your current age in years, months and days." },
+      { q: "Can I find my age on a specific date?", a: "Yes. Change the \"Age as on\" date to any past or future date. This is useful for admission, job, insurance and other forms that ask for age on a fixed date." },
+      { q: "What does completed age mean?", a: "It is the number of full years you have finished. Your age does not increase until your birthday, so 17 years and 11 months is still 17." },
+      { q: "How do I find my age in months, weeks, days or hours?", a: "Under the result you will see total months, total weeks, total days and total hours separately." },
+      { q: "What if I was born on 29 February?", a: "Leap-day birth dates are accepted. In a non-leap year the next birthday is counted on 28 February." },
+      { q: "Is dividing total days by 365 accurate?", a: "No, it can be off by a few days because leap years have 366 days and months have 28 to 31 days. This tool counts calendar years and months instead." },
+      { q: "Is my date of birth saved?", a: "No. Everything is calculated on your phone or browser and nothing is sent to a server." },
+      { q: "How do I check age for a government job?", a: "Government job age is counted on a fixed date. For that, use our Govt Job Age Calculator." },
       { q: "Does it handle leap years?", a: "Yes, leap years are taken into account." },
-      { q: "What if I enter a future date?", a: "It shows an error, because a date of birth cannot be in the future." },
+      { q: "What if the date of birth is after the \"Age as on\" date?", a: "It shows an error, because a date of birth cannot be after the date you are checking." },
     ],
   },
   "gpa-calculator-bd": {

@@ -9,15 +9,36 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "বয়স ক্যালকুলেটর কীভাবে কাজ করে",
         p: [
-          "আপনার জন্ম তারিখ দিলে এই টুল আজকের তারিখ পর্যন্ত আপনার বয়স বছর, মাস ও দিনে বের করে দেয়। সঙ্গে মোট কত দিন বেঁচে আছেন এবং পরের জন্মদিন আসতে আর কত দিন বাকি, তাও দেখায়।",
+          "আপনার জন্ম তারিখ দিলে এই টুল আজকের তারিখ (বা আপনার দেওয়া অন্য কোনো তারিখ) পর্যন্ত আপনার বয়স বছর, মাস ও দিনে বের করে দেয়। সঙ্গে মোট মাস, সপ্তাহ, দিন ও ঘণ্টা, কোন বারে জন্মেছেন এবং পরের জন্মদিন আসতে আর কত দিন বাকি, তাও দেখায়।",
           "হিসাবে লিপ ইয়ার ধরা হয়, তাই ২৯ ফেব্রুয়ারির মতো তারিখেও ফলাফল ঠিক থাকে। সব হিসাব আপনার ফোন বা ব্রাউজারেই হয়, জন্ম তারিখ কোথাও জমা হয় না।",
+        ],
+      },
+      {
+        h: "নির্দিষ্ট তারিখে বয়স (Age as on)",
+        p: [
+          "ফর্মে অনেক সময় আজকের বয়স নয়, একটি নির্দিষ্ট তারিখের বয়স চাওয়া হয়, যেমন আবেদনের শেষ দিন, শিক্ষাবর্ষের শুরু বা ভ্রমণের তারিখ। \"বয়স হিসাবের তারিখ\" ঘরে সেই তারিখ দিলে ওই দিনে আপনার বয়স কত ছিল বা হবে তা পাওয়া যায়। ভবিষ্যতের তারিখ দিয়ে দেখা যায় নির্দিষ্ট সময়ের মধ্যে বয়সের শর্ত পূরণ হবে কি না।",
+          "ফর্মের তারিখের ধরন সাবধানে পড়ুন। জন্ম তারিখ জন্মনিবন্ধন সনদ, পাসপোর্ট বা সার্টিফিকেটে যেভাবে আছে সেভাবেই দিন, যাতে সংস্থার যাচাইয়ের সাথে মিলে যায়।",
+        ],
+      },
+      {
+        h: "হাতে বয়স হিসাব করার নিয়ম",
+        p: [
+          "প্রথমে আজকের বছর থেকে জন্মসালের বছর বিয়োগ করুন। এ বছরের জন্মদিন এখনও না এলে ফলাফল থেকে ১ কমান, এটাই পূর্ণ বছর। এরপর শেষ জন্মদিন থেকে কত পূর্ণ মাস পার হয়েছে গুনুন, আর শেষে বাকি দিন যোগ করুন।",
+          "মোট দিনকে ৩৬৫ দিয়ে ভাগ করা সহজ উপায় মনে হলেও এতে ভুল হয়। লিপ ইয়ারে ৩৬৬ দিন, আর মাসে ২৮ থেকে ৩১ দিন থাকে, তাই কয়েক বছরে এক-দুই দিনের তফাত দাঁড়ায়। যেমন ১৫ জুন ২০০০ এ জন্মালে ১ সেপ্টেম্বর ২০২৬ এ বয়স ২৬ বছর ২ মাস ১৭ দিন।",
+        ],
+      },
+      {
+        h: "লিপ ইয়ার, মাসের দিন ও পূর্ণ বয়স",
+        p: [
+          "লিপ ইয়ারে ফেব্রুয়ারিতে ২৯ দিন থাকে। ২৯ ফেব্রুয়ারি জন্মালে লিপ ইয়ার নয় এমন বছরে জন্মদিন ২৮ ফেব্রুয়ারি ধরা হয়। ৩১ তারিখে জন্মালে ছোট মাসেও হিসাব ঠিক থাকে, কারণ মাসের শেষ দিন ধরে নেওয়া হয়।",
+          "পূর্ণ বয়স মানে যে কয়টি পূর্ণ বছর শেষ হয়েছে। ১৭ বছর ১১ মাস বয়সী কেউ এখনও ১৭, জন্মদিন আসার আগে ১৮ ধরা হয় না। বেশিরভাগ দেশ ও সরকারি ফর্মে এই পূর্ণ বয়সই ব্যবহার হয়।",
         ],
       },
       {
         h: "কখন বয়স হিসাব দরকার হয়",
         p: [
           "স্কুল বা কলেজে ভর্তির ফর্ম, পাসপোর্ট ও NID সংক্রান্ত আবেদন, চাকরির আবেদন, বীমা বা অন্য ফর্ম পূরণের সময় সঠিক বয়স লিখতে হয়। নিজে হিসাব করলে মাস ও দিনে ভুল হওয়া সহজ, তাই টুল দিয়ে মিলিয়ে নেওয়া ভালো।",
-          "সরকারি চাকরির আবেদনের বয়স নির্দিষ্ট একটি তারিখ ধরে গণনা হয়। সেক্ষেত্রে আমাদের Govt Job Age Calculator ব্যবহার করুন।",
+          "সরকারি চাকরির আবেদনের বয়স নির্দিষ্ট একটি তারিখ ধরে গণনা হয়। সেক্ষেত্রে আমাদের Govt Job Age Calculator ব্যবহার করুন। দুই তারিখের মধ্যে পার্থক্য জানতে Date Difference Calculator কাজে লাগবে।",
         ],
       },
     ],
@@ -25,15 +46,36 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How the age calculator works",
         p: [
-          "Enter your date of birth and this tool works out your age up to today in years, months and days. It also shows how many days you have lived and how many days remain until your next birthday.",
+          "Enter your date of birth and this tool works out your age up to today, or up to any date you choose, in years, months and days. It also shows total months, weeks, days and hours, the weekday you were born, and how many days remain until your next birthday.",
           "Leap years are taken into account, so dates such as 29 February still give the right result. Everything is calculated on your phone or browser and your date of birth is not stored anywhere.",
+        ],
+      },
+      {
+        h: "Age on a specific date (Age as on)",
+        p: [
+          "Forms often ask for your age on a fixed date rather than today, such as the application deadline, the start of the school year or the day of travel. Enter that date in the \"Age as on\" field to see how old you were or will be on that day. A future date also shows whether you will meet an age requirement before a deadline.",
+          "Read the form's date format carefully. Enter your date of birth exactly as it appears on your birth certificate, passport or certificate, so it matches what the organisation will check.",
+        ],
+      },
+      {
+        h: "How to calculate age by hand",
+        p: [
+          "Subtract the birth year from this year. If your birthday has not come yet this year, reduce the result by one; that gives your completed years. Then count the full months since your last birthday, and finally add the remaining days.",
+          "Dividing total days by 365 looks easy but is not exact. A leap year has 366 days and months have 28 to 31 days, so the shortcut drifts by a day or two over the years. For example, someone born on 15 June 2000 is 26 years, 2 months and 17 days old on 1 September 2026.",
+        ],
+      },
+      {
+        h: "Leap years, month lengths and completed age",
+        p: [
+          "A leap year has 29 days in February. If you were born on 29 February, your birthday is counted on 28 February in years that are not leap years. A birth on the 31st is also handled correctly in shorter months because the last day of the month is used.",
+          "Completed age is the number of full years finished. Someone who is 17 years and 11 months old is still 17 until the birthday arrives. Most countries and official forms use this completed age.",
         ],
       },
       {
         h: "When you need to calculate your age",
         p: [
           "You need your exact age for school or college admission forms, passport and NID applications, job applications and insurance forms. Counting by hand makes it easy to get the months and days wrong, so it is worth checking with the tool.",
-          "Age for a government job is counted on a fixed reference date. For that, use our Govt Job Age Calculator.",
+          "Age for a government job is counted on a fixed reference date. For that, use our Govt Job Age Calculator. To find the gap between two dates, use the Date Difference Calculator.",
         ],
       },
     ],
