@@ -499,6 +499,47 @@ export const GUIDES: Guide[] = [
     ],
   },
   {
+    slug: "bmi-south-asian-sima",
+    title: ["বাংলাদেশিদের জন্য BMI কত হলে স্বাভাবিক? দক্ষিণ এশীয় সীমা ও চার্ট", "What BMI is healthy for Bangladeshis? South Asian cut-offs and chart"],
+    desc: ["WHO আন্তর্জাতিক সীমা ও ২০০৪ সালের এশীয় অ্যাকশন পয়েন্ট (২৩ ও ২৭.৫) পাশাপাশি, উদাহরণ ও চার্টসহ।", "The WHO international cut-offs beside the 2004 Asian action points (23 and 27.5), with an example and chart."],
+    updated: "2026-11-14",
+    updatedLabel: ["১৪ নভেম্বর, ২০২৬", "14 November 2026"],
+    tool: { slug: "bmi-calculator", name: ["BMI ক্যালকুলেটর", "BMI calculator"] },
+    sections: [
+      {
+        h: ["আন্তর্জাতিক সীমা কেন সবার জন্য যথেষ্ট নয়", "Why the international cut-offs do not fit everyone"],
+        p: [
+          ["WHO এর ২০০৪ সালের বিশেষজ্ঞ পরামর্শ বলছে, অনেক এশীয় জনগোষ্ঠীতে টাইপ ২ ডায়াবেটিস ও হৃদরোগের ঝুঁকিতে থাকা মানুষের অনুপাত ২৫ এর কম BMI-তেও বেশ বড়। ঝুঁকির শুরু বিভিন্ন এশীয় জনগোষ্ঠীতে ২২ থেকে ২৫ এর মধ্যে ভিন্ন ভিন্ন জায়গায় দেখা গেছে।", "A 2004 WHO expert consultation found that in many Asian populations a substantial share of people are at high risk of type 2 diabetes and heart disease even below a BMI of 25. The point where risk starts varied between 22 and 25 across Asian populations."],
+          ["তাই WHO আন্তর্জাতিক সীমা (১৮.৫, ২৫, ৩০) অপরিবর্তিত রেখেছে, কিন্তু জনস্বাস্থ্যের সতর্কতার জন্য ২৩ ও ২৭.৫ নামে দুটি অতিরিক্ত অ্যাকশন পয়েন্ট যোগ করেছে।", "So WHO kept the international cut-offs (18.5, 25, 30) and added two extra public health action points, 23 and 27.5."],
+        ],
+      },
+      {
+        h: ["দুই মানদণ্ড পাশাপাশি", "The two scales side by side"],
+        p: [
+          ["WHO আন্তর্জাতিক: ১৮.৫ এর নিচে কম ওজন, ১৮.৫ থেকে ২৪.৯ স্বাভাবিক, ২৫ থেকে ২৯.৯ বেশি ওজন, ৩০ বা তার বেশি স্থূলতা।", "WHO international: below 18.5 underweight, 18.5 to 24.9 normal, 25 to 29.9 overweight, 30 or more obese."],
+          ["দক্ষিণ এশীয় (WHO ২০০৪ অ্যাকশন পয়েন্ট): ১৮.৫ এর নিচে কম ওজন, ১৮.৫ থেকে ২২.৯ গ্রহণযোগ্য ঝুঁকি, ২৩ থেকে ২৭.৪ ঝুঁকি বেড়েছে, ২৭.৫ বা তার বেশি উচ্চ ঝুঁকি।", "South Asian (WHO 2004 action points): below 18.5 underweight, 18.5 to 22.9 acceptable risk, 23 to 27.4 increased risk, 27.5 or more high risk."],
+        ],
+      },
+      {
+        h: ["উদাহরণ: ৫ ফুট ৫ ইঞ্চি, ৬৫ কেজি", "Example: 5 ft 5 in, 65 kg"],
+        p: [
+          ["৫ ফুট ৫ ইঞ্চি প্রায় ১.৬৫ মিটার। ১.৬৫² = ২.৭২২৫ এবং ৬৫ ÷ ২.৭২২৫ = প্রায় ২৩.৯। WHO আন্তর্জাতিক সীমায় এটি স্বাভাবিক, কিন্তু দক্ষিণ এশীয় ভাগে এটি ‘ঝুঁকি বেড়েছে’ ধাপে পড়ে।", "5 ft 5 in is about 1.65 m. 1.65² = 2.7225 and 65 ÷ 2.7225 = about 23.9. That is normal on the WHO international scale but falls in the ‘increased risk’ band on the South Asian scale."],
+          ["এর মানে এই নয় যে আপনি অসুস্থ। এটি কোমরের মাপ, রক্তচাপ ও রক্তের পরীক্ষা নিয়ে চিকিৎসকের সঙ্গে কথা বলার একটি সংকেত।", "It does not mean you are unwell. It is a prompt to talk to a doctor about waist size, blood pressure and blood tests."],
+        ],
+      },
+      {
+        h: ["সীমাবদ্ধতা", "Limits"],
+        p: [
+          ["২৩ ও ২৭.৫ সব এশীয় জনগোষ্ঠীর জন্য নির্দিষ্ট সীমা নয়, বরং সতর্কতার বিন্দু। BMI পেশি ও চর্বির পার্থক্য ধরে না। শিশু ও কিশোরদের জন্য আলাদা পার্সেন্টাইল ব্যবহার হয়। স্বাস্থ্য নিয়ে সিদ্ধান্ত নিতে চিকিৎসকের পরামর্শ নিন।", "23 and 27.5 are warning points, not fixed limits for every Asian population. BMI cannot tell muscle from fat, and children and teenagers use separate percentile charts. Talk to a doctor before making health decisions."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["বাংলাদেশিদের জন্য BMI কত হলে ভালো?", "What BMI is good for Bangladeshis?"], a: ["WHO ২০০৪ অ্যাকশন পয়েন্ট অনুযায়ী ১৮.৫ থেকে ২২.৯ গ্রহণযোগ্য ঝুঁকির সীমা। ২৩ থেকে ঝুঁকি বাড়তে শুরু করে এবং ২৭.৫ বা তার বেশি হলে উচ্চ ঝুঁকি।", "On the WHO 2004 action points, 18.5 to 22.9 is acceptable risk. Risk starts to rise from 23 and is high at 27.5 or more."] },
+      { q: ["BMI ২৩ হলে কি বেশি ওজন?", "Is a BMI of 23 overweight?"], a: ["WHO আন্তর্জাতিক সীমায় না, কিন্তু এশীয় অ্যাকশন পয়েন্টে ২৩ থেকে ‘ঝুঁকি বেড়েছে’ ধরা হয়।", "Not on the WHO international scale, but on the Asian action points 23 is where ‘increased risk’ begins."] },
+    ],
+  },
+  {
     slug: "percentage-hisab-niyom",
     title: ["শতকরা (পার্সেন্টেজ) কীভাবে হিসাব করবেন? সহজ সূত্র ও উদাহরণ", "How to calculate a percentage: simple formulas and examples"],
     desc: ["X এর Y% কত, একটি সংখ্যা আরেকটির কত শতাংশ এবং শতকরা বৃদ্ধি-হ্রাস বের করার সূত্র, পরীক্ষার নম্বর ও দামের উদাহরণসহ।", "Formulas for Y% of X, one number as a percentage of another, and percentage increase or decrease, with exam marks and price examples."],

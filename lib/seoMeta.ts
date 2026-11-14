@@ -115,8 +115,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "শতকরা হিসাব ক্যালকুলেটর। X এর Y% কত, শতকরা বৃদ্ধি-হ্রাস ও % যোগ-বিয়োগ এক ক্লিকে, হিসাবের ধাপসহ। ফ্রি percentage calculator।",
   },
   "bmi-calculator": {
-    title: "BMI Calculator - বিএমআই ক্যালকুলেটর",
-    description: "ওজন ও উচ্চতা দিয়ে BMI বের করুন এবং আপনার উচ্চতায় স্বাভাবিক ওজনের সীমা জানুন। ফ্রি অনলাইন বিএমআই ক্যালকুলেটর।",
+    title: "BMI Calculator বাংলা - বিএমআই ক্যালকুলেটর",
+    description: "বিএমআই ক্যালকুলেটর: কেজি বা পাউন্ড এবং ফুট-ইঞ্চি বা সেমিতে BMI বের করুন। WHO ও দক্ষিণ এশীয় সীমা, স্বাভাবিক ওজন ও BMI চার্ট সহ। ফ্রি BMI calculator।",
   },
   "password-generator": {
     title: "Password Generator - শক্তিশালী পাসওয়ার্ড বানান",

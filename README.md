@@ -22,7 +22,7 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
+Live guides (40): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, BMI for South Asians (WHO 2004 action points), percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
 
 ## SEO
 
@@ -30,6 +30,14 @@ Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), 
 - Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
 - `public/ads.txt` holds the AdSense publisher line.
 - `app/sitemap.ts` uses a fixed `lastModified` date for the static pages, categories and tools. Update that date when you change content (last set to 2026-11-11 after the passport fee update).
+
+## BMI calculator
+
+- `components/tools/BmiCalculator.tsx` is the UI; the maths and category tables are in `lib/bmi.ts` (no React, easy to test). Inputs: weight in kg or lb, height in ft+in or cm (values convert when the unit is switched), optional age. Two standards: WHO international (18.5, 25, 30, 35, 40, with thinness grades) and South Asian (WHO 2004 action points 23 and 27.5, international cut-offs unchanged). A result shows on first load (65 kg, 5 ft 5 in).
+- Result card: BMI, category on the chosen standard plus the category on the other one, a colour scale with a marker, healthy weight range in kg and lb, BMI Prime, Ponderal Index, the working, and a copy button. The category chart highlights the visitor's row. Under-20 ages show a note that adult BMI does not apply (children use percentiles).
+- Page text: `components/toolRegistry.tsx` (Bangla title, how-to, 8 FAQs, used for FAQPage JSON-LD), `lib/toolContentEn.ts` (English), `lib/seoMeta.ts` (title and description), `lib/toolArticles.ts` (long text under the tool: formula, chart, South Asian view, risks, limits), `lib/toolSources.ts` (source note). Guides: `bmi-hisab-niyom` and `bmi-south-asian-sima`.
+- Sources: WHO international classification, the 2004 WHO expert consultation on Asian populations (Lancet 2004;363:157-163), CDC for risk lists. If WHO guidance changes, edit the bands at the top of `lib/bmi.ts` and the text in the files above, and update the date in `lib/toolSources.ts`.
+- No medical reviewer or author name is shown on the page. Add a real reviewer in `lib/toolSources.ts` / the article only if a qualified person has actually reviewed it.
 
 ## Land calculator
 

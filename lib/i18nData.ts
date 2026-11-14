@@ -100,7 +100,7 @@ export const DESC_EN: Record<string, string> = {
   "age-calculator": "Find your exact age from date of birth",
   "gpa-calculator-bd": "SSC/HSC GPA calculator",
   "cgpa-calculator": "University CGPA calculator",
-  "bmi-calculator": "BMI and health check",
+  "bmi-calculator": "BMI calculator with WHO and South Asian ranges",
   "emi-calculator-bd": "Loan EMI calculator",
   "percentage-calculator": "Percentages in one click",
   "scientific-calculator": "Advanced scientific calculator",

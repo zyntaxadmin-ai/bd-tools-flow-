@@ -34,6 +34,11 @@ export const TOOL_SOURCES: Record<string, ToolSource> = {
     checked: ["প্রতিদিন আপডেট", "updated daily"],
     link: { href: "https://www.bb.org.bd/en/index.php/econdata/exchangerate", label: "bb.org.bd" },
   },
+  "bmi-calculator": {
+    basis: ["WHO আন্তর্জাতিক BMI শ্রেণিবিন্যাস এবং WHO ২০০৪ বিশেষজ্ঞ পরামর্শের এশীয় অ্যাকশন পয়েন্ট (২৩ ও ২৭.৫)। ঝুঁকির তথ্য CDC থেকে।", "WHO international BMI classification and the Asian action points (23 and 27.5) from the 2004 WHO expert consultation. Risk information from the CDC."],
+    checked: ["নভেম্বর ২০২৬", "November 2026"],
+    link: { href: "https://pubmed.ncbi.nlm.nih.gov/14726171/", label: "WHO expert consultation, The Lancet 2004" },
+  },
   "zakat-calculator-bd": {
     basis: ["নিসাব ৭.৫ ভরি সোনা বা ৫২.৫ ভরি রুপা এবং ২.৫% হার। সাধারণ নির্দেশনা, সিদ্ধান্তের আগে যোগ্য আলেমের পরামর্শ নিন।", "Nisab of 7.5 vori gold or 52.5 vori silver and a 2.5% rate. General guidance only; ask a qualified scholar before deciding."],
     checked: ["স্থির নিয়ম, তারিখ-নির্ভর নয়", "fixed rule, not date-dependent"],

@@ -297,14 +297,40 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "BMI কীভাবে হিসাব হয়",
         p: [
-          "BMI (বডি মাস ইনডেক্স) = ওজন (কেজি) ÷ উচ্চতা (মিটার) র বর্গ। যেমন ৭০ কেজি ওজন ও ১.৭৫ মিটার উচ্চতায় BMI প্রায় ২২.৯।",
-          "এই টুলে BMI ১৮.৫ এর কম হলে কম ওজন, ১৮.৫ থেকে ২৪.৯ স্বাভাবিক, ২৫ থেকে ২৯.৯ বেশি ওজন এবং ৩০ বা তার বেশি হলে স্থূলতা হিসেবে দেখানো হয়। সঙ্গে আপনার উচ্চতায় স্বাভাবিক ওজনের পরিসরও দেখানো হয়।",
+          "BMI (বডি মাস ইনডেক্স) = ওজন (কেজি) ÷ উচ্চতা (মিটার) এর বর্গ। উচ্চতা সেমিতে থাকলে ১০০ দিয়ে ভাগ করে মিটার বানিয়ে নিন। যেমন ৭০ কেজি ওজন ও ১৭০ সেমি (১.৭ মিটার) উচ্চতায় ১.৭ × ১.৭ = ২.৮৯, আর ৭০ ÷ ২.৮৯ = প্রায় ২৪.২, যা স্বাভাবিক সীমার মধ্যে।",
+          "পাউন্ড ও ইঞ্চিতে হিসাব করতে চাইলে সূত্র হলো ৭০৩ × ওজন (পাউন্ড) ÷ উচ্চতা (ইঞ্চি) এর বর্গ। এই টুলে কেজি-পাউন্ড ও ফুট-ইঞ্চি-সেমি যেকোনোটি ব্যবহার করা যায়, ফল একই আসে।",
+        ],
+      },
+      {
+        h: "BMI চার্ট: কত হলে কী (WHO আন্তর্জাতিক)",
+        p: [
+          "প্রাপ্তবয়স্কদের (২০ বছর বা তার বেশি) জন্য WHO এর শ্রেণিবিন্যাস: ১৮.৫ এর নিচে কম ওজন (১৭ থেকে ১৮.৪ সামান্য, ১৬ থেকে ১৬.৯ মাঝারি, ১৬ এর নিচে মারাত্মক), ১৮.৫ থেকে ২৪.৯ স্বাভাবিক, ২৫ থেকে ২৯.৯ বেশি ওজন, ৩০ থেকে ৩৪.৯ স্থূলতা ক্লাস ১, ৩৫ থেকে ৩৯.৯ ক্লাস ২ এবং ৪০ বা তার বেশি ক্লাস ৩।",
+        ],
+      },
+      {
+        h: "দক্ষিণ এশীয়দের জন্য BMI কত হলে স্বাভাবিক",
+        p: [
+          "WHO এর ২০০৪ সালের বিশেষজ্ঞ পরামর্শে দেখা গেছে, অনেক এশীয় জনগোষ্ঠীতে টাইপ ২ ডায়াবেটিস ও হৃদরোগের ঝুঁকি ২৫ এর আগেই বাড়তে শুরু করে। তাই আন্তর্জাতিক সীমা অপরিবর্তিত রেখে তারা ২৩ (ঝুঁকি বেড়েছে) ও ২৭.৫ (উচ্চ ঝুঁকি) নামে দুটি অতিরিক্ত অ্যাকশন পয়েন্ট যোগ করেছে।",
+          "এই হিসাবে ১৮.৫ এর নিচে কম ওজন, ১৮.৫ থেকে ২২.৯ গ্রহণযোগ্য ঝুঁকির সীমা, ২৩ থেকে ২৭.৪ ঝুঁকি বেড়েছে এবং ২৭.৫ বা তার বেশি উচ্চ ঝুঁকি। টুলে ‘দক্ষিণ এশীয়’ মানদণ্ড বেছে নিলে এই ভাগে ফল দেখাবে। এটি সব এশীয়ের জন্য একই সীমা নয়, বরং একটি সতর্কতার বিন্দু। আপনার ব্যক্তিগত ঝুঁকি চিকিৎসক বিচার করবেন।",
+        ],
+      },
+      {
+        h: "বেশি ওজনে কী ঝুঁকি বাড়ে",
+        p: [
+          "CDC-র তথ্য অনুযায়ী বেশি ওজন বা স্থূলতার সঙ্গে উচ্চ রক্তচাপ, টাইপ ২ ডায়াবেটিস, কোলেস্টেরলের সমস্যা, হৃদরোগ, স্ট্রোক, স্লিপ অ্যাপনিয়া, অস্টিওআর্থ্রাইটিস ও কিছু ধরনের ক্যানসারের ঝুঁকি যুক্ত।",
+        ],
+      },
+      {
+        h: "কম ওজনে কী ঝুঁকি বাড়ে",
+        p: [
+          "অতিরিক্ত কম ওজনে অপুষ্টি, রক্তস্বল্পতা, হাড় দুর্বল হওয়া, রোগ প্রতিরোধ ক্ষমতা কমা এবং সার্জারির পর জটিলতার ঝুঁকি থাকতে পারে। কারণ স্পষ্ট না হলে ডাক্তার দেখান।",
         ],
       },
       {
         h: "BMI এর সীমাবদ্ধতা",
         p: [
-          "BMI একটি সাধারণ আন্দাজ, রোগ নির্ণয় নয়। এটি পেশি ও চর্বির পার্থক্য ধরে না, তাই অনেক পেশিবহুল মানুষের BMI বেশি দেখাতে পারে। শিশু, কিশোর, গর্ভবতী নারী ও বয়স্কদের জন্য আলাদা নিয়ম প্রযোজ্য। দক্ষিণ এশিয়ার মানুষের ক্ষেত্রে কিছু গবেষণায় ঝুঁকির সীমা কম ধরা হয়।",
+          "BMI একটি সাধারণ আন্দাজ, রোগ নির্ণয় নয়। এটি পেশি ও চর্বির পার্থক্য ধরে না, তাই খেলোয়াড় বা পেশিবহুল মানুষের BMI বেশি দেখাতে পারে। আবার একই BMI-তে বয়স্কদের শরীরে তরুণদের চেয়ে বেশি চর্বি থাকতে পারে, নারীদেরও সাধারণত পুরুষদের চেয়ে বেশি। চর্বি কোথায় জমেছে (পেটে কি না) তাও BMI বলে না, তাই কোমরের মাপ, রক্তচাপ ও রক্তের পরীক্ষা মিলিয়ে দেখা ভালো।",
+          "শিশু ও কিশোরদের (২ থেকে ১৯ বছর) BMI বয়স ও লিঙ্গ অনুযায়ী পার্সেন্টাইল দিয়ে বিচার হয়, তাই এই ক্যালকুলেটর তাদের জন্য নয়। ৬৫ বছরের বেশি বয়সীদের ক্ষেত্রে সামান্য বেশি BMI (প্রায় ২৫ থেকে ২৭) অনেক সময় ক্ষতিকর নয় বলে ধরা হয়।",
           "স্বাস্থ্য নিয়ে সিদ্ধান্ত নিতে চিকিৎসকের পরামর্শ নিন।",
         ],
       },
@@ -313,14 +339,40 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How BMI is calculated",
         p: [
-          "BMI (body mass index) = weight (kg) ÷ height (metres) squared. For example, 70 kg at 1.75 m gives a BMI of about 22.9.",
-          "In this tool a BMI below 18.5 is shown as underweight, 18.5 to 24.9 as normal, 25 to 29.9 as overweight and 30 or more as obese. It also shows the normal weight range for your height.",
+          "BMI (body mass index) = weight (kg) ÷ height (metres) squared. If your height is in cm, divide by 100 to get metres. For example, 70 kg at 170 cm (1.7 m) gives 1.7 × 1.7 = 2.89, and 70 ÷ 2.89 = about 24.2, which is in the normal range.",
+          "In pounds and inches the formula is 703 × weight (lb) ÷ height (in) squared. This tool accepts kg or lb and feet-inches or cm, and gives the same result either way.",
+        ],
+      },
+      {
+        h: "BMI chart for adults (WHO international)",
+        p: [
+          "For adults aged 20 and over the WHO classification is: below 18.5 underweight (17 to 18.4 mild, 16 to 16.9 moderate, below 16 severe thinness), 18.5 to 24.9 normal, 25 to 29.9 overweight, 30 to 34.9 obese class I, 35 to 39.9 class II and 40 or more class III.",
+        ],
+      },
+      {
+        h: "What is a healthy BMI for South Asians",
+        p: [
+          "A 2004 WHO expert consultation found that in many Asian populations the risk of type 2 diabetes and heart disease starts to rise below a BMI of 25. It kept the international cut-offs but added two public health action points, 23 (increased risk) and 27.5 (high risk).",
+          "On that view, below 18.5 is underweight, 18.5 to 22.9 is acceptable risk, 23 to 27.4 is increased risk and 27.5 or more is high risk. Choose the South Asian standard in the tool to see your result this way. These are warning points, not a rule that fits every Asian person; a doctor judges your own risk.",
+        ],
+      },
+      {
+        h: "Risks of a higher weight",
+        p: [
+          "According to the CDC, overweight and obesity are linked with high blood pressure, type 2 diabetes, cholesterol problems, heart disease, stroke, sleep apnea, osteoarthritis and some cancers.",
+        ],
+      },
+      {
+        h: "Risks of being underweight",
+        p: [
+          "Being very underweight can bring malnutrition, anemia, weaker bones, a weaker immune system and more complications after surgery. See a doctor if the reason is not clear.",
         ],
       },
       {
         h: "Limits of BMI",
         p: [
-          "BMI is a rough guide, not a diagnosis. It does not separate muscle from fat, so a muscular person can show a high BMI. Different rules apply to children, teenagers, pregnant women and older adults. Some research uses lower risk thresholds for South Asian people.",
+          "BMI is a rough guide, not a diagnosis. It does not separate muscle from fat, so an athlete or muscular person can show a high BMI. At the same BMI older adults tend to carry more body fat than younger ones, and women more than men. BMI also cannot show where fat is stored, so waist size, blood pressure and blood tests give a fuller picture.",
+          "Children and teenagers (2 to 19) are assessed with percentiles for age and sex, so this calculator is not for them. For people over 65 a slightly higher BMI (about 25 to 27) is often not considered harmful.",
           "Talk to a doctor before making health decisions.",
         ],
       },

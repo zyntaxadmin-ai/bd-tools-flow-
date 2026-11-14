@@ -72,12 +72,17 @@ export const TOOL_EN: Record<string, ToolEn> = {
   },
   "bmi-calculator": {
     title: "BMI Calculator",
-    desc: "Find your BMI from weight and height, and the normal weight range for your height.",
-    howTo: ["Enter your weight in kg", "Enter your height in cm or in feet and inches", "See your BMI, category and normal weight range"],
+    desc: "Find your BMI in kg or lb and cm or feet and inches. See your category on the WHO or South Asian scale, the healthy weight range for your height, and a BMI chart.",
+    howTo: ["Enter your weight in kg or pounds", "Enter your height in feet and inches or cm", "Pick the WHO international or South Asian standard", "See your BMI, category and healthy weight range"],
     faqs: [
-      { q: "How is BMI calculated?", a: "Weight in kg divided by height in metres squared." },
-      { q: "What is a normal BMI?", a: "For adults, WHO considers 18.5 to 24.9 to be normal." },
-      { q: "Is BMI accurate for everyone?", a: "No. It may not be accurate for children, pregnant women and athletes. Please consult a doctor." },
+      { q: "What is BMI?", a: "Body mass index (BMI) is a number that compares your weight with your height. It helps flag underweight, normal weight, overweight and obesity. It is a screening measure, not a diagnosis." },
+      { q: "How is BMI calculated?", a: "Weight in kg divided by height in metres squared. For example 70 kg at 170 cm (1.7 m) gives 70 ÷ 2.89 = about 24.2. In pounds and inches it is 703 × weight (lb) ÷ height (in) squared." },
+      { q: "What is a normal BMI?", a: "On the WHO international scale a BMI of 18.5 to 24.9 is normal for adults. Below 18.5 is underweight, 25 to 29.9 is overweight and 30 or more is obese." },
+      { q: "What BMI is healthy for Bangladeshis and South Asians?", a: "A 2004 WHO expert consultation found that for many Asian populations risk rises at lower BMI values. It added action points at 23 (increased risk) and 27.5 (high risk) while keeping the international cut-offs. Choose the South Asian standard in this tool to see your result on that scale." },
+      { q: "What is a healthy weight at 5 ft 5 in?", a: "5 ft 5 in is about 165 cm. On the WHO scale (18.5 to 24.9) the healthy range is about 50.4 to 67.9 kg. On the South Asian scale (18.5 to 22.9) it is about 50.4 to 62.4 kg." },
+      { q: "Am I overweight at a BMI of 25?", a: "A BMI of 25 is where the WHO overweight range begins, but BMI alone does not say you have too much body fat. Doctors also look at muscle, age, waist size, blood pressure and blood tests." },
+      { q: "Is BMI accurate for everyone?", a: "No. It may be inaccurate for children, teenagers, pregnant women, athletes and older adults because it cannot tell muscle from fat. Please consult a doctor." },
+      { q: "Can I use it for children?", a: "No. This calculator is for adults aged 20 and over. For ages 2 to 19, BMI is read as a percentile for age and sex, so use a child BMI chart or ask a doctor." },
     ],
   },
   "emi-calculator-bd": {
