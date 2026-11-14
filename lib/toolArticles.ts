@@ -943,38 +943,79 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "keyword-density-checker": {
     bn: [
       {
-        h: "কীভাবে কাজ করে",
+        h: "কীওয়ার্ড ডেনসিটি কী এবং কীভাবে হিসাব হয়",
         p: [
-          "লেখা পেস্ট করে ১, ২ বা ৩ শব্দের ফ্রেজ বেছে নিন। টুলটি সবচেয়ে বেশি আসা শীর্ষ ২০টি কীওয়ার্ড ও তাদের ঘনত্ব দেখায়। বাংলা ও ইংরেজি দুটোতেই কাজ করে।",
-          "ঘনত্বের সূত্র: কীওয়ার্ড যতবার এসেছে ÷ মোট শব্দ × ১০০। সাধারণ শব্দের তালিকা ছোট, তাই দরকার হলে ফিল্টার বন্ধ করে নিন।",
+          "কীওয়ার্ড ডেনসিটি বলতে বোঝায় একটি শব্দ বা বাক্যাংশ আপনার লেখার মোট শব্দের কত শতাংশ। সূত্র: কীওয়ার্ড যতবার এসেছে ÷ মোট শব্দ × ১০০। যেমন ৫০০ শব্দের লেখায় একটি কীওয়ার্ড ১০ বার এলে ঘনত্ব ২%।",
+          "এই হিসাব দিয়ে বোঝা যায় আপনার লেখার প্রধান বিষয়টি ঠিকমতো ফুটে উঠেছে কি না, আর কোনো শব্দ অস্বাভাবিক বেশি এসে লেখাকে কৃত্রিম করে ফেলেছে কি না।",
         ],
       },
       {
-        h: "কোথায় কাজে লাগে",
+        h: "কত শতাংশ রাখা ভালো",
         p: [
-          "ব্লগ বা গাইড লেখার পর দেখা যায় কোন শব্দ বেশি ঘুরেফিরে এসেছে। কোনো একটি নির্দিষ্ট ঘনত্ব গুগল র‍্যাংকিংয়ের জন্য জরুরি নয়।",
-          "স্বাভাবিকভাবে লিখুন, জোর করে একই শব্দ বারবার ঢোকাবেন না।",
+          "অনেকে ১-২% কে সাধারণ লক্ষ্য ধরেন। কিন্তু গুগল কোনো নির্দিষ্ট শতাংশ বলেনি, তাই কোনো সংখ্যাকে নিয়ম ভাবা ঠিক নয়। ১% এর কম হলেও সমস্যা নেই, কারণ সার্চ ইঞ্জিন এখন প্রসঙ্গ ও সমার্থক শব্দ বুঝতে পারে।",
+          "টুল প্রতিটি টার্গেট কীওয়ার্ডের পাশে ১% এর কম, ১-২%, একটু বেশি বা অনেক বেশি লিখে দেয়। এটি শুধু একটি আন্দাজ। আগে পাঠকের জন্য স্বাভাবিকভাবে লিখুন, তারপর যাচাই করুন।",
+        ],
+      },
+      {
+        h: "টুলটি কীভাবে ব্যবহার করবেন",
+        p: [
+          "লেখা পেস্ট করুন। আপনার টার্গেট কীওয়ার্ড থাকলে নিচের ঘরে প্রতি লাইনে একটি করে লিখুন (সর্বোচ্চ ১০টি), তাহলে প্রতিটির বার ও ঘনত্ব আলাদা দেখাবে। এরপর ১, ২ বা ৩ শব্দের বাটনে চেপে সবচেয়ে বেশি আসা শব্দ ও বাক্যাংশ দেখুন।",
+          "ছোট ও সাধারণ শব্দ বাদ দেওয়ার অপশন ফলাফল পরিষ্কার রাখে। ফলাফল কপি করে স্প্রেডশিটে রাখতে পারেন বা CSV ফাইল নামাতে পারেন।",
+        ],
+      },
+      {
+        h: "বাংলা লেখার জন্য একটি জরুরি কথা",
+        p: [
+          "বাংলায় শব্দের সঙ্গে বিভক্তি যোগ হয়। 'ক্যালকুলেটর', 'ক্যালকুলেটরের' ও 'ক্যালকুলেটরে' টুল আলাদা শব্দ হিসেবে গোনে। তাই আপনার কীওয়ার্ডের একাধিক রূপ ব্যবহার করে থাকলে প্রতিটি রূপ টার্গেট কীওয়ার্ডের ঘরে দিয়ে যোগ করে দেখুন।",
+          "বাক্যাংশ গোনার সময় শব্দগুলো হুবহু পরপর থাকতে হয়, মাঝে অন্য শব্দ থাকলে সেটি গোনা হয় না।",
+        ],
+      },
+      {
+        h: "কীওয়ার্ড স্টাফিং এড়ানোর উপায়",
+        p: [
+          "কোনো শব্দ ৩% এর বেশি হলে টুল সতর্ক করে। তখন লেখাটি জোরে পড়ে দেখুন কৃত্রিম শোনায় কি না, কিছু জায়গায় প্রতিশব্দ বা সর্বনাম ব্যবহার করুন এবং সম্পর্কিত শব্দ ও প্রশ্নের উত্তর যোগ করে লেখা সমৃদ্ধ করুন।",
+          "আপনার লেখা কোথাও পাঠানো বা জমা হয় না, সব বিশ্লেষণ আপনার ব্রাউজারেই হয়।",
         ],
       },
     ],
     en: [
       {
-        h: "How it works",
+        h: "What keyword density is and how it is calculated",
         p: [
-          "Paste your text and choose 1, 2 or 3-word phrases. The tool shows the top 20 keywords and their density. It works for both Bangla and English.",
-          "Density is the number of times the keyword appears ÷ total words × 100. The common-word list is short, so turn the filter off if needed.",
+          "Keyword density is the share of your total words that a word or phrase makes up. Formula: times the keyword appears ÷ total words × 100. For example, a keyword that appears 10 times in a 500-word text has a density of 2%.",
+          "It shows whether your main topic comes through properly, and whether one word appears so often that the text feels artificial.",
         ],
       },
       {
-        h: "When it helps",
+        h: "What percentage is good",
         p: [
-          "After writing a blog post or guide you can see which words repeat most. There is no magic density number that Google requires for ranking.",
-          "Write naturally and do not force the same word in again and again.",
+          "Many people treat 1-2% as a common target. But Google has not named an ideal percentage, so no number should be treated as a rule. Under 1% is fine, because search engines now understand context and synonyms.",
+          "Next to each target keyword the tool shows under 1%, 1-2%, a bit high or very high. That is only a guide. Write naturally for readers first, then check.",
+        ],
+      },
+      {
+        h: "How to use the tool",
+        p: [
+          "Paste your text. If you have target keywords, enter them one per line in the box below (up to 10) and each shows its own count and density. Then tap the 1, 2 or 3 word button to see the most used words and phrases.",
+          "The option to ignore short and common words keeps the result clear. You can copy the result into a spreadsheet or download a CSV file.",
+        ],
+      },
+      {
+        h: "An important note for Bangla text",
+        p: [
+          "In Bangla, endings are added to words. The tool counts 'ক্যালকুলেটর', 'ক্যালকুলেটরের' and 'ক্যালকুলেটরে' as different words. So if you use several forms of your keyword, enter each form in the target keywords box and add them up.",
+          "A phrase is counted only when its words appear exactly one after another. If another word sits in between, it is not counted.",
+        ],
+      },
+      {
+        h: "How to avoid keyword stuffing",
+        p: [
+          "The tool warns you when a word goes above 3%. Then read the text aloud to see if it sounds forced, use synonyms or pronouns in some places, and add related words and answers to questions to enrich the text.",
+          "Your text is not sent or stored anywhere. All analysis happens in your browser.",
         ],
       },
     ],
   },
-
   "stopwatch-timer": {
     bn: [
       {
@@ -2477,28 +2518,6 @@ const EXTRA: Record<string, ToolArticle> = {
       { h: "Where it helps", p: [
         "It works well for seeing the time left before an exam, waiting for a birthday or event, remembering a job application deadline, a travel date or a project deadline.",
         "When the set time has passed the tool tells you. The time follows your device's clock and time zone, so make sure your clock is correct.",
-      ] },
-    ],
-  },
-  "keyword-density-checker": {
-    bn: [
-      { h: "কীভাবে হিসাব হয় এবং ব্যবহার", p: [
-        "কিওয়ার্ড ডেনসিটি = (কোনো শব্দ বা বাক্যাংশ যতবার এসেছে ÷ লেখার মোট শব্দ) × ১০০। উদাহরণ: ৫০০ শব্দের লেখায় একটি শব্দ ১০ বার এলে ঘনত্ব ২%।",
-        "লেখা পেস্ট করে ১, ২ বা ৩ শব্দের বাক্যাংশ বেছে নিন। ছোট (২ অক্ষর বা কম) এবং the, and, এবং, এই জাতীয় সাধারণ শব্দ বাদ দেওয়ার অপশন আছে। ফলাফলে সবচেয়ে বেশি আসা প্রথম ২০টি দেখানো হয়।",
-      ] },
-      { h: "কত শতাংশ ভালো", p: [
-        "কোনো নির্দিষ্ট শতাংশ গুগলের র‍্যাঙ্কিংয়ের জন্য জরুরি নয়। কিওয়ার্ড জোর করে বারবার বসালে লেখা অস্বাভাবিক হয় এবং পাঠকের ক্ষতি করে। স্বাভাবিকভাবে লিখুন, তারপর এই টুল দিয়ে দেখুন কোনো শব্দ অতিরিক্ত বেশি এসেছে কি না।",
-        "এটি আপনার লেখার প্রধান বিষয় ঠিকমতো ফুটে উঠছে কি না তা যাচাইয়ের একটি সহজ উপায়। লেখা আপনার ব্রাউজারেই বিশ্লেষণ হয়, কোথাও জমা হয় না।",
-      ] },
-    ],
-    en: [
-      { h: "How it is worked out and how to use it", p: [
-        "Keyword density = (number of times a word or phrase appears ÷ total words in the text) × 100. Example: if a word appears 10 times in a 500-word text, its density is 2%.",
-        "Paste your text and choose 1, 2 or 3 word phrases. There are options to ignore short words (2 characters or fewer) and common words such as the, and, is and common Bangla words. The result shows the top 20 that appear most often.",
-      ] },
-      { h: "What percentage is good", p: [
-        "No particular percentage is required for Google rankings. Forcing a keyword in again and again makes the text unnatural and hurts readers. Write naturally, then use this tool to see whether any word appears far too often.",
-        "It is a simple way to check whether the main topic of your text comes through properly. The text is analysed in your browser and is not stored anywhere.",
       ] },
     ],
   },

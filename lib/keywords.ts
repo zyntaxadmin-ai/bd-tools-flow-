@@ -27,3 +27,47 @@ export function analyze(text: string, n: 1 | 2 | 3, skipShort: boolean, skipStop
   rows.sort((a, b) => b.count - a.count || a.phrase.localeCompare(b.phrase));
   return { total, unique: new Set(tokens).size, rows };
 }
+
+// ---------- target keywords ----------
+export type TargetRow = { phrase: string; count: number; pct: number };
+
+// Counts how often each target word or phrase appears as whole words in the text.
+// Density = times it appears / total words x 100 (the usual SEO formula, same for phrases).
+// One phrase per line, up to `max` phrases. Repeated lines are counted once.
+export function countTargets(text: string, lines: string, max = 10): { total: number; rows: TargetRow[] } {
+  const tokens = tokenize(text);
+  const total = tokens.length;
+  const seen = new Set<string>();
+  const rows: TargetRow[] = [];
+  for (const raw of lines.split(/\r?\n/)) {
+    const words = tokenize(raw);
+    if (!words.length) continue;
+    const phrase = words.join(" ");
+    if (seen.has(phrase)) continue;
+    seen.add(phrase);
+    if (rows.length >= max) break;
+    let count = 0;
+    for (let i = 0; i + words.length <= total; i++) {
+      let ok = true;
+      for (let j = 0; j < words.length; j++) if (tokens[i + j] !== words[j]) { ok = false; break; }
+      if (ok) count++;
+    }
+    rows.push({ phrase, count, pct: total ? Math.round((count / total) * 10000) / 100 : 0 });
+  }
+  return { total, rows };
+}
+
+// Simple rule of thumb used for the badge. Google has not named an ideal percentage.
+export type Level = "none" | "low" | "ok" | "high" | "stuffed";
+export function densityLevel(count: number, pct: number): Level {
+  if (count === 0) return "none";
+  if (pct < 1) return "low";
+  if (pct <= 2) return "ok";
+  if (pct <= 3) return "high";
+  return "stuffed";
+}
+
+export const csvCell = (v: string | number) => {
+  const s = String(v);
+  return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+};

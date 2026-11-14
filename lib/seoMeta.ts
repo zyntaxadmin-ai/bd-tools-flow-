@@ -167,8 +167,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "টাইটেল, ডেসক্রিপশন, Open Graph ও Twitter ট্যাগসহ SEO meta tag বানান। Blogger ও যেকোনো ওয়েবসাইটের জন্য। ফ্রি।",
   },
   "keyword-density-checker": {
-    title: "Keyword Density Checker Tool - ফ্রি অনলাইন",
-    description: "ফ্রি keyword density checker। লেখা পেস্ট করলেই কোন শব্দ বা বাক্যাংশ কতবার এসেছে ও শতকরা হার দেখুন। বাংলা ও ইংরেজি দুটোতেই কাজ করে।",
+    title: "Keyword Density Checker - কীওয়ার্ড ঘনত্ব যাচাই",
+    description: "ফ্রি কীওয়ার্ড ডেনসিটি চেকার। লেখা পেস্ট করে নিজের টার্গেট কীওয়ার্ড ও ১-৩ শব্দের বাক্যাংশের ঘনত্ব দেখুন। বাংলা ও ইংরেজি, CSV ডাউনলোডসহ।",
   },
   "todo-list": {
     title: "To-Do List - দৈনিক কাজের তালিকা",

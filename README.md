@@ -90,6 +90,14 @@ Live guides (39): cash out charges (and a charge table for 500 to 10,000 taka), 
 - `lib/tz.ts` holds the helpers: `wallParts`, `offsetMinutes`, `zonedToInstant`, `fmtOffset`, `formatInZone`, `hmInZone`, `dayShift` and `overlapRuns`.
 - Page text: `components/toolRegistryB3.tsx` (9 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. Three guides about US time, UTC/India/UK time difference and 12/24-hour time link to it.
 
+## Keyword density checker
+
+- `components/tools/KeywordDensityChecker.tsx` analyses pasted text in the browser. It shows total words, unique words and reading time, the top 20 words or 2-3 word phrases (with filters for short and common words), and a **target keywords** box (one per line, up to 10) with each keyword's count, density and a rough badge (under 1%, 1-2%, a bit high, very high). A word above 3% triggers a keyword stuffing warning. Results can be copied (tab separated, for a spreadsheet) or downloaded as CSV (UTF-8 with BOM so Bangla opens in Excel).
+- `lib/keywords.ts` holds the logic: `tokenize`, `analyze` (top phrases), `countTargets` (target keywords, whole-word and in order), `densityLevel` and `csvCell`. Density = count / total words x 100, the same for phrases. The badge limits are a rule of thumb, not a Google rule, and the page says so.
+- Bangla words with an ending added (`ক্যালকুলেটর`, `ক্যালকুলেটরের`) count as different words. The page text tells the visitor to enter each form as a target keyword.
+- There is no URL mode, because fetching other sites needs a server route (and brings abuse risks). The visitor pastes the page text instead.
+- Page text: `components/toolRegistryB3.tsx` (11 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts`. Note: `toolArticles.ts` has a second map, `EXTRA`, whose sections are appended to the main entry for the same slug, so check both when you edit an article.
+
 ## Chat assistant (BD Flow Helper)
 
 - `pages/api/chat.js` is the server route. It holds the system prompt, FAQ knowledge, a link allowlist (only bdtoolsflow.cyou pages are kept in replies), an origin check and a soft per-IP rate limit. Message text is never logged.
