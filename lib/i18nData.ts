@@ -99,6 +99,8 @@ export const DESC_EN: Record<string, string> = {
   "upay-calculator": "Upay charge calculator",
   "age-calculator": "Find your exact age from date of birth",
   "gpa-calculator-bd": "SSC/HSC GPA calculator",
+  "ssc-gpa-calculator": "SSC GPA calculator",
+  "hsc-gpa-calculator": "HSC GPA calculator",
   "cgpa-calculator": "University CGPA calculator",
   "bmi-calculator": "BMI and health check",
   "emi-calculator-bd": "Loan EMI calculator",

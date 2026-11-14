@@ -2,7 +2,7 @@
 // in "related tools", then the rest of the same category. This links similar pages to each other.
 const GROUPS: string[][] = [
   ["bkash-calculator", "nagad-calculator", "rocket-calculator", "upay-calculator"],
-  ["gpa-calculator-bd", "cgpa-calculator"],
+  ["gpa-calculator-bd", "ssc-gpa-calculator", "hsc-gpa-calculator", "cgpa-calculator"],
   ["stopwatch-timer", "countdown-timer"],
   ["govt-job-age-calculator", "age-calculator", "date-difference-calculator"],
   ["zakat-calculator-bd", "gold-weight-converter-bd", "percentage-calculator"],

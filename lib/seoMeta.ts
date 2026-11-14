@@ -52,7 +52,15 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "gpa-calculator-bd": {
     title: "GPA Calculator BD - SSC HSC জিপিএ ক্যালকুলেটর",
-    description: "SSC ও HSC জিপিএ ক্যালকুলেটর। বিষয়ের গ্রেড দিয়ে GPA নির্ণয় করুন, কোনো বিষয়ে F থাকলে Fail দেখাবে। Bangladesh GPA calculator, ফ্রি।",
+    description: "GPA Calculator BD: SSC ও HSC জিপিএ হিসাব করুন গ্রেড বা নম্বর দিয়ে। ৪র্থ বিষয়ের পয়েন্ট, F হলে Fail ও ধাপে ধাপে হিসাব। ফ্রি জিপিএ ক্যালকুলেটর।",
+  },
+  "ssc-gpa-calculator": {
+    title: "SSC GPA Calculator BD - এসএসসি জিপিএ",
+    description: "SSC GPA Calculator Bangladesh। ৯ বিষয়ের গ্রেড বা নম্বর দিয়ে এসএসসি জিপিএ বের করুন, ৪র্থ বিষয়ের নিয়মসহ। ধাপে ধাপে হিসাব, ফ্রি।",
+  },
+  "hsc-gpa-calculator": {
+    title: "HSC GPA Calculator BD - এইচএসসি জিপিএ",
+    description: "HSC GPA Calculator Bangladesh। ৬ বিষয়ের গ্রেড বা নম্বর দিয়ে এইচএসসি জিপিএ বের করুন, ৪র্থ বিষয়সহ ও ছাড়া। ধাপে ধাপে হিসাব, ফ্রি।",
   },
   "cgpa-calculator": {
     title: "CGPA Calculator BD - সিজিপিএ ক্যালকুলেটর",

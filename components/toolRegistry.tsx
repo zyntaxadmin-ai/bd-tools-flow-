@@ -19,6 +19,7 @@ import { TOOL_REGISTRY_B8 } from "@/components/toolRegistryB8";
 import { TOOL_REGISTRY_B9 } from "@/components/toolRegistryB9";
 import { TOOL_REGISTRY_B10 } from "@/components/toolRegistryB10";
 import { TOOL_REGISTRY_B11 } from "@/components/toolRegistryB11";
+import { TOOL_REGISTRY_B12 } from "@/components/toolRegistryB12";
 
 export type Entry = {
   component: React.ComponentType;
@@ -42,11 +43,14 @@ export const TOOL_REGISTRY: Record<string, Entry> = {
   },
   "gpa-calculator-bd": {
     component: GpaCalculator,
-    title: "GPA Calculator BD",
-    desc: "SSC/HSC গ্রেড দিয়ে GPA নির্ণয় করুন। কোনো বিষয়ে F থাকলে Fail দেখাবে।",
-    howTo: ["৫টি বিষয়ের গ্রেড সিলেক্ট করুন", "Calculate GPA তে ক্লিক করুন", "৫.০০ এর মধ্যে ফলাফল দেখুন"],
+    title: "GPA Calculator BD (জিপিএ ক্যালকুলেটর)",
+    desc: "SSC ও HSC জিপিএ ক্যালকুলেটর। গ্রেড বা নম্বর দিয়ে জিপিএ হিসাব করুন, ৪র্থ বিষয়ের বাড়তি পয়েন্ট ও F থাকলে Fail সহ। ধাপে ধাপে হিসাব দেখুন।",
+    howTo: ["SSC (৯ বিষয়) বা HSC (৬ বিষয়) বেছে নিন", "গ্রেড দিয়ে বা নম্বর দিয়ে, যেভাবে সুবিধা সেটি বেছে নিন", "মূল বিষয়গুলোর গ্রেড বা নম্বর এবং ৪র্থ বিষয় থাকলে সেটি দিন", "GPA হিসাব করুন চাপুন এবং ধাপে ধাপে হিসাব দেখুন"],
     faqs: [
-      { q: "কোনো বিষয়ে F থাকলে?", a: "GPA 0.00 দেখাবে এবং Fail status আসবে।" },
+      { q: "GPA কীভাবে হিসাব করা হয়?", a: "মূল বিষয়গুলোর গ্রেড পয়েন্ট যোগ করুন, ৪র্থ বিষয়ের ২.০০ এর ওপরের পয়েন্ট যোগ করুন, তারপর মূল বিষয়ের সংখ্যা দিয়ে ভাগ করুন। এসএসসিতে ৯টি এবং এইচএসসিতে ৬টি মূল বিষয় ধরা হয়।" },
+      { q: "কোনো বিষয়ে F থাকলে?", a: "GPA 0.00 দেখাবে এবং Fail status আসবে। কোন বিষয়ে F তাও দেখানো হয়।" },
+      { q: "৪র্থ বিষয়ের পয়েন্ট কীভাবে যোগ হয়?", a: "৪র্থ বিষয়ের গ্রেড পয়েন্ট থেকে ২ বিয়োগ করে যা থাকে তা মোট পয়েন্টে যোগ হয়, ঋণাত্মক হলে শূন্য ধরা হয়। এটি সপ্তম বা দশম বিষয় হিসেবে ভাগে ধরা হয় না।" },
+      { q: "জিপিএ ৫ পেতে কত নম্বর লাগে?", a: "প্রতিটি বিষয়ে ৮০ বা তার বেশি (A+)। ৪র্থ বিষয়ের বাড়তি পয়েন্ট দিয়েও জিপিএ ৫.০০ হতে পারে।" },
       { q: "এটা কি অফিসিয়াল রেজাল্ট?", a: "না, এটি শুধু আনুমানিক হিসাবের জন্য। অফিসিয়াল রেজাল্ট বোর্ড থেকে দেখুন।" },
     ],
   },
@@ -155,4 +159,5 @@ export const TOOL_REGISTRY: Record<string, Entry> = {
   ...TOOL_REGISTRY_B9,
   ...TOOL_REGISTRY_B10,
   ...TOOL_REGISTRY_B11,
+  ...TOOL_REGISTRY_B12,
 };

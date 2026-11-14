@@ -44,15 +44,20 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "GPA ক্যালকুলেটর কীভাবে কাজ করে",
         p: [
-          "এই টুলে পাঁচটি বিষয়ের গ্রেড বেছে নিলে সেগুলোর গড় করে ৫.০০ এর মধ্যে GPA দেখানো হয়। এখানে ব্যবহৃত গ্রেড মান: A+ (৮০-১০০) = ৫.০০, A (৭০-৭৯) = ৪.০০, A- (৬০-৬৯) = ৩.৫০, B (৫০-৫৯) = ৩.০০, C (৪০-৪৯) = ২.০০, D (৩৩-৩৯) = ১.০০, F = ০.০০।",
-          "কোনো একটি বিষয়ে F থাকলে ফলাফল Fail হিসেবে দেখানো হয় এবং GPA ০.০০ ধরা হয়।",
+          "SSC (৯টি মূল বিষয়) বা HSC (৬টি মূল বিষয়) বেছে নিয়ে প্রতিটি বিষয়ের গ্রেড বা নম্বর দিন। টুলটি মূল বিষয়ের পয়েন্ট যোগ করে, ৪র্থ বিষয়ের বাড়তি পয়েন্ট যোগ করে এবং বিষয়ের সংখ্যা দিয়ে ভাগ করে ৫.০০ এর মধ্যে GPA দেখায়। গ্রেড মান: A+ (৮০-১০০) = ৫.০০, A (৭০-৭৯) = ৪.০০, A- (৬০-৬৯) = ৩.৫০, B (৫০-৫৯) = ৩.০০, C (৪০-৪৯) = ২.০০, D (৩৩-৩৯) = ১.০০, F = ০.০০।",
+          "কোনো মূল বিষয়ে F থাকলে ফলাফল Fail হয় এবং GPA ০.০০ ধরা হয়। ফলাফলের নিচে ধাপে ধাপে হিসাব এবং ৪র্থ বিষয় ছাড়া GPA-ও দেখানো হয়।",
+        ],
+      },
+      {
+        h: "৪র্থ বিষয়ের নিয়ম",
+        p: [
+          "৪র্থ (ঐচ্ছিক) বিষয়ের গ্রেড পয়েন্ট থেকে ২.০০ বিয়োগ করে যা থাকে, শুধু সেটুকু মোট পয়েন্টে যোগ হয়। ৪র্থ বিষয়ে ৫.০০ পেলে ৩.০০ যোগ হয়, ৪.০০ পেলে ২.০০। ২.০০ বা তার কম পেলে কিছু যোগ হয় না। এই বাড়তি পয়েন্ট মোট পয়েন্টের সঙ্গে যোগ হয়ে মূল বিষয়ের সংখ্যা দিয়েই ভাগ হয়।",
         ],
       },
       {
         h: "অফিসিয়াল ফলাফলের সঙ্গে পার্থক্য",
         p: [
-          "এটি পাঁচটি বিষয়ের সহজ গড়। বোর্ডের অফিসিয়াল ফলাফলে বিষয়ের সংখ্যা ও ঐচ্ছিক (৪র্থ) বিষয়ের নিয়ম আলাদা হতে পারে, তাই চূড়ান্ত ফল সবসময় আপনার শিক্ষা বোর্ডের প্রকাশিত রেজাল্ট।",
-          "টুলটি পরীক্ষার আগে লক্ষ্য ঠিক করতে কাজে লাগে। যেমন কোন বিষয়ে কত গ্রেড পেলে GPA ৫.০০ হবে, তা বদলে বদলে দেখে নিতে পারেন।",
+          "এটি আনুমানিক হিসাব। মাদ্রাসা ও কারিগরি বোর্ডে বিষয়ের সংখ্যা আলাদা হতে পারে, এবং ভর্তির সময় কোনো প্রতিষ্ঠান ৪র্থ বিষয় ধরবে কি না তা তাদের সার্কুলারে থাকে। চূড়ান্ত ফল সবসময় আপনার শিক্ষা বোর্ডের প্রকাশিত রেজাল্ট।",
         ],
       },
     ],
@@ -60,15 +65,112 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       {
         h: "How the GPA calculator works",
         p: [
-          "Choose the grade for each of five subjects and the tool averages them into a GPA out of 5.00. The grade points used are: A+ (80-100) = 5.00, A (70-79) = 4.00, A- (60-69) = 3.50, B (50-59) = 3.00, C (40-49) = 2.00, D (33-39) = 1.00 and F = 0.00.",
-          "If any subject is an F, the result shows Fail and the GPA is taken as 0.00.",
+          "Choose SSC (9 main subjects) or HSC (6 main subjects) and enter the grade or marks of each subject. The tool adds the main subject points, adds the 4th subject bonus, and divides by the number of main subjects to give a GPA out of 5.00. Grade points: A+ (80-100) = 5.00, A (70-79) = 4.00, A- (60-69) = 3.50, B (50-59) = 3.00, C (40-49) = 2.00, D (33-39) = 1.00, F = 0.00.",
+          "If any main subject is F, the result is Fail and the GPA is 0.00. Under the result you also see the step-by-step working and the GPA without the 4th subject.",
+        ],
+      },
+      {
+        h: "The 4th subject rule",
+        p: [
+          "Only the part of the 4th (optional) subject's grade point above 2.00 is added to the total. 5.00 adds 3.00 and 4.00 adds 2.00. 2.00 or less adds nothing. The bonus goes into the total, which is still divided by the number of main subjects.",
         ],
       },
       {
         h: "How it differs from your official result",
         p: [
-          "This is a simple average of five subjects. The board's official result can differ in the number of subjects and the rules for the optional (4th) subject, so the final result is always the one your education board publishes.",
-          "The tool is useful for setting goals before an exam. For example, you can try different grades to see what you need for a 5.00.",
+          "This is an estimate. Madrasah and technical boards can have a different number of subjects, and an admission circular states whether it counts the 4th subject. The final result is always the one your education board publishes.",
+        ],
+      },
+    ],
+  },
+
+  "ssc-gpa-calculator": {
+    bn: [
+      {
+        h: "এসএসসি জিপিএ হিসাবের নিয়ম",
+        p: [
+          "এসএসসি জিপিএ = (৯টি মূল বিষয়ের গ্রেড পয়েন্টের যোগফল + ৪র্থ বিষয়ের বাড়তি পয়েন্ট) ÷ ৯। দুই পত্রের বিষয় (যেমন বাংলা, ইংরেজি) একটি বিষয় হিসেবে ধরা হয়। জিপিএ ৫.০০ এর বেশি দেখানো হয় না।",
+          "উদাহরণ: ৯টি বিষয়ের পয়েন্ট ৫, ৪, ৪, ৫, ৩.৫, ৪, ৫, ৩, ৪ হলে যোগফল ৩৭.৫। ৪র্থ বিষয়ে A (৪.০০) হলে বাড়তি ২.০০, মোট ৩৯.৫। জিপিএ = ৩৯.৫ ÷ ৯ = ৪.৩৯।",
+        ],
+      },
+      {
+        h: "৪র্থ বিষয়ে কত পয়েন্ট যোগ হয়",
+        p: [
+          "৪র্থ বিষয়ে A+ পেলে ৩.০০, A পেলে ২.০০, A- পেলে ১.৫০ এবং B পেলে ১.০০ যোগ হয়। C, D বা F পেলে কিছু যোগ হয় না, এবং ৪র্থ বিষয়ে F থাকলে ফেল হয় না। তাই ৪র্থ বিষয় কখনো জিপিএ কমায় না।",
+        ],
+      },
+      {
+        h: "জিপিএ ৫ ও Golden A+ এর পার্থক্য",
+        p: [
+          "Golden A+ মানে সব বিষয়ে A+ (৮০ বা তার বেশি)। জিপিএ ৫.০০ ৪র্থ বিষয়ের বাড়তি পয়েন্টেও আসতে পারে, যেখানে সব বিষয়ে A+ নাও থাকতে পারে। কলেজে ভর্তি বা বৃত্তির শর্তে কোনটি লাগবে তা সংশ্লিষ্ট সার্কুলারে দেখুন।",
+          "এসএসসির পর এইচএসসির জিপিএ হিসাব করতে আমাদের HSC GPA ক্যালকুলেটর এবং বিশ্ববিদ্যালয়ের জন্য CGPA ক্যালকুলেটর ব্যবহার করুন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How SSC GPA is calculated",
+        p: [
+          "SSC GPA = (total grade points of the 9 main subjects + the 4th subject bonus) ÷ 9. A two-paper subject such as Bangla or English counts as one subject. The GPA is not shown above 5.00.",
+          "Example: nine subjects with points 5, 4, 4, 5, 3.5, 4, 5, 3 and 4 add up to 37.5. With an A (4.00) in the 4th subject the bonus is 2.00, so the total is 39.5. GPA = 39.5 ÷ 9 = 4.39.",
+        ],
+      },
+      {
+        h: "How many points the 4th subject adds",
+        p: [
+          "An A+ in the 4th subject adds 3.00, A adds 2.00, A- adds 1.50 and B adds 1.00. C, D or F add nothing, and an F in the 4th subject does not fail you. So the 4th subject never lowers the GPA.",
+        ],
+      },
+      {
+        h: "GPA 5 versus Golden A+",
+        p: [
+          "Golden A+ means A+ (80 or more) in every subject. GPA 5.00 can also come from the 4th subject bonus even when some subjects are not A+. Check the relevant circular to see which one a college admission or scholarship asks for.",
+          "After SSC, use our HSC GPA calculator, and the CGPA calculator for university results.",
+        ],
+      },
+    ],
+  },
+
+  "hsc-gpa-calculator": {
+    bn: [
+      {
+        h: "এইচএসসি জিপিএ হিসাবের নিয়ম",
+        p: [
+          "এইচএসসি জিপিএ = (৬টি মূল বিষয়ের গ্রেড পয়েন্টের যোগফল + ৪র্থ বিষয়ের বাড়তি পয়েন্ট) ÷ ৬। বাংলা, ইংরেজি ও ICT তিনটি আবশ্যিক বিষয়, সঙ্গে গ্রুপের তিনটি বিষয়। ৪র্থ বিষয় সপ্তম বিষয় হিসেবে ভাগে ধরা হয় না। জিপিএ ৫.০০ এর বেশি দেখানো হয় না।",
+          "উদাহরণ: ছয় বিষয়ে A+, A+, A, A, A-, B পেলে যোগফল ৫ + ৫ + ৪ + ৪ + ৩.৫ + ৩ = ২৪.৫। ৪র্থ বিষয় ছাড়া জিপিএ ২৪.৫ ÷ ৬ = ৪.০৮। ৪র্থ বিষয়ে A হলে বাড়তি ২.০০, মোট ২৬.৫, জিপিএ ৪.৪২।",
+        ],
+      },
+      {
+        h: "ফেল ও জিপিএ ৫ এর নিয়ম",
+        p: [
+          "কোনো মূল বিষয়ে F থাকলে ফলাফল Fail, অন্য বিষয়ের ভালো গ্রেডেও তা পূরণ হয় না। ৪র্থ বিষয়ে F থাকলে শুধু বাড়তি পয়েন্ট যোগ হয় না, ফেল হয় না। ৪র্থ বিষয়ের বাড়তি পয়েন্ট দিয়ে সব বিষয়ে A+ না থাকলেও জিপিএ ৫.০০ হতে পারে।",
+        ],
+      },
+      {
+        h: "ভর্তির জন্য সম্মিলিত জিপিএ",
+        p: [
+          "অনেক ভর্তি সার্কুলারে এসএসসি ও এইচএসসি জিপিএ যোগ করে ১০.০০ এর মধ্যে সম্মিলিত জিপিএ ধরা হয়, যেমন ৪.৮০ + ৪.৫০ = ৯.৩০। ন্যূনতম জিপিএ, ওজন এবং ৪র্থ বিষয় ধরা হবে কি না প্রতিষ্ঠানভেদে আলাদা, তাই সংশ্লিষ্ট সার্কুলার দেখুন। এসএসসি জিপিএ হিসাব করতে আমাদের SSC GPA ক্যালকুলেটর ব্যবহার করুন।",
+        ],
+      },
+    ],
+    en: [
+      {
+        h: "How HSC GPA is calculated",
+        p: [
+          "HSC GPA = (total grade points of the 6 main subjects + the 4th subject bonus) ÷ 6. Bangla, English and ICT are the three compulsory subjects, plus three group subjects. The 4th subject is not counted as a seventh subject in the division. The GPA is not shown above 5.00.",
+          "Example: with A+, A+, A, A, A- and B in six subjects the total is 5 + 5 + 4 + 4 + 3.5 + 3 = 24.5. The GPA without the 4th subject is 24.5 ÷ 6 = 4.08. With an A in the 4th subject the bonus is 2.00, the total is 26.5 and the GPA is 4.42.",
+        ],
+      },
+      {
+        h: "Fail and GPA 5 rules",
+        p: [
+          "An F in any main subject means Fail, and good grades elsewhere cannot cancel it. An F in the 4th subject only means no bonus, not a fail. The 4th subject bonus can lift the GPA to 5.00 even when not every subject is A+.",
+        ],
+      },
+      {
+        h: "Combined GPA for admission",
+        p: [
+          "Many admission circulars add the SSC and HSC GPA for a combined GPA out of 10.00, for example 4.80 + 4.50 = 9.30. The minimum, the weighting and whether the 4th subject counts differ by institution, so read the circular. To find your SSC GPA, use our SSC GPA calculator.",
         ],
       },
     ],
