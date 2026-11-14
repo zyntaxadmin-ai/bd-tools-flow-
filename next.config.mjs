@@ -41,12 +41,14 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "camera=(self), microphone=(), geolocation=(), payment=()" },
           { key: "Cross-Origin-Opener-Policy", value: "same-origin-allow-popups" },
           // Report-Only first: it logs problems in the browser console but blocks nothing. Switch to "Content-Security-Policy" after checking ads, analytics, PDF and QR tools show no violations.
-          { key: "Content-Security-Policy-Report-Only", value: CSP },
+          { key: "Content-Security-Policy", value: CSP },
         ],
       },
     ];
   },
-  typescript: { ignoreBuildErrors: true },
-  eslint: { ignoreDuringBuilds: true },
+  // Safe switch: set STRICT_BUILD=1 in Vercel (Environment Variables) to make the build fail on TypeScript/lint errors.
+  // Without it the build behaves as before, so the live site cannot break by surprise.
+  typescript: { ignoreBuildErrors: process.env.STRICT_BUILD !== "1" },
+  eslint: { ignoreDuringBuilds: process.env.STRICT_BUILD !== "1" },
 };
 export default nextConfig;
