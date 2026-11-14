@@ -6,6 +6,7 @@ const GROUPS: string[][] = [
   ["stopwatch-timer", "countdown-timer"],
   ["govt-job-age-calculator", "age-calculator", "date-difference-calculator"],
   ["zakat-calculator-bd", "gold-weight-converter-bd", "percentage-calculator"],
+  ["emi-calculator-bd", "fdr-dps-calculator-bd", "income-tax-calculator-bd", "bdt-currency-converter"],
 ];
 
 /** Slugs (without the /tool/ prefix) that should be listed first for this tool, in order. */

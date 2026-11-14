@@ -381,36 +381,48 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
 
   "emi-calculator-bd": {
     bn: [
-      {
-        h: "EMI কীভাবে হিসাব হয়",
-        p: [
-          "EMI মানে মাসিক কিস্তি। এই টুল reducing balance পদ্ধতিতে হিসাব করে, অর্থাৎ প্রতি মাসে বাকি থাকা আসলের ওপর সুদ ধরা হয়। সূত্র: EMI = P × r × (১+r)^n ÷ ((১+r)^n − ১), যেখানে P হলো লোনের পরিমাণ, r হলো মাসিক সুদের হার (বার্ষিক হার ÷ ১২ ÷ ১০০) এবং n হলো মোট মাস।",
-          "ফলাফলে মাসিক কিস্তি, মোট সুদ ও মোট পরিশোধের অঙ্ক এবং প্রথম ১২ মাসের আসল-সুদের ভাগ দেখানো হয়।",
-        ],
-      },
-      {
-        h: "লোন নেওয়ার আগে যা মনে রাখবেন",
-        p: [
-          "মেয়াদ বাড়ালে মাসিক কিস্তি কমে, কিন্তু মোট সুদ বেড়ে যায়। কিস্তির অঙ্ক আপনার মাসিক আয়ের তুলনায় কতটা, তা আগে ভেবে দেখুন।",
-          "এটি আনুমানিক হিসাব। ব্যাংকের প্রসেসিং ফি, বীমা ও অন্যান্য চার্জ আলাদা হতে পারে, তাই চূড়ান্ত অঙ্ক ব্যাংক থেকে জেনে নিন।",
-        ],
-      },
+      { h: "EMI ক্যালকুলেটর কীভাবে কাজ করে", p: [
+        "লোনের পরিমাণ, বার্ষিক সুদের হার ও মেয়াদ দিলে এই টুল মাসিক কিস্তি (EMI), মোট সুদ, মোট পরিশোধ এবং শোধ শেষ হওয়ার সময় বের করে। সঙ্গে দেখায় আসল ও সুদের ভাগ, বকেয়া আসল কমার চার্ট এবং বছর বা মাসভিত্তিক পুরো কিস্তির তালিকা, যা CSV হিসেবে নামানো যায়।",
+        "Reducing balance পদ্ধতিতে প্রতি মাসের সুদ হয় সেই মাসের শুরুর বাকি আসলের ওপর। তাই শুরুতে কিস্তির বড় অংশ সুদে যায়, পরে আসলের অংশ বাড়ে। যেমন ৫,০০,০০০ টাকা, ১০% সুদ, ৫ বছরের লোনে প্রথম মাসের কিস্তি ১০,৬২৪ টাকার মধ্যে সুদ ৪,১৬৭ টাকা এবং আসল ৬,৪৫৭ টাকা।",
+      ] },
+      { h: "Reducing balance ও flat rate", p: [
+        "Reducing balance এ বাকি আসল কমার সাথে সুদও কমে। Flat rate এ সুদ গণনা হয় পুরো মেয়াদ ধরে মূল আসলের ওপর, তাই একই হারে কিস্তি বেশি হয়। কোন পদ্ধতি প্রযোজ্য, তা ঋণদাতাভেদে আলাদা, তাই লোন নেওয়ার আগে জিজ্ঞেস করে নিন।",
+        "Flat rate দেখতে কম মনে হলেও প্রকৃত খরচ বেশি। এই টুলে flat rate বেছে নিলে সমান কিস্তির reducing balance হার আলাদা করে দেখায়। উদাহরণ: ৩ বছরের লোনে ১০% flat প্রায় ১৭.৯২% reducing balance এর সমান।",
+      ] },
+      { h: "লোনের ধরন অনুযায়ী হিসাব", p: [
+        "উপরের লোনের ধরনের বোতামগুলো শুধু শুরুর উদাহরণ বসায়: হোম, পার্সোনাল, কার, SME ও এডুকেশন লোন। সুদের হার ব্যাংক, গ্রাহকের অবস্থা ও সময়ভেদে বদলায়, তাই আপনার ব্যাংকের ঘোষিত হার বসিয়ে হিসাব করুন। পাশে দেখানো সীমা আনুমানিক, নিশ্চিত হার নয়।",
+        "উদাহরণ: ৩,০০,০০০ টাকার পার্সোনাল লোন ১৫% সুদে ৩ বছরে কিস্তি প্রায় ১০,৪০০ টাকা, মোট সুদ ৭৪,৩৮৬ টাকা। ২০ লাখ টাকার লোন ১১% সুদে ১০ বছরে কিস্তি প্রায় ২৭,৫৫০ টাকা, মোট সুদ প্রায় ১৩,০৬,০০০ টাকা।",
+      ] },
+      { h: "কিস্তির বোঝা কমানোর উপায়", p: [
+        "মেয়াদ বাড়ালে মাসিক কিস্তি কমে কিন্তু মোট সুদ বাড়ে, তাই দুটোর ভারসাম্য দেখুন। ডাউন পেমেন্ট বাড়িয়ে লোনের পরিমাণ কমালে সুদও কমে। একাধিক ব্যাংকের হার ও চার্জ এই টুলে বসিয়ে পাশাপাশি তুলনা করা যায়।",
+        "সম্ভব হলে প্রতি মাসে অতিরিক্ত টাকা দিন। ‘আরও অপশন’ এ সেই অঙ্ক দিলে টুল দেখায় ঋণ কত মাস আগে শোধ হবে ও কত সুদ বাঁচবে। তার আগে জেনে নিন আগাম পরিশোধে ব্যাংকের কোনো ফি আছে কি না।",
+      ] },
+      { h: "লোন নেওয়ার আগে যা দেখে নেবেন", p: [
+        "শুধু মাসিক কিস্তি নয়, মোট খরচ দেখুন। প্রসেসিং ফি, ইনস্যুরেন্স, আবগারি শুল্ক, দেরিতে পরিশোধের জরিমানা ও আগাম পরিশোধের ফি আছে কি না জানুন। সুদের হার স্থির (fixed) না পরিবর্তনশীল (floating), তাও জিজ্ঞেস করুন।",
+        "কিস্তি আপনার মাসিক আয়ের কতটা অংশ নিয়ে নেবে এবং আয় কমলেও চালানো যাবে কি না, তা ভেবে নিন। লোন চুক্তির কাগজ মন দিয়ে পড়ুন, আর চূড়ান্ত কিস্তির অঙ্ক ব্যাংকের কাছ থেকে লিখিত নিন।",
+      ] },
     ],
     en: [
-      {
-        h: "How EMI is calculated",
-        p: [
-          "EMI means equated monthly instalment. This tool uses the reducing balance method, so interest each month is charged on the principal still owed. The formula is EMI = P × r × (1+r)^n ÷ ((1+r)^n − 1), where P is the loan amount, r is the monthly interest rate (annual rate ÷ 12 ÷ 100) and n is the number of months.",
-          "The result shows the monthly instalment, total interest, total repayment and the principal and interest split for the first 12 months.",
-        ],
-      },
-      {
-        h: "What to keep in mind before taking a loan",
-        p: [
-          "A longer tenure lowers the monthly instalment but raises the total interest. Think about how large the instalment is compared with your monthly income.",
-          "This is an estimate. Bank processing fees, insurance and other charges may differ, so confirm the final figure with the bank.",
-        ],
-      },
+      { h: "How the EMI calculator works", p: [
+        "Enter the loan amount, annual interest rate and tenure, and the tool gives you the monthly EMI, total interest, total repayment and when the loan ends. It also shows the principal and interest split, a chart of the balance falling, and the full yearly or monthly schedule, which you can download as a CSV.",
+        "With the reducing balance method, each month's interest is charged on the balance at the start of that month. So most of an early EMI goes to interest and the principal share grows later. For example, on a 5,00,000 taka loan at 10% over 5 years, the first EMI of 10,624 taka has 4,167 taka of interest and 6,457 taka of principal.",
+      ] },
+      { h: "Reducing balance and flat rate", p: [
+        "With reducing balance, interest falls as the balance falls. With a flat rate, interest is charged on the original amount for the whole tenure, so the EMI is higher at the same rate. Which method applies depends on the lender, so ask before you borrow.",
+        "A flat rate looks lower but costs more. When you choose flat rate, the tool also shows the reducing balance rate that gives the same EMI. For example, 10% flat on a 3 year loan equals about 17.92% on a reducing balance.",
+      ] },
+      { h: "Calculating by loan type", p: [
+        "The loan type buttons above only fill in a starting example for home, personal, car, SME and education loans. Rates change with the bank, the borrower and the date, so enter the rate your bank announces. The range shown beside them is approximate, not a guaranteed rate.",
+        "Examples: a 3,00,000 taka personal loan at 15% over 3 years has an EMI of about 10,400 taka and total interest of 74,386 taka. A 20 lakh taka loan at 11% over 10 years has an EMI of about 27,550 taka and total interest of about 13,06,000 taka.",
+      ] },
+      { h: "Ways to lower the burden", p: [
+        "A longer tenure lowers the monthly EMI but raises the total interest, so look at both. A bigger down payment means a smaller loan and less interest. You can enter different banks' rates and charges here and compare them side by side.",
+        "If you can, pay something extra every month. Enter the amount under ‘More options’ and the tool shows how many months earlier the loan ends and how much interest you save. First find out whether the bank charges a fee for early repayment.",
+      ] },
+      { h: "What to check before you borrow", p: [
+        "Look at the total cost, not only the monthly EMI. Find out whether there are processing fees, insurance, excise duty, late payment charges and early repayment fees. Also ask whether the rate is fixed or floating.",
+        "Think about how much of your monthly income the EMI will take and whether you could still manage if your income drops. Read the loan agreement carefully and get the final EMI figure from the bank in writing.",
+      ] },
     ],
   },
 
@@ -2471,6 +2483,7 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
       },
     ],
   },
+
 };
 
 // ---------------------------------------------------------------------------

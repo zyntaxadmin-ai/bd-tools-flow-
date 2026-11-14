@@ -71,8 +71,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "জমির হিসাব ক্যালকুলেটর: শতাংশ, কাঠা, বিঘা, একর, কানি, গণ্ডা, বর্গফুট ও হেক্টরে রূপান্তর করুন। কাঠার মাপ বদলানো যায়, জমির দামও হিসাব হয়। ফ্রি।",
   },
   "emi-calculator-bd": {
-    title: "EMI Calculator BD - লোন কিস্তি ক্যালকুলেটর",
-    description: "লোনের কিস্তি ক্যালকুলেটর। লোনের পরিমাণ, সুদের হার ও মেয়াদ দিয়ে মাসিক EMI, মোট সুদ ও মোট পরিশোধের হিসাব করুন। ফ্রি, সাইনআপ ছাড়াই।",
+    title: "EMI Calculator BD - লোনের কিস্তি ক্যালকুলেটর",
+    description: "ফ্রি EMI ক্যালকুলেটর। হোম, পার্সোনাল ও কার লোনের মাসিক কিস্তি, মোট সুদ, flat ও reducing হিসাব, প্রসেসিং ফি এবং কিস্তির তালিকা। Loan EMI calculator BD।",
   },
   "bangla-calendar": {
     title: "Bangla Calendar - আজকের বাংলা তারিখ",

@@ -39,7 +39,7 @@ const allTools: Tool[] = [
   { id: 2, name: "GPA Calculator", slug: "/tool/gpa-calculator-bd", description: "SSC/HSC GPA নির্ণয়", category: "Education & Calculation", icon: "GraduationCap" },
   { id: 3, name: "CGPA Calculator", slug: "/tool/cgpa-calculator", description: "University CGPA calculator", category: "Education & Calculation", icon: "Award" },
   { id: 6, name: "BMI Calculator", slug: "/tool/bmi-calculator", description: "BMI ক্যালকুলেটর, WHO ও দক্ষিণ এশীয় সীমা", category: "Education & Calculation", icon: "HeartPulse" },
-  { id: 7, name: "EMI Calculator", slug: "/tool/emi-calculator-bd", description: "Loan EMI হিসাব করুন", category: "Education & Calculation", icon: "Calculator" },
+  { id: 7, name: "EMI Calculator", slug: "/tool/emi-calculator-bd", description: "হোম, পার্সোনাল ও কার লোনের কিস্তি হিসাব করুন", category: "Education & Calculation", icon: "Calculator" },
   { id: 4, name: "Percentage Calculator", slug: "/tool/percentage-calculator", description: "শতকরা হিসাব ১ ক্লিকে", category: "Education & Calculation", icon: "Percent" },
   { id: 5, name: "Scientific Calculator", slug: "/tool/scientific-calculator", description: "Advanced scientific calc", category: "Education & Calculation", icon: "Sigma" },
   { id: 8, name: "Unit Converter", slug: "/tool/unit-converter", description: "Length, Weight converter", category: "Education & Calculation", icon: "Ruler" },
