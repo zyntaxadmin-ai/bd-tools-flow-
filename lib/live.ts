@@ -2,8 +2,6 @@
 export const LIVE_SLUGS = [
   "age-calculator",
   "gpa-calculator-bd",
-  "ssc-gpa-calculator",
-  "hsc-gpa-calculator",
   "bkash-calculator",
   "word-counter",
   "percentage-calculator",

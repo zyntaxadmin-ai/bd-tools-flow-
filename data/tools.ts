@@ -37,8 +37,6 @@ const allTools: Tool[] = [
 
   { id: 1, name: "Age Calculator", slug: "/tool/age-calculator", description: "জন্ম তারিখ দিয়ে বয়স বের করুন", category: "Education & Calculation", icon: "Cake" },
   { id: 2, name: "GPA Calculator", slug: "/tool/gpa-calculator-bd", description: "SSC/HSC GPA নির্ণয়", category: "Education & Calculation", icon: "GraduationCap" },
-  { id: 58, name: "SSC GPA Calculator", slug: "/tool/ssc-gpa-calculator", description: "এসএসসি জিপিএ ক্যালকুলেটর", category: "Education & Calculation", icon: "GraduationCap" },
-  { id: 59, name: "HSC GPA Calculator", slug: "/tool/hsc-gpa-calculator", description: "এইচএসসি জিপিএ ক্যালকুলেটর", category: "Education & Calculation", icon: "GraduationCap" },
   { id: 3, name: "CGPA Calculator", slug: "/tool/cgpa-calculator", description: "University CGPA calculator", category: "Education & Calculation", icon: "Award" },
   { id: 6, name: "BMI Calculator", slug: "/tool/bmi-calculator", description: "BMI ও স্বাস্থ্য চেক", category: "Education & Calculation", icon: "HeartPulse" },
   { id: 7, name: "EMI Calculator", slug: "/tool/emi-calculator-bd", description: "Loan EMI হিসাব করুন", category: "Education & Calculation", icon: "Calculator" },
