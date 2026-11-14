@@ -8,8 +8,11 @@ import { CAT_I18N, DESC_EN } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
 import { ShieldCheck, Zap, Users, Sparkles } from "lucide-react";
 import Link from "next/link";
+import { toBnDigits } from "@/lib/site";
 export type GuideLink = { slug: string; title: [string, string] };
 
+// How many guides the home page shows. The rest are on /guides, so the home page stays short as you add guides.
+const HOME_GUIDES = 6;
 const ICONS = [Zap, ShieldCheck, Users, Sparkles];
 
 export default function HomeContent({ guides }: { guides: GuideLink[] }) {
@@ -102,12 +105,17 @@ export default function HomeContent({ guides }: { guides: GuideLink[] }) {
               <Link href="/guides" className="text-sm text-indigo-600 dark:text-indigo-400 hover:underline">{lang === "en" ? "All guides" : "সব গাইড"}</Link>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {guides.map((g) => (
+              {guides.slice(0, HOME_GUIDES).map((g) => (
                 <Link key={g.slug} href={`/guides/${g.slug}`} className="block rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 hover:border-indigo-400 transition">
                   <span className="font-semibold text-sm text-slate-900 dark:text-white">{lang === "en" ? g.title[1] : g.title[0]}</span>
                 </Link>
               ))}
             </div>
+            {guides.length > HOME_GUIDES && (
+              <Link href="/guides" className="mt-4 flex items-center justify-center min-h-[48px] rounded-xl border border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950/30 text-sm font-semibold text-indigo-700 dark:text-indigo-300 hover:bg-indigo-100 dark:hover:bg-indigo-950/60">
+                {lang === "en" ? `View all ${guides.length} guides →` : `সব ${toBnDigits(guides.length)}টি গাইড দেখুন →`}
+              </Link>
+            )}
           </section>
         )}
       </div>

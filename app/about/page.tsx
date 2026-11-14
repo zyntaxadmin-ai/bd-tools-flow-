@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import T from "@/components/T";
 import { CONTACT_EMAIL } from "@/lib/site";
 import { siteConfig } from "@/lib/seo";
+import { LIVE_SLUGS } from "@/lib/live";
+import { GUIDES } from "@/lib/guides";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Md Rohan Islam",
@@ -11,9 +14,29 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  const stats: { n: string; bn: string; en: string }[] = [
+    { n: String(LIVE_SLUGS.length), bn: "ফ্রি টুল", en: "free tools" },
+    { n: String(GUIDES.length), bn: "গাইড", en: "guides" },
+    { n: "0৳", bn: "কোনো খরচ নেই", en: "no cost" },
+    { n: "0", bn: "সাইনআপ লাগে না", en: "signup needed" },
+  ];
+  const values: { bn: [string, string]; en: [string, string] }[] = [
+    { bn: ["দ্রুত ও সহজ", "মোবাইলে ব্যবহার উপযোগী, হালকা পেজ, কোনো ঝামেলা নেই।"], en: ["Fast and simple", "Mobile-friendly, light pages, no hassle."] },
+    { bn: ["গোপনীয়তা আগে", "বেশিরভাগ টুল আপনার ব্রাউজারেই চলে। ফাইল আপলোড হয় না।"], en: ["Privacy first", "Most tools run in your browser. Your files are not uploaded."] },
+    { bn: ["বাংলাদেশের জন্য", "বিকাশ, নগদ, জমি, বিদ্যুৎ বিল, পাসপোর্ট ফি ও যাকাতের মতো স্থানীয় হিসাব।", ], en: ["Made for Bangladesh", "Local calculations like bKash, Nagad, land, electricity bills, passport fees and zakat."] },
+  ];
   return (
     <div className="max-w-[800px] mx-auto px-4 sm:px-6 py-10">
       <h1 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">About BD Tools Flow</h1>
+
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+        {stats.map((x) => (
+          <div key={x.en} className="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 text-center">
+            <p className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{x.n}</p>
+            <p className="text-xs mt-1 text-slate-600 dark:text-slate-400"><T bn={x.bn} en={x.en} /></p>
+          </div>
+        ))}
+      </div>
 
       <div className="space-y-5 text-slate-600 dark:text-slate-400 leading-relaxed">
         <p>
@@ -38,14 +61,15 @@ export default function Page() {
               en="I am trying to bring calculators, educational tools, financial calculations and essential online utilities together in one place. My main aim is to save users' time, help them get accurate results and give them a simple digital experience."
             />
           </p>
-          <a
-            href="https://github.com/zyntaxadmin-ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
-          >
-            GitHub Profile →
-          </a>
+        </section>
+
+        <section className="grid sm:grid-cols-3 gap-3">
+          {values.map((v) => (
+            <div key={v.en[0]} className="rounded-xl bg-slate-100 dark:bg-slate-800/60 p-4">
+              <h3 className="font-semibold text-slate-900 dark:text-white mb-1"><T bn={v.bn[0]} en={v.en[0]} /></h3>
+              <p className="text-sm"><T bn={v.bn[1]} en={v.en[1]} /></p>
+            </div>
+          ))}
         </section>
 
         <section>
@@ -65,10 +89,15 @@ export default function Page() {
           </p>
           <a
             href={`mailto:${CONTACT_EMAIL}`}
-            className="inline-block mt-2 text-indigo-600 dark:text-indigo-400 font-medium hover:underline"
+            className="inline-block mt-2 text-indigo-600 dark:text-indigo-400 font-medium hover:underline break-all"
           >
             {CONTACT_EMAIL}
           </a>
+          <p className="mt-3 text-sm">
+            <Link href="/contact" className="text-indigo-600 dark:text-indigo-400 hover:underline"><T bn="যোগাযোগ পেজ →" en="Contact page →" /></Link>
+            {" · "}
+            <Link href="/editorial-policy" className="text-indigo-600 dark:text-indigo-400 hover:underline"><T bn="সম্পাদকীয় নীতি →" en="Editorial policy →" /></Link>
+          </p>
         </section>
       </div>
     </div>

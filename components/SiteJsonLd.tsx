@@ -32,12 +32,6 @@ export default function SiteJsonLd() {
           name: "Md Rohan Islam",
           jobTitle: "Founder & Developer",
           url: `${siteConfig.url}/about`,
-          sameAs: [
-            "https://github.com/zyntaxadmin-ai",
-            "https://www.instagram.com/rohan3prime/",
-            "https://www.facebook.com/rohan3prime",
-            "https://www.tiktok.com/@rohan3prime",
-          ],
         },
       },
     ],
