@@ -76,12 +76,44 @@ export default function ToolLayout({ title, description, category, categorySlug,
       <div className="mt-6"><AdSlot label="Advertisement" /></div>
 
       {article && (
-        <div className="mt-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-6">
-          {article.map((sec) => (
-            <section key={sec.h}>
+        <div className="mt-8 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 space-y-8">
+          {article.length >= 5 && (
+            <details className="rounded-xl border border-slate-200 dark:border-slate-800 group">
+              <summary className="cursor-pointer list-none px-4 min-h-[44px] flex items-center justify-between text-sm font-medium text-slate-900 dark:text-white">
+                {lang === "en" ? `On this page (${article.length} sections)` : `এই পেজে (${article.length}টি অংশ)`}
+                <ChevronRight className="w-4 h-4 text-slate-500 group-open:rotate-90 transition-transform" />
+              </summary>
+              <nav aria-label={lang === "en" ? "On this page" : "এই পেজে"} className="px-4 pb-3 flex flex-col">
+                {article.map((sec, i) => (
+                  <a key={sec.h} href={`#sec-${i}`} className="py-2 min-h-[40px] text-[13px] text-slate-600 dark:text-slate-300 hover:text-indigo-700 dark:hover:text-indigo-300 border-t border-slate-100 dark:border-slate-800 first:border-t-0">{sec.h}</a>
+                ))}
+              </nav>
+            </details>
+          )}
+          {article.map((sec, i) => (
+            <section key={sec.h} id={`sec-${i}`} className="scroll-mt-20">
               <h2 className="font-semibold text-slate-900 dark:text-white mb-3">{sec.h}</h2>
               <div className="space-y-3 text-sm text-slate-600 dark:text-slate-400 leading-7">
-                {sec.p.map((para, i) => <p key={i}>{para}</p>)}
+                {sec.p.map((para, j) => <p key={j}>{para}</p>)}
+                {sec.table && (
+                  <div className="overflow-x-auto rounded-xl border border-slate-200 dark:border-slate-800">
+                    <table className="w-full text-left text-sm">
+                      <thead className="bg-slate-50 dark:bg-slate-800/60 text-slate-900 dark:text-white">
+                        <tr>{sec.table.head.map((h) => <th key={h} scope="col" className="px-3 py-2 font-semibold whitespace-nowrap">{h}</th>)}</tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
+                        {sec.table.rows.map((row, r) => (
+                          <tr key={r}>{row.map((cell, c) => <td key={c} className={`px-3 py-2 align-top ${c === 0 ? "font-medium text-slate-900 dark:text-slate-200" : ""}`}>{cell}</td>)}</tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+                {sec.list && (
+                  <ul className="list-disc pl-5 space-y-1.5 marker:text-indigo-400">
+                    {sec.list.map((li, j) => <li key={j}>{li}</li>)}
+                  </ul>
+                )}
               </div>
             </section>
           ))}

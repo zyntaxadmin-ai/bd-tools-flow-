@@ -111,8 +111,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "শব্দ, অক্ষর, বাক্য ও প্যারাগ্রাফ গণনা করুন টাইপ করার সাথে সাথে। Word counter ও character counter, ফ্রি অনলাইন।",
   },
   "percentage-calculator": {
-    title: "Percentage Calculator - শতকরা হিসাব",
-    description: "শতকরা হিসাব ক্যালকুলেটর। X এর Y% কত, শতকরা বৃদ্ধি-হ্রাস ও % যোগ-বিয়োগ এক ক্লিকে, হিসাবের ধাপসহ। ফ্রি percentage calculator।",
+    title: "Percentage Calculator - শতকরা হিসাব, VAT ও ছাড়",
+    description: "শতকরা হিসাব ক্যালকুলেটর: X এর Y% কত, কত শতাংশ, বৃদ্ধি-হ্রাস, ১৫% VAT, ছাড় ও পারসেন্টেজ পয়েন্ট। ধাপে ধাপে হিসাব, ফ্রি।",
   },
   "bmi-calculator": {
     title: "BMI Calculator বাংলা - বিএমআই ক্যালকুলেটর",

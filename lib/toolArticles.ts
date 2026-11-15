@@ -1,6 +1,6 @@
 // Longer explanation text shown under each tool (key = slug without /tool/).
 // Add an entry here to give a tool more useful text. Tools without an entry just skip this section.
-export type ArticleSection = { h: string; p: string[] };
+export type ArticleSection = { h: string; p: string[]; list?: string[]; table?: { head: string[]; rows: string[][] } };
 export type ToolArticle = { bn: ArticleSection[]; en: ArticleSection[] };
 
 export const TOOL_ARTICLES: Record<string, ToolArticle> = {
@@ -260,33 +260,205 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "percentage-calculator": {
     bn: [
       {
-        h: "শতকরা হিসাবের সূত্র",
+        h: "শতকরা (পার্সেন্টেজ) কী",
         p: [
-          "শতকরা হিসাবে তিনটি কাজ সবচেয়ে বেশি লাগে। এক, কোনো সংখ্যার কত শতাংশ কত: (শতাংশ × সংখ্যা) ÷ ১০০। যেমন ২০০ এর ১৫% = ৩০।",
-          "দুই, একটি সংখ্যা অন্যটির কত শতাংশ: (প্রথম সংখ্যা ÷ দ্বিতীয় সংখ্যা) × ১০০। যেমন ৪০ হলো ২০০ এর ২০%।",
-          "তিন, শতকরা বৃদ্ধি বা হ্রাস: ((নতুন মান − পুরোনো মান) ÷ পুরোনো মান) × ১০০। যেমন দাম ৫০০ থেকে ৬০০ হলে বৃদ্ধি ২০%।",
+          "শতকরা মানে প্রতি একশোতে কত। ২৫% মানে ১০০ এর মধ্যে ২৫, অর্থাৎ ২৫/১০০ বা দশমিকে ০.২৫। শতাংশকে দশমিকে বদলাতে ১০০ দিয়ে ভাগ করুন, আর দশমিক থেকে শতাংশ পেতে ১০০ দিয়ে গুণ করুন।",
+          "শতকরা দিয়ে ছোট-বড় যেকোনো সংখ্যার তুলনা করা যায়। যেমন ১৫০ এর মধ্যে ১২০ আর ২৫০ এর মধ্যে ১৮০ সরাসরি তুলনা করা কঠিন, কিন্তু ৮০% আর ৭২% বললে এক নজরে বোঝা যায় কোনটা বেশি।",
         ],
       },
       {
-        h: "কোথায় কাজে লাগে",
+        h: "তিনটি মূল সূত্র",
+        p: ["বাকি সব হিসাব এই তিনটি সূত্র থেকেই তৈরি হয়। টুলের প্রথম তিনটি ট্যাব ঠিক এই তিন প্রশ্নের জন্য।"],
+        table: {
+          head: ["প্রশ্ন", "সূত্র", "উদাহরণ"],
+          rows: [
+            ["X এর Y% কত", "X × Y ÷ ১০০", "২০০ এর ১৫% = ২০০ × ১৫ ÷ ১০০ = ৩০"],
+            ["X হলো Y এর কত শতাংশ", "X ÷ Y × ১০০", "৪৫ হলো ১৮০ এর ৪৫ ÷ ১৮০ × ১০০ = ২৫%"],
+            ["X হলো Y% হলে মোট কত", "X × ১০০ ÷ Y", "৫০ হলো ২৫% হলে মোট ৫০ × ১০০ ÷ ২৫ = ২০০"],
+          ],
+        },
+      },
+      {
+        h: "শতকরা বৃদ্ধি ও হ্রাস",
         p: [
-          "পরীক্ষার নম্বর থেকে শতাংশ, দোকানের ছাড় বা ভ্যাট, ব্যাংকের সুদ ও দামের ওঠানামা, সবখানেই শতকরা হিসাব লাগে। টুলে সংখ্যা বসালেই উত্তর পাওয়া যায়, তাই হাতে হিসাব করার ভুল এড়ানো যায়।",
+          "সূত্র: (নতুন মান − আগের মান) ÷ আগের মান × ১০০। ভাগ সবসময় আগের মান দিয়ে হয়। ফল ধনাত্মক হলে বৃদ্ধি, ঋণাত্মক হলে হ্রাস।",
+          "একটি জরুরি বিষয়: ৫০০ থেকে ৬০০ হলে বৃদ্ধি ২০%, কিন্তু ৬০০ থেকে আবার ৫০০ এ নামলে হ্রাস ২০% নয়, প্রায় ১৬.৬৭%। কারণ দ্বিতীয়বার ভাগ হচ্ছে ৬০০ দিয়ে। টুলের “উল্টো দিকে” লাইনে এটা সরাসরি দেখা যায়।",
+        ],
+      },
+      {
+        h: "যোগ-বিয়োগ ও ভ্যাট (VAT) হিসাব",
+        p: [
+          "কোনো দামের সাথে শতাংশ যোগ করতে দাম × (১ + শতাংশ ÷ ১০০) করুন, বিয়োগ করতে দাম × (১ − শতাংশ ÷ ১০০)। যেমন ১,০০০ টাকার সাথে ১৫% ভ্যাট যোগ করলে ১,০০০ × ১.১৫ = ১,১৫০ টাকা।",
+          "উল্টো হিসাবে ভুল বেশি হয়। ভ্যাট-সহ দাম ১,১৫০ টাকা হলে মূল দাম ১,১৫০ ÷ ১.১৫ = ১,০০০ টাকা, আর ভ্যাট ১৫০ টাকা। ১,১৫০ এর ১৫% (১৭২.৫০) বিয়োগ করলে ভুল ফল (৯৭৭.৫০) আসে। টুলের “যোগের আগের মান” অপশনে এই হিসাব ঠিকভাবে হয়।",
+          "বাংলাদেশে সাধারণ ভ্যাট হার ১৫%, তবে পণ্য ও সেবাভেদে হ্রাসকৃত বা ভিন্ন হার থাকতে পারে। নির্দিষ্ট পণ্যের হার জাতীয় রাজস্ব বোর্ডের (এনবিআর) হালনাগাদ তথ্য থেকে যাচাই করে নিন।",
+        ],
+      },
+      {
+        h: "ছাড়ের হিসাব ও পরপর দুই ছাড়",
+        p: [
+          "ছাড়ের পরের দাম = মূল দাম × (১ − ছাড় ÷ ১০০)। ১,২০০ টাকায় ১৫% ছাড় হলে ১,২০০ × ০.৮৫ = ১,০২০ টাকা, সাশ্রয় ১৮০ টাকা।",
+          "দুটি ছাড় পরপর হলে শতাংশ যোগ করা যায় না। ২০% ছাড়ের পর আরও ১০% ছাড় মানে ১,২০০ × ০.৮ × ০.৯ = ৮৬৪ টাকা। মোট সাশ্রয় ৩৩৬ টাকা, যা মূল দামের ২৮%, ৩০% নয়। টুলের ছাড় ট্যাবে দ্বিতীয় ছাড়ের ঘরে সংখ্যা দিলে কার্যকর হার সরাসরি দেখায়।",
+        ],
+      },
+      {
+        h: "পরীক্ষার নম্বর ও ফলাফলের শতকরা",
+        p: [
+          "প্রাপ্ত নম্বরকে পূর্ণমান দিয়ে ভাগ করে ১০০ দিয়ে গুণ করলেই শতকরা পাওয়া যায়। ৫০০ নম্বরের মধ্যে ৪৩২ পেলে ৪৩২ ÷ ৫০০ × ১০০ = ৮৬.৪%। “কত শতাংশ” ট্যাবে অংশের ঘরে প্রাপ্ত নম্বর, মোটের ঘরে পূর্ণমান দিন।",
+          "জিপিএ বা সিজিপিএ বের করার নিয়ম আলাদা, সেজন্য জিপিএ ও সিজিপিএ ক্যালকুলেটর ব্যবহার করুন।",
+        ],
+      },
+      {
+        h: "শতাংশ বনাম পারসেন্টেজ পয়েন্ট",
+        p: [
+          "দুটি হারের পার্থক্য বোঝাতে “পারসেন্টেজ পয়েন্ট” ব্যবহার হয়। হার ১০% থেকে ১৫% হলে পার্থক্য ৫ পারসেন্টেজ পয়েন্ট, কিন্তু আপেক্ষিক বৃদ্ধি ৫ ÷ ১০ × ১০০ = ৫০%।",
+          "ব্যাংকের সুদের হার ৮% থেকে ৯% হলে বাড়ল ১ পয়েন্ট, কিন্তু আগের হারের তুলনায় ১২.৫%। সংবাদ ও রিপোর্টে এই দুটি প্রায়ই গুলিয়ে ফেলা হয়, তাই কোনটা বলা হচ্ছে দেখে নিন।",
+        ],
+      },
+      {
+        h: "মনে মনে দ্রুত হিসাবের কৌশল",
+        p: ["এই কৌশলে মোটামুটি হিসাব দ্রুত হয়। নির্ভুল ফল দরকার হলে টুল ব্যবহার করুন।"],
+        list: [
+          "১০%: দশমিক বিন্দু এক ঘর বাঁয়ে সরান (৪৫০ এর ১০% = ৪৫)।",
+          "১%: দশমিক বিন্দু দুই ঘর বাঁয়ে সরান (৪৫০ এর ১% = ৪.৫)।",
+          "৫%: ১০% এর অর্ধেক (৪৫০ এর ৫% = ২২.৫)।",
+          "১৫%: ১০% ও ৫% যোগ (৪৫০ এর ১৫% = ৬৭.৫)।",
+          "২০%: ১০% এর দ্বিগুণ, অথবা ৫ দিয়ে ভাগ।",
+          "২৫%: ৪ দিয়ে ভাগ। ৫০%: ২ দিয়ে ভাগ।",
+        ],
+      },
+      {
+        h: "এক্সেল ও গুগল শিটে শতকরা হিসাব",
+        p: ["সেল Percentage ফরম্যাটে থাকলে ১৫% লিখলে ভেতরে মান ০.১৫ থাকে। তখন সূত্র হবে =A1*B1, ১০০ দিয়ে ভাগ লাগে না। নিচের সূত্রগুলো সাধারণ সংখ্যার জন্য (B1 তে ১৫ লেখা)।"],
+        table: {
+          head: ["কাজ", "সূত্র"],
+          rows: [
+            ["X এর Y%", "=A1*B1/100"],
+            ["অংশ মোটের কত শতাংশ", "=A1/B1*100"],
+            ["শতকরা বৃদ্ধি বা হ্রাস", "=(B1-A1)/A1*100"],
+            ["শতাংশ যোগ", "=A1*(1+B1/100)"],
+            ["ছাড়ের পর দাম", "=A1*(1-B1/100)"],
+          ],
+        },
+      },
+      {
+        h: "সাধারণ ভুল এড়াবেন যেভাবে",
+        p: [],
+        list: [
+          "ভুল ভিত্তি: বৃদ্ধি-হ্রাসে সবসময় আগের মান দিয়ে ভাগ করুন, নতুন মান দিয়ে নয়।",
+          "দুই ছাড় যোগ করা: ২০% ও ১০% ছাড় মানে ৩০% নয়, ২৮%।",
+          "ভ্যাট-সহ দাম থেকে ১৫% বিয়োগ করা: এর বদলে ১.১৫ দিয়ে ভাগ করুন।",
+          "পারসেন্টেজ পয়েন্ট ও শতাংশ গুলিয়ে ফেলা।",
+          "শূন্য থেকে বৃদ্ধি: আগের মান ০ হলে শতকরা বৃদ্ধি বের করা যায় না। টুল তখন কারণ জানিয়ে দেয়।",
+          "১০০% এর বেশি: দাম দ্বিগুণ হলে বৃদ্ধি ১০০%, তিনগুণ হলে ২০০%। কিন্তু হ্রাস কখনও ১০০% এর বেশি হয় না।",
+        ],
+      },
+      {
+        h: "এই টুল ব্যবহারে যা জানা দরকার",
+        p: [
+          "সব হিসাব আপনার ফোন বা ব্রাউজারেই হয়, কোনো সংখ্যা সার্ভারে যায় না। বাংলা অঙ্কে (১২৩) লিখলেও টুল বোঝে, আর ফলাফলে লাখ-কোটির কমা (১২,৫০,০০০) দেখায়। ফল সর্বোচ্চ চার দশমিক পর্যন্ত দেখানো হয়, শেষের অপ্রয়োজনীয় শূন্য বাদ দিয়ে।",
+          "“সংরক্ষণ” চাপলে হিসাবটি শুধু আপনার ডিভাইসে থাকে, আর “শেয়ার” দিয়ে একই সংখ্যাসহ লিংক পাঠানো যায়।",
         ],
       },
     ],
     en: [
       {
-        h: "The formulas behind percentages",
+        h: "What a percentage is",
         p: [
-          "Three percentage calculations come up most. First, a percentage of a number: (percentage × number) ÷ 100. For example, 15% of 200 = 30.",
-          "Second, what percentage one number is of another: (first number ÷ second number) × 100. For example, 40 is 20% of 200.",
-          "Third, percentage increase or decrease: ((new value − old value) ÷ old value) × 100. For example, a price going from 500 to 600 is a 20% increase.",
+          "A percentage is a number out of one hundred. 25% means 25 out of 100, which is 25/100 or 0.25 as a decimal. To turn a percent into a decimal, divide by 100. To turn a decimal into a percent, multiply by 100.",
+          "Percentages let you compare numbers of different sizes. Scoring 120 out of 150 and 180 out of 250 is hard to compare directly, but 80% against 72% shows at a glance which is higher.",
         ],
       },
       {
-        h: "Where it helps",
+        h: "The three core formulas",
+        p: ["Every other percentage calculation is built from these three. The first three tabs of the tool answer exactly these questions."],
+        table: {
+          head: ["Question", "Formula", "Example"],
+          rows: [
+            ["What is Y% of X", "X × Y ÷ 100", "15% of 200 = 200 × 15 ÷ 100 = 30"],
+            ["X is what % of Y", "X ÷ Y × 100", "45 of 180 = 45 ÷ 180 × 100 = 25%"],
+            ["X is Y% of what", "X × 100 ÷ Y", "50 is 25% of a number: 50 × 100 ÷ 25 = 200"],
+          ],
+        },
+      },
+      {
+        h: "Percentage increase and decrease",
         p: [
-          "You need percentages for exam marks, shop discounts and VAT, bank interest and price changes. Enter the numbers in the tool and you get the answer, which avoids mistakes from calculating by hand.",
+          "Formula: (new value − old value) ÷ old value × 100. You always divide by the old value. A positive result is an increase and a negative one is a decrease.",
+          "One thing that surprises people: going from 500 to 600 is a 20% increase, but going back from 600 to 500 is not a 20% decrease. It is about 16.67%, because this time you divide by 600. The “Reverse” line in the tool shows this directly.",
+        ],
+      },
+      {
+        h: "Adding and removing a percentage (VAT)",
+        p: [
+          "To add a percentage to a price, use price × (1 + percent ÷ 100). To take it off, use price × (1 − percent ÷ 100). Adding 15% VAT to 1,000 taka gives 1,000 × 1.15 = 1,150 taka.",
+          "Working backwards is where mistakes happen. If the price including VAT is 1,150 taka, the price before VAT is 1,150 ÷ 1.15 = 1,000 taka and the VAT is 150 taka. Taking 15% of 1,150 (172.50) off gives the wrong answer, 977.50. The “Before adding” option in the tool does this correctly.",
+          "The standard VAT rate in Bangladesh is 15%, but some goods and services have reduced or different rates. Check the current rate for your product with the National Board of Revenue (NBR).",
+        ],
+      },
+      {
+        h: "Discounts and two discounts in a row",
+        p: [
+          "Price after a discount = original price × (1 − discount ÷ 100). A 15% discount on 1,200 taka gives 1,200 × 0.85 = 1,020 taka, a saving of 180 taka.",
+          "Two discounts in a row cannot be added together. 20% off and then another 10% off gives 1,200 × 0.8 × 0.9 = 864 taka. The total saving is 336 taka, which is 28% of the original price, not 30%. Enter the second discount in the Discount tab to see the effective rate directly.",
+        ],
+      },
+      {
+        h: "Exam marks as a percentage",
+        p: [
+          "Divide the marks you got by the full marks and multiply by 100. Scoring 432 out of 500 gives 432 ÷ 500 × 100 = 86.4%. In the “What %” tab, put your marks in the part box and the full marks in the total box.",
+          "GPA and CGPA use different rules, so use the GPA and CGPA calculators for those.",
+        ],
+      },
+      {
+        h: "Percent versus percentage points",
+        p: [
+          "Percentage points describe the gap between two rates. A rate moving from 10% to 15% is a 5 percentage point change, but a relative increase of 5 ÷ 10 × 100 = 50%.",
+          "A bank rate going from 8% to 9% is up 1 point, but 12.5% higher than before. News stories often mix the two up, so check which one is meant.",
+        ],
+      },
+      {
+        h: "Quick mental maths",
+        p: ["These shortcuts give fast estimates. Use the tool when you need an exact figure."],
+        list: [
+          "10%: move the decimal point one place left (10% of 450 = 45).",
+          "1%: move the decimal point two places left (1% of 450 = 4.5).",
+          "5%: half of 10% (5% of 450 = 22.5).",
+          "15%: add 10% and 5% (15% of 450 = 67.5).",
+          "20%: double 10%, or divide by 5.",
+          "25%: divide by 4. 50%: divide by 2.",
+        ],
+      },
+      {
+        h: "Percentage formulas in Excel and Google Sheets",
+        p: ["If a cell is formatted as Percentage, typing 15% stores 0.15 inside. In that case the formula is simply =A1*B1 with no division by 100. The formulas below are for plain numbers (15 typed in B1)."],
+        table: {
+          head: ["Task", "Formula"],
+          rows: [
+            ["Y% of X", "=A1*B1/100"],
+            ["Part as a % of total", "=A1/B1*100"],
+            ["Percent increase or decrease", "=(B1-A1)/A1*100"],
+            ["Add a percentage", "=A1*(1+B1/100)"],
+            ["Price after a discount", "=A1*(1-B1/100)"],
+          ],
+        },
+      },
+      {
+        h: "Common mistakes to avoid",
+        p: [],
+        list: [
+          "Wrong base: for increase and decrease, always divide by the old value, not the new one.",
+          "Adding two discounts: 20% and 10% off is 28%, not 30%.",
+          "Taking 15% off a VAT-inclusive price: divide by 1.15 instead.",
+          "Mixing up percentage points and percent.",
+          "Growth from zero: if the old value is 0 the percentage change is undefined. The tool tells you why.",
+          "Going over 100%: doubling is a 100% increase and tripling is 200%. A decrease can never be more than 100%.",
+        ],
+      },
+      {
+        h: "Good to know about this tool",
+        p: [
+          "All calculations run on your phone or in your browser. No number is sent to a server. You can type Bangla digits (১২৩) and the tool understands them, and in Bangla mode results use lakh and crore commas (12,50,000). Results show up to four decimal places, with trailing zeros removed.",
+          "Press “Save” to keep a calculation on this device only, and “Share” to send a link that opens with the same numbers.",
         ],
       },
     ],
