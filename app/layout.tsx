@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   // Google AdSense
   const adsenseId =
-    process.env.NEXT_PUBLIC_ADSENSE_ID || "ca-pub-3581088994822973";
+    process.env.NEXT_PUBLIC_ADSENSE_ID || "ca-pub-9893214086578384";
 
   // Chat widget switch (default: OFF). To show it again, set NEXT_PUBLIC_CHATBOT=on in Vercel and redeploy.
   const chatbotEnabled = process.env.NEXT_PUBLIC_CHATBOT === "on";
