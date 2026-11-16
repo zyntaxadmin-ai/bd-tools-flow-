@@ -178,11 +178,12 @@ The header has a BN | EN toggle. The choice is saved in the browser. The page fr
 
 ## Environment variables
 
+The site domain is NOT an environment variable. It is the `SITE_URL` constant in `lib/site.ts` (plus one copy each in `next.config.mjs` and `public/chatbot.js`).
+
 Set these in Vercel under Settings, Environment Variables.
 
 | Name | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Public site URL, used by the sitemap, canonical links and Open Graph (no trailing slash) |
 | `NEXT_PUBLIC_ADS` | Set to `1` after AdSense approval to show ad slots |
 | `NEXT_PUBLIC_ADSENSE_ID` | AdSense publisher ID (`ca-pub-...`) |
 
