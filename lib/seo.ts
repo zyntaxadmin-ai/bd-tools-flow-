@@ -1,5 +1,6 @@
+import { SITE_URL } from "@/lib/site";
 
 export const siteConfig = {
-  url: "https://bdtoolsflow.cyou",
+  url: SITE_URL,
   name: "BD Tools Flow",
 };

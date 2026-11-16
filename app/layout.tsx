@@ -108,7 +108,7 @@ gtag('consent','default',{ad_storage:d,ad_user_data:d,ad_personalization:d,analy
         </ThemeProvider>
 
         {/* BD Flow Helper Chat Widget (hidden unless NEXT_PUBLIC_CHATBOT=on) */}
-        {chatbotEnabled ? <Script src="/chatbot.js?v=1" strategy="lazyOnload" /> : null}
+        {chatbotEnabled ? <Script src="/chatbot.js?v=2" strategy="lazyOnload" /> : null}
       </body>
     </html>
   );

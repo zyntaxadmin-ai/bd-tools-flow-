@@ -3,6 +3,7 @@ import { useState } from "react";
 import { RotateCcw, Copy, Check } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { GRAM_PER_VORI, toGrams, fromGrams, computeJewellery, computeSell, type MakingMode, type VatOn } from "@/lib/goldCalc";
+import { SITE_HOST } from "@/lib/site";
 
 // Re-exported so anything that imported these from this file keeps working.
 export { GRAM_PER_VORI, toGrams, fromGrams };
@@ -69,13 +70,13 @@ export default function GoldWeightConverter() {
 
   const summary = mode === "price" && jew
     ? tr(
-        `সোনার দাম (${caratLabel(carat)}, ${num(jew.grams, 3)} গ্রাম): সোনার মূল্য ${money(jew.goldValue)}, ক্ষয় ${money(jew.wastage)}, মজুরি ${money(jew.making)}, ভ্যাট ${money(jew.vat)}, মোট ${money(jew.total)} টাকা (bdtoolsflow.cyou)`,
-        `Gold price (${carat}, ${num(jew.grams, 3)} g): gold ${money(jew.goldValue)}, wastage ${money(jew.wastage)}, making ${money(jew.making)}, VAT ${money(jew.vat)}, total ${money(jew.total)} taka (bdtoolsflow.cyou)`
+        `সোনার দাম (${caratLabel(carat)}, ${num(jew.grams, 3)} গ্রাম): সোনার মূল্য ${money(jew.goldValue)}, ক্ষয় ${money(jew.wastage)}, মজুরি ${money(jew.making)}, ভ্যাট ${money(jew.vat)}, মোট ${money(jew.total)} টাকা (${SITE_HOST})`,
+        `Gold price (${carat}, ${num(jew.grams, 3)} g): gold ${money(jew.goldValue)}, wastage ${money(jew.wastage)}, making ${money(jew.making)}, VAT ${money(jew.vat)}, total ${money(jew.total)} taka (${SITE_HOST})`
       )
     : mode === "sell" && sell
     ? tr(
-        `পুরোনো সোনা বিক্রি (${caratLabel(carat)}, ${num(sell.grams, 3)} গ্রাম): সোনার মূল্য ${money(sell.goldValue)}, কর্তন ${money(sell.cut)}, আনুমানিক পাবেন ${money(sell.receive)} টাকা (bdtoolsflow.cyou)`,
-        `Selling old gold (${carat}, ${num(sell.grams, 3)} g): value ${money(sell.goldValue)}, deduction ${money(sell.cut)}, you get about ${money(sell.receive)} taka (bdtoolsflow.cyou)`
+        `পুরোনো সোনা বিক্রি (${caratLabel(carat)}, ${num(sell.grams, 3)} গ্রাম): সোনার মূল্য ${money(sell.goldValue)}, কর্তন ${money(sell.cut)}, আনুমানিক পাবেন ${money(sell.receive)} টাকা (${SITE_HOST})`,
+        `Selling old gold (${carat}, ${num(sell.grams, 3)} g): value ${money(sell.goldValue)}, deduction ${money(sell.cut)}, you get about ${money(sell.receive)} taka (${SITE_HOST})`
       )
     : "";
   const copy = async () => { try { await navigator.clipboard.writeText(summary); setCopied(true); } catch { setCopied(false); } };

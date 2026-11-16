@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { RotateCcw, Copy, Download, Check } from "lucide-react";
 import { useLang, useTr } from "@/lib/lang";
 import { flatPlan, flatToReducingRate, reducingEmi, reducingPlan, shortAmount, yearly } from "@/lib/emi";
+import { SITE_HOST } from "@/lib/site";
 
 const box = "w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const card = "rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-4";
@@ -86,7 +87,7 @@ export default function EmiCalculator() {
     if (!calc) return "";
     const pl = calc.plan;
     return [
-      `EMI ${tr("ক্যালকুলেটর", "calculator")} - bdtoolsflow.cyou`,
+      `EMI ${tr("ক্যালকুলেটর", "calculator")} - ${SITE_HOST}`,
       `${tr("লোন", "Loan")}: ${tk(P)}, ${R}% ${method === "flat" ? "flat" : "reducing"}, ${n} ${tr("মাস", "months")}`,
       `${tr("মাসিক কিস্তি", "Monthly EMI")}: ${tk(pl.emi + (calc.withExtra ? X : 0))}`,
       `${tr("মোট সুদ", "Total interest")}: ${tk(pl.totalInterest)}`,

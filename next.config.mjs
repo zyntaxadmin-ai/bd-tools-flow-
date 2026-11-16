@@ -24,7 +24,7 @@ const nextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "bd-tools-hub.vercel.app" }],
-        destination: "https://bdtoolsflow.cyou/:path*",
+        destination: "https://bdtoolsflow.bond/:path*", // keep in sync with SITE_URL in lib/site.ts (this file cannot import it)
         permanent: true,
       },
     ];

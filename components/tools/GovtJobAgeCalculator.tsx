@@ -3,6 +3,7 @@ import { useState } from "react";
 import { RotateCcw, Copy, Check, CalendarDays } from "lucide-react";
 import { parseYMD, utcMs, diffYMD, birthdayAt, fmtDate } from "@/lib/dateCalc";
 import { useTr } from "@/lib/lang";
+import { SITE_HOST } from "@/lib/site";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const DAY = 86400000;
@@ -64,8 +65,8 @@ export default function GovtJobAgeCalculator() {
   const copyResult = async () => {
     if (!res) return;
     const text = tr(
-      `বয়স গণনার তারিখে আমার বয়স ${res.y} বছর ${res.m} মাস ${res.d} দিন। সীমা: ${ruleText}। ${res.ok ? "বয়সের সীমার মধ্যে আছি" : "বয়সের সীমা পেরিয়ে গেছে"}। শেষ যোগ্য তারিখ: ${fmtDate(res.last)}। (bdtoolsflow.cyou)`,
-      `My age on the calculation date is ${res.y} years ${res.m} months ${res.d} days. Limit: ${ruleText}. ${res.ok ? "Within the age limit" : "Over the age limit"}. Last eligible date: ${fmtDate(res.last)}. (bdtoolsflow.cyou)`
+      `বয়স গণনার তারিখে আমার বয়স ${res.y} বছর ${res.m} মাস ${res.d} দিন। সীমা: ${ruleText}। ${res.ok ? "বয়সের সীমার মধ্যে আছি" : "বয়সের সীমা পেরিয়ে গেছে"}। শেষ যোগ্য তারিখ: ${fmtDate(res.last)}। (${SITE_HOST})`,
+      `My age on the calculation date is ${res.y} years ${res.m} months ${res.d} days. Limit: ${ruleText}. ${res.ok ? "Within the age limit" : "Over the age limit"}. Last eligible date: ${fmtDate(res.last)}. (${SITE_HOST})`
     );
     try { await navigator.clipboard.writeText(text); setCopied(true); setTimeout(() => setCopied(false), 1800); } catch { /* ignore */ }
   };

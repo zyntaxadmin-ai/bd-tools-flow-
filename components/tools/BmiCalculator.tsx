@@ -6,6 +6,7 @@ import {
   bandOf, bandsFor, bmiPrime, computeBmi, ponderal, toCm, toKg, validate, weightRangeKg, LB_PER_KG,
   type Standard,
 } from "@/lib/bmi";
+import { SITE_HOST } from "@/lib/site";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const label = "text-sm font-medium dark:text-slate-200";
@@ -64,7 +65,7 @@ export default function BmiCalculator() {
   const bands = bandsFor(std);
 
   const summary = bmi !== null && band
-    ? `BMI ${bmi.toFixed(1)} (${band.en}) - ${tr("স্বাভাবিক ওজন", "healthy weight")}: ${minKg.toFixed(1)}-${maxKg.toFixed(1)} kg. bdtoolsflow.cyou/tool/bmi-calculator`
+    ? `BMI ${bmi.toFixed(1)} (${band.en}) - ${tr("স্বাভাবিক ওজন", "healthy weight")}: ${minKg.toFixed(1)}-${maxKg.toFixed(1)} kg. ${SITE_HOST}/tool/bmi-calculator`
     : "";
   const copy = async () => {
     try { await navigator.clipboard.writeText(summary); setCopied(true); setTimeout(() => setCopied(false), 1500); } catch { /* ignore */ }

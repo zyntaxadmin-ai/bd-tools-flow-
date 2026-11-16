@@ -1,4 +1,4 @@
-/* BD Flow Helper - chat widget for https://bdtoolsflow.cyou
+/* BD Flow Helper - chat widget for https://bdtoolsflow.bond
    Plain JavaScript, no libraries. The conversation lives in memory only.
    All text from the AI is inserted with textContent, never innerHTML. */
 (function () {
@@ -8,7 +8,7 @@
   window.__bdFlowHelperLoaded = true;
 
   var API_URL = '/api/chat';
-  var SITE = 'https://bdtoolsflow.cyou';
+  var SITE = 'https://bdtoolsflow.bond'; // keep in sync with SITE_URL in lib/site.ts (a static file cannot import it)
   var MAX_CHARS = 500;
   var MAX_HISTORY = 10;
 
@@ -72,7 +72,7 @@
     return url === SITE || url.indexOf(SITE + '/') === 0;
   }
 
-  // Writes text into parent. Only links to bdtoolsflow.cyou become clickable.
+  // Writes text into parent. Only links to bdtoolsflow.bond become clickable.
   function appendLinked(parent, text) {
     var re = /https?:\/\/[^\s<>]+/g;
     var last = 0;

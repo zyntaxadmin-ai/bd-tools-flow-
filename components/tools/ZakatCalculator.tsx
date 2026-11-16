@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { RotateCcw, Copy, Check } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import { SITE_HOST } from "@/lib/site";
 
 // Nisab: 7.5 vori of gold or 52.5 vori of silver (1 vori = 11.664 g, so 87.48 g gold or 612.36 g silver). Zakat rate: 2.5%.
 // Prices change every day, so the user types the current price per vori.
@@ -95,8 +96,8 @@ export default function ZakatCalculator() {
   const payable = !!result && result.due && hawl;
   const summary = result
     ? tr(
-        `যাকাত হিসাব: মোট সম্পদ ${money(result.assets)}, ঋণ ${money(result.debts)}, নিট সম্পদ ${money(result.net)}, নিসাব ${money(result.nisab)}। ${payable ? `যাকাত (২.৫%) = ${money(result.zakat)} টাকা` : "এই হিসাবে যাকাত ফরজ হয় না।"} (bdtoolsflow.cyou)`,
-        `Zakat: total wealth ${money(result.assets)}, debts ${money(result.debts)}, net ${money(result.net)}, nisab ${money(result.nisab)}. ${payable ? `Zakat (2.5%) = ${money(result.zakat)} taka` : "Zakat is not due on this calculation."} (bdtoolsflow.cyou)`
+        `যাকাত হিসাব: মোট সম্পদ ${money(result.assets)}, ঋণ ${money(result.debts)}, নিট সম্পদ ${money(result.net)}, নিসাব ${money(result.nisab)}। ${payable ? `যাকাত (২.৫%) = ${money(result.zakat)} টাকা` : "এই হিসাবে যাকাত ফরজ হয় না।"} (${SITE_HOST})`,
+        `Zakat: total wealth ${money(result.assets)}, debts ${money(result.debts)}, net ${money(result.net)}, nisab ${money(result.nisab)}. ${payable ? `Zakat (2.5%) = ${money(result.zakat)} taka` : "Zakat is not due on this calculation."} (${SITE_HOST})`
       )
     : "";
   const copy = async () => {
