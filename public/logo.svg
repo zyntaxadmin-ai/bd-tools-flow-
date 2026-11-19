@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#93A8FF"/>
+      <stop offset="0.55" stop-color="#7F7DF7"/>
+      <stop offset="1" stop-color="#B58DF8"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.22" cy="0.12" r="0.75">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.60"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="warm" cx="0.85" cy="0.92" r="0.6">
+      <stop offset="0" stop-color="#FFB4D6" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#FFB4D6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glyph" gradientUnits="userSpaceOnUse" x1="0" y1="110" x2="0" y2="402">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E9E6FF"/>
+    </linearGradient>
+    <linearGradient id="dot" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB199"/>
+      <stop offset="1" stop-color="#FF6F91"/>
+    </linearGradient>
+    <clipPath id="tile"><rect x="16" y="16" width="480" height="480" rx="124"/></clipPath>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="150%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="9"/>
+      <feOffset dy="10"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.28"/></feComponentTransfer>
+      <feColorMatrix type="matrix" values="0.18 0 0 0 0  0 0.12 0 0 0  0 0 0.55 0 0  0 0 0 1 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <linearGradient id="swoosh" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#fff" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="spec" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#tile)">
+    <rect x="16" y="16" width="480" height="480" fill="url(#bg)"/>
+    <rect x="16" y="16" width="480" height="480" fill="url(#warm)"/>
+    <rect x="16" y="16" width="480" height="480" fill="url(#glow)"/>
+    <!-- soft flow rings -->
+    <circle cx="410" cy="120" r="150" fill="none" stroke="#fff" stroke-opacity="0.10" stroke-width="2"/>
+    <circle cx="410" cy="120" r="108" fill="none" stroke="#fff" stroke-opacity="0.08" stroke-width="2"/>
+  </g>
+  <rect x="19" y="19" width="474" height="474" rx="121" fill="none" stroke="#fff" stroke-opacity="0.45" stroke-width="3"/>
+  <!-- B monogram built from one flowing ribbon -->
+  <g filter="url(#sh)" fill="none" stroke="url(#glyph)" stroke-width="46" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M178 132 V380"/>
+    <path d="M178 132 H268 A60 60 0 0 1 268 252 H178"/>
+    <path d="M178 252 H282 A64 64 0 0 1 282 380 H178"/>
+  </g>
+  <!-- specular edge on B -->
+  <path d="M190 118 H268 A52 52 0 0 1 300 128" fill="none" stroke="url(#spec)" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <!-- flow swoosh under B -->
+  <path d="M150 436 C 220 462, 330 462, 392 420" fill="none" stroke="url(#swoosh)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M190 456 C 250 474, 320 470, 360 446" fill="none" stroke="url(#swoosh)" stroke-width="3.5" stroke-linecap="round" opacity="0.6"/>
+  <!-- accent dot (flag nod) with ring -->
+  <circle cx="362" cy="160" r="26" fill="#fff" fill-opacity="0.35"/>
+  <circle cx="362" cy="160" r="17" fill="url(#dot)"/>
+  <ellipse cx="357" cy="153" rx="6" ry="4" fill="#fff" fill-opacity="0.55"/>
+</svg>

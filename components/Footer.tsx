@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Wrench } from "lucide-react";
+import Image from "next/image";
 import { categories } from "@/data/tools";
 import { CAT_I18N } from "@/lib/i18nData";
 import { useLang, useUI } from "@/lib/lang";
@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="col-span-2 md:col-span-1">
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 flex items-center justify-center"><Wrench className="w-4 h-4 text-white" /></div>
+              <Image src="/logo.svg" alt="" width={32} height={32} unoptimized className="w-8 h-8" />
               <span className="font-bold text-slate-900 dark:text-white">BD Tools Flow</span>
             </div>
             <p className="text-sm text-slate-500 dark:text-slate-400 leading-relaxed">{ui.footerTag}</p>
