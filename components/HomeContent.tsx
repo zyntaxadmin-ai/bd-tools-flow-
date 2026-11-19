@@ -75,10 +75,11 @@ export default function HomeContent({ guides }: { guides: GuideLink[] }) {
       const h = document.querySelector("header")?.getBoundingClientRect().height ?? 64;
       const r = document.getElementById("home-rail")?.getBoundingClientRect().height ?? 0;
       root.style.setProperty("--sticky-top", `${Math.round(h + r)}px`);
+      root.style.setProperty("--footer-gap", "0px"); // footer sits flush under the category bar, no gap
     };
     set();
     window.addEventListener("resize", set);
-    return () => { window.removeEventListener("resize", set); root.style.removeProperty("--sticky-top"); };
+    return () => { window.removeEventListener("resize", set); root.style.removeProperty("--sticky-top"); root.style.removeProperty("--footer-gap"); };
   }, [searching]);
 
   const filtered = useMemo(() => {

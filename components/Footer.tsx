@@ -35,7 +35,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-8 flex flex-col bg-white dark:bg-slate-950 max-sm:min-h-[calc(100svh-var(--sticky-top,64px))] max-sm:supports-[height:100dvh]:min-h-[calc(100dvh-var(--sticky-top,64px))] sm:mt-16 lg:mt-20">
+    <footer className="mt-[var(--footer-gap,2rem)] flex flex-col bg-white dark:bg-slate-950 max-sm:min-h-[calc(100svh-var(--sticky-top,64px))] max-sm:supports-[height:100dvh]:min-h-[calc(100dvh-var(--sticky-top,64px))] sm:mt-16 lg:mt-20">
       <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-indigo-300/70 to-transparent dark:via-indigo-500/40" />
       <div className="mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-4 py-6 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="my-auto grid gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-12">
