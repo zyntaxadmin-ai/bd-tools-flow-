@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 // NOTE: Rates change and public sources disagree. Verify in the Nagad app / official charge chart and edit below. Last checked: Oct 2026.
 const AGENT_ATM_PER_1000 = 14.9; // agent and ATM cash out, taka per 1,000 taka
@@ -73,10 +74,10 @@ export default function NagadCalculator() {
         </div>
         <div>
           <label htmlFor="nagad-kind" className="text-sm font-medium dark:text-slate-200">{tr("লেনদেনের ধরন", "Transaction type")}</label>
-          <select id="nagad-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
+          <Select id="nagad-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
             <option value="agent">{tr("এজেন্ট ও এটিএম ক্যাশ আউট", "Agent and ATM cash out")} ({AGENT_ATM_PER_1000} TK / 1000)</option>
             <option value="custom">{tr("নিজে রেট দিন (অ্যাপ, USSD বা অফারের রেট)", "Enter my own rate (app, USSD or offer rate)")}</option>
-          </select>
+          </Select>
         </div>
         {kind === "custom" && (
           <div className="sm:col-span-2">

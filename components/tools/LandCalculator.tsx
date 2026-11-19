@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Copy, Check, RotateCcw, Share2 } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { siteConfig } from "@/lib/seo";
+import Select from "@/components/Select";
 
 const field = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const label = "text-sm font-medium dark:text-slate-200";
@@ -116,14 +117,14 @@ export default function LandCalculator() {
         </div>
         <div>
           <label htmlFor="land-unit" className={label}>{tr("একক", "Unit")}</label>
-          <select id="land-unit" value={unit} onChange={(e) => setUnit(e.target.value)} className={field}>
+          <Select id="land-unit" value={unit} onChange={(e) => setUnit(e.target.value)} className={field}>
             <optgroup label={tr("প্রচলিত একক", "Common units")}>
               {COMMON.map((id) => <option key={id} value={id}>{name(get(id))}</option>)}
             </optgroup>
             <optgroup label={tr("আঞ্চলিক একক", "Traditional units")}>
               {TRADITIONAL.map((id) => <option key={id} value={id}>{name(get(id))}</option>)}
             </optgroup>
-          </select>
+          </Select>
         </div>
       </div>
 
@@ -188,11 +189,11 @@ export default function LandCalculator() {
           {([["rect", "আয়তক্ষেত্র", "Rectangle"], ["tri", "ত্রিভুজ", "Triangle"]] as const).map(([id, bn, en]) => (
             <button key={id} onClick={() => setShape(id)} aria-pressed={shape === id} className={`px-3 py-1.5 rounded-lg text-sm border ${shape === id ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-950/30 dark:text-white" : "border-slate-200 dark:border-slate-700 dark:text-slate-300"}`}>{tr(bn, en)}</button>
           ))}
-          <select aria-label={tr("মাপের একক", "Length unit")} value={dimUnit} onChange={(e) => setDimUnit(e.target.value)} className="px-3 py-1.5 rounded-lg text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white">
+          <Select aria-label={tr("মাপের একক", "Length unit")} value={dimUnit} onChange={(e) => setDimUnit(e.target.value)} className="px-3 py-1.5 rounded-lg text-sm border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white">
             <option value="ft">{tr("ফুট", "Feet")}</option>
             <option value="m">{tr("মিটার", "Metres")}</option>
             <option value="gaz">{tr("গজ", "Yards (gaz)")}</option>
-          </select>
+          </Select>
         </div>
         <div className="grid grid-cols-2 gap-3 mt-3">
           <input type="number" inputMode="decimal" min="0" value={len} onChange={(e) => setLen(e.target.value)} aria-label={shape === "tri" ? tr("ভূমি", "Base") : tr("দৈর্ঘ্য", "Length")} placeholder={shape === "tri" ? tr("ভূমি", "Base") : tr("দৈর্ঘ্য", "Length")} className={field} />
@@ -213,9 +214,9 @@ export default function LandCalculator() {
         <p className="text-xs text-slate-500 mt-1">{tr("উপরের জমির পরিমাণ অনুযায়ী মোট দাম বের হবে।", "The total is worked out for the land amount entered above.")}</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
           <input type="number" inputMode="decimal" min="0" value={priceStr} onChange={(e) => setPriceStr(e.target.value)} aria-label={tr("দাম (টাকা)", "Price (BDT)")} placeholder={tr("দাম (টাকা)", "Price (BDT)")} className={field} />
-          <select aria-label={tr("প্রতি কত একক", "Per unit")} value={priceUnit} onChange={(e) => setPriceUnit(e.target.value)} className={field}>
+          <Select aria-label={tr("প্রতি কত একক", "Per unit")} value={priceUnit} onChange={(e) => setPriceUnit(e.target.value)} className={field}>
             {KEY.map((id) => <option key={id} value={id}>{tr("প্রতি ", "Per ")}{name(get(id))}</option>)}
-          </select>
+          </Select>
         </div>
         {perSqft !== null && (
           <div className="mt-3 bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-4 text-sm dark:text-slate-200 space-y-1">

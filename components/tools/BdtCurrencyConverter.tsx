@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowLeftRight, ExternalLink, Landmark } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { BB_RATE_URL, CURRENCIES, POPULAR, PRESET_AMOUNTS, QUICK_PAIRS, fmt, loadRates, rateOf, type Data } from "@/lib/currencyData";
+import Select from "@/components/Select";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const known = (c: string | undefined, fallback: string) => (c && CURRENCIES.some((x) => x.code === c) ? c : fallback);
@@ -48,12 +49,12 @@ export default function BdtCurrencyConverter({ initial, initialFrom, initialTo }
       <div className="grid grid-cols-1 sm:grid-cols-[1fr_auto_1fr] items-end gap-2">
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("থেকে", "From")}</label>
-          <select value={from} onChange={(e) => setFrom(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</select>
+          <Select value={from} onChange={(e) => setFrom(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</Select>
         </div>
         <button onClick={() => { setFrom(to); setTo(from); }} aria-label={tr("অদলবদল", "Swap")} className="p-3 mb-0.5 justify-self-center rotate-90 sm:rotate-0 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white hover:border-indigo-400"><ArrowLeftRight className="w-4 h-4" /></button>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("এতে", "To")}</label>
-          <select value={to} onChange={(e) => setTo(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</select>
+          <Select value={to} onChange={(e) => setTo(e.target.value)} className={input}>{list.map((c) => <option key={c.code} value={c.code}>{label(c.code)}</option>)}</Select>
         </div>
       </div>
 

@@ -2,6 +2,7 @@
 import { useRef, useState } from "react";
 import { Plus, Trash2, RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 // Common 4.00 letter-grade scale used by many Bangladeshi universities (UGC style).
 // Percentage ranges differ between universities, so the table is labelled as typical.
@@ -107,10 +108,10 @@ export default function CgpaCalculator() {
               <div key={r.id} className="flex items-end gap-2">
                 <div className="flex-1 min-w-0">
                   <label className="text-xs text-slate-500">{tr("কোর্স", "Course")} {i + 1} {tr("গ্রেড", "grade")}</label>
-                  <select value={r.grade} onChange={(e) => setCourses(courses.map((x) => (x.id === r.id ? { ...x, grade: e.target.value } : x)))} className={input}>
+                  <Select value={r.grade} onChange={(e) => setCourses(courses.map((x) => (x.id === r.id ? { ...x, grade: e.target.value } : x)))} className={input}>
                     <option value="">{tr("গ্রেড বাছুন", "Select grade")}</option>
                     {GRADES.map((g) => <option key={g.g} value={g.g}>{g.g} ({g.point.toFixed(2)})</option>)}
-                  </select>
+                  </Select>
                 </div>
                 <div className="w-24 sm:w-32">
                   <label className="text-xs text-slate-500">{tr("ক্রেডিট", "Credits")}</label>

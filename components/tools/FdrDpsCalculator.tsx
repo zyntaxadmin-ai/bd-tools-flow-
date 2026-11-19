@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 type Mode = "fdr" | "dps";
 type Comp = "quarterly" | "monthly" | "half" | "yearly" | "simple";
@@ -79,22 +80,22 @@ export default function FdrDpsCalculator() {
         </div>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("সুদ থেকে উৎসে কর", "Tax on interest (at source)")}</label>
-          <select value={tax} onChange={(e) => { setTax(e.target.value); clear(); }} className={input}>
+          <Select value={tax} onChange={(e) => { setTax(e.target.value); clear(); }} className={input}>
             <option value="10">{tr("১০% (TIN আছে)", "10% (with TIN)")}</option>
             <option value="15">{tr("১৫% (TIN নেই)", "15% (without TIN)")}</option>
             <option value="0">{tr("০% (কর ছাড়া)", "0% (no tax)")}</option>
-          </select>
+          </Select>
         </div>
         {mode === "fdr" && (
           <div className="sm:col-span-2">
             <label className="text-sm font-medium dark:text-slate-200">{tr("সুদ কীভাবে যোগ হয়", "How interest is added")}</label>
-            <select value={comp} onChange={(e) => { setComp(e.target.value as Comp); clear(); }} className={input}>
+            <Select value={comp} onChange={(e) => { setComp(e.target.value as Comp); clear(); }} className={input}>
               <option value="quarterly">{tr("ত্রৈমাসিক চক্রবৃদ্ধি (বেশিরভাগ ব্যাংক)", "Quarterly compounding (most banks)")}</option>
               <option value="monthly">{tr("মাসিক চক্রবৃদ্ধি", "Monthly compounding")}</option>
               <option value="half">{tr("ষান্মাসিক চক্রবৃদ্ধি", "Half-yearly compounding")}</option>
               <option value="yearly">{tr("বার্ষিক চক্রবৃদ্ধি", "Yearly compounding")}</option>
               <option value="simple">{tr("সরল সুদ (শুধু আসলের ওপর)", "Simple interest (on the original amount only)")}</option>
-            </select>
+            </Select>
           </div>
         )}
       </div>

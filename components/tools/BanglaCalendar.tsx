@@ -6,6 +6,7 @@ import {
   MONTHS_BN, MONTHS_EN, GREG_MONTHS_BN, GREG_MONTHS_EN, WEEKDAYS_BN, WEEKDAYS_EN, WEEKDAYS_BN_SHORT, WEEKDAYS_EN_SHORT,
   toBangla, fromBangla, monthGrid, weekdayOf, seasonOf, toBnDigits, daysInGregMonth, monthLengths,
 } from "@/lib/banglaDate";
+import Select from "@/components/Select";
 
 type YM = { y: number; m: number };
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
@@ -143,9 +144,9 @@ export default function BanglaCalendar() {
           <div className="space-y-3">
             <div className="grid grid-cols-3 gap-2">
               <input type="number" inputMode="numeric" value={bDay} onChange={(e) => setBDay(e.target.value)} placeholder={tr("তারিখ", "Day")} className={input} />
-              <select value={bMonth} onChange={(e) => setBMonth(parseInt(e.target.value, 10))} className={input}>
+              <Select value={bMonth} onChange={(e) => setBMonth(parseInt(e.target.value, 10))} className={input}>
                 {MONTHS_BN.map((_, i) => <option key={i} value={i}>{bnMonth(i)}</option>)}
-              </select>
+              </Select>
               <input type="number" inputMode="numeric" value={bYear} onChange={(e) => setBYear(e.target.value)} placeholder={tr("সাল", "Year")} className={input} />
             </div>
             {b2gErr && <p className="text-sm text-red-500">{b2gErr === "range" ? tr("বঙ্গাব্দ ১৩০৭ থেকে ১৫০৭ এর মধ্যে দিন", "Enter a Bangla year between 1307 and 1507") : tr(`${bnMonth(bMonth)} মাসে এই বছর সর্বোচ্চ ${b2gErr.slice(5)} দিন`, `${bnMonth(bMonth)} has at most ${b2gErr.slice(5)} days in this year`)}</p>}

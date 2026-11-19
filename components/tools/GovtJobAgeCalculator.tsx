@@ -4,6 +4,7 @@ import { RotateCcw, Copy, Check, CalendarDays } from "lucide-react";
 import { parseYMD, utcMs, diffYMD, birthdayAt, fmtDate } from "@/lib/dateCalc";
 import { useTr } from "@/lib/lang";
 import { SITE_HOST } from "@/lib/site";
+import Select from "@/components/Select";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const DAY = 86400000;
@@ -78,9 +79,9 @@ export default function GovtJobAgeCalculator() {
     <div className="space-y-4">
       <div>
         <label htmlFor="gja-preset" className="text-sm font-medium dark:text-slate-200">{tr("কোন চাকরির সীমা? (ঝটপট বেছে নিন)", "Which age limit? (quick pick)")}</label>
-        <select id="gja-preset" value={preset} onChange={(e) => pickPreset(e.target.value)} className={input}>
+        <Select id="gja-preset" value={preset} onChange={(e) => pickPreset(e.target.value)} className={input}>
           {PRESETS.map((p) => <option key={p.id} value={p.id}>{tr(p.bn, p.en)}</option>)}
-        </select>
+        </Select>
       </div>
       <div>
         <label htmlFor="gja-dob" className="text-sm font-medium dark:text-slate-200">{tr("আপনার জন্ম তারিখ", "Your date of birth")}</label>
