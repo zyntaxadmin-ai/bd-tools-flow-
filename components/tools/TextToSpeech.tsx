@@ -5,6 +5,7 @@ import { useLang, useTr } from "@/lib/lang";
 import { planSpeech, pickVoice, languagesFromVoices, baseLang, voiceId, fallbackLocale } from "@/lib/tts";
 import { speakPlan, SynthLike, UtteranceLike } from "@/lib/ttsEngine";
 import Select from "@/components/Select";
+import Range from "@/components/Range";
 
 type Status = "idle" | "speaking" | "paused";
 const MAX = 5000;
@@ -207,8 +208,8 @@ export default function TextToSpeech() {
       )}
 
       <div className="grid grid-cols-2 gap-4">
-        <div><label className="text-sm font-medium dark:text-slate-200">{tr("গতি", "Speed")}: {rate.toFixed(1)}x</label><input type="range" min={0.5} max={2} step={0.1} value={rate} onChange={(e) => setRate(parseFloat(e.target.value))} className="w-full mt-2 accent-indigo-600" /></div>
-        <div><label className="text-sm font-medium dark:text-slate-200">{tr("সুর", "Pitch")}: {pitch.toFixed(1)}</label><input type="range" min={0.5} max={2} step={0.1} value={pitch} onChange={(e) => setPitch(parseFloat(e.target.value))} className="w-full mt-2 accent-indigo-600" /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("গতি", "Speed")}: {rate.toFixed(1)}x</label><Range type="range" min={0.5} max={2} step={0.1} value={rate} onChange={(e) => setRate(parseFloat(e.target.value))} className="w-full mt-2 accent-indigo-600" /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("সুর", "Pitch")}: {pitch.toFixed(1)}</label><Range type="range" min={0.5} max={2} step={0.1} value={pitch} onChange={(e) => setPitch(parseFloat(e.target.value))} className="w-full mt-2 accent-indigo-600" /></div>
       </div>
 
       <div className="flex gap-3">

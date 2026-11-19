@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Upload, Download, RotateCcw } from "lucide-react";
 import { fmtBytes, loadImage, canvasToBlob, renderToCanvas, fitPixels, downloadUrl, baseName, extFor, MAX_FILE_BYTES } from "@/lib/imageUtil";
 import { useTr } from "@/lib/lang";
+import Range from "@/components/Range";
 
 type Mime = "image/jpeg" | "image/png" | "image/webp";
 const FORMATS: { id: Mime; label: string }[] = [
@@ -102,7 +103,7 @@ export default function ImageConverter() {
           {target !== "image/png" && (
             <div>
               <label className="text-sm font-medium dark:text-slate-200">{tr("কোয়ালিটি:", "Quality:")} {quality}%</label>
-              <input type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
+              <Range type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
             </div>
           )}
           {target === "image/jpeg" && <p className="text-xs text-slate-500">{tr("JPG স্বচ্ছতা (transparent) সাপোর্ট করে না, তাই স্বচ্ছ অংশ সাদা হয়ে যাবে।", "JPG does not support transparency, so transparent areas will turn white.")}</p>}

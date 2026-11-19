@@ -5,6 +5,7 @@ import { useTr } from "@/lib/lang";
 import { Kind, Entry, EXPENSE_CATS, INCOME_CATS, MAX_ENTRIES, parseAmount, summarize, byCategory, filterMonth, monthsIn, toCsv, sanitizeLoaded } from "@/lib/expense";
 import { GREG_MONTHS_BN, GREG_MONTHS_EN } from "@/lib/banglaDate";
 import Select from "@/components/Select";
+import DateInput from "@/components/DateInput";
 
 const KEY = "bdtoolshub-expenses-v1";
 type Err = "" | "amount" | "date" | "limit";
@@ -102,7 +103,7 @@ export default function ExpenseTracker() {
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div><label className="text-xs text-slate-500">{tr("টাকার পরিমাণ", "Amount")}</label><input type="number" inputMode="decimal" value={amount} onChange={(e) => setAmount(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter") add(); }} placeholder={tr("যেমন: 250", "e.g. 250")} className={input} /></div>
-          <div><label className="text-xs text-slate-500">{tr("তারিখ", "Date")}</label><input type="date" value={date} onChange={(e) => setDate(e.target.value)} className={input} /></div>
+          <div><label className="text-xs text-slate-500">{tr("তারিখ", "Date")}</label><DateInput type="date" value={date} onChange={(e) => setDate(e.target.value)} className={input} /></div>
         </div>
         <div className="grid grid-cols-2 gap-3">
           <div>

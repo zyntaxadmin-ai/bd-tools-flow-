@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { Copy, Check, RefreshCw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Range from "@/components/Range";
 
 const SETS = {
   upper: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
@@ -71,7 +72,7 @@ export default function PasswordGenerator() {
       </div>
       <div>
         <label className="text-sm font-medium dark:text-slate-200">{tr("দৈর্ঘ্য:", "Length:")} {length}</label>
-        <input type="range" min={8} max={64} value={length} onChange={(e) => setLength(parseInt(e.target.value))} className="w-full mt-2 accent-indigo-600" />
+        <Range type="range" min={8} max={64} value={length} onChange={(e) => setLength(parseInt(e.target.value))} className="w-full mt-2 accent-indigo-600" />
       </div>
       <div className="space-y-2">
         {labels.map(([k, label]) => (

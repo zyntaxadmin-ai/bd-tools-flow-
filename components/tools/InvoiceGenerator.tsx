@@ -4,6 +4,7 @@ import { Plus, Trash2, Printer } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { Item, calcInvoice, money } from "@/lib/invoice";
 import Select from "@/components/Select";
+import DateInput from "@/components/DateInput";
 
 const KEY = "bdtoolshub-invoice-seller-v1";
 const CURRENCIES = ["Tk", "৳", "$", "€", "£", "SAR", "INR"];
@@ -85,8 +86,8 @@ export default function InvoiceGenerator() {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         <div><label className={lbl}>{tr("ইনভয়েস নং", "Invoice no.")}</label><input value={invNo} onChange={(e) => setInvNo(e.target.value)} maxLength={30} className={input} /></div>
-        <div><label className={lbl}>{tr("তারিখ", "Date")}</label><input type="date" value={invDate} onChange={(e) => setInvDate(e.target.value)} className={input} /></div>
-        <div><label className={lbl}>{tr("পরিশোধের শেষ তারিখ", "Due date")}</label><input type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className={input} /></div>
+        <div><label className={lbl}>{tr("তারিখ", "Date")}</label><DateInput type="date" value={invDate} onChange={(e) => setInvDate(e.target.value)} className={input} /></div>
+        <div><label className={lbl}>{tr("পরিশোধের শেষ তারিখ", "Due date")}</label><DateInput type="date" value={dueDate} onChange={(e) => setDueDate(e.target.value)} className={input} /></div>
         <div><label className={lbl}>{tr("মুদ্রা", "Currency")}</label><Select value={currency} onChange={(e) => setCurrency(e.target.value)} className={input}>{CURRENCIES.map((x) => <option key={x} value={x}>{x}</option>)}</Select></div>
       </div>
 

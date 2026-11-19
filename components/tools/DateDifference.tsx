@@ -3,6 +3,7 @@ import { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { parseYMD, utcMs, diffYMD, addToDate, fmtDate } from "@/lib/dateCalc";
 import { useTr } from "@/lib/lang";
+import DateInput from "@/components/DateInput";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const tab = (on: boolean) => `flex-1 py-2 rounded-xl border text-sm ${on ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`;
@@ -43,8 +44,8 @@ export default function DateDifference() {
       {mode === "diff" ? (
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div><label className="text-sm font-medium dark:text-slate-200">{tr("শুরুর তারিখ", "Start date")}</label><input type="date" value={d1} onChange={(e) => setD1(e.target.value)} className={input} /></div>
-            <div><label className="text-sm font-medium dark:text-slate-200">{tr("শেষের তারিখ", "End date")}</label><input type="date" value={d2} onChange={(e) => setD2(e.target.value)} className={input} /></div>
+            <div><label className="text-sm font-medium dark:text-slate-200">{tr("শুরুর তারিখ", "Start date")}</label><DateInput type="date" value={d1} onChange={(e) => setD1(e.target.value)} className={input} /></div>
+            <div><label className="text-sm font-medium dark:text-slate-200">{tr("শেষের তারিখ", "End date")}</label><DateInput type="date" value={d2} onChange={(e) => setD2(e.target.value)} className={input} /></div>
           </div>
           <button onClick={() => { setD1(""); setD2(""); }} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
           {diff && (
@@ -63,7 +64,7 @@ export default function DateDifference() {
         </>
       ) : (
         <>
-          <div><label className="text-sm font-medium dark:text-slate-200">{tr("শুরুর তারিখ", "Start date")}</label><input type="date" value={base} onChange={(e) => setBase(e.target.value)} className={input} /></div>
+          <div><label className="text-sm font-medium dark:text-slate-200">{tr("শুরুর তারিখ", "Start date")}</label><DateInput type="date" value={base} onChange={(e) => setBase(e.target.value)} className={input} /></div>
           <div className="flex gap-2">
             <button onClick={() => setSign(1)} className={tab(sign === 1)}>{tr("যোগ (+)", "Add (+)")}</button>
             <button onClick={() => setSign(-1)} className={tab(sign === -1)}>{tr("বিয়োগ (−)", "Subtract (−)")}</button>
