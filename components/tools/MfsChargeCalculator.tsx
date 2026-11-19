@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 export type MfsOption = { id: string; bn: string; en: string; per1000: number };
 export type MfsTheme = { button: string; accent: string; box: string; ring: string };
@@ -52,12 +53,12 @@ export default function MfsChargeCalculator({
         </div>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("ক্যাশ আউটের ধরন", "Cash out type")}</label>
-          <select value={optId} onChange={(e) => setOptId(e.target.value)} className={field}>
+          <Select value={optId} onChange={(e) => setOptId(e.target.value)} className={field}>
             {options.map((o) => (
               <option key={o.id} value={o.id}>{tr(o.bn, o.en)} ({o.per1000} TK / 1000)</option>
             ))}
             <option value="custom">{tr("নিজে রেট দিন", "Enter my own rate")}</option>
-          </select>
+          </Select>
         </div>
         {optId === "custom" && (
           <div className="sm:col-span-2">

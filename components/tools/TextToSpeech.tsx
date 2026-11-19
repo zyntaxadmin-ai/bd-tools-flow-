@@ -4,6 +4,7 @@ import { Play, Pause, Square, RotateCcw, Copy, Check, Upload } from "lucide-reac
 import { useLang, useTr } from "@/lib/lang";
 import { planSpeech, pickVoice, languagesFromVoices, baseLang, voiceId, fallbackLocale } from "@/lib/tts";
 import { speakPlan, SynthLike, UtteranceLike } from "@/lib/ttsEngine";
+import Select from "@/components/Select";
 
 type Status = "idle" | "speaking" | "paused";
 const MAX = 5000;
@@ -172,17 +173,17 @@ export default function TextToSpeech() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("ভাষা", "Language")}</label>
-          <select value={langSel} onChange={(e) => { setLangSel(e.target.value); setVoiceSel("auto"); }} className={input}>
+          <Select value={langSel} onChange={(e) => { setLangSel(e.target.value); setVoiceSel("auto"); }} className={input}>
             <option value="auto">{tr("স্বয়ংক্রিয় (লেখা দেখে চিনবে)", "Automatic (detect from the text)")}</option>
             {installed.map((c) => <option key={c} value={c}>{langName(c)}</option>)}
-          </select>
+          </Select>
         </div>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("কণ্ঠ", "Voice")}</label>
-          <select value={voiceSel} onChange={(e) => setVoiceSel(e.target.value)} className={input}>
+          <Select value={voiceSel} onChange={(e) => setVoiceSel(e.target.value)} className={input}>
             <option value="auto">{automaticLabel}</option>
             {voiceChoices.map((v) => <option key={voiceId(v)} value={voiceId(v)}>{v.name} ({v.lang}){v.localService === false ? ` • ${tr("অনলাইন", "online")}` : ""}</option>)}
-          </select>
+          </Select>
           {voiceSel === "auto" && langsInPlan.length > 0 && (
             <div className="mt-2 text-xs text-slate-500 space-y-1" aria-live="polite">
               {langsInPlan.map((c) => {

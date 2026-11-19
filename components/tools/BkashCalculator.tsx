@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { AGENT_PER_1000 } from "@/lib/bkashRates";
+import Select from "@/components/Select";
 
 // NOTE: Rates change. Verify on the bKash official site / app and edit the numbers below. Last checked: Oct 2026.
 // The agent rate lives in lib/bkashRates.ts (the home page calculator uses it too).
@@ -78,12 +79,12 @@ export default function BkashCalculator() {
         </div>
         <div>
           <label htmlFor="bkash-kind" className="text-sm font-medium dark:text-slate-200">{tr("লেনদেনের ধরন", "Transaction type")}</label>
-          <select id="bkash-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
+          <Select id="bkash-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
             <option value="agent">{tr("এজেন্ট ক্যাশ আউট", "Agent cash out")} ({AGENT_PER_1000} TK / 1000)</option>
             <option value="atm">{tr("এটিএম ক্যাশ আউট", "ATM cash out")} ({ATM_PER_1000} TK / 1000)</option>
             <option value="send">{tr("Send Money (চার্জ ০ ধরা)", "Send Money (charge assumed 0)")}</option>
             <option value="custom">{tr("নিজে রেট দিন (প্রিয় এজেন্ট, অফার)", "Enter my own rate (Priyo agent, offers)")}</option>
-          </select>
+          </Select>
         </div>
         {kind === "custom" && (
           <div className="sm:col-span-2">

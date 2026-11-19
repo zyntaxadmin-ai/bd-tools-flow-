@@ -4,6 +4,7 @@ import { Plus, Trash2, Download, RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
 import { Kind, Entry, EXPENSE_CATS, INCOME_CATS, MAX_ENTRIES, parseAmount, summarize, byCategory, filterMonth, monthsIn, toCsv, sanitizeLoaded } from "@/lib/expense";
 import { GREG_MONTHS_BN, GREG_MONTHS_EN } from "@/lib/banglaDate";
+import Select from "@/components/Select";
 
 const KEY = "bdtoolshub-expenses-v1";
 type Err = "" | "amount" | "date" | "limit";
@@ -106,9 +107,9 @@ export default function ExpenseTracker() {
         <div className="grid grid-cols-2 gap-3">
           <div>
             <label className="text-xs text-slate-500">{tr("ক্যাটাগরি", "Category")}</label>
-            <select value={category} onChange={(e) => setCategory(e.target.value)} className={input}>
+            <Select value={category} onChange={(e) => setCategory(e.target.value)} className={input}>
               {cats.map((c) => <option key={c.id} value={c.id}>{tr(c.bn, c.en)}</option>)}
-            </select>
+            </Select>
           </div>
           <div><label className="text-xs text-slate-500">{tr("নোট (ঐচ্ছিক)", "Note (optional)")}</label><input value={note} onChange={(e) => setNote(e.target.value)} maxLength={120} className={input} /></div>
         </div>
@@ -117,10 +118,10 @@ export default function ExpenseTracker() {
       </div>
 
       <div className="flex gap-2 items-center">
-        <select value={month} onChange={(e) => setMonth(e.target.value)} aria-label={tr("মাস", "Month")} className="flex-1 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm dark:text-white">
+        <Select value={month} onChange={(e) => setMonth(e.target.value)} aria-label={tr("মাস", "Month")} className="flex-1 px-3 py-2.5 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-sm dark:text-white">
           <option value="all">{monthLabel("all")}</option>
           {months.map((m) => <option key={m} value={m}>{monthLabel(m)}</option>)}
-        </select>
+        </Select>
         <button onClick={exportCsv} disabled={shown.length === 0} className="px-3 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl text-sm flex items-center gap-1 dark:text-white disabled:opacity-40"><Download className="w-4 h-4" /> CSV</button>
       </div>
 

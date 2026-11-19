@@ -4,6 +4,7 @@ import { Clock, ArrowUpDown, Copy, Check } from "lucide-react";
 import { wallParts, zonedToInstant, offsetMinutes, fmtOffset, formatInZone, hmInZone, dayShift, overlapRuns } from "@/lib/tz";
 import { useTr } from "@/lib/lang";
 import { SITE_HOST } from "@/lib/site";
+import Select from "@/components/Select";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const chip = (a: boolean) => `px-3.5 py-2 rounded-full border text-sm ${a ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`;
@@ -107,18 +108,18 @@ export default function TimeZoneConverter() {
     <div className="space-y-4">
       <div>
         <label className="text-sm font-medium dark:text-slate-200">{tr("কোন দেশের সময় থেকে", "From which place")}</label>
-        <select value={from} onChange={(e) => { setFrom(e.target.value); setCopied(false); }} className={input}>
+        <Select value={from} onChange={(e) => { setFrom(e.target.value); setCopied(false); }} className={input}>
           {GROUPS.map(([g, bn, en]) => <optgroup key={g} label={tr(bn, en)}>{ZONES.filter((z) => z.group === g).map((z) => <option key={z.id} value={z.id}>{zn(z)}</option>)}</optgroup>)}
-        </select>
+        </Select>
       </div>
       <div className="flex justify-center">
         <button onClick={swap} className="px-4 py-2 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-2 text-sm dark:text-white"><ArrowUpDown className="w-4 h-4" />{tr("অদলবদল", "Swap")}</button>
       </div>
       <div>
         <label className="text-sm font-medium dark:text-slate-200">{tr("কোন দেশের সময়ে বদলাবেন", "To which place")}</label>
-        <select value={to} onChange={(e) => { setTo(e.target.value); setCopied(false); }} className={input}>
+        <Select value={to} onChange={(e) => { setTo(e.target.value); setCopied(false); }} className={input}>
           {GROUPS.map(([g, bn, en]) => <optgroup key={g} label={tr(bn, en)}>{ZONES.filter((z) => z.group === g).map((z) => <option key={z.id} value={z.id}>{zn(z)}</option>)}</optgroup>)}
-        </select>
+        </Select>
       </div>
       <div className="grid grid-cols-2 gap-3">
         <div><label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ", "Date")}</label><input type="date" value={date} onChange={(e) => { setDate(e.target.value); setCopied(false); }} className={input} /></div>

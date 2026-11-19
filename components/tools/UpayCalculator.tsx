@@ -2,6 +2,7 @@
 import { useMemo, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 // NOTE: Rates change and only limited public sources exist. Verify in the Upay app / official charge chart and edit below. Last checked: Oct 2026.
 const AGENT_PER_1000 = 14; // agent cash out (1.4%), taka per 1,000 taka
@@ -75,11 +76,11 @@ export default function UpayCalculator() {
         </div>
         <div>
           <label htmlFor="upay-kind" className="text-sm font-medium dark:text-slate-200">{tr("লেনদেনের ধরন", "Transaction type")}</label>
-          <select id="upay-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
+          <Select id="upay-kind" value={kind} onChange={(e) => setKind(e.target.value as Kind)} className={field}>
             <option value="agent">{tr("এজেন্ট ক্যাশ আউট", "Agent cash out")} ({AGENT_PER_1000} TK / 1000)</option>
             <option value="atm">{tr("ইউসিবি ব্যাংক এটিএম", "UCB Bank ATM")} ({ATM_PER_1000} TK / 1000)</option>
             <option value="custom">{tr("নিজে রেট দিন (অফার বা অন্য রেট)", "Enter my own rate (offer or other rate)")}</option>
-          </select>
+          </Select>
         </div>
         {kind === "custom" && (
           <div className="sm:col-span-2">

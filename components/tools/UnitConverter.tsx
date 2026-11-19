@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { ArrowLeftRight } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 type Unit = { id: string; label: string; f: number };
 type Cat = { id: string; label: string; units: Unit[] };
@@ -138,16 +139,16 @@ export default function UnitConverter() {
       <div className="grid grid-cols-[1fr_auto_1fr] gap-2 items-end">
         <div className="min-w-0">
           <label className="text-xs text-slate-500">{tr("থেকে", "From")}</label>
-          <select value={fromU.id} onChange={(e) => setFrom(e.target.value)} className={input}>
+          <Select value={fromU.id} onChange={(e) => setFrom(e.target.value)} className={input}>
             {cat.units.map((u) => <option key={u.id} value={u.id}>{L(u.label)}</option>)}
-          </select>
+          </Select>
         </div>
         <button onClick={() => { setFrom(toU.id); setTo(fromU.id); }} aria-label={tr("অদলবদল", "Swap")} className="p-3 mb-0.5 rounded-xl border border-slate-200 dark:border-slate-700 dark:text-white"><ArrowLeftRight className="w-4 h-4" /></button>
         <div className="min-w-0">
           <label className="text-xs text-slate-500">{tr("এ", "To")}</label>
-          <select value={toU.id} onChange={(e) => setTo(e.target.value)} className={input}>
+          <Select value={toU.id} onChange={(e) => setTo(e.target.value)} className={input}>
             {cat.units.map((u) => <option key={u.id} value={u.id}>{L(u.label)}</option>)}
-          </select>
+          </Select>
         </div>
       </div>
       {typeof res === "string" && <p className="text-sm text-red-500">{tr(res, "Temperature cannot be below absolute zero (-273.15°C)")}</p>}

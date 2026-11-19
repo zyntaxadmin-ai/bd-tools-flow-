@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import Select from "@/components/Select";
 
 const grades = [
   { label: "A+ (80-100)", value: 5.0 },
@@ -59,10 +60,10 @@ function GpaCore({ level, showLevelSwitch }: { level: Level; showLevelSwitch?: b
 
   const renderInput = (value: string, onChange: (v: string) => void, withNone = false) =>
     mode === "grade" ? (
-      <select value={value} onChange={(e) => onChange(e.target.value)} className={inputCls}>
+      <Select value={value} onChange={(e) => onChange(e.target.value)} className={inputCls}>
         {withNone && <option value="none">{tr("৪র্থ বিষয় নেই", "No 4th subject")}</option>}
         {grades.map((g) => <option key={g.label} value={g.value}>{g.label}</option>)}
-      </select>
+      </Select>
     ) : (
       <input type="number" inputMode="decimal" min={0} max={100} placeholder={withNone ? tr("৪র্থ বিষয়ের নম্বর (ঐচ্ছিক)", "4th subject marks (optional)") : tr("নম্বর (১০০ এর মধ্যে)", "Marks out of 100")}
         value={value === "none" ? "" : value} onChange={(e) => onChange(withNone && e.target.value === "" ? "none" : e.target.value)} className={inputCls} />
