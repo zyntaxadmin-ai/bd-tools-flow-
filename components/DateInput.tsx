@@ -182,8 +182,8 @@ function DatePanel({ value, min, max, sheet, bn, onSelect }: {
   const sel = parseDate(value);
   const [cur, setCur] = useState<YMD>(sel ?? today);
   const [view, setView] = useState<"days" | "months" | "years">("days");
-  const minY = min ? +min.slice(0, 4) : 1900;
-  const maxY = max ? +max.slice(0, 4) : 2100;
+  const minY = min ? +min.slice(0, 4) : Math.min(1920, today.y - 110);
+  const maxY = max ? +max.slice(0, 4) : today.y + 30;
   const months = bn ? MONTHS_BN : MONTHS_EN;
   const weekdays = bn ? DAYS_BN : DAYS_EN;
   const gridRef = useRef<HTMLDivElement>(null);
@@ -340,7 +340,7 @@ function DatePanel({ value, min, max, sheet, bn, onSelect }: {
               type="button"
               data-sel={y === cur.y ? "1" : undefined}
               onClick={() => { setCur((c) => ({ ...c, y, d: clampDay(y, c.m, c.d) })); setView("days"); }}
-              className={`h-11 rounded-xl text-sm tabular-nums transition-colors ${
+              className={`h-11 rounded-xl text-sm tabular-nums [content-visibility:auto] [contain-intrinsic-size:auto_44px] ${
                 y === cur.y ? "bg-indigo-600 text-white font-semibold" : y === today.y ? "ring-1 ring-inset ring-indigo-400 text-slate-800 dark:text-slate-100" : "text-slate-800 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700"
               }`}
             >
