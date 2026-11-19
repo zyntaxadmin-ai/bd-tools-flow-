@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { splitDuration } from "@/lib/tz";
 import { useTr } from "@/lib/lang";
+import DateInput from "@/components/DateInput";
 
 const KEY = "bdtoolshub-countdown-v1";
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
@@ -53,7 +54,7 @@ export default function CountdownTimer() {
       </div>
       <div>
         <label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ ও সময়", "Date and time")}</label>
-        <input type="datetime-local" value={when} onChange={(e) => setWhen(e.target.value)} className={input} />
+        <DateInput type="datetime-local" value={when} onChange={(e) => setWhen(e.target.value)} className={input} />
       </div>
       <button onClick={() => { setName(""); setWhen(""); }} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-1 dark:text-white"><RotateCcw className="w-4 h-4" /> Reset</button>
 

@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import { Download, RotateCcw } from "lucide-react";
 import { downloadUrl } from "@/lib/imageUtil";
 import { useTr } from "@/lib/lang";
+import Range from "@/components/Range";
+import ColorInput from "@/components/ColorInput";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const LEVELS: { id: "L" | "M" | "Q" | "H"; label: string }[] = [
@@ -71,7 +73,7 @@ export default function QrCodeGenerator() {
       </div>
       <div>
         <label className="text-sm font-medium dark:text-slate-200">{tr("সাইজ:", "Size:")} {size} px</label>
-        <input type="range" min={200} max={1000} step={50} value={size} onChange={(e) => setSize(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
+        <Range type="range" min={200} max={1000} step={50} value={size} onChange={(e) => setSize(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
       </div>
       <div>
         <p className="text-sm font-medium dark:text-slate-200 mb-2">{tr("ভুল সংশোধনের মাত্রা", "Error correction level")}</p>
@@ -84,11 +86,11 @@ export default function QrCodeGenerator() {
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("QR এর রং", "QR colour")}</label>
-          <input type="color" value={fg} onChange={(e) => setFg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
+          <ColorInput type="color" value={fg} onChange={(e) => setFg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
         </div>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("ব্যাকগ্রাউন্ড", "Background")}</label>
-          <input type="color" value={bg} onChange={(e) => setBg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
+          <ColorInput type="color" value={bg} onChange={(e) => setBg(e.target.value)} className="w-full h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
         </div>
       </div>
       <p className="text-xs text-slate-500">{tr("গাঢ় রঙ আর হালকা ব্যাকগ্রাউন্ড ব্যবহার করুন, নাহলে কিছু স্ক্যানারে পড়া নাও যেতে পারে।", "Use a dark colour on a light background, otherwise some scanners may not read the QR.")}</p>

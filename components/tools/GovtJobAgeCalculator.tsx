@@ -5,6 +5,7 @@ import { parseYMD, utcMs, diffYMD, birthdayAt, fmtDate } from "@/lib/dateCalc";
 import { useTr } from "@/lib/lang";
 import { SITE_HOST } from "@/lib/site";
 import Select from "@/components/Select";
+import DateInput from "@/components/DateInput";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const DAY = 86400000;
@@ -85,12 +86,12 @@ export default function GovtJobAgeCalculator() {
       </div>
       <div>
         <label htmlFor="gja-dob" className="text-sm font-medium dark:text-slate-200">{tr("আপনার জন্ম তারিখ", "Your date of birth")}</label>
-        <input id="gja-dob" type="date" value={dob} onChange={(e) => setDob(e.target.value)} className={input} />
+        <DateInput id="gja-dob" type="date" value={dob} onChange={(e) => setDob(e.target.value)} className={input} />
       </div>
       <div>
         <label htmlFor="gja-asof" className="text-sm font-medium dark:text-slate-200">{tr("বয়স গণনার তারিখ (বিজ্ঞপ্তিতে যা দেওয়া আছে)", "Age-calculation date (as given in the circular)")}</label>
         <div className="flex gap-2">
-          <input id="gja-asof" type="date" value={asOf} onChange={(e) => setAsOf(e.target.value)} className={input} />
+          <DateInput id="gja-asof" type="date" value={asOf} onChange={(e) => setAsOf(e.target.value)} className={input} />
           <button type="button" onClick={() => setAsOf(todayStr())} className="mt-1 px-3 rounded-xl border border-slate-200 dark:border-slate-700 text-sm whitespace-nowrap flex items-center gap-1 dark:text-white"><CalendarDays className="w-4 h-4" />{tr("আজ", "Today")}</button>
         </div>
       </div>

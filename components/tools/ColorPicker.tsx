@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Copy, Check } from "lucide-react";
 import { parseHex, rgbToHex, rgbToHsl } from "@/lib/colorUtil";
 import { useTr } from "@/lib/lang";
+import ColorInput from "@/components/ColorInput";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none font-mono";
 
@@ -39,7 +40,7 @@ export default function ColorPicker() {
       <div className="grid grid-cols-[auto_1fr] gap-3 items-end">
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("রং বাছুন", "Pick a colour")}</label>
-          <input type="color" value={hex.toLowerCase()} onChange={(e) => onNative(e.target.value)} className="block w-20 h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
+          <ColorInput type="color" value={hex.toLowerCase()} onChange={(e) => onNative(e.target.value)} className="block w-20 h-12 mt-1 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-1" />
         </div>
         <div>
           <label className="text-sm font-medium dark:text-slate-200">{tr("অথবা HEX কোড লিখুন", "Or type a HEX code")}</label>

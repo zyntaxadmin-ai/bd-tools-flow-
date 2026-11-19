@@ -45,3 +45,59 @@ body { @apply bg-slate-50 text-slate-900 antialiased; }
 
 /* Height of the sticky header (+ category bar on the home page). The footer uses it to fill the phone screen. */
 :root { --sticky-top: 64px; }
+
+/* ---------- Form controls: checkbox, slider, details ---------- */
+
+/* Checkbox: rounded box, the tick draws in when checked */
+input[type="checkbox"] {
+  -webkit-appearance: none; appearance: none; flex: none; cursor: pointer;
+  width: 1.25rem; height: 1.25rem; border-radius: 0.4rem;
+  border: 1.5px solid #94a3b8; background-color: #fff;
+  background-repeat: no-repeat; background-position: center; background-size: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='white' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3.5 8.5l3 3 6-6.5'/%3E%3C/svg%3E");
+  transition: background-color 0.15s, border-color 0.15s, background-size 0.15s ease-out, box-shadow 0.15s;
+}
+.dark input[type="checkbox"] { background-color: #1e293b; border-color: #64748b; }
+input[type="checkbox"]:hover { border-color: #6366f1; }
+input[type="checkbox"]:checked { background-color: #4f46e5; border-color: #4f46e5; background-size: 80%; }
+.dark input[type="checkbox"]:checked { background-color: #6366f1; border-color: #6366f1; }
+
+/* Slider (see components/Range.tsx, which sets --fill) */
+input.range { -webkit-appearance: none; appearance: none; height: 1.5rem; background: transparent; cursor: pointer; }
+input.range::-webkit-slider-runnable-track {
+  height: 6px; border-radius: 999px;
+  background: linear-gradient(to right, #4f46e5 var(--fill, 0%), #e2e8f0 var(--fill, 0%));
+}
+.dark input.range::-webkit-slider-runnable-track { background: linear-gradient(to right, #818cf8 var(--fill, 0%), #334155 var(--fill, 0%)); }
+input.range::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: 50%;
+  background: #fff; border: 2px solid #4f46e5; box-shadow: 0 1px 4px rgba(49, 46, 129, 0.35);
+  transition: transform 0.12s, box-shadow 0.12s;
+}
+.dark input.range::-webkit-slider-thumb { border-color: #818cf8; }
+input.range:active::-webkit-slider-thumb { transform: scale(1.12); box-shadow: 0 0 0 7px rgba(79, 70, 229, 0.16); }
+input.range::-moz-range-track { height: 6px; border-radius: 999px; background: #e2e8f0; }
+.dark input.range::-moz-range-track { background: #334155; }
+input.range::-moz-range-progress { height: 6px; border-radius: 999px; background: #4f46e5; }
+.dark input.range::-moz-range-progress { background: #818cf8; }
+input.range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 50%; background: #fff; border: 2px solid #4f46e5; box-shadow: 0 1px 4px rgba(49, 46, 129, 0.35); }
+/* Hue slider in the colour picker */
+input.range-hue::-webkit-slider-runnable-track,
+.dark input.range-hue::-webkit-slider-runnable-track { background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
+input.range-hue::-moz-range-track,
+.dark input.range-hue::-moz-range-track { background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00); }
+input.range-hue::-moz-range-progress { background: transparent; }
+
+/* details: hide the default triangle; summaries without their own icon (class list-none) get a chevron */
+summary::-webkit-details-marker { display: none; }
+details > summary:not(.list-none) { list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+details > summary:not(.list-none)::after {
+  content: ""; flex: none; width: 1rem; height: 1rem; background: currentColor; opacity: 0.55; transition: transform 0.2s ease;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+details[open] > summary:not(.list-none)::after { transform: rotate(180deg); }
+/* Smooth open and close where the browser supports it (newer Chrome and Edge); elsewhere it just opens */
+details { interpolate-size: allow-keywords; }
+details::details-content { block-size: 0; overflow: clip; transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete; }
+details[open]::details-content { block-size: auto; }

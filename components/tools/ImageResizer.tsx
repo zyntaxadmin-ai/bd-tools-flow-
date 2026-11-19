@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Upload, Download, RotateCcw } from "lucide-react";
 import { fmtBytes, loadImage, canvasToBlob, downloadUrl, baseName, extFor, MAX_FILE_BYTES } from "@/lib/imageUtil";
 import { useTr } from "@/lib/lang";
+import Range from "@/components/Range";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const PRESETS = [
@@ -154,7 +155,7 @@ export default function ImageResizer() {
           {mime !== "image/png" && (
             <div>
               <label className="text-sm font-medium dark:text-slate-200">{tr("কোয়ালিটি:", "Quality:")} {quality}%</label>
-              <input type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
+              <Range type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
             </div>
           )}
           <button onClick={run} disabled={busy} className="w-full py-3 bg-indigo-600 text-white rounded-xl font-medium hover:bg-indigo-700 disabled:opacity-60">{busy ? tr("প্রসেস হচ্ছে...", "Processing...") : tr("রিসাইজ করুন", "Resize")}</button>

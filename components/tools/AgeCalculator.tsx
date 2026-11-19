@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import { RotateCcw, Calendar } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import DateInput from "@/components/DateInput";
 
 type YMD = { y: number; m: number; d: number };
 const pad = (n: number) => String(n).padStart(2, "0");
@@ -71,11 +72,11 @@ export default function AgeCalculator() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div>
           <label className="text-sm font-medium text-slate-700 dark:text-slate-300">{tr("আপনার জন্ম তারিখ", "Your date of birth")}</label>
-          <input type="date" value={dob} onChange={(e) => setDob(e.target.value)} className={inputCls} />
+          <DateInput type="date" value={dob} onChange={(e) => setDob(e.target.value)} className={inputCls} />
         </div>
         <div>
           <label className="text-sm font-medium text-slate-700 dark:text-slate-300">{tr("বয়স হিসাবের তারিখ (Age as on)", "Age as on (date)")}</label>
-          <input type="date" value={asOn} onChange={(e) => setAsOn(e.target.value)} className={inputCls} />
+          <DateInput type="date" value={asOn} onChange={(e) => setAsOn(e.target.value)} className={inputCls} />
         </div>
       </div>
       <p className="text-xs text-slate-500 mt-2">{tr("ডিফল্টে আজকের তারিখ থাকে। ফর্মে নির্দিষ্ট তারিখ (যেমন আবেদনের শেষ দিন) চাইলে সেটি দিন।", "Today is the default. For a form that asks for a fixed date (such as the application deadline), enter that date.")}</p>

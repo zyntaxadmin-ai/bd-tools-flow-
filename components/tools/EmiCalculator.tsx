@@ -4,6 +4,7 @@ import { RotateCcw, Copy, Download, Check } from "lucide-react";
 import { useLang, useTr } from "@/lib/lang";
 import { flatPlan, flatToReducingRate, reducingEmi, reducingPlan, shortAmount, yearly } from "@/lib/emi";
 import { SITE_HOST } from "@/lib/site";
+import Range from "@/components/Range";
 
 const box = "w-full px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const card = "rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/60 p-4";
@@ -119,7 +120,7 @@ export default function EmiCalculator() {
   }, [calc, P]);
 
   const slider = (value: number, min: number, max: number, step: number, set: (v: string) => void, label: string) => (
-    <input type="range" aria-label={label} min={min} max={max} step={step} value={Math.min(max, Math.max(min, isNaN(value) ? min : value))} onChange={(e) => { set(e.target.value); touch(); }} className="w-full mt-2 accent-indigo-600" />
+    <Range type="range" aria-label={label} min={min} max={max} step={step} value={Math.min(max, Math.max(min, isNaN(value) ? min : value))} onChange={(e) => { set(e.target.value); touch(); }} className="w-full mt-2 accent-indigo-600" />
   );
 
   const rows = calc?.plan.rows ?? [];

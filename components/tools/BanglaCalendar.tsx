@@ -7,6 +7,7 @@ import {
   toBangla, fromBangla, monthGrid, weekdayOf, seasonOf, toBnDigits, daysInGregMonth, monthLengths,
 } from "@/lib/banglaDate";
 import Select from "@/components/Select";
+import DateInput from "@/components/DateInput";
 
 type YM = { y: number; m: number };
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
@@ -136,7 +137,7 @@ export default function BanglaCalendar() {
         </div>
         {mode === "g2b" ? (
           <div>
-            <input type="date" value={gDate} onChange={(e) => setGDate(e.target.value)} min="1900-01-01" max="2100-12-31" className={input} />
+            <DateInput type="date" value={gDate} onChange={(e) => setGDate(e.target.value)} min="1900-01-01" max="2100-12-31" className={input} />
             {g2bErr && <p className="text-sm text-red-500 mt-2">{g2bErr === "range" ? tr("১৯০০ থেকে ২১০০ সালের মধ্যে তারিখ দিন", "Enter a date between 1900 and 2100") : tr("সঠিক তারিখ দিন", "Enter a valid date")}</p>}
             {g2b && <p className="mt-3 p-3 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 font-semibold text-indigo-700 dark:text-indigo-300">{g2b}</p>}
           </div>

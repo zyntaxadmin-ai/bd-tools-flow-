@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Upload, Download, RotateCcw } from "lucide-react";
 import { fmtBytes, loadImage, canvasToBlob, renderToCanvas, fitPixels, downloadUrl, baseName, MAX_FILE_BYTES } from "@/lib/imageUtil";
 import { useTr } from "@/lib/lang";
+import Range from "@/components/Range";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 type Result = { url: string; size: number; w: number; h: number; scaled: boolean; realMime: string };
@@ -101,7 +102,7 @@ export default function ImageCompressor() {
           </div>
           <div>
             <label className="text-sm font-medium dark:text-slate-200">{tr("কোয়ালিটি:", "Quality:")} {quality}%</label>
-            <input type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
+            <Range type="range" min={10} max={100} value={quality} onChange={(e) => setQuality(parseInt(e.target.value, 10))} className="w-full mt-2 accent-indigo-600" />
           </div>
           <div>
             <label className="text-sm font-medium dark:text-slate-200">{tr("সর্বোচ্চ প্রস্থ (px, ঐচ্ছিক)", "Maximum width (px, optional)")}</label>

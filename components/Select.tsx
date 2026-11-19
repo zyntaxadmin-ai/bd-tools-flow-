@@ -3,6 +3,7 @@ import {
   Children,
   Fragment,
   isValidElement,
+  useCallback,
   useEffect,
   useId,
   useMemo,
@@ -12,21 +13,19 @@ import {
   type ReactElement,
   type ReactNode,
 } from "react";
-import { createPortal } from "react-dom";
-import { AnimatePresence, motion, useDragControls, useReducedMotion } from "framer-motion";
 import { Check, ChevronDown } from "lucide-react";
+import Popup, { fieldTitle } from "./Popup";
 
 /**
  * Drop-in replacement for the native <select>.
  * Same API: <Select value onChange className id aria-label> with <option> / <optgroup> children,
  * and onChange receives an event-like object, so `e.target.value` keeps working.
- * Desktop: animated popover under the field. Phone: smooth bottom sheet.
  */
 
 type Opt = { value: string; label: ReactNode; text: string; disabled: boolean };
 type Group = { label?: ReactNode; loose: boolean; options: Opt[] };
 
-type ChangeEventLike = { target: { value: string }; currentTarget: { value: string } };
+export type ChangeEventLike = { target: { value: string }; currentTarget: { value: string } };
 
 type SelectProps = {
   value: string | number;
@@ -77,16 +76,12 @@ function collect(children: ReactNode, group: Group | null, groups: Group[]) {
 
 export default function Select({ value, onChange, children, className = "", id, disabled, placeholder, "aria-label": ariaLabel }: SelectProps) {
   const uid = useId();
-  const reduce = useReducedMotion();
-  const dragControls = useDragControls();
   const triggerRef = useRef<HTMLButtonElement>(null);
-  const listRef = useRef<HTMLDivElement>(null);
   const typeBuf = useRef({ s: "", t: 0 });
 
   const [open, setOpen] = useState(false);
-  const [sheet, setSheet] = useState(false);
+  const [title, setTitle] = useState<string | undefined>();
   const [active, setActive] = useState(0);
-  const [pos, setPos] = useState({ top: 0, left: 0, width: 0, maxH: 300, up: false });
 
   const groups = useMemo(() => {
     const g: Group[] = [];
@@ -98,31 +93,17 @@ export default function Select({ value, onChange, children, className = "", id, 
   const selIndex = flat.findIndex((o) => o.value === cur);
   const selected = selIndex >= 0 ? flat[selIndex] : null;
 
-  const place = () => {
-    const r = triggerRef.current?.getBoundingClientRect();
-    if (!r) return;
-    const below = window.innerHeight - r.bottom - 12;
-    const above = r.top - 12;
-    const up = below < 200 && above > below;
-    const maxH = Math.max(160, Math.min(320, up ? above : below));
-    const width = Math.max(r.width, 180);
-    const left = Math.min(Math.max(8, r.left), window.innerWidth - width - 8);
-    setPos({ top: up ? r.top - 6 : r.bottom + 6, left, width, maxH, up });
-  };
-
   const openMenu = () => {
     if (disabled) return;
-    const isSheet = window.matchMedia("(max-width: 639px)").matches;
-    setSheet(isSheet);
-    if (!isSheet) place();
+    setTitle(fieldTitle(triggerRef.current, id, ariaLabel));
     setActive(selIndex >= 0 ? selIndex : Math.max(0, flat.findIndex((o) => !o.disabled)));
     setOpen(true);
   };
 
-  const close = (refocus = true) => {
+  const close = useCallback((refocus = true) => {
     setOpen(false);
     if (refocus) triggerRef.current?.focus();
-  };
+  }, []);
 
   const choose = (i: number) => {
     const o = flat[i];
@@ -131,25 +112,13 @@ export default function Select({ value, onChange, children, className = "", id, 
     close();
   };
 
-  // Focus the list when it opens, keep the page from scrolling behind the phone sheet, close on resize.
-  useEffect(() => {
-    if (!open) return;
-    listRef.current?.focus({ preventScroll: true });
-    const prevOverflow = document.body.style.overflow;
-    if (sheet) document.body.style.overflow = "hidden";
-    const onResize = () => setOpen(false);
-    window.addEventListener("resize", onResize);
-    return () => {
-      document.body.style.overflow = prevOverflow;
-      window.removeEventListener("resize", onResize);
-    };
-  }, [open, sheet]);
-
-  // Keep the highlighted row visible.
+  // Keep the highlighted row in view while moving with the keyboard.
   useEffect(() => {
     if (!open) return;
     document.getElementById(`${uid}-o${active}`)?.scrollIntoView({ block: "nearest" });
   }, [open, active, uid]);
+
+  const focusList = useCallback((el: HTMLDivElement | null) => { el?.focus({ preventScroll: true }); }, []);
 
   const step = (from: number, dir: 1 | -1) => {
     for (let i = from + dir; i >= 0 && i < flat.length; i += dir) if (!flat[i].disabled) return i;
@@ -162,9 +131,9 @@ export default function Select({ value, onChange, children, className = "", id, 
     else if (e.key === "Home") { e.preventDefault(); setActive(step(-1, 1)); }
     else if (e.key === "End") { e.preventDefault(); setActive(step(flat.length, -1)); }
     else if (e.key === "Enter" || e.key === " ") { e.preventDefault(); choose(active); }
-    else if (e.key === "Escape") { e.preventDefault(); e.stopPropagation(); close(); }
     else if (e.key === "Tab") { close(false); }
     else if (e.key.length === 1 && !e.ctrlKey && !e.metaKey && !e.altKey) {
+      // Type-ahead: typing "ka" jumps to the first option starting with "ka".
       const now = Date.now();
       const b = typeBuf.current;
       b.s = now - b.t > 700 ? e.key.toLowerCase() : b.s + e.key.toLowerCase();
@@ -183,64 +152,6 @@ export default function Select({ value, onChange, children, className = "", id, 
       openMenu();
     }
   };
-
-  const dur = reduce ? 0 : 0.18;
-  let flatIndex = -1;
-
-  const list = (
-    <div
-      ref={listRef}
-      role="listbox"
-      id={`${uid}-list`}
-      tabIndex={-1}
-      aria-label={ariaLabel}
-      aria-activedescendant={`${uid}-o${active}`}
-      onKeyDown={onListKey}
-      className="outline-none overflow-y-auto overscroll-contain p-1.5"
-      style={sheet ? { maxHeight: "min(60vh, 440px)" } : { maxHeight: pos.maxH }}
-    >
-      {groups.map((g, gi) => (
-        <div key={gi} role={g.loose ? undefined : "group"} aria-label={g.loose ? undefined : textOf(g.label)}>
-          {!g.loose && g.label != null && (
-            <div className="px-3 pt-3 pb-1 text-[11px] font-semibold uppercase tracking-wider text-slate-400 dark:text-slate-500 select-none">{g.label}</div>
-          )}
-          {g.options.map((o) => {
-            flatIndex += 1;
-            const i = flatIndex;
-            const isSel = i === selIndex;
-            const isAct = i === active;
-            return (
-              <div
-                key={`${gi}-${o.value}-${i}`}
-                id={`${uid}-o${i}`}
-                role="option"
-                aria-selected={isSel}
-                aria-disabled={o.disabled || undefined}
-                onMouseMove={() => { if (!o.disabled && active !== i) setActive(i); }}
-                onMouseDown={(e) => e.preventDefault()}
-                onClick={() => choose(i)}
-                className={`flex items-center justify-between gap-3 rounded-xl px-3 ${sheet ? "py-3.5 text-base" : "py-2.5 text-sm"} cursor-pointer select-none transition-colors duration-100 ${
-                  o.disabled
-                    ? "opacity-40 cursor-not-allowed"
-                    : isSel
-                    ? "bg-indigo-50 text-indigo-700 font-semibold dark:bg-indigo-500/15 dark:text-indigo-200"
-                    : isAct
-                    ? "bg-slate-100 dark:bg-slate-700/70 dark:text-white"
-                    : "text-slate-700 dark:text-slate-200"
-                } ${isSel && isAct ? "!bg-indigo-100 dark:!bg-indigo-500/25" : ""}`}
-              >
-                <span className="min-w-0">{o.label}</span>
-                {isSel && <Check className="w-4 h-4 shrink-0 text-indigo-600 dark:text-indigo-300" aria-hidden="true" />}
-              </div>
-            );
-          })}
-        </div>
-      ))}
-    </div>
-  );
-
-  const panelCls =
-    "bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-2xl shadow-slate-900/15 dark:shadow-black/50";
 
   return (
     <>
@@ -262,62 +173,67 @@ export default function Select({ value, onChange, children, className = "", id, 
         <ChevronDown className={`w-4 h-4 shrink-0 text-slate-400 transition-transform duration-200 ${open ? "rotate-180" : ""}`} aria-hidden="true" />
       </button>
 
-      {typeof document !== "undefined" &&
-        createPortal(
-          <AnimatePresence>
-            {open && sheet && (
-              <div key="sheet" className="fixed inset-0 z-[100]">
-                <motion.div
-                  className="absolute inset-0 bg-slate-950/50 backdrop-blur-[2px]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: dur }}
-                  onClick={() => close()}
-                />
-                <motion.div
-                  className={`absolute inset-x-0 bottom-0 rounded-t-3xl ${panelCls} border-b-0 pb-[env(safe-area-inset-bottom)]`}
-                  initial={{ y: "100%" }}
-                  animate={{ y: 0 }}
-                  exit={{ y: "100%" }}
-                  transition={reduce ? { duration: 0 } : { type: "spring", damping: 32, stiffness: 380, mass: 0.8 }}
-                  drag="y"
-                  dragControls={dragControls}
-                  dragListener={false}
-                  dragConstraints={{ top: 0, bottom: 0 }}
-                  dragElastic={{ top: 0, bottom: 0.6 }}
-                  onDragEnd={(_, info) => { if (info.offset.y > 90 || info.velocity.y > 500) close(); }}
+      <Popup open={open} onClose={close} anchorRef={triggerRef} title={title} width="anchor">
+        {({ sheet, maxH }) => {
+          let flatIndex = -1;
+          return (
+            <div
+              ref={focusList}
+              role="listbox"
+              id={`${uid}-list`}
+              tabIndex={-1}
+              aria-label={title}
+              aria-activedescendant={`${uid}-o${active}`}
+              onKeyDown={onListKey}
+              className="outline-none overflow-y-auto overscroll-contain p-1.5"
+              style={{ maxHeight: sheet ? "min(60vh, 440px)" : maxH }}
+            >
+              {groups.map((g, gi) => (
+                <div
+                  key={gi}
+                  role={g.loose ? undefined : "group"}
+                  aria-label={g.loose ? undefined : textOf(g.label)}
+                  className={gi > 0 ? "mt-1.5 pt-1 border-t border-slate-100 dark:border-slate-700/70" : ""}
                 >
-                  <div className="flex justify-center pt-2.5 pb-1.5 touch-none cursor-grab" aria-hidden="true" onPointerDown={(e) => dragControls.start(e)}>
-                    <span className="h-1.5 w-10 rounded-full bg-slate-300 dark:bg-slate-600" />
-                  </div>
-                  {ariaLabel && <div className="px-5 pb-1 text-sm font-semibold text-slate-500 dark:text-slate-400">{ariaLabel}</div>}
-                  {list}
-                </motion.div>
-              </div>
-            )}
-            {open && !sheet && (
-              <div key="pop" className="fixed inset-0 z-[100]" onMouseDown={() => close(false)}>
-                <motion.div
-                  className={`absolute rounded-2xl ${panelCls}`}
-                  style={{
-                    left: pos.left,
-                    width: pos.width,
-                    ...(pos.up ? { bottom: window.innerHeight - pos.top, transformOrigin: "bottom" } : { top: pos.top, transformOrigin: "top" }),
-                  }}
-                  initial={{ opacity: 0, y: pos.up ? 8 : -8, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: pos.up ? 6 : -6, scale: 0.98 }}
-                  transition={{ duration: dur, ease: [0.16, 1, 0.3, 1] }}
-                  onMouseDown={(e) => e.stopPropagation()}
-                >
-                  {list}
-                </motion.div>
-              </div>
-            )}
-          </AnimatePresence>,
-          document.body
-        )}
+                  {!g.loose && g.label != null && (
+                    <div className="px-3 pt-2 pb-1 text-xs font-medium text-slate-500 dark:text-slate-400 select-none">{g.label}</div>
+                  )}
+                  {g.options.map((o) => {
+                    flatIndex += 1;
+                    const i = flatIndex;
+                    const isSel = i === selIndex;
+                    const isAct = i === active;
+                    return (
+                      <div
+                        key={`${gi}-${o.value}-${i}`}
+                        id={`${uid}-o${i}`}
+                        role="option"
+                        aria-selected={isSel}
+                        aria-disabled={o.disabled || undefined}
+                        onMouseMove={() => { if (!o.disabled && active !== i) setActive(i); }}
+                        onMouseDown={(e) => e.preventDefault()}
+                        onClick={() => choose(i)}
+                        className={`flex items-center justify-between gap-3 rounded-xl px-3 ${sheet ? "py-3.5 text-base" : "py-2.5 text-sm"} cursor-pointer select-none transition-colors duration-100 ${
+                          o.disabled
+                            ? "opacity-40 cursor-not-allowed"
+                            : isSel
+                            ? "bg-indigo-50 text-indigo-700 font-semibold dark:bg-indigo-500/15 dark:text-indigo-200"
+                            : isAct
+                            ? "bg-slate-100 dark:bg-slate-700/70 dark:text-white"
+                            : "text-slate-700 dark:text-slate-200"
+                        } ${isSel && isAct ? "!bg-indigo-100 dark:!bg-indigo-500/25" : ""}`}
+                      >
+                        <span className="min-w-0">{o.label}</span>
+                        {isSel && <Check className="w-4 h-4 shrink-0 text-indigo-600 dark:text-indigo-300" aria-hidden="true" />}
+                      </div>
+                    );
+                  })}
+                </div>
+              ))}
+            </div>
+          );
+        }}
+      </Popup>
     </>
   );
 }

@@ -5,6 +5,7 @@ import { wallParts, zonedToInstant, offsetMinutes, fmtOffset, formatInZone, hmIn
 import { useTr } from "@/lib/lang";
 import { SITE_HOST } from "@/lib/site";
 import Select from "@/components/Select";
+import DateInput from "@/components/DateInput";
 
 const input = "w-full mt-1 px-4 py-3 rounded-xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 dark:text-white focus:ring-2 focus:ring-indigo-500 outline-none";
 const chip = (a: boolean) => `px-3.5 py-2 rounded-full border text-sm ${a ? "bg-indigo-600 text-white border-indigo-600" : "border-slate-200 dark:border-slate-700 dark:text-white"}`;
@@ -122,8 +123,8 @@ export default function TimeZoneConverter() {
         </Select>
       </div>
       <div className="grid grid-cols-2 gap-3">
-        <div><label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ", "Date")}</label><input type="date" value={date} onChange={(e) => { setDate(e.target.value); setCopied(false); }} className={input} /></div>
-        <div><label className="text-sm font-medium dark:text-slate-200">{tr("সময়", "Time")}</label><input type="time" value={time} onChange={(e) => { setTime(e.target.value); setCopied(false); }} className={input} /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("তারিখ", "Date")}</label><DateInput type="date" value={date} onChange={(e) => { setDate(e.target.value); setCopied(false); }} className={input} /></div>
+        <div><label className="text-sm font-medium dark:text-slate-200">{tr("সময়", "Time")}</label><DateInput type="time" value={time} onChange={(e) => { setTime(e.target.value); setCopied(false); }} className={input} /></div>
       </div>
       <div className="flex flex-wrap gap-2 items-center">
         <button onClick={() => setNow(from)} className="px-4 py-2.5 border border-slate-200 dark:border-slate-700 rounded-xl flex items-center gap-2 text-sm dark:text-white"><Clock className="w-4 h-4" /> {tr("এখনকার সময় বসান", "Use current time")}</button>
