@@ -103,7 +103,7 @@ export const DESC_EN: Record<string, string> = {
   "bmi-calculator": "BMI calculator with WHO and South Asian ranges",
   "emi-calculator-bd": "Loan EMI calculator",
   "percentage-calculator": "Percentages, VAT and discounts in one click",
-  "scientific-calculator": "Advanced scientific calculator",
+  "scientific-calculator": "Scientific calculator with fractions, calculus and matrices",
   "unit-converter": "Length, weight and more",
   "bill-calculator": "Split a bill with friends",
   "date-difference-calculator": "Difference between two dates",

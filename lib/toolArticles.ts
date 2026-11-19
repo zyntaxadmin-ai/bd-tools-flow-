@@ -1056,33 +1056,183 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
   "scientific-calculator": {
     bn: [
       {
-        h: "কী কী করা যায়",
+        h: "এই ক্যালকুলেটরে কী আছে",
         p: [
-          "sin, cos, tan, log, ln, বর্গমূল, ঘাত, ফ্যাক্টরিয়াল ও বন্ধনী ব্যবহার করে হিসাব করা যায়। কোণের জন্য Deg বা Rad বেছে নিন। Deg মোডে sin(30) = ০.৫।",
-          "= চাপলে ফল আসে এবং Ans দিয়ে আগের ফল আবার ব্যবহার করা যায়।",
+          "এটি আটটি মোডের একটি পূর্ণাঙ্গ অনলাইন সায়েন্টিফিক ক্যালকুলেটর। বাটনের বিন্যাস Casio fx-991 ধাঁচের, তাই হাতের ক্যালকুলেটরে অভ্যস্ত শিক্ষার্থীরা সহজেই চালাতে পারবেন। এটি Casio এর কোনো পণ্য নয়।",
+          "পর্দায় একটি এক্সপ্রেশন লাইন ও একটি ফলাফল লাইন থাকে। লেখার সময় ফলের পূর্বরূপ দেখা যায়, কিবোর্ডে সরাসরি টাইপ করা যায়, আর শেষ ৩০টি হিসাব History তে থাকে।",
+        ],
+        table: { head: ["মোড", "কী করে"], rows: [
+          ["COMP", "সাধারণ হিসাব, ত্রিকোণমিতি, লগ, ঘাত, ফ্যাক্টোরিয়াল, nCr, nPr, ∫, d/dx, Σ"],
+          ["CMPLX", "জটিল সংখ্যার যোগ, গুণ, ভাগ, মডুলাস, আর্গুমেন্ট ও পোলার রূপ"],
+          ["EQN", "দ্বিঘাত, ত্রিঘাত এবং ২ বা ৩ অজ্ঞাতের একঘাত সমীকরণ"],
+          ["MATRIX", "২×২ ও ৩×৩ ম্যাট্রিক্সের যোগ, গুণ, ডিটারমিন্যান্ট, বিপরীত ও ট্রান্সপোজ"],
+          ["VECTOR", "২D ও ৩D ভেক্টরের ডট ও ক্রস গুণফল, মান, একক ভেক্টর ও কোণ"],
+          ["STAT", "গড়, মান বিচ্যুতি, কোয়ার্টাইল এবং ৬ ধরনের রিগ্রেশন"],
+          ["BASE-N", "BIN, OCT, DEC ও HEX রূপান্তর এবং AND, OR, XOR, NOT"],
+          ["TABLE", "f(x) এর মান নির্দিষ্ট ধাপে তালিকা আকারে"],
+        ] },
+      },
+      {
+        h: "ধাপে ধাপে ব্যবহার ও উদাহরণ",
+        p: [
+          "বাটন চেপে বা কিবোর্ডে হিসাব লিখে = বা Enter চাপুন। আগের ফলে ফিরতে Ans ব্যবহার করুন। = চাপার পর সরাসরি +, −, × বা ÷ চাপলে আগের ফলের সঙ্গে হিসাব চলতে থাকে। নিচের উদাহরণগুলো নিজে লিখে মিলিয়ে নিতে পারেন।",
+        ],
+        list: [
+          "√144 = ১২",
+          "৫! = ১২০",
+          "২^১০ = ১০২৪",
+          "log(১০০০) = ৩",
+          "Deg মোডে sin(৩০) = ০.৫",
+          "1÷2+1÷3 = ৫/৬",
+          "nCr(৫, ২) = ১০ এবং nPr(৫, ২) = ২০",
+          "∫(x^2, 0, 3) = ৯",
+          "d/dx(x^3, 2) = ১২",
+          "Σ(x, 1, 100) = ৫০৫০",
         ],
       },
       {
-        h: "সীমা ও ব্যবহার",
+        h: "ভগ্নাংশ ও সঠিক উত্তর",
         p: [
-          "ফ্যাক্টরিয়াল ০ থেকে ১৭০ পর্যন্ত পূর্ণসংখ্যার জন্য কাজ করে। শিক্ষার্থীদের গণিত, পদার্থবিজ্ঞান ও রসায়নের হিসাব মেলাতে এটি কাজে লাগে।",
-          "পরীক্ষার হলে কোন ক্যালকুলেটর চলবে তা পরীক্ষার নিয়মে দেখে নিন।",
+          "পূর্ণসংখ্যা ও ভগ্নাংশ দিয়ে হিসাব করলে উত্তর সঠিক ভগ্নাংশে আসে, তাই 1÷3 লিখলে ০.৩৩৩৩ নয়, ১/৩ দেখায়। S⇔D বাটনে দশমিক ও ভগ্নাংশ বদলানো যায়, আর a b/c বাটনে ৭/৩ কে ২ ১/৩ আকারে দেখা যায়।",
+          "ভগ্নাংশ যথেষ্ট বড় হয়ে গেলে ক্যালকুলেটর আপনাআপনি দশমিকে চলে যায়। ফলাফল ১০ অঙ্ক পর্যন্ত দেখানো হয় এবং খুব বড় বা ছোট সংখ্যা ×১০ এর ঘাত আকারে আসে।",
+        ],
+      },
+      {
+        h: "Deg, Rad ও Gra",
+        p: [
+          "ত্রিকোণমিতির উত্তর কোণের একক নির্ভর। ৩৬০ ডিগ্রি = ২π রেডিয়ান = ৪০০ গ্রেড। Deg মোডে sin(৯০) = ১, কিন্তু Rad মোডে sin(π/২) = ১ হয়। sin(১৮০) এর মতো মান এখানে ঠিক ০ আসে, ০.০০০০০০০১২ এর মতো ভুল অবশিষ্ট দেখায় না।",
+          "tan(৯০°) এর মান নেই, তাই এমন ক্ষেত্রে ক্যালকুলেটর ত্রুটি দেখায়। sin⁻¹ ও cos⁻¹ এ মান -১ থেকে ১ এর মধ্যে হতে হবে।",
+        ],
+      },
+      {
+        h: "ক্যালকুলাস: ইন্টিগ্রাল, অন্তরক ও যোগফল",
+        p: [
+          "∫(f, নিম্নসীমা, উচ্চসীমা) সংখ্যাগত পদ্ধতিতে (Simpson's rule) নির্দিষ্ট সমাকলন বের করে। d/dx(f, x₀) নির্দিষ্ট বিন্দুতে অন্তরক সহগ দেয়। Σ(f, শুরু, শেষ) পূর্ণসংখ্যা সীমায় যোগফল দেয়। তিনটির ভেতরেই চলক হিসেবে x ব্যবহার হয়।",
+          "এগুলো সংখ্যাগত ফল, প্রতীকী সমাধান নয়। তাই ∫ এর উত্তর ১০ অঙ্কের মধ্যে ঠিক থাকে, কিন্তু যে ফাংশন সীমার ভেতরে অসীম হয়ে যায় তার জন্য ফল নির্ভরযোগ্য নয়।",
+        ],
+      },
+      {
+        h: "সমীকরণ, ম্যাট্রিক্স ও ভেক্টর",
+        p: [
+          "EQN মোডে সহগে ভগ্নাংশ বা মূল লিখলে (যেমন 1/2, √2) হিসাব সঠিক ভগ্নাংশে হয়, যেমন 2x² + x − 1 = 0 এর মূল ১/২ ও −১। বাস্তব মূল না থাকলে জটিল মূল দেখায়। ত্রিঘাত সমীকরণের মূল সংখ্যাগত পদ্ধতিতে বের হয়।",
+          "MATRIX মোডে ডিটারমিন্যান্ট শূন্য হলে বিপরীত ম্যাট্রিক্স নেই বলে জানায়। VECTOR মোডে ক্রস গুণফল শুধু ৩D ভেক্টরে চলে, আর কোণ আপনার বাছা একক (Deg, Rad বা Gra) এ আসে।",
+        ],
+      },
+      {
+        h: "পরিসংখ্যান ও রিগ্রেশন",
+        p: [
+          "১ চলকে প্রতি লাইনে একটি সংখ্যা লিখুন। সঙ্গে কমা দিয়ে ফ্রিকোয়েন্সি দেওয়া যায়, যেমন ১৫, ৩। ফলে n, Σx, Σx², গড়, জনসংখ্যার (σ) ও নমুনার (s) মান বিচ্যুতি, ভেদাঙ্ক, ন্যূনতম, Q1, মধ্যমা, Q3 ও সর্বোচ্চ আসে। Q1 ও Q3 হলো নিচের ও ওপরের অর্ধেকের মধ্যমা।",
+          "২ চলকে x, y জোড়া দিয়ে Linear, Quadratic, Log, Exponential, Power বা Inverse রিগ্রেশন বেছে a, b, (c) ও সহগ r পাবেন, সঙ্গে যেকোনো x এর জন্য ŷ এর আন্দাজ।",
+        ],
+      },
+      {
+        h: "বেস-N ও বিট অপারেশন",
+        p: [
+          "BASE-N মোডে সংখ্যা DEC, HEX, BIN বা OCT যেকোনোটিতে লিখুন। ফল একসঙ্গে চারটি বেসেই দেখায়। হিসাব ৩২-বিট পূর্ণসংখ্যায় হয় এবং ঋণাত্মক সংখ্যা BIN, OCT ও HEX এ দুইয়ের পরিপূরক আকারে আসে, যেমন DEC এ −১ হলো HEX এ FFFFFFFF।",
+          "যোগ, বিয়োগ, গুণ, ভাগের পাশাপাশি AND, OR, XOR, XNOR, NOT ও NEG চলে। ফল ৩২-বিটের সীমার বাইরে গেলে ত্রুটি দেখায়।",
+        ],
+      },
+      {
+        h: "সাধারণ ভুল ও সীমাবদ্ধতা",
+        p: [
+          "ভুল উত্তর এলে আগে Deg/Rad মোড, তারপর বন্ধনীর মিল দেখুন। শেষে বন্ধনী ছেড়ে দিলে ক্যালকুলেটর নিজে বন্ধ করে নেয়, তবে মাঝখানে খোলা বন্ধনী থাকলে হিসাব ভুল হতে পারে।",
+        ],
+        list: [
+          "পরীক্ষার হলে অনলাইন ক্যালকুলেটর সাধারণত অনুমোদিত নয়। বোর্ডের নিয়ম দেখুন।",
+          "পাঠ্যবইয়ের মতো ওপর-নিচ ভগ্নাংশ লেখা যায় না, ÷ ব্যবহার করুন।",
+          "প্রতীকী বীজগণিত (যেমন x² এর সমাকলন ফাংশন আকারে) এখানে নেই, শুধু সংখ্যাগত ফল।",
+          "সব ফলাফল ১০ অঙ্ক পর্যন্ত দেখানো হয়।",
         ],
       },
     ],
     en: [
       {
-        h: "What it can do",
+        h: "What is in this calculator",
         p: [
-          "You can calculate with sin, cos, tan, log, ln, square roots, powers, factorials and brackets. Choose Deg or Rad for angles. In Deg mode, sin(30) = 0.5.",
-          "Press = for the result and use Ans to reuse the previous result.",
+          "This is a full online scientific calculator with eight modes. The key layout follows the Casio fx-991 style, so students used to a handheld calculator can start straight away. It is not a Casio product.",
+          "The screen has an expression line and a result line. A preview of the result shows as you type, you can type directly on the keyboard, and your last 30 calculations stay in History.",
+        ],
+        table: { head: ["Mode", "What it does"], rows: [
+          ["COMP", "Everyday maths, trigonometry, logs, powers, factorial, nCr, nPr, ∫, d/dx, Σ"],
+          ["CMPLX", "Add, multiply and divide complex numbers; modulus, argument and polar form"],
+          ["EQN", "Quadratic, cubic and linear equations in 2 or 3 unknowns"],
+          ["MATRIX", "Add, multiply, determinant, inverse and transpose for 2×2 and 3×3 matrices"],
+          ["VECTOR", "Dot and cross product, magnitude, unit vector and angle for 2D and 3D vectors"],
+          ["STAT", "Mean, standard deviation, quartiles and 6 regression types"],
+          ["BASE-N", "BIN, OCT, DEC and HEX conversion plus AND, OR, XOR, NOT"],
+          ["TABLE", "Values of f(x) at fixed steps as a table"],
+        ] },
+      },
+      {
+        h: "Step by step, with examples",
+        p: [
+          "Press the buttons or type on the keyboard, then press = or Enter. Use Ans to bring back the previous result. After pressing =, pressing +, −, × or ÷ straight away carries on from the previous result. You can type the examples below to check them yourself.",
+        ],
+        list: [
+          "√144 = 12",
+          "5! = 120",
+          "2^10 = 1,024",
+          "log(1000) = 3",
+          "In Deg mode sin(30) = 0.5",
+          "1÷2+1÷3 = 5/6",
+          "nCr(5, 2) = 10 and nPr(5, 2) = 20",
+          "∫(x^2, 0, 3) = 9",
+          "d/dx(x^3, 2) = 12",
+          "Σ(x, 1, 100) = 5050",
         ],
       },
       {
-        h: "Limits and use",
+        h: "Fractions and exact answers",
         p: [
-          "Factorial works for whole numbers from 0 to 170. It helps students check maths, physics and chemistry calculations.",
-          "Check your exam rules to see which calculators are allowed in the hall.",
+          "When you calculate with whole numbers and fractions the answer is an exact fraction, so 1÷3 shows 1/3, not 0.3333. S⇔D switches between decimal and fraction, and a b/c shows 7/3 as 2 1/3.",
+          "If a fraction grows too large the calculator moves to decimals by itself. Results show up to 10 digits, and very large or very small numbers appear as a power of 10.",
+        ],
+      },
+      {
+        h: "Deg, Rad and Gra",
+        p: [
+          "Trigonometric answers depend on the angle unit. 360 degrees = 2π radians = 400 gradians. In Deg mode sin(90) = 1, and in Rad mode sin(π/2) = 1. Values such as sin(180) come out as exactly 0, without a tiny leftover like 0.00000000012.",
+          "tan(90°) is undefined, so the calculator shows an error there. For sin⁻¹ and cos⁻¹ the value must be between -1 and 1.",
+        ],
+      },
+      {
+        h: "Calculus: integral, derivative and sum",
+        p: [
+          "∫(f, lower, upper) finds a definite integral numerically (Simpson's rule). d/dx(f, x₀) gives the derivative at a point. Σ(f, start, end) adds terms between whole-number limits. All three use x as the variable.",
+          "These are numerical results, not symbolic answers. An integral is accurate to about 10 digits, but a function that blows up inside the limits will not give a reliable result.",
+        ],
+      },
+      {
+        h: "Equations, matrices and vectors",
+        p: [
+          "In EQN mode, coefficients such as 1/2 or √2 are handled exactly where possible, so 2x² + x − 1 = 0 gives 1/2 and −1. If there are no real roots, complex roots are shown. Cubic roots are found numerically.",
+          "In MATRIX mode, a zero determinant means the inverse does not exist. In VECTOR mode the cross product works only for 3D vectors, and the angle comes in the unit you chose (Deg, Rad or Gra).",
+        ],
+      },
+      {
+        h: "Statistics and regression",
+        p: [
+          "For one variable, enter one number per line. You can add a frequency after a comma, such as 15, 3. You get n, Σx, Σx², mean, population (σ) and sample (s) standard deviation, variance, minimum, Q1, median, Q3 and maximum. Q1 and Q3 are the medians of the lower and upper halves.",
+          "For two variables, enter x, y pairs, choose Linear, Quadratic, Log, Exponential, Power or Inverse regression, and read a, b, (c) and the coefficient r, plus an estimate of ŷ for any x.",
+        ],
+      },
+      {
+        h: "Base-N and bitwise operations",
+        p: [
+          "In BASE-N mode, enter a number in DEC, HEX, BIN or OCT. The result shows in all four bases at once. Calculations use 32-bit whole numbers, and negative values appear in two's complement in BIN, OCT and HEX, so −1 in DEC is FFFFFFFF in HEX.",
+          "Add, subtract, multiply and divide work, as do AND, OR, XOR, XNOR, NOT and NEG. A result outside the 32-bit range shows an error.",
+        ],
+      },
+      {
+        h: "Common mistakes and limits",
+        p: [
+          "If an answer looks wrong, check the Deg/Rad mode first, then the brackets. A missing bracket at the very end is closed for you, but an open bracket in the middle can change the result.",
+        ],
+        list: [
+          "Online calculators are usually not allowed in exam halls. Check your board's rules.",
+          "You cannot enter stacked textbook fractions. Use ÷ instead.",
+          "There is no symbolic algebra (such as the integral of x² as a function), only numerical results.",
+          "Results are shown to 10 digits.",
         ],
       },
     ],
@@ -2665,24 +2815,22 @@ export const TOOL_ARTICLES: Record<string, ToolArticle> = {
 const EXTRA: Record<string, ToolArticle> = {
   "scientific-calculator": {
     bn: [
-      { h: "ব্যবহারের ধাপ ও উদাহরণ", p: [
-        "বাটন চেপে বা কিবোর্ডে সরাসরি হিসাব লিখুন। লেখার সঙ্গে সঙ্গে নিচে ফলাফলের পূর্বরূপ (= চিহ্নের পরে) দেখা যায়, আর Enter বা সমান বাটন চাপলে ফলাফল বসে যায়। আগের ফলাফল আবার ব্যবহার করতে Ans বাটন চাপুন।",
-        "কিছু উদাহরণ: √(১৪৪) = ১২। ৫! = ১২০। ২^১০ = ১,০২৪। log(১০০০) = ৩ (log এখানে ১০ ভিত্তির)। ডিগ্রি মোডে sin(৩০) = ০.৫।",
-      ] },
-      { h: "ডিগ্রি ও রেডিয়ান, আর সাধারণ ভুল", p: [
-        "sin, cos ও tan এর উত্তর কোণ ডিগ্রিতে নাকি রেডিয়ানে ধরা হবে তা ওপরের Deg বা Rad বাটনে ঠিক হয়। ফলাফল মিলছে না মনে হলে প্রথমে এই মোড দেখুন।",
-        "ln হলো স্বাভাবিক (e ভিত্তির) লগারিদম, আর log হলো ১০ ভিত্তির। দুটির মান আলাদা। ০ বা ঋণাত্মক সংখ্যার log বা ln বের করা যায় না। কোষ বন্ধ করতে ভুলে গেলেও হিসাব ব্যর্থ হতে পারে, তাই ( ও ) মিলিয়ে নিন।",
-      ] },
+      {
+        h: "কোন শিক্ষার্থীর কোন মোড কাজে লাগে",
+        p: [
+          "এসএসসি ও এইচএসসির গণিত ও পদার্থবিজ্ঞানে COMP মোডই যথেষ্ট: ত্রিকোণমিতি, লগ, ঘাত, বর্গমূল ও ভগ্নাংশ। এইচএসসির উচ্চতর গণিত ও বিশ্ববিদ্যালয়ের প্রথম বর্ষে EQN, MATRIX, VECTOR ও ∫, d/dx কাজে লাগে। পরিসংখ্যান ও অর্থনীতির শিক্ষার্থীদের জন্য STAT, আর কম্পিউটার সায়েন্স ও ইঞ্জিনিয়ারিংয়ের জন্য BASE-N ও CMPLX।",
+          "নতুন হলে প্রথমে COMP মোডে সহজ হিসাব চেষ্টা করুন, তারপর SHIFT চেপে হলুদ ফাংশনগুলো দেখুন। কোনো ফাংশন মনে না থাকলে নিচের গাইডগুলোতে উদাহরণসহ ব্যাখ্যা পাবেন।",
+        ],
+      },
     ],
     en: [
-      { h: "Steps and examples", p: [
-        "Press the buttons or type your calculation straight from the keyboard. As you type, a preview of the result appears below (after the = sign), and pressing Enter or the equals button puts the result in place. Use the Ans button to reuse the previous result.",
-        "A few examples: √(144) = 12. 5! = 120. 2^10 = 1,024. log(1000) = 3 (log here is base 10). In degree mode sin(30) = 0.5.",
-      ] },
-      { h: "Degrees and radians, and common mistakes", p: [
-        "The Deg or Rad button at the top decides whether sin, cos and tan treat the angle as degrees or radians. If a result looks wrong, check this mode first.",
-        "ln is the natural (base e) logarithm and log is base 10, so their values differ. You cannot take the log or ln of zero or a negative number. A calculation can also fail if a bracket is left open, so check that ( and ) match.",
-      ] },
+      {
+        h: "Which mode suits which student",
+        p: [
+          "For SSC and HSC maths and physics, COMP mode is enough: trigonometry, logs, powers, roots and fractions. For HSC higher maths and first-year university, EQN, MATRIX, VECTOR and ∫, d/dx help. Statistics and economics students can use STAT, and computer science and engineering students can use BASE-N and CMPLX.",
+          "If you are new, try simple sums in COMP first, then press SHIFT to see the amber functions. If you forget a function, the guides below explain it with examples.",
+        ],
+      },
     ],
   },
   "case-converter": {

@@ -1596,6 +1596,111 @@ export const GUIDES: Guide[] = [
       { q: ["১০ বছরের ৪৮ পৃষ্ঠার পাসপোর্টের ফি কত?", "What is the fee for a 10 year, 48 page passport?"], a: ["সাধারণ ডেলিভারিতে ৫,৭৫০ টাকা, জরুরিতে ৮,০৫০ টাকা এবং অতি জরুরিতে ১০,৩৫০ টাকা, ১৫% ভ্যাটসহ।", "5,750 taka for regular, 8,050 taka for express and 10,350 taka for super express, with 15% VAT."] },
     ],
   },
+  {
+    slug: "scientific-calculator-kivabe-byabohar-korben",
+    title: ["সায়েন্টিফিক ক্যালকুলেটর কীভাবে ব্যবহার করবেন (এসএসসি, এইচএসসি ও বিশ্ববিদ্যালয়)", "How to use a scientific calculator (SSC, HSC and university)"],
+    desc: ["sin, cos, tan, log, ভগ্নাংশ, ঘাত ও মেমরি ব্যবহারের ধাপ উদাহরণসহ। Casio fx-991 ধাঁচের অনলাইন ক্যালকুলেটরে অনুশীলন করুন।", "Steps for sin, cos, tan, log, fractions, powers and memory, with examples. Practise on an online calculator in the Casio fx-991 style."],
+    updated: "2026-11-19",
+    updatedLabel: ["১৯ নভেম্বর, ২০২৬", "19 November 2026"],
+    tool: { slug: "scientific-calculator", name: ["Scientific Calculator", "Scientific calculator"] },
+    sections: [
+      {
+        h: ["প্রথমে যা ঠিক করবেন", "What to set first"],
+        p: [
+          ["হিসাব শুরুর আগে দুটি জিনিস দেখুন: কোণের একক (Deg, Rad বা Gra) এবং মোড। সাধারণ হিসাবের জন্য COMP মোড। ত্রিকোণমিতির প্রশ্নে ডিগ্রি থাকলে Deg, π থাকলে Rad ব্যবহার করুন।", "Before you start, check two things: the angle unit (Deg, Rad or Gra) and the mode. Use COMP mode for everyday sums. In trigonometry, use Deg when the question is in degrees and Rad when it has π."],
+          ["ভুল উত্তরের সবচেয়ে বড় কারণ হলো ভুল একক। Deg মোডে sin(30) = ০.৫, কিন্তু Rad মোডে একই লেখায় অন্য উত্তর আসে।", "The biggest cause of wrong answers is the wrong unit. In Deg mode sin(30) = 0.5, but in Rad mode the same input gives a different answer."],
+        ],
+      },
+      {
+        h: ["মূল ফাংশনের উদাহরণ", "Examples of the main functions"],
+        p: [
+          ["√(144) = ১২। ৫! = ১২০। ২^১০ = ১০২৪। log(১০০০) = ৩। nCr(৫, ২) = ১০ এবং nPr(৫, ২) = ২০। কোনো বাটন মনে না পড়লে SHIFT চেপে বাটনের ওপরের হলুদ লেখা দেখুন।", "√(144) = 12. 5! = 120. 2^10 = 1,024. log(1000) = 3. nCr(5, 2) = 10 and nPr(5, 2) = 20. If you cannot find a key, press SHIFT and look at the amber text above the keys."],
+          ["প্রশ্নে যত বন্ধনী আছে ঠিক ততগুলো দিন। যেমন (3+4)×2 = ১৪, কিন্তু 3+4×2 = ১১।", "Use exactly the brackets the question has. For example (3+4)×2 = 14, but 3+4×2 = 11."],
+        ],
+      },
+      {
+        h: ["ভগ্নাংশ, Ans ও মেমরি", "Fractions, Ans and memory"],
+        p: [
+          ["1÷2+1÷3 লিখলে উত্তর ৫/৬ আসে। S⇔D বাটনে দশমিক (০.৮৩৩৩৩৩৩৩৩৩) দেখা যায়। আগের উত্তর আবার ব্যবহার করতে Ans চাপুন, অথবা = এর পর সরাসরি অপারেটর চাপুন।", "Typing 1÷2+1÷3 gives 5/6. S⇔D shows the decimal (0.8333333333). To reuse the previous answer press Ans, or press an operator straight after =."],
+          ["দীর্ঘ হিসাবে মাঝের ফল রাখতে STO চেপে A, B, C, D, X, Y বা M বাটন চাপুন। পরে ওই অক্ষর লিখলেই মানটি বসে যাবে।", "In a long calculation, keep a middle result by pressing STO and then A, B, C, D, X, Y or M. Typing that letter later brings the value back."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["sin(30) এর উত্তর ০.৫ না এলে কী করব?", "What if sin(30) does not give 0.5?"], a: ["ক্যালকুলেটর Rad মোডে আছে। Deg বাটন চেপে ডিগ্রি মোড করুন, তাহলে উত্তর ০.৫ আসবে।", "The calculator is in Rad mode. Press the angle button until it shows Deg and the answer will be 0.5."] },
+      { q: ["ভগ্নাংশ কীভাবে লিখব?", "How do I write a fraction?"], a: ["÷ বাটন ব্যবহার করুন, যেমন 3÷4। পাঠ্যবইয়ের মতো ওপর-নিচ করে লেখার ঘর এখানে নেই। জটিল ভগ্নাংশে ওপরের ও নিচের অংশ আলাদা বন্ধনীতে দিন, যেমন (1+2)÷(3+4)।", "Use the ÷ key, for example 3÷4. There is no stacked box like a textbook. For a complex fraction put the top and bottom in separate brackets, such as (1+2)÷(3+4)."] },
+      { q: ["এটি দিয়ে কি পরীক্ষা দেওয়া যাবে?", "Can I use it in an exam?"], a: ["না। পরীক্ষার হলে সাধারণত শুধু অনুমোদিত হ্যান্ডহেল্ড ক্যালকুলেটর চলে। কোন মডেল চলবে তা বোর্ডের নিয়মে দেখুন। এটি অনুশীলন ও হোমওয়ার্কের জন্য।", "No. Exams usually allow only approved handheld calculators. Check your board's rules for which models are permitted. This tool is for practice and homework."] },
+    ],
+  },
+  {
+    slug: "degree-radian-kivabe-bodlabe",
+    title: ["ডিগ্রি ও রেডিয়ান: পার্থক্য, রূপান্তর ও ক্যালকুলেটরে সঠিক মোড", "Degrees and radians: the difference, conversion and the right calculator mode"],
+    desc: ["π রেডিয়ান = ১৮০ ডিগ্রি। রূপান্তরের সূত্র, sin ও cos এর সাধারণ মান এবং ক্যালকুলেটরে Deg আর Rad মোডের ভুল এড়ানোর উপায়।", "π radians = 180 degrees. The conversion formulas, common sin and cos values, and how to avoid Deg and Rad mode mistakes on a calculator."],
+    updated: "2026-11-19",
+    updatedLabel: ["১৯ নভেম্বর, ২০২৬", "19 November 2026"],
+    tool: { slug: "scientific-calculator", name: ["Scientific Calculator", "Scientific calculator"] },
+    sections: [
+      {
+        h: ["ডিগ্রি ও রেডিয়ান কী", "What degrees and radians are"],
+        p: [
+          ["সম্পূর্ণ বৃত্ত ৩৬০ ডিগ্রি, আবার ২π রেডিয়ান। তাই π রেডিয়ান = ১৮০ ডিগ্রি এবং ১ রেডিয়ান প্রায় ৫৭.২৯৫৮ ডিগ্রি। কিছু ক্যালকুলেটরে তৃতীয় একক গ্রেডও থাকে, ৪০০ গ্রেড = ৩৬০ ডিগ্রি।", "A full circle is 360 degrees, which is also 2π radians. So π radians = 180 degrees, and 1 radian is about 57.2958 degrees. Some calculators also have a third unit, the gradian: 400 gradians = 360 degrees."],
+        ],
+      },
+      {
+        h: ["রূপান্তরের সূত্র", "Conversion formulas"],
+        p: [
+          ["ডিগ্রি থেকে রেডিয়ান: ডিগ্রি × π ÷ ১৮০। রেডিয়ান থেকে ডিগ্রি: রেডিয়ান × ১৮০ ÷ π। যেমন ৯০° = π/২ রেডিয়ান এবং π/৬ রেডিয়ান = ৩০°।", "Degrees to radians: degrees × π ÷ 180. Radians to degrees: radians × 180 ÷ π. For example 90° = π/2 radians and π/6 radians = 30°."],
+          ["ক্যালকুলেটরে যাচাই করতে 1×180÷π লিখুন। ১ রেডিয়ানের ডিগ্রি আসবে ৫৭.২৯৫৭৭৯৫১।", "To check this on the calculator, type 1×180÷π. The degrees in one radian come out as 57.29577951."],
+        ],
+      },
+      {
+        h: ["ক্যালকুলেটরে সঠিক মোড", "The right mode on the calculator"],
+        p: [
+          ["প্রশ্নে ° চিহ্ন থাকলে Deg মোড। π বা কোণের পাশে rad লেখা থাকলে Rad মোড। Deg মোডে sin(৩০) = ০.৫ ও cos(৬০) = ০.৫। Rad মোডে sin(π÷৬) = ০.৫ ও cos(π) = −১।", "If the question uses the ° sign, use Deg mode. If it has π or rad next to the angle, use Rad mode. In Deg mode sin(30) = 0.5 and cos(60) = 0.5. In Rad mode sin(π÷6) = 0.5 and cos(π) = −1."],
+          ["Rad মোডে π÷৬ লেখার সময় বন্ধনী দিন। sin(π÷৬) সঠিক, কিন্তু sin π÷৬ লিখলে আগে sin(π) বের হয়ে তারপর ৬ দিয়ে ভাগ হবে।", "In Rad mode use brackets for π÷6. sin(π÷6) is right, but sin π÷6 may be read as sin(π) divided by 6."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["১ রেডিয়ান কত ডিগ্রি?", "How many degrees is 1 radian?"], a: ["প্রায় ৫৭.২৯৫৮ ডিগ্রি। সূত্র ১৮০ ÷ π।", "About 57.2958 degrees. The formula is 180 ÷ π."] },
+      { q: ["tan(৯০) এ ত্রুটি আসে কেন?", "Why does tan(90) show an error?"], a: ["কারণ tan(৯০°) এর মান অসংজ্ঞায়িত। cos(৯০°) = ০, আর tan = sin ÷ cos, তাই ০ দিয়ে ভাগ হয়ে যায়।", "Because tan(90°) is undefined. cos(90°) = 0 and tan = sin ÷ cos, so it would divide by zero."] },
+      { q: ["sin⁻¹ এর উত্তর ডিগ্রিতে আসে কেন?", "Why does sin⁻¹ give an answer in degrees?"], a: ["উত্তর বর্তমান কোণ-এককে আসে। Deg মোডে sin⁻¹(০.৫) = ৩০, আর Rad মোডে ০.৫২৩৫৯৮৭৭৫৬।", "The answer comes in the current angle unit. In Deg mode sin⁻¹(0.5) = 30, and in Rad mode it is 0.5235987756."] },
+    ],
+  },
+  {
+    slug: "log-ln-power-hisab-niyom",
+    title: ["log, ln ও ঘাতের হিসাব: পার্থক্য, উদাহরণ ও সাধারণ ভুল", "log, ln and powers: the difference, examples and common mistakes"],
+    desc: ["log ১০ ভিত্তির, ln e ভিত্তির। ক্যালকুলেটরে log, ln, 10ˣ, eˣ, যেকোনো ভিত্তির লগ ও ঘাত হিসাব করার নিয়ম উদাহরণসহ।", "log is base 10 and ln is base e. How to calculate log, ln, 10ˣ, eˣ, logs of any base and powers on a calculator, with examples."],
+    updated: "2026-11-19",
+    updatedLabel: ["১৯ নভেম্বর, ২০২৬", "19 November 2026"],
+    tool: { slug: "scientific-calculator", name: ["Scientific Calculator", "Scientific calculator"] },
+    sections: [
+      {
+        h: ["log ও ln আলাদা কেন", "Why log and ln are different"],
+        p: [
+          ["log বোঝায় ১০ ভিত্তির লগারিদম: log(১০০০) = ৩, কারণ ১০³ = ১০০০। ln বোঝায় e ভিত্তির স্বাভাবিক লগারিদম, যেখানে e প্রায় ২.৭১৮২৮: ln(e) = ১ এবং ln(১) = ০। একই সংখ্যার log ও ln এর মান আলাদা, যেমন log(১০) = ১ কিন্তু ln(১০) = ২.৩০২৫৮৫০৯৩।", "log means the base 10 logarithm: log(1000) = 3 because 10³ = 1000. ln means the natural logarithm with base e, which is about 2.71828: ln(e) = 1 and ln(1) = 0. The log and ln of the same number differ, for example log(10) = 1 but ln(10) = 2.302585093."],
+        ],
+      },
+      {
+        h: ["উল্টো হিসাব: 10ˣ ও eˣ", "The reverse: 10ˣ and eˣ"],
+        p: [
+          ["log এর উল্টো হলো 10ˣ আর ln এর উল্টো eˣ। এই দুটি SHIFT চেপে log ও ln বাটনের ওপরে পাবেন। যেমন 10^(৩) = ১০০০ এবং e^(২) = ৭.৩৮৯০৫৬০৯৯।", "The reverse of log is 10ˣ and the reverse of ln is eˣ. Press SHIFT and you will find them above the log and ln keys. For example 10^(3) = 1000 and e^(2) = 7.389056099."],
+          ["যেকোনো ভিত্তির লগের জন্য log(ভিত্তি, মান) লিখুন। log(২, ৮) = ৩, কারণ ২³ = ৮।", "For a log of any base type log(base, value). log(2, 8) = 3 because 2³ = 8."],
+        ],
+      },
+      {
+        h: ["সাধারণ ভুল", "Common mistakes"],
+        p: [
+          ["০ বা ঋণাত্মক সংখ্যার log বা ln বের করা যায় না, ক্যালকুলেটর ত্রুটি দেখাবে। ভগ্নাংশ ঘাত লিখতে বন্ধনী দিন, যেমন ৮^(১÷৩) = ২। বন্ধনী ছাড়া ৮^১÷৩ লিখলে ৮ কে আগে ১ ঘাত করে ৩ দিয়ে ভাগ হয়।", "You cannot take the log or ln of zero or a negative number, and the calculator will show an error. Use brackets for a fractional power, such as 8^(1÷3) = 2. Without brackets, 8^1÷3 raises 8 to the power 1 first and then divides by 3."],
+        ],
+      },
+    ],
+    faqs: [
+      { q: ["log(১০০) কত?", "What is log(100)?"], a: ["২, কারণ ১০² = ১০০।", "2, because 10² = 100."] },
+      { q: ["ln আর log এর মধ্যে সম্পর্ক কী?", "How are ln and log related?"], a: ["ln(x) = log(x) × ২.৩০২৫৮৫। অর্থাৎ ln(x) = log(x) ÷ log(e)।", "ln(x) = log(x) × 2.302585. In other words ln(x) = log(x) ÷ log(e)."] },
+      { q: ["ঋণাত্মক সংখ্যার বর্গমূল বের করা যায় কি?", "Can I take the square root of a negative number?"], a: ["COMP মোডে যায় না, কারণ ফল বাস্তব সংখ্যা নয়। CMPLX মোডে √(−৪) = ২i পাওয়া যায়।", "Not in COMP mode, because the result is not a real number. In CMPLX mode √(−4) = 2i."] },
+    ],
+  },
 ];
 
 export const getGuide = (slug: string) => GUIDES.find((g) => g.slug === slug);

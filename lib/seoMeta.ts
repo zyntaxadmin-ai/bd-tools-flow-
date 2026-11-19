@@ -139,8 +139,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "দুই তারিখের মধ্যে বছর, মাস, দিন ও মোট দিনের পার্থক্য বের করুন, অথবা কোনো তারিখে দিন যোগ-বিয়োগ করুন। ফ্রি date calculator।",
   },
   "scientific-calculator": {
-    title: "Scientific Calculator - সায়েন্টিফিক ক্যালকুলেটর",
-    description: "sin, cos, tan, log, ln, বর্গমূল, পাওয়ার, ফ্যাক্টোরিয়াল ও বন্ধনীসহ ফ্রি অনলাইন সায়েন্টিফিক ক্যালকুলেটর। মোবাইলে ব্যবহার করা সহজ।",
+    title: "Scientific Calculator Online - Casio fx-991 স্টাইল",
+    description: "ফ্রি অনলাইন সায়েন্টিফিক ক্যালকুলেটর (Casio fx-991 স্টাইল)। ভগ্নাংশে সঠিক উত্তর, ইন্টিগ্রাল, জটিল সংখ্যা, সমীকরণ, ম্যাট্রিক্স, পরিসংখ্যান ও বেস-N। সাইন-আপ লাগে না।",
   },
   "image-resizer": {
     title: "Image Resizer - ছবির সাইজ পরিবর্তন",

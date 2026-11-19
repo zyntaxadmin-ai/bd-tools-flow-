@@ -41,7 +41,7 @@ const allTools: Tool[] = [
   { id: 6, name: "BMI Calculator", slug: "/tool/bmi-calculator", description: "BMI ক্যালকুলেটর, WHO ও দক্ষিণ এশীয় সীমা", category: "Education & Calculation", icon: "HeartPulse" },
   { id: 7, name: "EMI Calculator", slug: "/tool/emi-calculator-bd", description: "হোম, পার্সোনাল ও কার লোনের কিস্তি হিসাব করুন", category: "Education & Calculation", icon: "Calculator" },
   { id: 4, name: "Percentage Calculator", slug: "/tool/percentage-calculator", description: "শতকরা, VAT ও ছাড়ের হিসাব ১ ক্লিকে", category: "Education & Calculation", icon: "Percent" },
-  { id: 5, name: "Scientific Calculator", slug: "/tool/scientific-calculator", description: "Advanced scientific calc", category: "Education & Calculation", icon: "Sigma" },
+  { id: 5, name: "Scientific Calculator", slug: "/tool/scientific-calculator", description: "Scientific calculator with fractions, calculus, matrices and more", category: "Education & Calculation", icon: "Sigma" },
   { id: 8, name: "Unit Converter", slug: "/tool/unit-converter", description: "Length, Weight converter", category: "Education & Calculation", icon: "Ruler" },
   { id: 9, name: "Bill Calculator", slug: "/tool/bill-calculator", description: "ভাগ করে বিল হিসাব", category: "Education & Calculation", icon: "Receipt" },
   { id: 10, name: "Date Difference", slug: "/tool/date-difference-calculator", description: "দুটি তারিখের পার্থক্য", category: "Education & Calculation", icon: "CalendarDays" },

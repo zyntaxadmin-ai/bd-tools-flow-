@@ -22,7 +22,7 @@ Dropped: Background Remover, TIN Check, Plagiarism Helper, Article Rewriter. Not
 
 The `/guides` section has Bangla and English how-to articles, each linked to a tool. Guides live in `lib/guides.ts` (a `GUIDES` array). Add an object there and the guide page, the `/guides` list, the sitemap, the home page section and the link on the matching tool page all pick it up. Every guide needs a dated `updated` field, a tool link, sections and FAQs. Check facts against official sources before publishing.
 
-Live guides (40): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, BMI for South Asians (WHO 2004 action points), percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, and reducing image size.
+Live guides (43): cash out charges (and a charge table for 500 to 10,000 taka), SSC GPA, GPA to grade, GPA with the 4th subject, income tax 2026-27, electricity bill, finding units from a bill amount, prepaid recharge units, why a bill jumps, zakat, FDR/DPS, simple vs compound interest, passport fee, how many grams in a vori, CGPA, university grade points, EMI, flat vs reducing EMI, how to lower an EMI, BMI, BMI for South Asians (WHO 2004 action points), percentage, discount and profit/loss percentages, age, number to words, square feet to shotangsho, katha to shatak, how many shatak in 1 bigha, kani/gonda/kora/kranti/til, US time to Bangladesh time, Bangladesh/India/UK time difference, 24-hour to 12-hour time, tracking monthly expenses, making a safe password, reducing image size, using a scientific calculator, degrees vs radians, and log, ln and powers.
 
 ## SEO
 
@@ -30,6 +30,14 @@ Live guides (40): cash out charges (and a charge table for 500 to 10,000 taka), 
 - Tool and guide pages include JSON-LD structured data (guides: Article and FAQPage). `app/sitemap.ts` lists the home page, categories, tools and guides.
 - `public/ads.txt` holds the AdSense publisher line.
 - `app/sitemap.ts` uses a fixed `lastModified` date for the static pages, categories and tools. Update that date when you change content (last set to 2026-11-11 after the passport fee update).
+
+## Scientific calculator
+
+- `components/tools/ScientificCalculator.tsx` is the UI: a handheld-style calculator (graphite body, LCD, amber SHIFT legends above the keys) with 8 mode tabs: COMP, CMPLX, EQN, MATRIX, VECTOR, STAT, BASE-N and TABLE. All maths is in `lib/sciCalc.ts` (no React, no `eval`), so it is easy to test.
+- COMP/CMPLX: exact fractions (1÷2+1÷3 = 5/6) with S⇔D and a b/c toggles, Deg/Rad/Gra, live preview, Ans, STO into A-D, X, Y, M, M+/M−, History (last 30, saved in the browser's localStorage), keyboard typing (Enter, Esc, arrow keys), `∫(f,a,b)`, `d/dx(f,x0)` and `Σ(f,a,b)` (variable X; numerical, Simpson's rule), nCr, nPr, gcd, lcm, mod, hyperbolic functions, and complex numbers with a+bi / r∠θ output.
+- Not built: surd output (√2 stays a decimal), stacked textbook fraction entry, symbolic algebra, an ALPHA key (variables have their own keys).
+- Page text: `components/toolRegistryB1.tsx` (Bangla, 11 FAQs), `lib/toolContentEn.ts`, `lib/seoMeta.ts`, `lib/toolArticles.ts` (long text and mode table). Three guides link to it: how to use a scientific calculator, degrees vs radians, log/ln and powers. The sentences were written for this site, not copied from any other site.
+- To change a result format or add a function, edit `lib/sciCalc.ts` (`FUNCS` list and the `call` function), then add the key in `KEYS` in the component.
 
 ## BMI calculator
 
@@ -151,7 +159,7 @@ data/tools.ts               The full list of tools (name, slug, category, icon)
 lib/
   live.ts                   Slugs that are actually built (sitemap and related tools use this)
   seo.ts                    Site URL and name
-  dateCalc.ts, sciEval.ts, imageUtil.ts, colorUtil.ts, lorem.ts,
+  dateCalc.ts, sciCalc.ts, imageUtil.ts, colorUtil.ts, lorem.ts,
   keywords.ts, metaTags.ts, rand.ts, tz.ts, goldCalc.ts, pdfUtil.ts, pdfjs.ts,
   banglaDate.ts, expense.ts, invoice.ts, scan.ts, tts.ts, ttsEngine.ts   Shared, tested logic
   currencyData.ts, currencyPairs.ts   Currency list, rate helpers and pair pages

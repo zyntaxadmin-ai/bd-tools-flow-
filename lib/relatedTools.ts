@@ -3,6 +3,7 @@
 const GROUPS: string[][] = [
   ["bkash-calculator", "nagad-calculator", "rocket-calculator", "upay-calculator"],
   ["gpa-calculator-bd", "cgpa-calculator"],
+  ["scientific-calculator", "unit-converter", "bmi-calculator", "percentage-calculator"],
   ["stopwatch-timer", "countdown-timer"],
   ["govt-job-age-calculator", "age-calculator", "date-difference-calculator"],
   ["zakat-calculator-bd", "gold-weight-converter-bd", "percentage-calculator"],
