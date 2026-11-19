@@ -101,3 +101,18 @@ details[open] > summary:not(.list-none)::after { transform: rotate(180deg); }
 details { interpolate-size: allow-keywords; }
 details::details-content { block-size: 0; overflow: clip; transition: block-size 0.25s ease, content-visibility 0.25s allow-discrete; }
 details[open]::details-content { block-size: auto; }
+
+/* ---------- Popups (components/Popup.tsx): CSS-only enter/exit, runs off the main thread ---------- */
+@keyframes popup-pop-in { from { opacity: 0; transform: translate3d(0, var(--pop-dy, -8px), 0) scale(0.97); } }
+@keyframes popup-pop-out { to { opacity: 0; transform: translate3d(0, calc(var(--pop-dy, -8px) * 0.6), 0) scale(0.98); } }
+@keyframes popup-sheet-in { from { transform: translate3d(0, 100%, 0); } }
+@keyframes popup-sheet-out { to { transform: translate3d(0, 100%, 0); } }
+@keyframes popup-fade-in { from { opacity: 0; } }
+@keyframes popup-fade-out { to { opacity: 0; } }
+/* "backwards" for entering so a finished animation does not pin the transform (the sheet drag sets it inline) */
+.popup-pop { will-change: transform, opacity; animation: popup-pop-in 0.16s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+.popup-pop[data-state="closed"] { animation: popup-pop-out 0.12s ease-in forwards; pointer-events: none; }
+.popup-sheet { will-change: transform; animation: popup-sheet-in 0.26s cubic-bezier(0.2, 0.8, 0.2, 1) backwards; }
+.popup-sheet[data-state="closed"] { animation: popup-sheet-out 0.18s ease-in forwards; pointer-events: none; }
+.popup-scrim { animation: popup-fade-in 0.2s ease-out backwards; }
+.popup-scrim[data-state="closed"] { animation: popup-fade-out 0.18s ease-in forwards; pointer-events: none; }
