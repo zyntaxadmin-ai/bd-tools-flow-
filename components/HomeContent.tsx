@@ -67,6 +67,20 @@ export default function HomeContent({ guides }: { guides: GuideLink[] }) {
     return () => io.disconnect();
   }, [searching]);
 
+  // The footer fills the phone screen below the sticky header and category bar, so it needs their height.
+  useEffect(() => {
+    if (searching) return;
+    const root = document.documentElement;
+    const set = () => {
+      const h = document.querySelector("header")?.getBoundingClientRect().height ?? 64;
+      const r = document.getElementById("home-rail")?.getBoundingClientRect().height ?? 0;
+      root.style.setProperty("--sticky-top", `${Math.round(h + r)}px`);
+    };
+    set();
+    window.addEventListener("resize", set);
+    return () => { window.removeEventListener("resize", set); root.style.removeProperty("--sticky-top"); };
+  }, [searching]);
+
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
     if (!q) return tools;
@@ -131,7 +145,7 @@ export default function HomeContent({ guides }: { guides: GuideLink[] }) {
       </section>
 
       {!searching && (
-        <nav aria-label={ui.categories} className="sticky top-[64px] z-40 border-b border-indigo-100/70 dark:border-slate-800 bg-slate-50/85 dark:bg-slate-950/85 backdrop-blur-xl">
+        <nav id="home-rail" aria-label={ui.categories} className="sticky top-[64px] z-40 border-b border-indigo-100/70 dark:border-slate-800 bg-slate-50/85 dark:bg-slate-950/85 backdrop-blur-xl">
           <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
             <div className="flex gap-2 overflow-x-auto py-3 [scrollbar-width:none]">
               {categories.map((c) => {

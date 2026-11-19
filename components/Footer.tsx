@@ -35,10 +35,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-8 bg-white dark:bg-slate-950 sm:mt-16 lg:mt-20">
+    <footer className="mt-8 flex flex-col bg-white dark:bg-slate-950 max-sm:min-h-[calc(100svh-var(--sticky-top,64px))] max-sm:supports-[height:100dvh]:min-h-[calc(100dvh-var(--sticky-top,64px))] sm:mt-16 lg:mt-20">
       <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-indigo-300/70 to-transparent dark:via-indigo-500/40" />
-      <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
-        <div className="grid gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-12">
+      <div className="mx-auto flex w-full max-w-[1280px] flex-1 flex-col px-4 py-6 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+        <div className="my-auto grid gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3">
@@ -48,10 +48,10 @@ export default function Footer() {
             <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:mt-4 sm:text-[15px]">
               {ui.footerTag}
             </p>
-            <p className="mt-2 hidden text-sm text-slate-500 dark:text-slate-400 sm:block">
+            <p className="mt-2 hidden text-sm text-slate-500 dark:text-slate-400 sm:block [@media(min-height:920px)]:block">
               {en ? `${tools.length} free tools, made for Bangladesh.` : `${toBnDigits(tools.length)}টি ফ্রি টুল, বাংলাদেশের জন্য।`}
             </p>
-            <ul className="mt-5 hidden max-w-sm grid-cols-2 gap-x-4 gap-y-2.5 sm:grid">
+            <ul className="mt-5 hidden max-w-sm grid-cols-2 gap-x-4 gap-y-2.5 sm:grid [@media(min-height:920px)]:grid">
               {ui.features.map((f, i) => {
                 const Icon = FEATURE_ICONS[i];
                 return (
@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="mt-6 hidden min-h-[44px] items-center gap-2 rounded-xl border border-indigo-100 bg-indigo-50/60 px-4 text-sm font-semibold text-indigo-800 sm:inline-flex hover:bg-indigo-100 dark:border-slate-700 dark:bg-slate-900 dark:text-indigo-200 dark:hover:bg-slate-800"
+              className="mt-6 hidden min-h-[44px] items-center gap-2 rounded-xl border border-indigo-100 bg-indigo-50/60 px-4 text-sm font-semibold text-indigo-800 sm:inline-flex [@media(min-height:920px)]:inline-flex hover:bg-indigo-100 dark:border-slate-700 dark:bg-slate-900 dark:text-indigo-200 dark:hover:bg-slate-800"
             >
               <Mail className="h-4 w-4" aria-hidden />
               {CONTACT_EMAIL}
@@ -90,7 +90,7 @@ export default function Footer() {
               <h2 className={titleCls}>{ui.popular}</h2>
               <ul>
                 {POPULAR.map((p) => (
-                  <li key={p.href} className={p.wide ? "hidden sm:block" : undefined}><Link href={p.href} className={linkCls}>{p.name}</Link></li>
+                  <li key={p.href} className={p.wide ? "hidden sm:block [@media(min-height:920px)]:block" : undefined}><Link href={p.href} className={linkCls}>{p.name}</Link></li>
                 ))}
               </ul>
             </div>
