@@ -1,21 +1,28 @@
 "use client";
 import { Search, X } from "lucide-react";
 
-interface Props { value: string; onChange: (val: string) => void; placeholder?: string; clearLabel?: string; }
+interface Props { value: string; onChange: (val: string) => void; placeholder?: string; clearLabel?: string; className?: string; }
 
-export default function SearchBar({ value, onChange, placeholder = "Search tools...", clearLabel = "Clear" }: Props) {
+export default function SearchBar({ value, onChange, placeholder = "Search tools...", clearLabel = "Clear", className = "mx-auto" }: Props) {
   return (
-    <div className="relative w-full max-w-2xl mx-auto">
+    <div className={`relative w-full max-w-2xl ${className}`}>
       <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500 w-5 h-5" />
       <input
+        id="home-search"
         type="text"
+        aria-label={placeholder}
+        autoComplete="off"
+        enterKeyHint="search"
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
         className="w-full pl-11 pr-10 py-4 text-[15px] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-500 shadow-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all"
       />
+      {!value && (
+        <kbd aria-hidden className="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 h-6 w-6 items-center justify-center rounded-md border border-slate-200 dark:border-slate-700 text-xs font-medium text-slate-400">/</kbd>
+      )}
       {value && (
-        <button onClick={() => onChange("")} aria-label={clearLabel} className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800">
+        <button onClick={() => onChange("")} aria-label={clearLabel} className="absolute right-3 top-1/2 -translate-y-1/2 p-1 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 min-w-[32px] min-h-[32px] flex items-center justify-center">
           <X className="w-4 h-4 text-slate-500" />
         </button>
       )}

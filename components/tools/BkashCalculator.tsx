@@ -2,9 +2,10 @@
 import { useMemo, useState } from "react";
 import { RotateCcw } from "lucide-react";
 import { useTr } from "@/lib/lang";
+import { AGENT_PER_1000 } from "@/lib/bkashRates";
 
 // NOTE: Rates change. Verify on the bKash official site / app and edit the numbers below. Last checked: Oct 2026.
-const AGENT_PER_1000 = 18.5; // 1.85% agent cash out (bKash app and *247#)
+// The agent rate lives in lib/bkashRates.ts (the home page calculator uses it too).
 const ATM_PER_1000 = 14.9;   // cash out from partner bank ATMs
 const SEND_PER_1000 = 0;     // Send Money is assumed free; above limits or other transfers a charge can apply
 

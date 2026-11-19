@@ -19,3 +19,26 @@ body { @apply bg-slate-50 text-slate-900 antialiased; }
 /* Percentage calculator: colour of the partly filled grid cell */
 :root { --pct-fill: #4f46e5; }
 .dark { --pct-fill: #818cf8; }
+
+/* Home page: one colour per category. --c = text/icon, --dot = bright accent, --t = tile tint */
+.cat-bangladesh-special { --c: #c7305c; --dot: #ff6f91; --t: #ffe9ef; }
+.cat-education-calculation { --c: #4f55d6; --dot: #6d7cf5; --t: #eceeff; }
+.cat-image-pdf { --c: #b8500f; --dot: #f59e6b; --t: #fff0e4; }
+.cat-text-seo { --c: #0b7a60; --dot: #1fb894; --t: #e1f7ef; }
+.cat-daily-utility { --c: #7a45d6; --dot: #a06cf2; --t: #f1eaff; }
+.dark .cat-bangladesh-special { --c: #ff9db8; --t: rgba(255, 111, 145, 0.13); }
+.dark .cat-education-calculation { --c: #aab2ff; --t: rgba(109, 124, 245, 0.16); }
+.dark .cat-image-pdf { --c: #ffb88a; --t: rgba(245, 158, 107, 0.14); }
+.dark .cat-text-seo { --c: #5fe0bc; --t: rgba(31, 184, 148, 0.14); }
+.dark .cat-daily-utility { --c: #cbb0ff; --t: rgba(160, 108, 242, 0.16); }
+
+.home-hero {
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(201, 184, 255, 0.5), transparent 70%),
+    radial-gradient(600px 300px at 0% 100%, rgba(255, 201, 222, 0.4), transparent 70%);
+}
+.dark .home-hero {
+  background:
+    radial-gradient(900px 420px at 88% -10%, rgba(99, 102, 241, 0.18), transparent 70%),
+    radial-gradient(600px 300px at 0% 100%, rgba(236, 72, 153, 0.1), transparent 70%);
+}

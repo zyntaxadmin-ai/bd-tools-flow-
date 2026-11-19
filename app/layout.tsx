@@ -1,7 +1,7 @@
 
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
+import { Inter, Poppins, Hind_Siliguri, Anek_Bangla } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
 import Header from "@/components/Header";
@@ -10,7 +10,11 @@ import CookieConsent from "@/components/CookieConsent";
 import { LangProvider } from "@/lib/lang";
 import { siteConfig } from "@/lib/seo";
 
-const inter = Inter({ subsets: ["latin"], display: "swap" });
+// Inter + Hind Siliguri carry body text (Latin and Bangla). Poppins + Anek Bangla carry large headings.
+const inter = Inter({ subsets: ["latin"], display: "swap", variable: "--font-inter" });
+const hind = Hind_Siliguri({ subsets: ["bengali", "latin"], weight: ["400", "500", "600", "700"], display: "swap", variable: "--font-hind" });
+const poppins = Poppins({ subsets: ["latin"], weight: ["600", "700", "800"], display: "swap", variable: "--font-poppins" });
+const anek = Anek_Bangla({ subsets: ["bengali", "latin"], display: "swap", variable: "--font-anek" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -79,7 +83,7 @@ gtag('consent','default',{ad_storage:d,ad_user_data:d,ad_personalization:d,analy
         ) : null}
       </head>
 
-      <body className={inter.className}>
+      <body className={`${inter.variable} ${hind.variable} ${poppins.variable} ${anek.variable} font-sans`}>
         {/* Google Analytics 4 */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-N78SKNNJ9Z"
