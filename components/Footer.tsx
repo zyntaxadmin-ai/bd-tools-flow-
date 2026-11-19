@@ -11,18 +11,18 @@ import T from "./T";
 
 const FEATURE_ICONS = [Zap, ShieldCheck, Users, Sparkles];
 
-const POPULAR: { name: string; href: string }[] = [
+const POPULAR: { name: string; href: string; wide?: boolean }[] = [
   { name: "bKash Calculator", href: "/tool/bkash-calculator" },
   { name: "Age Calculator", href: "/tool/age-calculator" },
   { name: "GPA Calculator", href: "/tool/gpa-calculator-bd" },
   { name: "Land Calculator", href: "/tool/land-calculator-bd" },
   { name: "Income Tax Calculator", href: "/tool/income-tax-calculator-bd" },
-  { name: "Word Counter", href: "/tool/word-counter" },
+  { name: "Word Counter", href: "/tool/word-counter", wide: true },
 ];
 
 const linkCls =
-  "flex min-h-[36px] items-center text-[14.5px] text-slate-600 dark:text-slate-400 underline-offset-4 hover:text-indigo-700 hover:underline dark:hover:text-indigo-300";
-const titleCls = "mb-3 text-sm font-semibold text-slate-900 dark:text-white";
+  "flex min-h-[32px] items-center text-[14px] sm:min-h-[36px] sm:text-[14.5px] text-slate-600 dark:text-slate-400 underline-offset-4 hover:text-indigo-700 hover:underline dark:hover:text-indigo-300";
+const titleCls = "mb-1.5 text-sm sm:mb-3 font-semibold text-slate-900 dark:text-white";
 
 export default function Footer() {
   const { lang } = useLang();
@@ -35,23 +35,23 @@ export default function Footer() {
   };
 
   return (
-    <footer className="mt-20 bg-white dark:bg-slate-950">
+    <footer className="mt-8 bg-white dark:bg-slate-950 sm:mt-16 lg:mt-20">
       <div aria-hidden className="h-px bg-gradient-to-r from-transparent via-indigo-300/70 to-transparent dark:via-indigo-500/40" />
-      <div className="mx-auto max-w-[1280px] px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
-        <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+        <div className="grid gap-6 sm:gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3">
               <Image src="/logo.svg" alt="" width={40} height={40} unoptimized className="h-10 w-10" />
               <span className="font-display text-xl font-bold tracking-tight text-slate-900 dark:text-white">BD Tools Flow</span>
             </Link>
-            <p className="mt-4 max-w-sm text-[15px] leading-relaxed text-slate-600 dark:text-slate-400">
+            <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:mt-4 sm:text-[15px]">
               {ui.footerTag}
             </p>
-            <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+            <p className="mt-2 hidden text-sm text-slate-500 dark:text-slate-400 sm:block">
               {en ? `${tools.length} free tools, made for Bangladesh.` : `${toBnDigits(tools.length)}টি ফ্রি টুল, বাংলাদেশের জন্য।`}
             </p>
-            <ul className="mt-5 grid max-w-sm grid-cols-2 gap-x-4 gap-y-2.5">
+            <ul className="mt-5 hidden max-w-sm grid-cols-2 gap-x-4 gap-y-2.5 sm:grid">
               {ui.features.map((f, i) => {
                 const Icon = FEATURE_ICONS[i];
                 return (
@@ -64,7 +64,7 @@ export default function Footer() {
             </ul>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-xl border border-indigo-100 bg-indigo-50/60 px-4 text-sm font-semibold text-indigo-800 hover:bg-indigo-100 dark:border-slate-700 dark:bg-slate-900 dark:text-indigo-200 dark:hover:bg-slate-800"
+              className="mt-6 hidden min-h-[44px] items-center gap-2 rounded-xl border border-indigo-100 bg-indigo-50/60 px-4 text-sm font-semibold text-indigo-800 sm:inline-flex hover:bg-indigo-100 dark:border-slate-700 dark:bg-slate-900 dark:text-indigo-200 dark:hover:bg-slate-800"
             >
               <Mail className="h-4 w-4" aria-hidden />
               {CONTACT_EMAIL}
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <nav aria-label={en ? "Footer" : "ফুটার"} className="grid grid-cols-2 gap-x-6 gap-y-9 sm:grid-cols-4 lg:col-span-8">
+          <nav aria-label={en ? "Footer" : "ফুটার"} className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 sm:gap-y-9 lg:col-span-8">
             <div>
               <h2 className={titleCls}>{ui.categories}</h2>
               <ul>
@@ -90,7 +90,7 @@ export default function Footer() {
               <h2 className={titleCls}>{ui.popular}</h2>
               <ul>
                 {POPULAR.map((p) => (
-                  <li key={p.href}><Link href={p.href} className={linkCls}>{p.name}</Link></li>
+                  <li key={p.href} className={p.wide ? "hidden sm:block" : undefined}><Link href={p.href} className={linkCls}>{p.name}</Link></li>
                 ))}
               </ul>
             </div>
@@ -115,26 +115,26 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10"><AdSlot label="Advertisement" /></div>
+        <div className="mt-6 sm:mt-10"><AdSlot label="Advertisement" /></div>
 
         {/* Bottom bar */}
-        <div className="mt-12 flex flex-col items-center gap-4 border-t border-slate-200 pt-6 text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row sm:justify-between">
-          <p className="text-center sm:text-left">
-            © {new Date().getFullYear()} BD Tools Flow. {ui.rights}
-          </p>
-          <div className="flex items-center gap-4">
+        <div className="mt-6 flex items-center justify-between gap-3 border-t border-slate-200 pt-4 text-[13px] text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:mt-12 sm:pt-6 sm:text-sm">
+          <div className="flex flex-col gap-0.5 sm:flex-1 sm:flex-row sm:items-center sm:justify-between sm:pr-4">
+            <p>
+              © {new Date().getFullYear()} BD Tools Flow. {ui.rights}
+            </p>
             <p>
               Developed by <span className="font-semibold text-slate-900 dark:text-white">Rohan</span>
             </p>
-            <button
-              type="button"
-              onClick={toTop}
-              aria-label={en ? "Back to top" : "ওপরে যান"}
-              className="grid h-11 w-11 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 hover:border-indigo-300 hover:text-indigo-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-indigo-300"
-            >
-              <ArrowUp className="h-4 w-4" aria-hidden />
-            </button>
           </div>
+          <button
+            type="button"
+            onClick={toTop}
+            aria-label={en ? "Back to top" : "ওপরে যান"}
+            className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-slate-200 bg-white text-slate-600 hover:border-indigo-300 hover:text-indigo-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-indigo-300 sm:h-11 sm:w-11"
+          >
+            <ArrowUp className="h-4 w-4" aria-hidden />
+          </button>
         </div>
       </div>
     </footer>
