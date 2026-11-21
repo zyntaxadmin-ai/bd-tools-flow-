@@ -3020,3 +3020,561 @@ for (const [slug, extra] of Object.entries(EXTRA)) {
     TOOL_ARTICLES[slug] = extra;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Extra sections (added 22 Nov 2026): worked examples, use cases and tips for the
+// tools that had the shortest pages. Appended to the entries above.
+// ---------------------------------------------------------------------------
+const EXTRA2: Record<string, ToolArticle> = {
+  "bangla-calendar": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন আপনি জানতে চান ২১ ফেব্রুয়ারি ২০২৬ বাংলায় কত তারিখ। তারিখ রূপান্তর অংশে ইংরেজি থেকে বাংলা ট্যাব বেছে ওই তারিখ দিন। টুল দেখাবে ৮ ফাল্গুন ১৪৩২, শনিবার। কারণ ২০২৬ সালে ১৪ ফেব্রুয়ারি ১ ফাল্গুন পড়ে, তাই এক সপ্তাহ পরে ৮ ফাল্গুন।",
+        "উল্টোটাও করা যায়। বাংলা থেকে ইংরেজি ট্যাবে তারিখ ১, মাস পৌষ ও সাল ১৪৩২ লিখলে ফল আসবে মঙ্গলবার, ১৬ ডিসেম্বর ২০২৫। এই তারিখটি বিজয় দিবসের সঙ্গে মিলে যায়, তাই মনে রাখা সহজ।",
+        "মাসের ক্যালেন্ডারে প্রতিটি ঘরে বড় সংখ্যা ইংরেজি তারিখ, নিচের ছোট সংখ্যা বাংলা তারিখ। যেদিন নতুন বাংলা মাস শুরু হয়, সেদিন সংখ্যার বদলে মাসের নাম লেখা থাকে। তাই এক নজরে বোঝা যায় ইংরেজি মাসের কোন দিনে বাংলা মাস বদলাচ্ছে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "জন্মদিন, বিয়ে বা কোনো স্মরণীয় ঘটনার বাংলা তারিখ জানতে অনেকে এই টুল ব্যবহার করেন। দলিল, নিমন্ত্রণপত্র বা পারিবারিক অনুষ্ঠানের কার্ডে বাংলা তারিখ লিখতে হলে হিসাব মেলানো সহজ হয়।",
+        "স্কুল বা প্রতিষ্ঠানের অনুষ্ঠান পরিকল্পনায়ও কাজে লাগে। যেমন পহেলা বৈশাখ কোন বারে পড়বে, তা সামনের বছরের এপ্রিল মাসের ক্যালেন্ডার খুলে দেখে নেওয়া যায়। ২০২৬ সালে ১ বৈশাখ ১৪৩৩ পড়ছে মঙ্গলবারে।",
+        "পুরোনো কাগজপত্রে বঙ্গাব্দ লেখা থাকলে সেটি ইংরেজি তারিখে বদলে নিতে পারবেন। ১৯০০ থেকে ২১০০ সালের মধ্যে যেকোনো তারিখ নিয়ে কাজ করা যায়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বড় ভুল হলো পশ্চিমবঙ্গের পঞ্জিকার সঙ্গে মেলানো। দুই পঞ্জিকার নিয়ম আলাদা, তাই একই দিনে দুই জায়গার বাংলা তারিখ আলাদা হতে পারে। এই টুল বাংলাদেশের পঞ্জিকা ধরে হিসাব করে।",
+        "ফাল্গুনের ৩০ তারিখ দিলে ত্রুটির বার্তা আসতে পারে। কারণ সাধারণ বছরে ফাল্গুনে ২৯ দিন। বার্তায় ওই বছরে মাসের সর্বোচ্চ দিন লেখা থাকে, সেটি দেখে তারিখ ঠিক করুন।",
+        "বাংলা সাল লেখার সময় চার অঙ্কের সাল দিন, যেমন ১৪৩২। দুই অঙ্কের সাল দিলে সীমার বাইরে বলে দেখাবে। তারিখের ঘরে ১ থেকে শুরু করে ওই মাসের শেষ দিন পর্যন্ত সংখ্যা দেওয়া যায়। মাস বাছাই করা হয় ড্রপডাউন থেকে, তাই বানান নিয়ে ভাবতে হয় না। সাল ও তারিখ দুটি ঘরই পূরণ না করলে ফলাফল আসে না, এ কথাটিও মনে রাখুন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "আজকের তারিখ আপনার ডিভাইসের ঘড়ি থেকে নেওয়া হয়। ফোনের তারিখ ভুল থাকলে এখানেও ভুল দেখাবে, তাই গুরুত্বপূর্ণ কাজের আগে ফোনের তারিখ ঠিক আছে কিনা দেখে নিন।",
+        "এখানে সরকারি ছুটি, উৎসব বা চাঁদের হিসাবে নির্ধারিত ধর্মীয় দিবস দেওয়া নেই। এসব তারিখ প্রতি বছর সরকারি বিজ্ঞপ্তিতে ঠিক হয়, তাই অফিসিয়াল সূত্র দেখাই নিরাপদ।",
+        "আইনি বা সরকারি কাগজে বাংলা তারিখ বসানোর আগে একবার নিজে মিলিয়ে নিন এবং সংশ্লিষ্ট দপ্তরের নিয়ম জেনে নিন। হিসাব আপনার ব্রাউজারেই হয়, তাই তারিখ নিয়ে অবাধে পরীক্ষা করা যায়।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with a real example", p: [
+        "Say you want to know the Bangla date of 21 February 2026. In the date converter, choose the Gregorian to Bangla tab and enter that date. The tool shows 8 Falgun 1432, Saturday. In 2026, 14 February is 1 Falgun, so one week later is 8 Falgun.",
+        "You can also go the other way. On the Bangla to Gregorian tab, enter day 1, month Poush and year 1432. The result is Tuesday, 16 December 2025, which is also Victory Day, so it is easy to remember.",
+        "In the month view, the big number in each cell is the Gregorian date and the small one below is the Bangla date. On the day a new Bangla month begins, the month name replaces the number, so you can see at a glance where the Bangla month changes.",
+      ] },
+      { h: "When and why it helps", p: [
+        "People use it to find the Bangla date of a birthday, a wedding or another memorable event. It also helps when you must write a Bangla date on an invitation card, a document or a family programme.",
+        "It is useful for planning too. You can open next April in the calendar and check which weekday Pohela Boishakh falls on. In 2026, 1 Boishakh 1433 is a Tuesday.",
+        "If an old paper carries a Bangla year, you can turn it into a Gregorian date. Any date between 1900 and 2100 can be converted.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The biggest mistake is comparing the result with West Bengal's calendar. The two calendars follow different rules, so the Bangla date for the same day can differ. This tool follows Bangladesh's calendar.",
+        "Entering day 30 of Falgun may give an error, because Falgun has 29 days in a normal year. The message tells you the maximum for that month and year, so adjust the day accordingly.",
+        "When typing a Bangla year, use four digits such as 1432. A two-digit year falls outside the allowed range and will be rejected.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "Today's date comes from your device clock. If your phone's date is wrong, the result here will be wrong too, so check it before doing anything important.",
+        "Public holidays, festivals and religious days that depend on moon sighting are not included. These are announced officially each year, so use the official source for them.",
+        "Before putting a Bangla date on a legal or government paper, verify it yourself and check the rules of the office concerned. The calculation runs in your browser, so you can try as many dates as you like.",
+      ] },
+    ],
+  },
+  "bill-calculator": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও একটি উদাহরণ", p: [
+        "টুলটি চালানো সহজ। প্রথমে মোট বিল লিখুন, তারপর কতজন ভাগ করবেন। এরপর দরকার হলে VAT বা সার্ভিস চার্জ এবং টিপের শতকরা হার দিন। সব ঘর পূরণ হলে ফলাফল নিজে থেকেই দেখা যায়, আলাদা বোতাম চাপতে হয় না।",
+        "একটি উদাহরণ দেখা যাক। চারজন বন্ধু রেস্টুরেন্টে খেয়ে ২,৪০০ টাকার বিল পেল। বিলে VAT ও সার্ভিস চার্জ মিলিয়ে ১০% যোগ হবে, আর ওরা ৫% টিপ দিতে চায়। টুল VAT ধরবে ২৪০ টাকা এবং টিপ ধরবে ১২০ টাকা। সর্বমোট দাঁড়ায় ২,৭৬০ টাকা। চারজনে ভাগ করলে জনপ্রতি ৬৯০ টাকা।",
+        "আরেকটি উদাহরণ: ১,৮৫০ টাকার বিল তিনজনে ভাগ হবে, VAT ও টিপ নেই। ১,৮৫০ কে ৩ দিয়ে ভাগ করলে ৬১৬.৬৬৬৬ হয়। টুল দেখায় ৬১৬.৬৭ টাকা। বাস্তবে সবাই ৬১৭ টাকা করে দিলে সামান্য বেশি জমবে, সেটা রেখে দিতে পারেন বা টিপ হিসেবে দিতে পারেন।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "বন্ধুদের সঙ্গে খাওয়ার পর বিল নিয়ে হিসাব মেলানো অনেক সময় ঝামেলার হয়। কেউ বলে VAT আলাদা, কেউ বলে টিপও ধরতে হবে। টুলে একবার হার বসালে সবাই একই সংখ্যা দেখতে পায়, তাই তর্কের জায়গা কমে।",
+        "ঘুরতে গিয়ে গাড়ি ভাড়া বা হোটেল খরচ ভাগ করতেও এটি কাজে আসে। এখানে VAT ও টিপ ফাঁকা রেখে শুধু মোট খরচ ও জনসংখ্যা দিলেই হয়। মেসের বাজার, অফিসের দলগত লাঞ্চ বা পরিবারের কোনো অনুষ্ঠানের খরচেও একই পদ্ধতি চলে।",
+        "রেস্টুরেন্ট ঠিক কত শতাংশ VAT বা চার্জ নেয় তা প্রতিষ্ঠানভেদে আলাদা হতে পারে। তাই অনুমান না করে বিলের কাগজে ছাপা হার দেখে নিয়ে সেটাই লিখুন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বড় ভুল হলো VAT দুইবার ধরা। অনেক বিলে VAT আগেই যোগ করা থাকে এবং নিচে মোট অঙ্ক লেখা থাকে। সেই মোট অঙ্ক দিয়ে আবার VAT দিলে হিসাব বেশি আসবে। ছাপা মোট অঙ্ক ব্যবহার করলে VAT ঘর ফাঁকা রাখুন।",
+        "দ্বিতীয় ভুল হলো দুটি চার্জের হার আলাদা ঘরে খোঁজা। টুলে VAT ও সার্ভিস চার্জের জন্য একটিই ঘর আছে। দুটো থাকলে হার দুটি যোগ করে লিখুন। তবে এতে টুল একটি মোট শতাংশ ধরে মূল বিলের ওপর হিসাব করে, চার্জের ওপর চার্জ ধরে না। আপনার বিলে যদি অন্যভাবে হিসাব হয়ে থাকে তবে বিলের লেখা অঙ্কটিই সঠিক ধরুন।",
+        "তৃতীয় ভুল হলো মানুষের সংখ্যায় দশমিক বা শূন্য দেওয়া। সংখ্যাটি ১ বা তার বেশি পূর্ণসংখ্যা হতে হয়, নইলে টুল ভুলের বার্তা দেখায়। লাল বার্তা এলে ঘরের মান আবার দেখে নিন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলটি মোট অঙ্ককে সমান ভাগে ভাগ করে। কে কোন খাবার খেয়েছে তা আলাদা করে ধরার ব্যবস্থা নেই। কারও অর্ডার অনেক বেশি হলে সেই ব্যক্তির অংশ আগে বাদ দিয়ে বাকি অঙ্ক দিয়ে হিসাব করতে পারেন।",
+        "টিপ ও VAT দুটোই মূল বিলের শতকরা হিসেবে আলাদাভাবে ধরা হয়। রেস্টুরেন্টের নিজস্ব হিসাবের নিয়ম আলাদা হলে ছোট ব্যবধান হতে পারে। পরিশোধের আগে বিলের চূড়ান্ত অঙ্কের সঙ্গে একবার মিলিয়ে নিন।",
+        "ভালো অভ্যাস হিসেবে টাকা দেওয়ার আগেই হিসাবটি দলের সবাইকে দেখান। ফলাফল দশমিকে এলে আগেই ঠিক করুন কে কতটা রাউন্ড করবে। এতে পরে ভুল বোঝাবুঝি হয় না।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with a worked example", p: [
+        "Using the tool is simple. Enter the total bill first, then the number of people. If needed, add the VAT or service charge percentage and the tip percentage. The result appears on its own once the boxes are filled, so there is no calculate button to press.",
+        "Here is an example. Four friends eat at a restaurant and the bill is 2,400 taka. The bill adds 10% for VAT and service charge, and they want to leave a 5% tip. The tool calculates VAT of 240 taka and a tip of 120 taka. The grand total is 2,760 taka, which comes to 690 taka per person for four people.",
+        "One more case: a bill of 1,850 taka shared by three people, with no VAT and no tip. Dividing 1,850 by 3 gives 616.6666, and the tool shows 616.67 taka. If everyone pays 617 taka, a small amount is left over, which you can keep or give as a tip.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Settling a bill after a meal with friends can get awkward. One person says VAT is extra, another says the tip should be added. When you enter the rates once, everyone sees the same number and there is less to argue about.",
+        "It also helps when you share a car rental or hotel cost on a trip. In that case leave VAT and tip empty and enter only the total cost and the number of people. The same method works for mess grocery costs, an office team lunch or a family event.",
+        "The VAT or service charge a restaurant applies can differ between places. Do not guess. Read the rate printed on your bill and enter that.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The biggest mistake is counting VAT twice. Many bills already include VAT and print a final total at the bottom. If you use that total and also enter a VAT rate, the result will be too high. When you use the printed total, leave the VAT box empty.",
+        "The second mistake is looking for separate boxes for two charges. The tool has a single box for VAT and service charge. If your bill has both, add the two rates and enter the sum. The tool applies that combined percentage to the original bill and does not charge one on top of the other. If your bill is calculated differently, treat the amount printed on the bill as correct.",
+        "The third mistake is entering a decimal or zero for the number of people. It must be a whole number of 1 or more, otherwise the tool shows an error. If you see the red message, check that box again.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool divides the total into equal parts. It has no way to assign individual items to individual people. If one person ordered far more than the others, take their share out first and split the rest.",
+        "VAT and tip are both calculated separately as a percentage of the original bill. If a restaurant uses a different method, you may see a small gap. Compare with the final amount on the bill before you pay.",
+        "As a good habit, show the result to the whole group before anyone pays. If the amount has decimals, agree in advance who rounds up and by how much. This avoids confusion later.",
+      ] },
+    ],
+  },
+  "character-counter": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "বক্সে লেখা পেস্ট করার সঙ্গে সঙ্গেই তিনটি সংখ্যা বদলে যায়: স্পেসসহ অক্ষর, স্পেস ছাড়া অক্ষর ও লাইন। এরপর নিচের বোতাম থেকে একটি লিমিট বাছলে একটি বার আসে। বারটি সবুজ থাকলে আপনি সীমার মধ্যে আছেন। ৯০% পার হলে হলুদ হয় এবং সীমা ছাড়ালে লাল হয়ে কত অক্ষর বেশি হয়েছে তা লিখে দেখায়।",
+        "উদাহরণ: \"Hello World\" লিখলে স্পেসসহ ১১, স্পেস ছাড়া ১০ এবং লাইন ১ দেখায়। SMS (ইংরেজি) ১৬০ বাছলে লেখা হবে \"149 অক্ষর বাকি (11/160)\"। দুই লাইনের একটি লেখা, যেমন \"Dear Sir,\" এর পরের লাইনে \"Please find attached.\", স্পেসসহ ৩১, স্পেস ছাড়া ২৭ এবং লাইন ২ দেখাবে।",
+        "আরেকটি ব্যবহার: আপনার ওয়েবসাইটের টাইটেল লিখে SEO Title ~৬০ বেছে নিন। ৬৪ অক্ষর হলে টুল দেখাবে ৪ অক্ষর বেশি। তখন একটি শব্দ কেটে বা ছোট শব্দ দিয়ে বদলে সংখ্যা কমিয়ে নিন।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "অনেক জায়গায় লেখার সীমা বাঁধা থাকে। ফোনের SMS, X পোস্ট, ইনস্টাগ্রাম বায়ো, চাকরির আবেদনের নির্দিষ্ট ঘর বা বিজ্ঞাপনের শিরোনাম, সবখানেই অক্ষর হিসেব করে লিখতে হয়। আগে টুলে মেপে নিলে পরে কেটে যাওয়ার ভয় থাকে না।",
+        "যারা ওয়েবসাইট বা ব্লগ চালান তাদের জন্য টাইটেল ও ডেসক্রিপশন মাপা নিয়মিত কাজ। দীর্ঘ টাইটেল সার্চ ফলাফলে কেটে দেখানো হতে পারে। শিক্ষার্থীরা অ্যাসাইনমেন্টে অক্ষরসীমা দেখতে বা আবেদনপত্রের ছোট রচনা মাপতেও এটি ব্যবহার করে।",
+        "বাংলায় SMS পাঠালে ৭০ অক্ষরের সীমা মনে রাখা জরুরি, কারণ বাংলা ইউনিকোড হিসেবে যায়। দীর্ঘ বার্তা একাধিক অংশে ভাগ হলে খরচ বাড়তে পারে। খরচের নিয়ম আপনার অপারেটর বা SMS সেবাদাতার কাছে যাচাই করুন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো স্পেসসহ ও স্পেস ছাড়া সংখ্যা গুলিয়ে ফেলা। বেশিরভাগ প্ল্যাটফর্মের সীমা স্পেসসহ গণনায় ধরা হয়। সীমা মেলাতে তাই স্পেসসহ সংখ্যাটি দেখুন। টুলের বারও স্পেসসহ সংখ্যা ধরেই চলে।",
+        "দ্বিতীয় ভুল হলো বাংলা লেখাকে ইংরেজির মতো ধরে নেওয়া। বাংলা লেখায় একটি যুক্তাক্ষর বা কার-চিহ্ন আলাদা ইউনিকোড অক্ষর হিসেবে গোনা হয়, তাই চোখে দেখা অক্ষরের চেয়ে সংখ্যা বেশি আসে। SMS এর জন্য বাংলায় ৭০ সীমা মেনে চলাই নিরাপদ।",
+        "তৃতীয় ভুল হলো পেস্ট করা লেখার শেষে অদৃশ্য ফাঁকা জায়গা বা বাড়তি লাইন ব্রেক থেকে যাওয়া। এতে সংখ্যা সামান্য বেশি আসে। শেষের ফাঁকা জায়গা মুছে আবার দেখুন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলটি অক্ষর ও লাইন গোনে, শব্দ গোনে না। প্ল্যাটফর্মভেদে গণনা সামান্য আলাদা হতে পারে, বিশেষ করে ইমোজি বা লিংকের ক্ষেত্রে। যেমন X লিংককে নিজের নিয়মে গোনে, টুল সাধারণ অক্ষরের মতোই গোনে।",
+        "SEO Title ও Description এর ৬০ ও ১৬০ সংখ্যা আনুমানিক। Google পিক্সেল প্রস্থ দেখে ছাঁটে, তাই চওড়া অক্ষর বেশি থাকলে কম অক্ষরেও কেটে যেতে পারে। সীমার কাছাকাছি গেলে কিছু অক্ষর ছেড়ে রাখুন।",
+        "ভালো অভ্যাস হলো সীমার ঠিক শেষ পর্যন্ত না গিয়ে সামান্য জায়গা রাখা। গুরুত্বপূর্ণ বার্তা পাঠানোর আগে সংশ্লিষ্ট প্ল্যাটফর্মেও একবার দেখে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with real examples", p: [
+        "As soon as you paste text into the box, three numbers update: characters with spaces, characters without spaces and lines. If you then pick a limit from the buttons below, a bar appears. Green means you are inside the limit, it turns amber past 90%, and it turns red when you go over, with a message telling you how many characters are over.",
+        "For example, typing \"Hello World\" shows 11 with spaces, 10 without spaces and 1 line. If you pick SMS (English) 160, the message reads \"149 characters left (11/160)\". A two-line text such as \"Dear Sir,\" followed by \"Please find attached.\" on the next line shows 31 with spaces, 27 without spaces and 2 lines.",
+        "Another use: type a page title and choose SEO Title ~60. If the title is 64 characters, the tool shows 4 characters over. Cut a word or swap in a shorter one until the number comes down.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Many places set a fixed writing limit. A phone SMS, an X post, an Instagram bio, a fixed box in a job application or an ad headline all need you to count characters. Measuring first means nothing gets cut off later.",
+        "If you run a website or blog, measuring titles and descriptions is a regular job. A long title may be shown truncated in search results. Students also use a counter for assignment limits or short essays in application forms.",
+        "If you send Bangla SMS, remember the 70 character limit, because Bangla goes as Unicode. A long message split into several parts may cost more. Check the pricing rules with your operator or SMS provider.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is mixing up the with-spaces and without-spaces numbers. Most platforms apply their limit to the count with spaces, so use that number to compare. The bar in the tool also uses the with-spaces count.",
+        "The second mistake is treating Bangla like English. In Bangla, a conjunct or a vowel sign is counted as its own Unicode character, so the number is higher than the letters you see. For SMS, staying within 70 in Bangla is the safe approach.",
+        "The third mistake is invisible extra space or a stray line break at the end of pasted text. This makes the count slightly higher. Delete the trailing space and check again.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool counts characters and lines, not words. Counting can differ slightly between platforms, especially for emoji and links. For instance, X handles links by its own rules, while this tool counts them like ordinary characters.",
+        "The 60 and 160 figures for SEO titles and descriptions are approximate. Google truncates by pixel width, so a title with many wide letters may be cut off even under the limit. Leave a few characters of room when you are close.",
+        "A good habit is to avoid filling the limit to the very last character. Before sending anything important, also preview it on the platform itself.",
+      ] },
+    ],
+  },
+  "date-difference-calculator": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন আপনি জানতে চান ১৫ মার্চ ২০২০ থেকে ১০ জুন ২০২৪ পর্যন্ত কত সময় গেছে। \"দুই তারিখের পার্থক্য\" ট্যাবে শুরুর তারিখে ২০২০-০৩-১৫ এবং শেষের তারিখে ২০২৪-০৬-১০ দিন। টুল দেখাবে ৪ বছর, ২ মাস, ২৬ দিন। মোট দিন ১,৫৪৮ এবং মোট সপ্তাহ ২২১ সপ্তাহ ১ দিন।",
+        "এই হিসাবে ১৫ মার্চ ২০২০ থেকে পূর্ণ ৫০ মাস যোগ করলে ১৫ মে ২০২৪ হয়। এরপর ১০ জুন পর্যন্ত বাকি থাকে ২৬ দিন। ২০২৪ সালের ২৯ ফেব্রুয়ারি মোট দিনের মধ্যে ধরা আছে।",
+        "এবার দ্বিতীয় ট্যাব। ৩১ জানুয়ারি ২০২৪ বেছে যোগ (+) চাপুন, মাসের ঘরে ১ লিখুন। ফল আসবে ২৯ ফেব্রুয়ারি ২০২৪, বার বৃহস্পতিবার। কারণ ফেব্রুয়ারিতে ৩১ তারিখ নেই, তাই মাসের শেষ দিনে থামে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "দৈনন্দিন কাজে তারিখের হিসাব প্রায়ই লাগে। কোনো আবেদনের শেষ তারিখ আর আজকের মধ্যে কত দিন বাকি, তা দেখা যায়। ঋণ বা কিস্তির মেয়াদ কত মাস গেল, সেটাও বের করা যায়।",
+        "চাকরিতে যোগদানের তারিখ থেকে এখন পর্যন্ত কত বছর কত মাস হলো, তা জানতে কাজে লাগে। বিদেশ থেকে ফেরার পর কত দিন হলো, ভিসা বা পাসপোর্ট কত দিন বাকি, এসব হিসাবও করা যায়। ডেলিভারির সময়সীমা বা জামিনের মেয়াদের মতো বিষয়ে ৩০ বা ৯০ দিন পরের তারিখ বের করতেও সুবিধা।",
+        "শিক্ষার্থীরা পরীক্ষার আগে কত দিন হাতে আছে তা গুনতে পারে। গর্ভাবস্থা, প্রজেক্ট ডেডলাইন বা অনুষ্ঠানের প্রস্তুতির সময়ও এই টুলে দ্রুত মেলানো যায়। হাতে ক্যালেন্ডার গুনে ভুল করার সুযোগ তাতে কমে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বেশি হয় শুরুর দিন গোনা নিয়ে বিভ্রান্তি। টুল দুই তারিখের মাঝের ব্যবধান দেখায়, শুরুর দিন ধরে না। যদি আপনার নিয়মে দুই প্রান্তের দিনই ধরতে হয়, ফলের সাথে ১ যোগ করে নিন।",
+        "আরেকটি ভুল হলো মাসকে সবসময় ৩০ দিন ধরা। এই টুল বাস্তব ক্যালেন্ডার ধরে, তাই মোট দিন আর মাস-দিনের হিসাব হাতের ৩০ দিনের হিসাবের সাথে মিলবে না। যেমন ১ জানুয়ারি থেকে ৩১ ডিসেম্বর ২০২৫ এ ১১ মাস ৩০ দিন এবং মোট ৩৬৪ দিন আসে।",
+        "তারিখ ঠিকমতো না বসলেও ফল আসে না। ফল না এলে দুটি ঘরেই পূর্ণ ও বৈধ তারিখ আছে কিনা দেখুন। যোগ-বিয়োগে দশমিক বা ঋণাত্মক সংখ্যা দিলে ভুলের বার্তা আসে। বিয়োগ করতে চাইলে সংখ্যা ধনাত্মক রেখে \"বিয়োগ (−)\" বোতাম চাপুন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এই টুল শুধু খ্রিষ্টীয় ক্যালেন্ডারের তারিখ নিয়ে কাজ করে। বাংলা বা হিজরি তারিখের হিসাব এতে নেই। সেগুলোর জন্য আগে তারিখটি খ্রিষ্টীয় ক্যালেন্ডারে নিয়ে আসতে হবে। টুল শুধু তারিখ ধরে, সময় বা ঘণ্টা-মিনিট ধরে না।",
+        "আইনি বা সরকারি সময়সীমা, যেমন আপিলের মেয়াদ বা আবেদনের শেষ দিন, কীভাবে গোনা হবে তা প্রতিষ্ঠানের নিয়মে ঠিক হয়। কোন দিন থেকে গোনা শুরু আর ছুটির দিন বাদ যাবে কিনা, তা এই টুল জানে না। গুরুত্বপূর্ণ ক্ষেত্রে অফিসিয়াল বিজ্ঞপ্তি বা সংশ্লিষ্ট দপ্তরের নিয়ম মিলিয়ে নিন।",
+        "ভালো অভ্যাস হলো ফল পাওয়ার পর একবার দেখে নেওয়া: ফলাফল তারিখের বার ঠিক আছে কিনা। দীর্ঘ সময়ের হিসাবে ফল ক্যালেন্ডারের সাথে একবার মিলিয়ে নিলে ভুল ধরা পড়ে। তারিখ আপনার ডিভাইসেই প্রক্রিয়া হয়, তাই ব্যক্তিগত তারিখ দিতেও সমস্যা নেই।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with real examples", p: [
+        "Say you want to know how much time passed from 15 March 2020 to 10 June 2024. In the \"Difference between dates\" tab, enter 2020-03-15 as the start and 2024-06-10 as the end. The tool shows 4 years, 2 months and 26 days. Total days are 1,548, and total weeks are 221 weeks 1 day.",
+        "Here is how that works. Adding 50 whole months to 15 March 2020 gives 15 May 2024. From there to 10 June is 26 days left. The extra day of 29 February 2024 is already counted in the total days.",
+        "Now the second tab. Pick 31 January 2024, choose Add (+) and type 1 in the months box. The result is Thursday, 29 February 2024. February has no 31st, so the date stops at the last day of the month.",
+      ] },
+      { h: "When and why it is useful", p: [
+        "Date arithmetic comes up in everyday tasks. You can see how many days are left between today and an application deadline, or how many months of a loan or instalment plan have passed.",
+        "It helps you find how many years and months you have been in a job since your joining date. You can also work out days since you returned from abroad, or how long a visa or passport has left. Finding the date 30 or 90 days ahead is handy for delivery windows or notice periods.",
+        "Students can count the days left before an exam. For project deadlines or event planning the tool gives a quick check, and it lowers the chance of miscounting on a paper calendar.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The most common confusion is whether the start day is counted. The tool shows the gap between two dates and does not include the start day. If your rule counts both end days, add 1 to the result.",
+        "Another mistake is treating every month as 30 days. This tool follows the real calendar, so its total days and its months-and-days split will not match a rough 30-day calculation. For example, 1 January to 31 December 2025 gives 11 months 30 days and 364 total days.",
+        "If no result appears, check that both boxes hold full, valid dates. In add/subtract, decimals or negative numbers trigger an error message. To subtract, keep the number positive and press the Subtract (−) button.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool works only with Gregorian calendar dates. It does not calculate Bangla or Hijri dates, so convert those to Gregorian first. It handles dates only, not hours and minutes.",
+        "Legal or official deadlines, such as an appeal period or an application closing date, are counted by the rules of the institution. This tool does not know which day counting starts from or whether holidays are skipped. For anything important, check the official notice or the office concerned.",
+        "A good habit is to glance at the weekday of the resulting date. For long spans, compare the answer against a calendar once. Dates are processed on your own device, so entering personal dates is fine.",
+      ] },
+    ],
+  },
+  "image-compressor": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন ফোনে তোলা একটি ছবি ৪০০০ × ৩০০০ পিক্সেলের এবং আপনার ফর্মে ছবি ছোট করে দিতে হবে। ছবিটি সিলেক্ট করে JPEG বাছুন, কোয়ালিটি ৭০% রাখুন এবং সর্বোচ্চ প্রস্থ লিখুন ১৬০০। টুল দেখাবে ১৬০০ × ১২০০ px, কারণ উচ্চতা একই অনুপাতে কমে।",
+        "এরপর 'আগে', 'পরে' ও 'সাশ্রয়' তিনটি বক্স দেখুন। ধরা যাক আগে ২.৪ MB ছিল আর পরে কম এসেছে, তখন সাশ্রয়ের শতাংশও দেখাবে। সংখ্যা ছবি ভেদে আলাদা হয়, তাই নিজের ছবিতে স্লাইডার নাড়িয়ে দেখাই ভালো।",
+        "সাইজ ঠিক মনে হলে ডাউনলোড চাপুন। ফাইলের নাম হবে মূল নামের পরে -compressed, যেমন photo-compressed.jpg।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "অনেক আবেদন ফর্ম, পোর্টাল ও অ্যাপে ছবির সাইজের সীমা থাকে। ফোনের ক্যামেরার ছবি সহজেই কয়েক MB হয়, তাই জমা দেওয়ার আগে ছোট করতে হয়। সীমা কত, তা সংশ্লিষ্ট ওয়েবসাইটের নির্দেশনায় দেখে নিন।",
+        "ইমেইল বা মেসেঞ্জারে অনেক ছবি পাঠালে ডেটা ও সময় দুটোই বাঁচে। ধীর ইন্টারনেটে এটি বিশেষ কাজে আসে।",
+        "ওয়েবসাইট বা ব্লগে ছবি দিলে ছোট ফাইল পেজ দ্রুত খুলতে সাহায্য করে। সেক্ষেত্রে প্রস্থ কমানো সবচেয়ে কার্যকর ধাপ, কারণ পর্দায় যে মাপে দেখাবে তার চেয়ে বড় ছবি রাখার দরকার নেই।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "কোয়ালিটি খুব কমিয়ে ফেলা সবচেয়ে সাধারণ ভুল। ছবিতে ঝাপসা ভাব ও ছোট ছোট চতুর্ভুজ দাগ দেখা দিলে কোয়ালিটি একটু বাড়ান, বরং প্রস্থ কমিয়ে সাইজ নামান।",
+        "PNG ছবি দিয়ে সাইজ না কমার অভিযোগ হয়। এখানে আউটপুট JPEG বা WebP, তাই ফরম্যাট বদলে যায়। স্ক্রিনশটের মতো ছবিতে লেখা থাকলে বেশি কম্প্রেস করলে লেখা অস্পষ্ট হতে পারে।",
+        "'সাশ্রয়' ঋণাত্মক এলে বুঝবেন ছবিটি আগে থেকেই ছোট বা কম্প্রেসড। তখন কোয়ালিটি আরও কমান বা প্রস্থ ছোট করুন।",
+        "আগের কম্প্রেস করা ছবি আবার কম্প্রেস করলে মান বেশি খারাপ হয়। সব সময় মূল ছবি থেকে শুরু করুন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "ফাইলের সীমা ২৫ MB এবং একবারে একটি ছবি নিয়ে কাজ হয়। পিক্সেল সংখ্যা খুব বেশি হলে ফোনের মেমোরির জন্য মাপ কিছুটা ছোট করা হয়, এ কথা টুল নিজেই জানায়।",
+        "এখানে সরাসরি 'এত KB চাই' লিখে দেওয়ার ব্যবস্থা নেই। স্লাইডার ও প্রস্থ বদলে নিজে সাইজ মিলিয়ে নিতে হয়।",
+        "আবেদনের ছবির সাইজ ও ফরম্যাটের শর্ত প্রতিষ্ঠান ভেদে আলাদা, তাই ডাউনলোডের পর ফাইলটির সাইজ ও মাপ আবার দেখে নিন। মূল ছবি আলাদা রেখে দিন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with a real example", p: [
+        "Say a photo from your phone is 4000 × 3000 pixels and a form needs a smaller file. Select the image, choose JPEG, keep quality at 70% and enter 1600 as the maximum width. The tool will show 1600 × 1200 px, because the height shrinks in the same proportion.",
+        "Now look at the Before, After and Saved boxes. If the original was 2.4 MB and the new file is smaller, the saved percentage appears too. Numbers differ from image to image, so move the slider on your own picture and see.",
+        "When the size looks right, press Download. The file is named with -compressed added to the original name, such as photo-compressed.jpg.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Many application forms, portals and apps set a size limit for pictures. Phone photos easily run to several MB, so they need shrinking before upload. Check the exact limit in that website's instructions.",
+        "If you send many pictures by email or messenger, a smaller file saves both data and time. This matters most on a slow connection.",
+        "For websites and blogs, smaller files help pages open faster. Reducing the width is the most effective step there, since there is no need to keep an image larger than the size it will appear on screen.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The most common mistake is pushing quality too low. If you see blur or small blocky patches, raise the quality a little and bring the size down by reducing the width instead.",
+        "People sometimes complain that a PNG does not shrink. The output here is JPEG or WebP, so the format changes. Screenshots with text can become fuzzy if compressed too hard.",
+        "If Saved is negative, the picture was already small or compressed. Lower the quality further or reduce the width.",
+        "Compressing an already compressed copy degrades quality further. Always start from the original picture.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The file limit is 25 MB and one image is handled at a time. If the pixel count is very high, the dimensions are reduced slightly to fit phone memory, and the tool tells you so.",
+        "There is no box to type a target such as 'make it 100 KB'. You adjust the slider and width and match the size yourself.",
+        "Size and format rules for application photos differ between organisations, so check the file's size and dimensions again after downloading. Keep your original picture separately.",
+      ] },
+    ],
+  },
+  "image-converter": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন একটি চাকরির আবেদনে শুধু JPG ছবি নেয়, কিন্তু আপনার কাছে signature.png আছে। ছবিটি সিলেক্ট করে JPG বাছুন। স্বচ্ছ ব্যাকগ্রাউন্ড থাকলে তা সাদা হয়ে যাবে, যা সই বা ছবির জন্য সাধারণত ঠিকই আছে। ডাউনলোড করলে ফাইলের নাম হবে signature.jpg।",
+        "ডাউনলোডের আগেই নতুন ফাইলের সাইজ দেখা যায়। কোয়ালিটি ৯০% থেকে কমিয়ে ৮০% করলে সাইজ আবার হিসাব হয়ে নতুন মান দেখায়। কতটা কমবে তা ছবির ধরনের ওপর নির্ভর করে, তাই নির্দিষ্ট সংখ্যা আগে থেকে বলা যায় না।",
+        "একই ছবি ভিন্ন ফরম্যাটে বদলে সাইজ মিলিয়ে দেখাও সহজ। JPG, PNG ও WebP বোতাম পরপর চাপলেই প্রতিবার নতুন সাইজ দেখাবে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "কিছু ফর্ম বা ওয়েবসাইট শুধু নির্দিষ্ট ফরম্যাট নেয়। স্ক্রিনশট সাধারণত PNG হয়, ফোনের ছবি সাধারণত JPG। দরকার মতো বদলে নিলে আপলোডের সময় ঝামেলা কমে।",
+        "ওয়েবসাইট বা ব্লগের ছবি ছোট রাখতে অনেকে WebP ব্যবহার করেন। এতে পেজ দ্রুত লোড হতে সাহায্য করে। তবে পুরোনো সফটওয়্যার বা কিছু অ্যাপ WebP খুলতে না-ও পারে, তাই কোথায় ব্যবহার করবেন তা আগে ভেবে নিন।",
+        "লোগো বা স্বচ্ছ ব্যাকগ্রাউন্ডের ছবি PNG তে রাখাই ভালো। ছবি আপলোড হয় না বলে ব্যক্তিগত ছবি বা আইডির ছবি বদলাতেও এটি নিরাপদ মনে হতে পারে, কারণ সব কাজ ব্রাউজারেই হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "অনেকে JPG কে PNG করলে মান বাড়বে ভেবে বদলান। আসলে হারিয়ে যাওয়া তথ্য ফেরে না, আর ফাইল বড় হয়ে যেতে পারে। শুধু ফরম্যাটের শর্ত মেটাতে হলে বদলান।",
+        "JPG করার পর ব্যাকগ্রাউন্ড সাদা দেখে অনেকে অবাক হন। এটি JPG এর সীমাবদ্ধতা। স্বচ্ছতা দরকার হলে PNG বা WebP বেছে নিন।",
+        "কোয়ালিটি খুব কম রাখলে ছবিতে ঝাপসা ভাব বা ছোট ছোট দাগ আসে। প্রথমে ৮০ থেকে ৯০% দিয়ে দেখুন, পরে দরকার হলে ধীরে কমান।",
+        "ছবি না খুললে সাধারণত ফরম্যাট ব্রাউজারের অচেনা। ছবিটি অন্য কোনো অ্যাপে খুলে JPG বা PNG হিসেবে সেভ করে আবার দিন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "একবারে একটি ছবি বদলানো যায়। ফাইলের সীমা ২৫ MB। পিক্সেল সংখ্যা খুব বেশি হলে মাপ কিছুটা ছোট করা হয় এবং টুল তা জানিয়ে দেয়।",
+        "ব্রাউজার কোনো ফরম্যাট সাপোর্ট না করলে অন্য ফরম্যাটে সেভ হতে পারে। ডাউনলোডের আগে সতর্কবার্তা পড়ে নিন এবং ফাইলের এক্সটেনশন দেখে নিন।",
+        "মূল ছবিটি কখনো মুছবেন না। নতুন ফাইল আলাদা নামে আসে না, কেবল এক্সটেনশন বদলায়, তাই ফোল্ডারে দুটি ফাইল গুলিয়ে ফেলবেন না। ডাউনলোড করা ফোল্ডারে ফাইলের ধরন দেখে চিনে নিন।",
+        "কোনো আবেদনের ছবির জন্য নির্দিষ্ট ফরম্যাট ও সাইজের শর্ত থাকলে তা সংশ্লিষ্ট ওয়েবসাইটের নির্দেশনা থেকে দেখে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with a real example", p: [
+        "Suppose a job application accepts only JPG, but your signature is a PNG named signature.png. Select it and choose JPG. If it has a transparent background, that will turn white, which is usually fine for a signature or photo. When you download, the file will be named signature.jpg.",
+        "You can see the new file size before downloading. If you lower the quality from 90% to 80%, the size is recalculated and shown again. How much it drops depends on the image, so no fixed number can be promised in advance.",
+        "It is also easy to compare formats for the same picture. Press JPG, PNG and WebP one after another and each time the new size is shown.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Some forms and websites accept only certain formats. Screenshots are usually PNG and phone photos usually JPG. Converting as needed saves trouble at upload time.",
+        "Many people use WebP to keep website and blog images small, which helps pages load faster. Older software and some apps may not open WebP, so think about where the file will be used.",
+        "Logos and images with transparent backgrounds are best kept as PNG. Because nothing is uploaded, converting personal photos or ID pictures here also keeps them on your own device.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "Many people convert a JPG to PNG expecting better quality. Lost detail does not come back, and the file may become larger. Convert only when a format requirement forces you to.",
+        "Some are surprised by a white background after converting to JPG. That is a limit of JPG. Choose PNG or WebP if you need transparency.",
+        "Setting the quality very low brings blur and small blotches. Start at 80 to 90% and lower it gradually only if needed.",
+        "If an image does not open, the browser usually does not recognise its format. Open it in another app, save it as JPG or PNG, and try again.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "One image is converted at a time, and the file limit is 25 MB. If the pixel count is very high, the dimensions are reduced slightly and the tool says so.",
+        "If the browser cannot produce a format, the file may be saved in another one. Read the warning before downloading and check the file extension.",
+        "Keep your original file. The new file keeps the same name with a different extension, so do not mix the two up in your downloads folder.",
+        "If an application form requires a particular format or size, check the instructions on that website.",
+      ] },
+    ],
+  },
+  "invoice-generator": {
+    bn: [
+      { h: "একটি বাস্তব উদাহরণে হিসাব", p: [
+        "ধরুন আপনি ফ্রিল্যান্স ডিজাইনার। একজন গ্রাহকের জন্য প্রথম আইটেম \"লোগো ডিজাইন\", পরিমাণ 1, দাম 5000। দ্বিতীয় আইটেম \"ব্যানার ডিজাইন\", পরিমাণ 3, দাম 800। টুল প্রথম সারির মোট দেখাবে 5,000.00 এবং দ্বিতীয় সারির মোট 2,400.00। সাবটোটাল হবে 7,400.00।",
+        "এবার ছাড়ের ঘরে 400 ও ভ্যাটের ঘরে 5 দিন। টুল আগে সাবটোটাল থেকে ছাড় বাদ দেয়, ফলে 7,000.00 থাকে। এই অঙ্কের ওপর 5% ভ্যাট হয় 350.00। সর্বমোট দেখাবে Tk 7,350.00। ইনভয়েসের নিচের ডান দিকে সাবটোটাল, ছাড়, ভ্যাট ও সর্বমোট আলাদা লাইনে আসে, তাই গ্রাহক সহজে হিসাব মিলিয়ে নিতে পারেন।",
+      ] },
+      { h: "কখন এই টুল কাজে লাগে", p: [
+        "ফ্রিল্যান্সার, ছোট দোকান, হোম বিজনেস বা সেবাদাতা প্রায়ই দ্রুত একটি বিল পাঠাতে চান। এমন সময় আলাদা সফটওয়্যার নামানো ঝামেলার। এই টুলে সাইন-আপ ছাড়াই ফর্ম পূরণ করে মিনিটখানেকে একটি পরিষ্কার ইনভয়েস তৈরি হয়।",
+        "কোটেশন বা মূল্যের প্রস্তাব পাঠাতেও একই ফর্ম ব্যবহার করা যায়। তবে পাতায় লেখা শিরোনাম \"INVOICE\" বা \"ইনভয়েস\" থাকে এবং তা বদলানো যায় না, এ কথা মাথায় রাখুন। পেমেন্টের জন্য ব্যাংক বা মোবাইল ব্যাংকিং নম্বর নোট ঘরে লিখে দিলে গ্রাহকের টাকা পাঠাতে সুবিধা হয়।",
+        "ইনভয়েসে নিজের নাম, ঠিকানা ও ফোন একবার লিখে রাখলে পরের বার আর লিখতে হয় না, কারণ এগুলো এই ব্রাউজারে মনে থাকে। ফলে একই গ্রাহকের পুনরাবৃত্ত কাজে বা নতুন গ্রাহকের জন্য শুধু গ্রাহকের ঘর ও আইটেম বদলালেই চলে। এতে সময় অনেক বাঁচে এবং বানান ভুলের সুযোগ কমে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "অনেকে পরিমাণের ঘর ফাঁকা রাখেন বা 0 দেন। টুল তখন \"প্রতিটি আইটেমে পরিমাণ ০ এর বেশি এবং দাম সঠিক দিন\" বার্তা দেখায় এবং ওই সারি হিসাবে ধরে না। পরিমাণ 1 বা তার বেশি দিন। দাম ঋণাত্মক হতে পারে না।",
+        "ছাড়ের ঘরে শতাংশ লিখলে ভুল হিসাব হয়, কারণ ঘরটি টাকার অঙ্ক নেয়। ১০% ছাড় দিতে চাইলে সাবটোটালের ১০% আগে নিজে হিসাব করে অঙ্কটি দিন। ভ্যাট ০ থেকে ১০০ এর বাইরে দিলেও ত্রুটি আসে। আরেকটি সাধারণ ভুল হলো পাতা রিফ্রেশ করা। এতে আইটেম ও গ্রাহকের তথ্য চলে যায়, তাই আগে PDF সেভ করে নিন।",
+        "ভুল ধরা সহজ করতে ইনভয়েসের প্রিভিউ আগে ভালো করে দেখুন। আইটেমের বিবরণ ছোট ও পরিষ্কার রাখুন, যেমন \"ওয়েবসাইট মেইনটেন্যান্স, মার্চ মাস\"। অস্পষ্ট বিবরণ থাকলে গ্রাহক পরে প্রশ্ন করতে পারেন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এটি একটি সাধারণ ইনভয়েস। সরকারি ভ্যাট চালান বা মূসক ফরম্যাটের জন্য এনবিআরের বর্তমান নিয়ম নিজে যাচাই করুন। কোন পণ্যে কত ভ্যাট প্রযোজ্য, তা এই টুল বলে না। আপনি যে হার জানেন সেটিই বসাতে হবে।",
+        "প্রতিটি ইনভয়েসের জন্য আলাদা নম্বর দিন এবং তৈরি PDF একটি ফোল্ডারে রেখে দিন, কারণ টুল কোনো ইনভয়েস সেভ করে না। মুদ্রা বদলালে শুধু চিহ্ন বদলায়, অঙ্ক রূপান্তর হয় না। পাঠানোর আগে নাম, তারিখ ও সর্বমোট আরেকবার মিলিয়ে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example with real numbers", p: [
+        "Say you are a freelance designer. The first item is \"Logo design\", quantity 1, price 5000. The second is \"Banner design\", quantity 3, price 800. The tool shows 5,000.00 for the first row and 2,400.00 for the second, so the subtotal is 7,400.00.",
+        "Now enter a discount of 400 and VAT of 5. The tool subtracts the discount from the subtotal first, leaving 7,000.00. VAT at 5% on that amount is 350.00, and the total reads Tk 7,350.00. The subtotal, discount, VAT and total appear on separate lines at the bottom right of the invoice, so your client can check the sums easily.",
+      ] },
+      { h: "When this tool helps", p: [
+        "Freelancers, small shops, home businesses and service providers often need to send a bill quickly. Installing separate software is a hassle for that. Here you fill in a form without signing up and get a clean invoice in about a minute.",
+        "You can use the same form for a quotation, but remember that the heading on the page says \"INVOICE\" and cannot be changed. Adding a bank or mobile banking number in the notes box makes it easier for the client to pay.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "Some people leave the quantity empty or enter 0. The tool then shows \"Each item needs a quantity above 0 and a valid price\" and skips that row in the totals. Enter 1 or more. A price cannot be negative.",
+        "Typing a percentage in the discount box gives a wrong result, because that box takes an amount. To give 10% off, work out 10% of the subtotal yourself and enter that figure. A VAT value outside 0 to 100 also triggers an error. Another common slip is refreshing the page, which clears the items and client details, so save the PDF first.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This is a general invoice. For the official VAT challan (Mushak) format, check the current NBR rules yourself. The tool does not tell you which VAT rate applies to which product. You enter the rate you know to be correct.",
+        "Give every invoice its own number and keep the PDFs in a folder, since the tool does not save invoices. Changing the currency only changes the symbol, and the amounts are not converted. Before sending, check the names, dates and total once more.",
+      ] },
+    ],
+  },
+  "meta-tag-generator": {
+    bn: [
+      { h: "একটি উদাহরণে দেখুন কী কোড পাবেন", p: [
+        "ধরুন আপনি একটি বয়স হিসাবের পেজের জন্য টাইটেল দিলেন \"বয়স ক্যালকুলেটর - জন্মতারিখ থেকে বয়স\" এবং ডেসক্রিপশনে এক লাইনের বিবরণ। Canonical হিসেবে https://example.com/age দিলেন, ছবি দিলেন না, আর index ও follow টিক রাখলেন।",
+        "টুল প্রথমে charset ও viewport ট্যাগ দেবে। তারপর title, description, robots (index, follow) এবং canonical link আসবে। এরপর og:type, og:title, og:description ও og:url আসবে। শেষে twitter:card আসবে, ছবি না থাকায় মান হবে summary, সঙ্গে twitter:title ও twitter:description। প্রতিটি ফাঁকা ঘরের ট্যাগ বাদ পড়ে, তাই অপ্রয়োজনীয় খালি ট্যাগ জমে না।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "Blogger বা নিজের তৈরি ওয়েবসাইটে অনেক সময় ট্যাগ হাতে লিখতে হয়। বানান বা উদ্ধৃতি চিহ্নের ছোট ভুলেও ট্যাগ ভেঙে যেতে পারে। এই টুল সঠিক কাঠামোয় কোড তৈরি করে দেয়, তাই নতুন ব্লগার বা ছোট ব্যবসার মালিকের জন্য সুবিধা হয়।",
+        "Facebook এ লিংক শেয়ার করলে কেমন দেখাবে, তা Open Graph ট্যাগে ঠিক করা যায়। আর সার্চ ফলাফলে টাইটেল ও বিবরণ কী দেখাবে, সে বিষয়ে আপনার প্রস্তাবও এই ট্যাগেই থাকে। যদিও Google শেষ পর্যন্ত নিজের মতো অন্য লেখা দেখাতেও পারে।",
+        "ছোট একটি অভ্যাস কাজে দেয়। কোড কপির আগে টুলের কাউন্টার দেখুন। টাইটেলের কাউন্টার ৬০ ও ডেসক্রিপশনের কাউন্টার ১৬০ এর বেশি হলে লাল হয়। এটি আনুমানিক সীমা, কারণ গুগল অক্ষর নয়, পিক্সেলের প্রস্থ দেখে ছাঁটে। তাই লেখার শেষ দিকের গুরুত্বপূর্ণ কথা কেটে যেতে পারে, এটি মাথায় রেখে মূল কথা শুরুর দিকে লিখুন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "Canonical বা ছবির লিংক https:// ছাড়া দিলে টুল লাল সতর্কবার্তা দেখায়। ডোমেইনসহ পূর্ণ ঠিকানা দিন, যেমন https://example.com/page। লিংকে ফাঁকা জায়গা বা ডোমেইনের ডট না থাকলেও এটি অবৈধ ধরা হয়।",
+        "সব পেজে একই টাইটেল ও ডেসক্রিপশন বসানো আরেকটি বড় ভুল। প্রতিটি পেজের জন্য আলাদা কোড বানান। কাউন্টার লাল হলে লেখা আনুমানিক সীমার বেশি হয়েছে, তাই ছেঁটে ছোট করুন। আর পেজ অনির্দিষ্টকালের জন্য লুকাতে না চাইলে noindex টিক খুলে রাখবেন না।",
+        "Blogger এর ক্ষেত্রে থিমে আগে থেকে কিছু মেটা ট্যাগ থাকতে পারে। নতুন কোড বসানোর আগে সেগুলো দেখে নিন এবং একই কাজের ট্যাগ একটির বেশি রাখবেন না। বড় পরিবর্তনের আগে থিমের একটি ব্যাকআপ নেওয়া নিরাপদ।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলটি শুধু HTML কোড তৈরি করে, আপনার সাইটে বসায় না এবং বসানো ঠিক হয়েছে কি না যাচাইও করে না। বসানোর পর পেজের সোর্স দেখে নিন বা Google Search Console এর মতো টুলে পরীক্ষা করুন।",
+        "ভালো টাইটেলে মূল বিষয়টি শুরুর দিকে রাখুন এবং ডেসক্রিপশনে পেজে কী পাওয়া যাবে তা সৎভাবে লিখুন। বাড়তি কীওয়ার্ড ঠাসবেন না। সাইটে আগে থেকে কোনো SEO প্লাগইন বা থিম এসব ট্যাগ দিলে একই ট্যাগ দুইবার বসাবেন না।",
+      ] },
+    ],
+    en: [
+      { h: "See what code you get in an example", p: [
+        "Say you are working on an age calculator page. You enter the title \"Age Calculator - Age from date of birth\" and a one-line description. You set the canonical to https://example.com/age, leave the image empty, and keep index and follow ticked.",
+        "The tool first outputs the charset and viewport tags. Then come the title, the description, robots (index, follow) and the canonical link. Next are og:type, og:title, og:description and og:url. Last is twitter:card, which is summary because there is no image, followed by twitter:title and twitter:description. A tag for any empty field is left out, so no blank tags pile up.",
+      ] },
+      { h: "When and why it helps", p: [
+        "On Blogger or a hand-built site you often have to write these tags by hand. A small slip with a quote mark or a spelling can break a tag. This tool builds the code in the right structure, which helps new bloggers and small business owners.",
+        "Open Graph tags control how a shared link looks on Facebook. The title and description tags also carry your suggestion for what search results should show, although Google may still choose to display different text.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "If the canonical or image link does not start with https://, the tool shows a red warning. Give the full address with the domain, such as https://example.com/page. A link with spaces or without a dot in the domain part is also treated as invalid.",
+        "Using the same title and description on every page is another big mistake. Generate separate code for each page. When a counter turns red, the text is over the approximate limit, so trim it. And do not leave noindex ticked unless you really want the page kept out of search.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool only generates HTML. It does not place it on your site and it does not check that you pasted it correctly. After pasting, view the page source or test with a tool such as Google Search Console.",
+        "A good title puts the main topic near the start, and a good description honestly says what the page offers. Do not stuff extra keywords. If your theme or an SEO plugin already outputs these tags, avoid adding the same tags twice.",
+      ] },
+    ],
+  },
+  "password-generator": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন আপনি ইমেইল অ্যাকাউন্টের জন্য নতুন পাসওয়ার্ড চান। দৈর্ঘ্য ১৬ রেখে চারটি ধরনই টিক রাখুন। তখন মোট ৮৫টি অক্ষর থেকে বাছাই হয়: ২৬টি বড় হাতের, ২৬টি ছোট হাতের, ১০টি সংখ্যা এবং ২৩টি চিহ্ন। শক্তির বার তখন প্রায় ১০২ বিট ধরে \"শক্তিশালী\" দেখায়।",
+        "দৈর্ঘ্য বাড়িয়ে ২০ করলে হিসাব প্রায় ১২৮ বিট হয় এবং বার \"খুব শক্তিশালী\" দেখায়। অর্থাৎ অক্ষর বাড়ালে শক্তি দ্রুত বাড়ে। উল্টোটাও সত্য: শুধু ৮ অক্ষরের সংখ্যা দিলে বার \"দুর্বল\" দেখায়, কারণ তখন বাছাইয়ের অক্ষর মাত্র ১০টি।",
+        "যদি পাসওয়ার্ডটি কাগজে লিখে রাখতে হয়, \"বিভ্রান্তিকর অক্ষর বাদ\" টিক দিন। তখন 0 আর O, অথবা 1, l আর I গুলিয়ে ফেলার সুযোগ থাকে না। পছন্দ না হলে \"নতুন\" চাপলেই আরেকটি আসে, আর Copy চাপলে সরাসরি ক্লিপবোর্ডে যায়।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "নিজের মনে মনে বানানো পাসওয়ার্ড সাধারণত নাম, জন্মসাল বা মোবাইল নম্বরের ধাঁচে হয়। এগুলো অন্যে সহজে অনুমান করতে পারে। র‍্যান্ডম পাসওয়ার্ডে এমন কোনো নিয়ম থাকে না।",
+        "নতুন ইমেইল, ফেসবুক, ব্যাংকিং অ্যাপ, মোবাইল ব্যাংকিং বা অফিসের সিস্টেমে অ্যাকাউন্ট খুলতে এটি কাজে লাগে। ওয়াই-ফাই রাউটারের পাসওয়ার্ড বদলানোর সময়ও একটি দীর্ঘ র‍্যান্ডম পাসওয়ার্ড নেওয়া যায়। পুরোনো ও দুর্বল পাসওয়ার্ড বদলানোর কাজেও সুবিধা।",
+        "একসাথে অনেক অ্যাকাউন্টের পাসওয়ার্ড বদলাতে হলে প্রতিবার \"নতুন\" চেপে আলাদা আলাদা পাসওয়ার্ড নেওয়া যায়। সেগুলো মনে রাখার জন্য পাসওয়ার্ড ম্যানেজার ব্যবহার করা ভালো।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো ছোট দৈর্ঘ্য রাখা। ৮ অক্ষরের পাসওয়ার্ড কাজ চালানোর মতো হলেও গুরুত্বপূর্ণ অ্যাকাউন্টে ১৬ বা তার বেশি নেওয়াই ভালো। শক্তির বার \"মোটামুটি\" বা \"দুর্বল\" দেখালে দৈর্ঘ্য বাড়ান।",
+        "দ্বিতীয় ভুল হলো একই পাসওয়ার্ড একাধিক জায়গায় ব্যবহার। একটি সাইট থেকে তথ্য ফাঁস হলে অন্য অ্যাকাউন্টেও ঢোকা সম্ভব হয়। প্রতিটির জন্য আলাদা পাসওয়ার্ড নিন।",
+        "তৃতীয় সমস্যা হলো কিছু সাইট কিছু চিহ্ন নেয় না, অথবা সর্বোচ্চ দৈর্ঘ্যের সীমা রাখে। সেক্ষেত্রে চিহ্নের টিক তুলে দিন বা দৈর্ঘ্য কমান, তবে দৈর্ঘ্য কমালে অন্য ধরন মেশানো রাখুন। কপি করার পর ফাঁকা জায়গা যেন না আসে, সেটাও দেখে নিন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলটি শুধু পাসওয়ার্ড বানায়। সেটি আপনার অ্যাকাউন্টে আপনি নিজে বসান। এটি কোথাও জমা রাখে না, তাই পেজ বন্ধ করার আগে ব্যবহারের জায়গায় বা পাসওয়ার্ড ম্যানেজারে রেখে দিন, নয়তো আর ফিরে পাবেন না।",
+        "শক্তির বার একটি আনুমানিক হিসাব। এটি শুধু দৈর্ঘ্য ও অক্ষরের ধরনের ওপর ভিত্তি করে। আপনার ডিভাইসে ম্যালওয়্যার থাকলে বা কেউ ফিশিং সাইটে আপনার পাসওয়ার্ড নিয়ে নিলে বার যা-ই দেখাক, ঝুঁকি থেকে যায়।",
+        "ভালো অভ্যাস: গুরুত্বপূর্ণ অ্যাকাউন্টে টু-ফ্যাক্টর অথেনটিকেশন চালু করুন। পাসওয়ার্ড কারও সাথে মেসেজে শেয়ার করবেন না। ক্লিপবোর্ডে কপি করা পাসওয়ার্ড ব্যবহারের পর অন্য কিছু কপি করে মুছে দিন। সন্দেহ হলে পাসওয়ার্ড বদলে ফেলুন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with a real example", p: [
+        "Say you need a new password for an email account. Keep the length at 16 and leave all four types ticked. The pool then holds 85 characters: 26 uppercase, 26 lowercase, 10 digits and 23 symbols. The strength bar works this out to about 102 bits and shows \"Strong\".",
+        "Raise the length to 20 and the estimate is about 128 bits, which shows \"Very strong\". So adding characters increases strength quickly.",
+        "If you must write the password on paper, tick \"Exclude confusing characters\". Then 0 and O, or 1, l and I, cannot be mixed up. If you do not like the result, press \"New\" for another one, and Copy sends it straight to the clipboard.",
+      ] },
+      { h: "When and why it is useful", p: [
+        "Passwords made up in your head often follow patterns such as a name, a birth year or a phone number. Others can guess these. A random password has no such pattern.",
+        "It helps when you open a new email, Facebook, banking app, mobile banking or work system account. You can also use a long random password when changing a Wi-Fi router password. It is useful for replacing old, weak passwords too.",
+        "When you have to change many passwords at once, press \"New\" each time to get a separate password for each account. A password manager is a sensible way to remember them.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is a short length. Eight characters may do for a minor account, but for important ones take 16 or more. If the bar shows \"Fair\" or \"Weak\", increase the length.",
+        "The second mistake is reusing the same password in several places. If one site leaks data, your other accounts can be opened too. Use a different one for each.",
+        "The third issue is that some sites reject certain symbols or set a maximum length. Untick symbols or lower the length, but if you shorten it, keep the other types mixed in. After copying, also check that no stray space was added.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool only generates a password. You place it in your account yourself. It keeps nothing, so before closing the page store the password where you will use it or in a password manager, or it is lost.",
+        "The strength bar is an estimate based only on length and character types. If your device has malware, or someone captures your password on a phishing site, the risk remains whatever the bar shows.",
+        "Good habits: turn on two-factor authentication for important accounts. Do not share passwords in messages. After pasting a copied password, copy something else to clear the clipboard. If you suspect a leak, change the password.",
+      ] },
+    ],
+  },
+  "qr-scanner": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও একটি উদাহরণ", p: [
+        "ধরুন একটি দোকানের পোস্টারে QR কোড আছে। \"ক্যামেরা চালু করুন\" চাপলে ব্রাউজার অনুমতি চাইবে। অনুমতি দিলে ফোনের পেছনের ক্যামেরা চালু হয়। কোডটি ফ্রেমের ভেতরে ধরলে টুল প্রায় প্রতি এক-অষ্টমাংশ সেকেন্ডে ছবি পরীক্ষা করে। কোড পড়া গেলে ফোন সামান্য কাঁপে, ক্যামেরা বন্ধ হয় এবং ফলাফল আসে।",
+        "ধরুন কোডে লেখা ছিল https://example.com/offer। টুল \"লিংক পাওয়া গেছে\" লিখে ঠিকানাটি পুরো দেখাবে এবং সতর্কবার্তা দেবে। ঠিকানা ঠিক মনে হলে \"লিংক খুলুন\" চাপুন, লিংক নতুন ট্যাবে খুলবে। কোডে যদি শুধু \"Table 5\" লেখা থাকত, টুল \"লেখা পাওয়া গেছে\" দেখাত এবং শুধু কপি করার সুযোগ দিত।",
+      ] },
+      { h: "কখন কাজে লাগে", p: [
+        "অনেক সময় QR কোড কম্পিউটারের স্ক্রিনে বা অন্য ফোনে দেখা যায়, অথচ সেটি স্ক্যান করার আলাদা অ্যাপ হাতে নেই। এই টুল ব্রাউজারেই চলে, কিছু নামাতে হয় না। কোনো পিডিএফ বা হোয়াটসঅ্যাপে পাওয়া QR এর স্ক্রিনশট থাকলে তা আপলোড করেই লেখা পড়া যায়।",
+        "পোস্টার, ফ্লায়ার, প্যাকেট বা ইভেন্টের টিকিটে ছাপা লিংক এভাবে দেখে নেওয়া যায়। খোলার আগে ঠিকানাটি পড়তে পারাটাই এখানে বড় সুবিধা।",
+        "ক্যামেরা চালু করার আগে ফোনের ক্যামেরার লেন্স পরিষ্কার আছে কি না দেখে নিন। অনেক সময় আঙুলের দাগেই ছবি ঝাপসা হয়। দিনের আলোয় বা ভালো আলোয় স্ক্যান করলে ফল তুলনামূলক ভালো আসে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "স্ক্যান না হওয়ার বড় কারণ হলো ঝাপসা ছবি, কম আলো বা ঝলকানি। কোড থেকে একটু দূরে গিয়ে ফোন স্থির ধরুন এবং ঘরের আলো বাড়ান। স্ক্রিনে দেখা কোডের ক্ষেত্রে স্ক্রিনের উজ্জ্বলতা বাড়ান।",
+        "ছবি আপলোডে কোড না পেলে স্ক্রিনশটটি ছেঁটে শুধু কোড ও তার চারপাশের সাদা অংশ রেখে আবার দিন। ক্যামেরার অনুমতি একবার \"Block\" হয়ে গেলে ব্রাউজারের সাইট সেটিংস থেকে চালু করতে হয়। অন্য অ্যাপ ক্যামেরা ধরে রাখলে সেটি বন্ধ করে আবার চেষ্টা করুন।",
+        "কোনো দোকান বা অনুষ্ঠানে লাগানো QR কোডের ওপর আলাদা স্টিকার সাঁটা আছে কি না, তা খেয়াল করুন। এমন স্টিকার প্রায়ই প্রতারণার কাজে লাগে। স্ক্যানের পর ডোমেইন চেনা মনে না হলে লিংক খুলবেন না।",
+        "ফোনের ক্যামেরা একেবারে কাছে না নিয়ে কিছুটা দূর থেকে ধরুন, কারণ খুব কাছে গেলে ক্যামেরা ফোকাস হারাতে পারে। ফ্রেমের ভেতরে কোডটি সোজা ও পুরোটা রাখুন, কাত বা অর্ধেক কাটা অবস্থায় রাখলে পড়তে সময় লাগে।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলটি সাধারণ QR কোড পড়ে, বারকোড নয়। এটি লিংক নিরাপদ কি না যাচাই করে না, শুধু দেখায় লিংকে কী লেখা আছে। তাই ডোমেইনের বানান মন দিয়ে দেখুন। ব্যাংক বা পেমেন্টের নাম করে আসা অচেনা কোডে ক্লিক বা টাকা পাঠানোর আগে অন্য পথে যাচাই করুন।",
+        "ছবির সাইজ ২৫ MB এর বেশি হলে নেওয়া হয় না, আর খুব বড় ছবি পড়ার আগে আনুমানিক ৪০ লাখ পিক্সেলে ছোট করা হয়। ফলাফল সেভ থাকে না, তাই দরকারি লেখা আগেই কপি করে রাখুন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with an example", p: [
+        "Say a shop poster has a QR code. Tap \"Start camera\" and the browser asks for permission. Once you allow it, the rear camera of the phone starts. When you hold the code inside the frame, the tool checks the picture roughly every eighth of a second. When the code is read, the phone vibrates briefly if it supports it, the camera stops and the result appears.",
+        "Say the code held https://example.com/offer. The tool shows \"Link found\", prints the full address and adds a warning. If the address looks right, tap \"Open link\" and it opens in a new tab. If the code only said \"Table 5\", the tool would show \"Text found\" and offer only the copy option.",
+      ] },
+      { h: "When it helps", p: [
+        "Sometimes a QR code is on a computer screen or another phone, and you have no scanner app at hand. This tool runs in the browser, so nothing needs installing. If you have a screenshot of a QR code from a PDF or a chat, you can upload it and read the content.",
+        "It is handy for links printed on posters, flyers, packaging or event tickets. The real advantage is that you can read the address before opening it.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The usual reasons a scan fails are a blurry picture, poor light or glare. Step back a little, hold the phone steady and add light. For a code on a screen, raise the screen brightness.",
+        "If an uploaded photo finds no code, crop the screenshot so it keeps only the code and the white margin around it, then try again. If camera permission was blocked once, turn it back on in the browser's site settings. If another app is holding the camera, close it and retry.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool reads standard QR codes, not barcodes. It does not check whether a link is safe. It only shows what the link says, so read the domain spelling carefully. For unknown codes claiming to be from a bank or a payment service, verify through another channel before clicking or sending money.",
+        "Images over 25 MB are rejected, and very large photos are scaled down to about 4 million pixels before reading. Results are not saved, so copy any important text first.",
+      ] },
+    ],
+  },
+  "rotate-pdf": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "প্রথমে PDF সিলেক্ট করুন। ফাইল খুললে বক্সে পেজ সংখ্যা ও ফাইলের আকার দেখা যায়। এরপর কত ডিগ্রি ঘোরাবেন তা বাছুন: ডানে ৯০°, বামে ৯০° বা ১৮০°। তারপর \"সব পেজ\" অথবা \"নির্দিষ্ট পেজ\" ঠিক করে PDF ঘোরান চাপুন।",
+        "উদাহরণ: আপনার ১০ পেজের স্ক্যান করা ফাইলে ৩ ও ৪ নম্বর পেজ কাত হয়ে আছে। \"নির্দিষ্ট পেজ\" বেছে ঘরে 3-4 লিখুন এবং ডানে ৯০° দিন। বাকি ৮টি পেজ অপরিবর্তিত থাকবে। ফাইলের নাম scan.pdf হলে নতুন ফাইলটি scan-rotated.pdf নামে ডাউনলোড হবে।",
+        "আরেকটি উদাহরণ: ৬ পেজের একটি PDF এর ১, ২, ৩ ও ৫ নম্বর পেজ উল্টো। ঘরে 1-3, 5 লিখে ১৮০° বাছলে ঠিক ওই চারটি পেজ ঘুরবে। ৪ ও ৬ নম্বর পেজ যেমন ছিল তেমনই থাকবে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "ফোনের ক্যামেরা বা স্ক্যানার অ্যাপ দিয়ে কাগজ স্ক্যান করলে অনেক সময় পেজ কাত বা উল্টো হয়ে যায়। জমা দেওয়ার আগে সেটি সোজা না করলে পড়তে অসুবিধা হয়। সরকারি বা অফিসের আবেদন, ভর্তির কাগজ, ইনভয়েস বা বইয়ের স্ক্যান, সবখানেই এই সমস্যা দেখা যায়।",
+        "কখনো একটি ফাইলের কিছু পেজ আড়াআড়ি (ল্যান্ডস্কেপ) আর বাকি পেজ খাড়া থাকে। পুরো ফাইল না ঘুরিয়ে শুধু সেই কটি পেজ বাছলে সময় বাঁচে। অনলাইনে ফাইল জমা দেওয়ার আগে এভাবে ঠিক করে নিলে গ্রহণকারী সহজে পড়তে পারেন।",
+        "ফাইলটি আপনার ডিভাইসেই প্রসেস হয়, তাই ব্যক্তিগত বা গোপনীয় কাগজ ঘোরাতেও আলাদা আপলোডের চিন্তা থাকে না।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো ভুল দিকে ঘোরানো। পেজ ডানে কাত থাকলে বামে ৯০° দিতে হয়, আর বামে কাত থাকলে ডানে ৯০°। নিশ্চিত না হলে একটি দিক চেষ্টা করে ফল দেখুন, ভুল হলে আবার ঘোরান। নতুন কোণ আগের সঙ্গে যোগ হয়, তাই দুই চেষ্টায় ঠিক হয়ে যায়।",
+        "দ্বিতীয় ভুল হলো পেজ নম্বর ভুল ফরম্যাটে লেখা। 5-3 লিখলে টুল জানায় শুরু শেষের চেয়ে বড় হতে পারে না। মোট পেজের বেশি নম্বর দিলে বার্তা আসে যে নম্বর ১ থেকে মোট পেজের মধ্যে হতে হবে। শুধু কমা আর হাইফেন ব্যবহার করুন।",
+        "তৃতীয় সমস্যা হলো ফাইল খুলতে না পারা। পাসওয়ার্ড দেওয়া বা নষ্ট PDF এই টুলে খোলে না। পাসওয়ার্ড দেওয়া ফাইল হলে আগে অন্য উপায়ে পাসওয়ার্ড সরিয়ে আনুন। ৫০ MB এর বড় ফাইলও নেওয়া হয় না।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এই টুল শুধু পেজ ঘোরায়। পেজের লেখা বদলানো, কাটা বা আকার ছোট করা এর কাজ নয়। এক দফায় একটি কোণই প্রয়োগ হয়, তাই আলাদা পেজের জন্য আলাদা কোণ লাগলে কয়েকবার চালাতে হবে।",
+        "ঘোরানোর পর ডাউনলোড করা ফাইল খুলে একবার সব পেজ দেখে নিন। মূল ফাইল আলাদা থাকে, তাই কোনো সমস্যা হলে আবার চেষ্টা করা যায়। ফাইলের নাম বুঝে রাখলে মূল ও নতুন ফাইল গুলিয়ে যায় না।",
+        "গুরুত্বপূর্ণ কাগজ জমা দেওয়ার আগে নতুন ফাইলটি আপনার ডিভাইসের PDF ভিউয়ারে খুলে দেখুন। কিছু পুরনো ভিউয়ারে ঘোরানো পেজ ভিন্নভাবে দেখাতে পারে।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with real examples", p: [
+        "First select a PDF. Once it opens, the box shows the page count and file size. Then choose how far to rotate: right 90°, left 90° or 180°. Decide between All pages and Chosen pages, then press Rotate PDF.",
+        "Example: your 10-page scanned file has pages 3 and 4 lying sideways. Choose Chosen pages, type 3-4 and pick right 90°. The other eight pages remain unchanged. If the file was called scan.pdf, the new file downloads as scan-rotated.pdf.",
+        "Another example: in a 6-page PDF, pages 1, 2, 3 and 5 are upside down. Type 1-3, 5 and choose 180°, and exactly those four pages turn. Pages 4 and 6 stay as they were.",
+      ] },
+      { h: "When and why it helps", p: [
+        "When you scan paper with a phone camera or a scanner app, pages often come out sideways or upside down. Submitting the file without fixing it makes it hard to read. This happens with office or government applications, admission papers, invoices and scanned books.",
+        "Sometimes a file has a few landscape pages while the rest are upright. Selecting only those pages saves time compared with rotating the whole file. Fixing the orientation before you upload the file somewhere makes it easier for the receiver to read.",
+        "The file is processed on your own device, so you do not need to worry about uploading personal or private papers.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is rotating the wrong way. If a page leans to the right, it needs left 90°, and if it leans left it needs right 90°. If you are unsure, try one direction and check. Because the new angle is added to the old one, two attempts will fix it.",
+        "The second mistake is writing the page numbers in the wrong format. Typing 5-3 makes the tool say the start cannot be after the end. A number above the page count triggers a message that numbers must be between 1 and the total. Use only commas and hyphens.",
+        "The third problem is a file that will not open. Password protected or damaged PDFs do not open in this tool. For a protected file, remove the password by another method first. Files larger than 50 MB are also not accepted.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool only rotates pages. It does not edit text, crop pages or reduce file size. One run applies one angle, so if different pages need different angles you will need to run it more than once.",
+        "After rotating, open the downloaded file and look through every page. The original stays separate, so you can try again if something is wrong. Keeping the file names clear stops you mixing up the original and the new copy.",
+        "Before submitting an important document, open the new file in your device's PDF viewer. Some older viewers may display rotated pages differently.",
+      ] },
+    ],
+  },
+  "unit-converter": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও বাস্তব উদাহরণ", p: [
+        "ধরুন একটি জমির মাপ ১ একর, আপনি জানতে চান তা কত শতাংশ। উপরে \"ক্ষেত্রফল\" বাছুন, মানে ১ লিখুন, \"থেকে\" তে একর ও \"এ\" তে শতাংশ দিন। ফলাফল আসবে ১ একর = ১০০ শতাংশ।",
+        "আরেকটি উদাহরণ: ১০০ কিমি/ঘণ্টা গতি মাইল/ঘণ্টায় কত। \"গতি\" ক্যাটাগরিতে কিমি/ঘণ্টা থেকে মাইল/ঘণ্টা বাছুন। ফল প্রায় ৬২.১৩৭১১৯২ মাইল/ঘণ্টা।",
+        "তাপমাত্রায় ১০০ সেলসিয়াস দিলে ফারেনহাইটে ২১২ এবং কেলভিনে ৩৭৩.১৫ আসে। ডেটা সাইজে ২.৫ GB কে MB তে বদলালে ২৫৬০ MB আসে, কারণ এখানে ১ GB = ১০২৪ MB। ক্যাটাগরি বদলালে \"থেকে\" ও \"এ\" নিজে থেকে ওই ক্যাটাগরির প্রথম দুটি একক ধরে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "বাংলাদেশে জমির মাপে শতাংশ, একর ও বর্গফুট একসাথে আসে। বাড়ি বা প্লট কেনার আগে বিজ্ঞাপনের বর্গফুট আর দলিলের শতাংশ মিলিয়ে দেখতে এই টুল কাজে লাগে।",
+        "বিদেশে পড়াশোনা বা কাজের সময় ইঞ্চি, ফুট, পাউন্ড ও ফারেনহাইটের সাথে মোকাবিলা করতে হয়। রান্নার রেসিপিতে কাপ ও আউন্স থাকলে মিলিলিটার বা গ্রামে বদলে নেওয়া যায়। ভ্রমণে মাইল ও কিলোমিটারের হিসাবও লাগে।",
+        "মোবাইল বা কম্পিউটারে ফাইলের সাইজ আর ইন্টারনেট প্যাকেজের GB, MB বোঝাতেও এটি সহায়ক। শিক্ষার্থীরা পড়ার সময় একক বদলের হিসাব দ্রুত মিলিয়ে নিতে পারে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "একটি সাধারণ ভুল হলো ভুল ক্যাটাগরিতে থাকা। ক্যাটাগরি বদলালে একক তালিকাও বদলে যায়, তাই মিটার বা কেজি খুঁজে না পেলে উপরের বাটন দেখুন। আরেকটি ভুল হলো \"থেকে\" ও \"এ\" উল্টো বাছাই। ফল অদ্ভুত লাগলে অদলবদল বাটন চেপে দেখুন।",
+        "ডেটা সাইজে ১ KB = ১০২৪ বাইট ধরা হয়। স্টোরেজ ডিভাইসের গায়ের মাপ কিছু ক্ষেত্রে ১০০০ ভিত্তিক হয়, তাই ৫০০ GB লেখা ডিস্কে কম্পিউটার কিছুটা কম সাইজ দেখাতে পারে। এটি ভুল নয়, মাপের নিয়মের পার্থক্য।",
+        "তাপমাত্রায় −২৭৩.১৫°C এর নিচের মান দিলে ভুলের বার্তা আসে। মান ঠিক আছে কিনা ও এককটি সঠিক কিনা দেখুন, বিশেষ করে কেলভিন আর সেলসিয়াস গুলিয়ে ফেললে।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "টুলে সাতটি ধরনের নির্দিষ্ট কিছু একক আছে। কাঠা, বিঘা, মণ, সের, ভরি বা রতির মতো স্থানীয় একক এখানে নেই। গ্যালন, কাপ ও ফ্লুইড আউন্স US মাপের, UK মাপের নয়। এক ধরন থেকে অন্য ধরনে বদলানো যায় না।",
+        "ফলাফল বেশি দশমিক সংখ্যা পর্যন্ত দেখায়। প্রয়োজনমতো নিজে গোল করে নিন। জমি কেনাবেচা, ওষুধের ডোজ বা প্রকৌশলের মতো গুরুত্বপূর্ণ কাজে শুধু একটি টুলের ফলের ওপর নির্ভর না করে দলিল, বিধি বা সংশ্লিষ্ট কর্তৃপক্ষের মাপ মিলিয়ে নিন।",
+        "ভালো অভ্যাস হলো ফলাফল বক্সের পূর্ণ লাইনটি পড়ে এককগুলো আবার দেখে নেওয়া। যে মান লিখেছেন সেটিও ফলের লাইনে দেখা যায়, তাই লেখার ভুল সহজে ধরা পড়ে।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step, with real examples", p: [
+        "Say a plot is 1 acre and you want it in shatak. Choose \"Area\", type 1, then pick acre in \"From\" and shatak in \"To\". The result reads 1 Acre = 100 Shatak.",
+        "Another example: how much is 100 km/h in miles per hour? In the \"Speed\" category pick km/hour to miles/hour. The result is about 62.1371192 miles/hour.",
+        "In temperature, entering 100 Celsius gives 212 in Fahrenheit and 373.15 in Kelvin. In data size, converting 2.5 GB to MB gives 2560 MB, because 1 GB is 1024 MB here. When you switch category, the From and To lists reset to the first two units of that category.",
+      ] },
+      { h: "When and why it is useful", p: [
+        "In Bangladesh, land measures often mix shatak, acre and square feet. Before buying a flat or plot, this tool helps you compare the square feet in an advertisement with the shatak in the deed.",
+        "If you study or work abroad you meet inches, feet, pounds and Fahrenheit. When a recipe uses cups and ounces, you can convert to millilitres or grams. Trips need miles and kilometres too.",
+        "It also helps with file sizes and internet package amounts in GB and MB. Students can use it to check unit-change homework quickly.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "One common mistake is being in the wrong category. The unit lists change with the category, so if you cannot find metre or kilogram, look at the buttons at the top. Another is choosing From and To the wrong way round. If the result looks odd, press the swap button.",
+        "In data size, 1 KB is treated as 1024 bytes. Some storage devices are labelled on a base of 1000, so a disk marked 500 GB may show a smaller size on a computer. That is not an error, only a difference in measuring convention.",
+        "In temperature, a value below −273.15°C gives an error message. Check the value and the unit, especially if you have mixed up Kelvin and Celsius.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool has a fixed set of units across seven types. Local units such as katha, bigha, maund, ser, bhori or roti are not included. Gallon, cup and fluid ounce are US measures, not UK ones. You cannot convert from one type to another.",
+        "Results can show many decimal places, so round them yourself as needed. For land dealings, medicine doses or engineering work, do not rely on one tool alone. Check against the deed, the rules or the relevant authority's measure.",
+        "A good habit is to read the full result line and re-check the units. The value you typed also appears in that line, so a typing slip is easy to catch.",
+      ] },
+    ],
+  },
+};
+
+for (const [slug, add] of Object.entries(EXTRA2)) {
+  const base = TOOL_ARTICLES[slug];
+  if (base) {
+    base.bn.push(...add.bn);
+    base.en.push(...add.en);
+  } else {
+    TOOL_ARTICLES[slug] = add;
+  }
+}

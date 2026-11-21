@@ -75,8 +75,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি EMI ক্যালকুলেটর। হোম, পার্সোনাল ও কার লোনের মাসিক কিস্তি, মোট সুদ, flat ও reducing হিসাব, প্রসেসিং ফি এবং কিস্তির তালিকা। Loan EMI calculator BD।",
   },
   "bangla-calendar": {
-    title: "Bangla Calendar - আজকের বাংলা তারিখ",
-    description: "আজকের বাংলা তারিখ দেখুন। ইংরেজি-বাংলা ক্যালেন্ডার ও তারিখ রূপান্তর, বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী। ফ্রি Bangla calendar টুল।",
+    title: "বাংলা ক্যালেন্ডার ও Bangla Date কনভার্টার",
+    description: "ফ্রি Bangla calendar: আজকের বাংলা তারিখ ও ঋতু দেখুন, ইংরেজি থেকে বাংলা এবং বাংলা থেকে ইংরেজি তারিখ বদলান। বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী।",
   },
   "countdown-timer": {
     title: "Countdown - কাউন্টডাউন টাইমার অনলাইন",
@@ -87,8 +87,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি অনলাইন স্টপওয়াচ (stop watch) ল্যাপসহ এবং শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। ফুলস্ক্রিন ও শর্টকাট আছে। Online timer stopwatch।",
   },
   "image-compressor": {
-    title: "Image Compressor - ছবির সাইজ কমান KB",
-    description: "ছবির সাইজ KB/MB-এ কমান, কোয়ালিটি নিজে ঠিক করুন। ছবি আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি image compressor।",
+    title: "Image Compressor - ছবির সাইজ KB তে কমান",
+    description: "ফ্রি image compressor: JPEG বা WebP বেছে কোয়ালিটি ও প্রস্থ ঠিক করে ছবির সাইজ KB/MB তে কমান। আগে-পরের সাইজ দেখুন। ছবি আপলোড হয় না।",
   },
   "compress-pdf": {
     title: "Compress PDF - পিডিএফ সাইজ কমান",
@@ -119,24 +119,24 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "বিএমআই ক্যালকুলেটর: কেজি বা পাউন্ড এবং ফুট-ইঞ্চি বা সেমিতে BMI বের করুন। WHO ও দক্ষিণ এশীয় সীমা, স্বাভাবিক ওজন ও BMI চার্ট সহ। ফ্রি BMI calculator।",
   },
   "password-generator": {
-    title: "Password Generator - শক্তিশালী পাসওয়ার্ড বানান",
-    description: "নিরাপদ ও শক্তিশালী র‍্যান্ডম পাসওয়ার্ড তৈরি করুন। আপনার ব্রাউজারেই তৈরি হয়, কোথাও সেভ হয় না। ফ্রি password generator।",
+    title: "পাসওয়ার্ড জেনারেটর | Password Generator",
+    description: "ফ্রি Password Generator: ৮ থেকে ৬৪ অক্ষরের র‍্যান্ডম পাসওয়ার্ড বানান, ধরন বেছে নিন ও কপি করুন। ব্রাউজারেই তৈরি হয়, সেভ হয় না।",
   },
   "case-converter": {
     title: "Case Converter - UPPERCASE lowercase Title Case",
     description: "লেখাকে UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case ও kebab-case এ বদলান। ফ্রি অনলাইন case converter।",
   },
   "unit-converter": {
-    title: "Unit Converter - একক রূপান্তর",
-    description: "দৈর্ঘ্য, ওজন, তাপমাত্রা, ক্ষেত্রফল, আয়তন, গতি ও ডেটা সাইজ এক জায়গায় দ্রুত রূপান্তর করুন। ফ্রি, সাইনআপ ছাড়া। Free unit converter।",
+    title: "একক রূপান্তর | Unit Converter",
+    description: "ফ্রি Unit Converter: দৈর্ঘ্য, ওজন, তাপমাত্রা, ক্ষেত্রফল (শতাংশ, একর), আয়তন, গতি ও ডেটা সাইজ এক জায়গায় রূপান্তর করুন, সাইনআপ ছাড়াই।",
   },
   "bill-calculator": {
-    title: "Bill Split Calculator - বিল ভাগ করুন",
-    description: "বন্ধুদের সাথে বিল ভাগ করুন। VAT, সার্ভিস চার্জ ও টিপসহ জনপ্রতি কত পড়বে হিসাব করুন। ফ্রি bill split calculator।",
+    title: "বিল ভাগ ক্যালকুলেটর - Bill Split Calculator",
+    description: "ফ্রি bill split calculator। মোট বিল, কতজন, VAT বা সার্ভিস চার্জ ও টিপ দিলে জনপ্রতি কত টাকা পড়বে তা সঙ্গে সঙ্গে হিসাব করে দেখায়।",
   },
   "date-difference-calculator": {
-    title: "Date Difference Calculator - দুই তারিখের ব্যবধান",
-    description: "দুই তারিখের মধ্যে বছর, মাস, দিন ও মোট দিনের পার্থক্য বের করুন, অথবা কোনো তারিখে দিন যোগ-বিয়োগ করুন। ফ্রি date calculator।",
+    title: "তারিখের পার্থক্য | Date Difference Calculator",
+    description: "ফ্রি Date Difference Calculator: দুই তারিখের মধ্যে বছর, মাস, দিন ও মোট দিন বের করুন, অথবা কোনো তারিখে দিন-মাস-বছর যোগ বা বিয়োগ করুন।",
   },
   "scientific-calculator": {
     title: "Scientific Calculator Online - Casio fx-991 স্টাইল",
@@ -147,12 +147,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ছবির প্রস্থ-উচ্চতা px এ বদলান। পাসপোর্ট সাইজসহ প্রিসেট আছে। ছবি আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি image resizer।",
   },
   "image-converter": {
-    title: "Image Converter - JPG PNG WebP কনভার্টার",
-    description: "ছবি JPG, PNG ও WebP এর মধ্যে বদলান। ছবি আপলোড হয় না, সব কাজ ব্রাউজারেই হয়। ফ্রি, সাইনআপ ছাড়া। Free image format converter।",
+    title: "Image Converter - JPG PNG WebP বদলান",
+    description: "ফ্রি image converter: ছবি JPG, PNG ও WebP ফরম্যাটে বদলান, কোয়ালিটি ঠিক করুন ও ডাউনলোড করুন। ছবি আপলোড হয় না, সব কাজ ব্রাউজারে হয়।",
   },
   "character-counter": {
-    title: "Character Counter - অক্ষর গণনা",
-    description: "স্পেসসহ ও স্পেস ছাড়া অক্ষর গুনুন। SMS, X, SEO Title ও Description এর লিমিট চেক করুন। ফ্রি, সাইনআপ ছাড়া। Free character counter।",
+    title: "অক্ষর গণনা - Character Counter",
+    description: "ফ্রি online character counter। লেখা পেস্ট করলে স্পেসসহ, স্পেস ছাড়া অক্ষর ও লাইন গোনে এবং SMS, X, SEO Title, Bio এর লিমিট মিলিয়ে দেখায়।",
   },
   "color-picker": {
     title: "Color Picker - HEX RGB HSL কালার কোড",
@@ -163,8 +163,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ডিজাইন বা ওয়েবসাইটের জন্য প্যারাগ্রাফ, বাক্য বা শব্দ হিসেবে Lorem Ipsum ডামি টেক্সট বানান। ফ্রি lorem ipsum generator।",
   },
   "meta-tag-generator": {
-    title: "Meta Tag Generator - SEO মেটা ট্যাগ",
-    description: "টাইটেল, ডেসক্রিপশন, Open Graph ও Twitter ট্যাগসহ SEO meta tag বানান। Blogger ও যেকোনো ওয়েবসাইটের জন্য, কপি করে সরাসরি বসান। ফ্রি।",
+    title: "Meta Tag Generator - ফ্রি SEO মেটা ট্যাগ বানান",
+    description: "টাইটেল, ডেসক্রিপশন, canonical, Open Graph ও Twitter ট্যাগসহ ফ্রি meta tag generator। HTML কপি করে পেজের head এ বসান, Blogger এও চলে।",
   },
   "keyword-density-checker": {
     title: "Keyword Density Checker - কীওয়ার্ড ঘনত্ব যাচাই",
@@ -187,20 +187,20 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "খরচের হিসাব ও আয়-ব্যয় রাখুন, মাস অনুযায়ী দেখুন ও ক্যাটাগরি অনুযায়ী খরচের ভাগ জানুন। CSV ডাউনলোড করা যায়। ফ্রি expense tracker।",
   },
   "invoice-generator": {
-    title: "Invoice Generator - ফ্রি ইনভয়েস বানান",
-    description: "আইটেম, ভ্যাট ও ছাড়সহ ফ্রি ইনভয়েস বানান এবং প্রিন্ট করুন বা PDF হিসেবে সেভ করুন। সাইন-আপ লাগে না। Free invoice generator।",
+    title: "Invoice Generator - ফ্রি ইনভয়েস বানান PDF",
+    description: "আইটেম, ভ্যাট ও ছাড়সহ ফ্রি ইনভয়েস বানান। টুলটি সাবটোটাল ও সর্বমোট নিজে হিসাব করে, তারপর প্রিন্ট বা PDF সেভ করা যায়। Free invoice generator।",
   },
   "qr-scanner": {
-    title: "QR Scanner - কিউআর কোড স্ক্যান",
-    description: "ফোনের ক্যামেরা দিয়ে QR কোড স্ক্যান করুন, অথবা QR এর ছবি আপলোড করুন। কোনো ছবি সার্ভারে যায় না। ফ্রি QR scanner।",
+    title: "QR Scanner - ফ্রি কিউআর কোড স্ক্যান অনলাইন",
+    description: "ফোনের ক্যামেরা দিয়ে QR কোড স্ক্যান করুন বা ছবি আপলোড করুন। লিংক খোলার আগে ঠিকানা দেখা যায়, ছবি সার্ভারে যায় না। ফ্রি QR scanner।",
   },
   "text-to-speech": {
     title: "বাংলা Text to Speech - লেখা থেকে ভয়েস",
     description: "ফ্রি বাংলা টেক্সট টু স্পিচ। লেখা পেস্ট বা .txt ফাইল দিয়ে বাংলা, ইংরেজি ও অন্য ভাষায় পড়ে শোনান। গতি ও সুর ঠিক করুন, সাইন-আপ লাগে না।",
   },
   "rotate-pdf": {
-    title: "Rotate PDF - পিডিএফ ঘুরান",
-    description: "উল্টো বা কাত হওয়া PDF পেজ ডানে, বামে বা ১৮০° ঘুরিয়ে সোজা করুন। সব পেজ বা নির্দিষ্ট পেজ বাছুন। ফাইল আপলোড হয় না। ফ্রি rotate PDF online।",
+    title: "PDF ঘুরান - Rotate PDF Online",
+    description: "ফ্রি rotate PDF টুল। কাত বা উল্টো PDF পেজ ডানে, বামে বা ১৮০° ঘুরিয়ে সোজা করুন, সব পেজ বা নির্দিষ্ট পেজ। ফাইল আপলোড হয় না।",
   },
   "split-pdf": {
     title: "Split PDF - পিডিএফ ভাগ করুন",
