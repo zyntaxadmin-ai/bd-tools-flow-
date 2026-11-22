@@ -3824,3 +3824,535 @@ for (const [slug, add] of Object.entries(EXTRA_B2)) {
     TOOL_ARTICLES[slug] = add;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Extra sections (added 22 Nov 2026): worked examples, use cases and tips for the
+// tools that had the shortest pages. Appended to the entries above.
+// ---------------------------------------------------------------------------
+const EXTRA_B3: Record<string, ToolArticle> = {
+  "color-picker": {
+    bn: [
+      { h: "একটি রং থেকে তিন ধরনের কোড পাওয়ার উদাহরণ", p: [
+        "ধরুন আপনার ওয়েবসাইটের বাটনের জন্য #4F46E5 রংটি পছন্দ হয়েছে। HEX ঘরে এই কোড লিখুন। উপরের বড় বক্সে রংটি দেখা যাবে, আর নিচে তিনটি সারি আসবে। HEX সারিতে #4F46E5, RGB সারিতে rgb(79, 70, 229) এবং HSL সারিতে hsl(243, 75%, 59%) দেখাবে।",
+        "এখন যেখানে যে ফরম্যাট লাগে সেখানে সেটি কপি করুন। CSS এ background-color এর পাশে HEX বসানো যায়। কোনো ডিজাইন সফটওয়্যার RGB চাইলে দ্বিতীয় সারি কপি করুন। আর রংটির একটু হালকা সংস্করণ চাইলে HSL এর শেষ সংখ্যা, মানে lightness, বাড়িয়ে নিজে হিসাব করে নিতে পারেন।",
+        "রং বাছুন বক্সে ট্যাপ করলে ব্রাউজারের নিজস্ব রং বাছাই প্যানেল খোলে। সেখান থেকে বাছলে HEX ঘর নিজে থেকে আপডেট হয়। উল্টোটাও হয়: HEX ঘরে সঠিক কোড লিখলে বাছাই বক্সের রং বদলে যায়।",
+      ] },
+      { h: "কখন এই টুল কাজে লাগে", p: [
+        "ওয়েব ডেভেলপার স্টাইলশিটে রং বসানোর সময় প্রায়ই এক ফরম্যাট থেকে অন্য ফরম্যাটে যেতে চান। ডিজাইনারের পাঠানো HEX কোড থেকে RGB বা HSL বের করতে এই টুল সুবিধাজনক। ফেসবুক পেজের ব্যানার, পোস্টার বা স্লাইডের রং মেলাতে চাইলেও একই কোড কপি করে বিভিন্ন জায়গায় ব্যবহার করা যায়।",
+        "ব্র্যান্ডের রং ঠিক রাখতেও কোড কাজে লাগে। লোগোর রংটি একবার কোড হিসেবে লিখে রাখলে পরে যে-ই ডিজাইন করুক, একই রং ব্যবহার করতে পারবে। শুধু চোখে দেখে মিলিয়ে নেওয়ার চেয়ে কোডে মেলানো নির্ভরযোগ্য, কারণ ভিন্ন স্ক্রিনে রং কিছুটা আলাদা দেখায়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বেশি ভুল হয় HEX কোড লেখার সময়। কোডে শুধু ০ থেকে ৯ এবং A থেকে F অক্ষর চলে। G বা Z থাকলে কোড সঠিক হবে না, লাল বার্তা আসবে। অঙ্ক সংখ্যাও ঠিক ৩ বা ৬টি হতে হবে। পাঁচ বা সাতটি অঙ্ক দিলে টুল রং নেবে না।",
+        "দ্বিতীয় ভুল হলো O অক্ষর আর ০ সংখ্যা গুলিয়ে ফেলা। কোড কোথাও থেকে হাতে লিখে নিলে এই ঝামেলা হয়। সম্ভব হলে কপি করে পেস্ট করুন।",
+        "তৃতীয় ভুল হলো ধরে নেওয়া যে ৮ অঙ্কের কোডও চলবে। স্বচ্ছতাসহ ৮ অঙ্কের HEX এই টুল পড়ে না। এমন কোড পেলে প্রথম ৬ অঙ্ক আলাদা করে দিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "এই টুল রং ঠিক করে কোড দেয়, কিন্তু কোন দুই রং একসাথে মানাবে বা লেখা পড়া যাবে কি না তা যাচাই করে না। গাঢ় পটভূমিতে হালকা লেখা বা হালকা পটভূমিতে গাঢ় লেখা রাখলে পড়তে সুবিধা হয়। চূড়ান্ত করার আগে আসল পেজে রংটি একবার দেখে নিন।",
+        "যেসব রং বারবার ব্যবহার করবেন, সেগুলোর HEX কোড একটি নোটে লিখে রাখুন। এই টুলে বাছাই করা রং সংরক্ষণের কোনো ব্যবস্থা নেই, তাই পেজ বন্ধ করলে আবার কোড লিখতে হবে।",
+        "ফোন, ল্যাপটপ ও প্রিন্টারে একই কোড কিছুটা আলাদা দেখাতে পারে। ছাপার কাজ করলে প্রেসের সঙ্গে কথা বলে নিন, কারণ ছাপার জন্য আলাদা রং পদ্ধতি লাগতে পারে।",
+      ] },
+    ],
+    en: [
+      { h: "Worked example: one colour, three codes", p: [
+        "Say you like #4F46E5 for a button on your website. Type that code in the HEX field. The large box above shows the colour, and three rows appear below. The HEX row reads #4F46E5, the RGB row reads rgb(79, 70, 229) and the HSL row reads hsl(243, 75%, 59%).",
+        "Now copy whichever format you need. In CSS you can paste the HEX next to background-color. If a design program asks for RGB, copy the second row. If you want a lighter version of the same colour, raise the last number of the HSL value, the lightness, and work out the new value yourself.",
+        "Tapping the Pick a colour box opens the browser's own colour panel. When you choose there, the HEX field updates by itself. It works the other way too: type a valid code in the HEX field and the picker colour changes.",
+      ] },
+      { h: "When this tool helps", p: [
+        "Web developers often need to move a colour from one format to another while writing a stylesheet. If a designer sends you a HEX code, this tool gives you the RGB and HSL values straight away. The same code can be reused in a Facebook page banner, a poster or a slide so the colours match.",
+        "Codes also help keep a brand colour consistent. Once the logo colour is written down as a code, anyone designing later can use exactly the same shade. Matching by code is more dependable than matching by eye, because screens display colours a little differently.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "Most mistakes happen when typing the HEX code. Only digits 0 to 9 and letters A to F are allowed. A G or a Z makes the code invalid and a red message appears. The code must also have exactly 3 or 6 digits. Five or seven digits will not be accepted.",
+        "Another mistake is mixing up the letter O and the number 0, which happens when you copy a code by hand from somewhere. Copy and paste when you can.",
+        "A third mistake is assuming 8-digit codes will work. HEX codes with transparency are not read by this tool. If you receive one, enter only the first six digits.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool sets a colour and gives you its codes. It does not check whether two colours look good together or whether text will be readable. Light text on a dark background, or dark text on a light background, is easier to read. Look at the colour on the real page before you finalise it.",
+        "Write down the HEX codes of colours you use often in a note. The tool has no way to save your picks, so when you close the page you will need to type the code again.",
+        "The same code can look slightly different on a phone, a laptop and a printer. For print work, talk to the press first, since printing may need a different colour method.",
+      ] },
+    ],
+  },
+  "expense-tracker": {
+    bn: [
+      { h: "এক মাসের হিসাবের উদাহরণ", p: [
+        "ধরুন মাসের শুরুতে আপনার বেতন ৩০,০০০ টাকা এসেছে। আয় ট্যাব বেছে পরিমাণ ৩০০০০, ক্যাটাগরি বেতন দিয়ে যোগ করুন। এরপর খরচ ট্যাবে গিয়ে বাসা ভাড়া ৮০০০, খাবার ৪৫০০ এবং যাতায়াত ১৫০০ টাকা আলাদা এন্ট্রিতে যোগ করুন।",
+        "এখন ওপরের তিনটি বক্সে আয় ৩০,০০০ টাকা, খরচ ১৪,০০০ টাকা এবং ব্যালেন্স ১৬,০০০ টাকা দেখাবে। খরচের ভাগ অংশে বাসা ভাড়া ৫৭.১%, খাবার ৩২.১% এবং যাতায়াত ১০.৭% দেখা যাবে। বার দেখেই বোঝা যায় কোন খাতে সবচেয়ে বেশি টাকা যাচ্ছে।",
+        "দিনের পর দিন এন্ট্রি জমলে মাসের ড্রপডাউন থেকে নির্দিষ্ট মাস বাছুন। তখন শুধু সেই মাসের আয়, খরচ ও ব্যালেন্স দেখা যাবে। সব সময় বেছে নিলে সব মাসের যোগফল আসবে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "মাস শেষে টাকা কোথায় গেল বুঝতে না পারা অনেকেরই হয়। ছোট ছোট খরচ, যেমন চা, রিকশা ভাড়া বা মোবাইলে রিচার্জ, আলাদা করে মনে থাকে না। লিখে রাখলে মাস শেষে যোগফল দেখে চমকে যাওয়ার সম্ভাবনা কমে।",
+        "ছাত্রছাত্রী হাতখরচের হিসাব রাখতে পারে, চাকরিজীবী সংসারের মাসিক বাজেট দেখতে পারে, আর ছোট ব্যবসায়ী আয়-ব্যয়ের মোটামুটি চিত্র পেতে পারে। ব্যবসার ক্ষেত্রে এটি পূর্ণাঙ্গ হিসাবরক্ষণের বিকল্প নয়, শুধু একটি সহজ খাতা।",
+        "CSV ডাউনলোড করে Excel বা Google Sheets এ খুললে নিজের মতো ফিল্টার বা যোগ করা যায়। কোনো কাজে বা সংসারের আলোচনায় হিসাব দেখাতে হলে এটি সুবিধাজনক।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বড় ভুল হলো কয়েকদিনের খরচ একসঙ্গে লেখা। তখন অনেক কিছু মনে থাকে না। প্রতিদিন রাতে এক মিনিট সময় নিয়ে লিখে ফেলুন।",
+        "দ্বিতীয় ভুল হলো তারিখ ঠিক না করা। এই টুল আজকের তারিখ আগে থেকেই বসিয়ে দেয়। কিন্তু আগের দিনের খরচ লিখলে তারিখ বদলে নিতে হবে, নইলে সেটি ভুল মাসে গিয়ে মাসের হিসাব বিগড়ে দেবে।",
+        "তৃতীয় ভুল হলো আয় ও খরচ উল্টো ট্যাবে লেখা। বেতন খরচ ট্যাবে লিখলে ব্যালেন্স কমে যাবে। ভুল হলে সারির বিন আইকনে ট্যাপ করে মুছে সঠিক ট্যাবে আবার লিখুন, কারণ এন্ট্রি এডিট করা যায় না।",
+        "চতুর্থ ভুল হলো সব খরচ অন্যান্য ক্যাটাগরিতে ফেলা। তাহলে খরচের ভাগ দেখে কিছুই বোঝা যায় না। কাছাকাছি ক্যাটাগরি বেছে নিন এবং নোটে একটু বিবরণ লিখুন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "হিসাব শুধু আপনার ব্রাউজারে থাকে। ব্রাউজারের ডেটা মুছলে, অন্য ব্রাউজার বা ডিভাইসে গেলে বা প্রাইভেট মোডে লিখলে হিসাব পাবেন না। মাসের শেষে CSV ডাউনলোড করে ফাইলটি নিরাপদ জায়গায় রাখুন।",
+        "টুলে শুধু টাকা (৳) এককে হিসাব হয়, ঋণ বা কিস্তির আলাদা ট্র্যাকিং নেই, আর নিজের ক্যাটাগরি বানানো যায় না। সর্বোচ্চ ২০০০টি এন্ট্রি রাখা যায়।",
+        "বাজেট ঠিক করতে চাইলে প্রথমে এক-দুই মাস শুধু লিখে যান, কিছু বদলাবেন না। তারপর ক্যাটাগরির ভাগ দেখে কোন খাতে কমানো সম্ভব তা ঠিক করুন। এই টুল কর, ঋণ বা বিনিয়োগ নিয়ে কোনো পরামর্শ দেয় না। এসব বিষয়ে প্রয়োজনে যোগ্য পরামর্শদাতার সঙ্গে কথা বলুন।",
+      ] },
+    ],
+    en: [
+      { h: "A month of entries, worked through", p: [
+        "Suppose your salary of 30,000 taka arrives at the start of the month. Choose the Income tab, enter 30000, pick the Salary category and add it. Then switch to the Expense tab and add three separate entries: Rent 8000, Food 4500 and Transport 1500.",
+        "The three boxes at the top now show income 30,000 taka, expense 14,000 taka and balance 16,000 taka. In the spending split, Rent shows 57.1%, Food 32.1% and Transport 10.7%. The bars make it easy to see which category takes the most money.",
+        "As entries pile up over the days, pick a particular month from the month dropdown. You will see income, expense and balance for that month only. Choosing All time gives the total across every month.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Many people reach the end of the month unsure where the money went. Small spends such as tea, rickshaw fares or a mobile recharge are hard to remember one by one. Writing them down makes the month-end total less of a surprise.",
+        "A student can track pocket money, an employee can watch the household budget, and a small shop owner can get a rough picture of money in and out. For a business this is not a replacement for proper bookkeeping, only a simple notebook.",
+        "If you download the CSV and open it in Excel or Google Sheets, you can filter or add up the data your own way. That helps when you need to show the figures in a household discussion or at work.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The biggest mistake is writing several days of spending at once, when much of it is forgotten. Take one minute each night to log the day.",
+        "The second mistake is leaving the date wrong. The tool fills in today's date automatically, but if you are logging yesterday's spending you must change it, otherwise the entry lands in the wrong month and spoils that month's totals.",
+        "The third mistake is putting an entry under the wrong tab. If salary is entered as an expense, the balance goes down. Entries cannot be edited, so tap the bin icon, delete it and add it again under the right tab.",
+        "The fourth mistake is putting everything under Other. Then the spending split tells you nothing. Pick the nearest category and add a short description in the note.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "Your entries live only in your browser. If you clear browser data, switch browser or device, or write in a private window, you will not find them. At the end of each month, download a CSV and keep the file somewhere safe.",
+        "The tool works in taka only, has no separate tracking for loans or instalments, and does not let you create your own categories. You can keep at most 2000 entries.",
+        "If you want to set a budget, first just record for a month or two without changing anything. Then look at the category split and decide where you can cut back. This tool gives no advice on tax, loans or investment. For those, talk to a qualified adviser if you need to.",
+      ] },
+    ],
+  },
+  "image-to-pdf": {
+    bn: [
+      { h: "একটি উদাহরণ: ৩টি ছবি নিয়ে একটি PDF", p: [
+        "ধরুন আপনি চাকরির আবেদনের জন্য তিনটি ছবি একটি PDF এ পাঠাতে চান: সার্টিফিকেটের সামনের ছবি, পেছনের ছবি আর NID এর ছবি। তিনটি ছবি একসাথে সিলেক্ট করুন। তালিকায় ছবিগুলোর ছোট প্রিভিউ, নাম আর সাইজ দেখাবে।",
+        "যদি NID টি শেষে চান কিন্তু তালিকায় প্রথমে এসে থাকে, তীর বাটন দিয়ে নিচে নামিয়ে দিন। পেজের মাপ \"A4 পেজ\" রেখে \"PDF বানান\" চাপুন। কিছুক্ষণ পরে \"৩টি পেজের PDF তৈরি, সাইজ ...\" লেখা আসবে এবং \"PDF ডাউনলোড\" বাটন চাপলে images.pdf সেভ হবে।",
+        "ছবিগুলো আড়াআড়ি হলে A4 পেজও আড়াআড়ি হয়। প্রতিটি ছবি পেজের মাঝখানে বসে এবং চারপাশে সামান্য ফাঁকা থাকে। \"ছবির মাপে\" বাছলে ফাঁকা থাকে না, পেজ ঠিক ছবির সমান হয়।",
+        "তালিকার প্রতিটি ছবির পাশে সরানোর বাটন আছে। ভুল ছবি সিলেক্ট হলে সেটি তালিকা থেকে সরিয়ে দিন, অন্য ছবিগুলোতে হাত দিতে হবে না। সব মুছে নতুন করে শুরু করতে চাইলে রিসেট বাটন চাপুন।",
+      ] },
+      { h: "কখন কোন পেজ মাপ বেছে নেবেন", p: [
+        "কাগজের নথি, যেমন সার্টিফিকেট বা ফর্মের ছবি, প্রিন্ট বা জমা দেওয়ার জন্য A4 পেজ সুবিধাজনক। পেজের মাপ সব পেজে একই ধরনের থাকে এবং ছাপলে সাজানো দেখায়।",
+        "আর ফোনের স্ক্রিনশট বা লম্বা ছবি পুরো মাপে রাখতে চাইলে \"ছবির মাপে\" ভালো। তখন ছবি ছোট হয় না, ফাঁকাও থাকে না। তবে পেজগুলো ভিন্ন ভিন্ন মাপের হতে পারে।",
+        "মনে রাখবেন, PNG ছবির স্বচ্ছ অংশ PDF এ সাদা হয়ে যায়। লোগো বা স্টিকারের মতো স্বচ্ছ পটভূমির ছবি দিলে সাদা পটভূমি আসবে।",
+        "একাধিক পেজের একটি নথি হলে ছবিগুলো পেজ নম্বর অনুযায়ী সাজিয়ে নিন। এতে যিনি PDF টি দেখবেন তাঁর পড়তে সুবিধা হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "কিছু ফাইল বাদ গেছে এমন বার্তা এলে দেখুন সেগুলো ছবি কি না, আর ২৫ MB এর মধ্যে আছে কি না। একসাথে ৫০টির বেশি ছবি নেওয়া যায় না, তাই বেশি হলে দুটি আলাদা PDF বানিয়ে Merge PDF দিয়ে জুড়তে পারেন।",
+        "ক্রম ভুল হলে ডাউনলোডের আগেই তীর বাটনে ঠিক করুন। ক্রম বা মাপ বদলালে আগের তৈরি PDF মুছে যায়, তাই আবার \"PDF বানান\" চাপতে হবে।",
+        "\"PDF বানানো যায়নি\" বার্তা এলে কোনো ছবি নষ্ট হতে পারে। একটি একটি করে ছবি সরিয়ে দেখুন কোনটি সমস্যা করছে। ছবি ঘোরানোর সুবিধা এই টুলে নেই, তাই ছবি আগে থেকেই সোজা করে নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "একসাথে সর্বোচ্চ ৫০টি ছবি, প্রতিটি সর্বোচ্চ ২৫ MB। ছবি PDF এ বসানোর আগে JPEG হিসেবে আবার সংরক্ষণ হয়, তাই ছবির সংখ্যা বেশি হলে একটু সময় লাগতে পারে।",
+        "পরিষ্কার আলোয় তোলা সোজা ছবি দিলে PDF ভালো দেখায়। অন্ধকার বা কাত করে তোলা ছবি পরে ঠিক করা যায় না। কাগজ ফোনে তোলার সময় চারপাশ ফাঁকা রেখে লেখা যেন পড়া যায় সেদিকে খেয়াল রাখুন।",
+        "জমা দেওয়ার আগে তৈরি PDF খুলে প্রতিটি পেজ দেখে নিন। সাইজ বেশি হলে Image Compressor দিয়ে ছবি ছোট করে আবার বানান। কোথাও জমা দিলে সেখানকার ফাইল সাইজ ও ফরম্যাটের নিয়ম প্রতিষ্ঠানের নিজস্ব নির্দেশনা থেকে মিলিয়ে নেবেন।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example: three photos into one PDF", p: [
+        "Say you are applying for a job and want to send three photos in one PDF: the front of a certificate, the back and an NID card. Select all three images together. The list shows a small preview, the name and the size of each.",
+        "If the NID should come last but sits first, move it down with the arrow buttons. Keep the page size on \"A4 page\" and tap \"Create PDF\". After a moment you will see \"PDF ready: 3 page(s)\" with the size, and tapping \"Download PDF\" saves images.pdf.",
+        "If an image is wider than it is tall, its A4 page turns landscape. Each image sits in the middle of the page with a small margin around it. Choosing \"Fit to image\" removes the margin and makes each page exactly the size of its image.",
+      ] },
+      { h: "Choosing between the two page sizes", p: [
+        "For paper documents such as certificates or form photos that may be printed or submitted, A4 is convenient. Pages look consistent and tidy when printed.",
+        "If you want a phone screenshot or a tall image kept at its full size, \"Fit to image\" works better. The image is not shrunk and there is no empty margin, though the pages may end up in different sizes.",
+        "Remember that transparent parts of a PNG turn white in the PDF. A logo or sticker with a transparent background will get a white one.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "If a message says some files were skipped, check that they are images and under 25 MB. You cannot add more than 50 images at once, so if you have more, make two PDFs and join them with Merge PDF.",
+        "If the order is wrong, fix it with the arrow buttons before downloading. Changing the order or page size clears any PDF you already made, so tap \"Create PDF\" again.",
+        "If you get \"Could not create the PDF\", one image may be damaged. Remove images one at a time to find the culprit. There is no rotate option in this tool, so straighten any sideways photo before adding it.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "You can add up to 50 images, each up to 25 MB. Every image is re-saved as a JPEG before it goes into the PDF, so a long list can take a little while.",
+        "Straight photos taken in good light make a better PDF. Dark or tilted shots cannot be fixed afterwards. When you photograph a paper, leave a little space around it and make sure the text is readable.",
+        "Open the finished PDF and look at every page before you submit it. If it is too large, shrink the images with the Image Compressor and build it again. For any submission, check the file size and format rules in the official instructions of the place you are sending it to.",
+      ] },
+    ],
+  },
+  "lorem-ipsum-generator": {
+    bn: [
+      { h: "একটি উদাহরণসহ কীভাবে চালাবেন", p: [
+        "ধরুন আপনার ব্লগ টেমপ্লেটে তিনটি অনুচ্ছেদের জায়গা ভরতে হবে। \"প্যারাগ্রাফ\" বাটন চেপে সংখ্যা ৩ দিন। নিচের বক্সে তিনটি প্যারাগ্রাফ আসবে, প্রতিটির মাঝে একটি ফাঁকা লাইন থাকবে। \"Copy\" চাপলে পুরো লেখা কপি হয়ে যাবে।",
+        "এবার কার্ডের একটি ছোট শিরোনামের জন্য শুধু ৬টি শব্দ লাগলে \"শব্দ\" বাটন চেপে ৬ দিন। টিক দেওয়া থাকলে শব্দগুলো হবে \"lorem ipsum dolor sit amet consectetur\", কারণ শুরুর অংশ থেকে ঠিক ৬টি নেওয়া হয়। টিক তুলে দিলে ৬টি এলোমেলো শব্দ আসবে।",
+        "বাক্য মোডে ২ দিলে দুটি পূর্ণ বাক্য পাবেন, যার প্রতিটি ৮ থেকে ১৪ শব্দের। আউটপুট পছন্দ না হলে \"নতুন\" চেপে নতুন করে সাজান। সংখ্যার ঘর ফাঁকা বা সীমার বাইরে হলে লাল বার্তা দেখাবে এবং কোনো লেখা তৈরি হবে না।",
+      ] },
+      { h: "কেন ও কখন ডামি লেখা দরকার", p: [
+        "আসল লেখা তৈরি হওয়ার আগে ডিজাইনের কাজ শুরু করতে হয়। ফাঁকা বাক্স দেখে বোঝা যায় না লেখা বসলে লাইন কোথায় ভাঙবে বা কার্ড কতটা লম্বা হবে। ডামি লেখা বসালে এই প্রশ্নের উত্তর মেলে।",
+        "ডেভেলপাররা ফর্মের টেক্সট এরিয়া, স্ক্রল বার বা পেজিনেশন পরীক্ষা করতে বেশি লেখা বসান। ডিজাইনাররা ফন্টের আকার, লাইনের ফাঁক এবং প্যারাগ্রাফের চওড়া দেখতে ব্যবহার করেন। শিক্ষার্থীরা প্রেজেন্টেশন বা বইয়ের লেআউটের নমুনায় জায়গা দেখাতেও এটি নেন।",
+        "ডামি লেখার সুবিধা হলো এতে কেউ অর্থ খুঁজতে যায় না। তাই আলোচনা থাকে লেআউট নিয়ে, বিষয়বস্তু নিয়ে নয়।",
+        "প্রিন্ট ডিজাইনেও একই কাজ হয়। পোস্টার, লিফলেট বা বইয়ের পাতায় কতটা লেখা ধরবে, তা আগেই আন্দাজ করা যায়। তাই ছাপার আগে অন্তত একবার ডামি লেখা বসিয়ে পাতাটি দেখে নেওয়া ভালো।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বড় ভুল হলো নমুনা লেখা সাইটে প্রকাশের পরও রেখে দেওয়া। এতে পেজ অসম্পূর্ণ দেখায়। প্রকাশের আগে পেজে \"lorem\" বা \"ipsum\" লিখে খুঁজে সব ডামি অংশ বদলে নিন।",
+        "দ্বিতীয় ভুল হলো ডামি ল্যাটিন লেখা দিয়ে বাংলা ফন্ট বা লাইনের উচ্চতা বিচার করা। বাংলা অক্ষরের উচ্চতা ও যুক্তবর্ণ ইংরেজির মতো নয়। তাই ডিজাইনের শেষ ধাপে নিজের বাংলা লেখা বসিয়ে একবার দেখে নিন।",
+        "তৃতীয় ভুল হলো শব্দ মোডে দাঁড়ি বা বড় হাতের অক্ষর আশা করা। ওই মোডে শুধু ছোট হাতের শব্দ আসে। বিরামচিহ্নসহ লেখা চাইলে বাক্য বা প্যারাগ্রাফ মোড নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "এক বারে সর্বোচ্চ ৫০টি প্যারাগ্রাফ, ২০০টি বাক্য বা ২০০০টি শব্দ বানানো যায়। এর বেশি লাগলে একাধিকবার কপি করে জুড়ে নিন। টুলের শব্দভাণ্ডার ছোট একটি ল্যাটিন তালিকা, তাই লম্বা লেখায় শব্দ পুনরাবৃত্তি হবে, এটা স্বাভাবিক।",
+        "যেটুকু জায়গা দরকার ঠিক ততটুকুই লেখা নিন। অতিরিক্ত নিলে ডিজাইনে লেখা অনেক ঠাসা দেখাতে পারে এবং আসল লেখার দৈর্ঘ্যের সঙ্গে ফারাক বাড়ে। আসল লেখার আনুমানিক শব্দসংখ্যা জানা থাকলে সেই মাপে ডামি লেখা বানান।",
+        "লেখা আপনার ব্রাউজারেই তৈরি হয়, কোথাও জমা হয় না। প্রতিবার ফল আলাদা হয়, তাই কোনো নির্দিষ্ট লেখা পরে আবার চাইলে আগেই কপি করে রেখে দিন।",
+      ] },
+    ],
+    en: [
+      { h: "How to run it, with an example", p: [
+        "Say your blog template needs three paragraphs of filler. Press the \"Paragraphs\" button and enter 3. Three paragraphs appear in the box below, with a blank line between each. Press \"Copy\" to copy the whole text.",
+        "Now say a card needs a short heading of only 6 words. Press \"Words\" and enter 6. With the start option ticked, the result is \"lorem ipsum dolor sit amet consectetur\", because exactly six words are taken from the opening phrase. Untick it and you get six random words.",
+        "In Sentences mode, entering 2 gives two full sentences of 8 to 14 words each. If you do not like the output, press \"New\" to reshuffle. If the number box is empty or outside the allowed range, a red message appears and no text is generated.",
+      ] },
+      { h: "Why and when you need placeholder text", p: [
+        "Design work often starts before the real text is written. An empty box does not show where lines will break or how tall a card will become. Filler text answers those questions.",
+        "Developers fill text areas, scroll regions and paginated lists with it to test them. Designers use it to judge font size, line spacing and paragraph width. Students use it in presentation or book layout samples to show where text will go.",
+        "Another benefit is that nobody tries to read meaning into it, so the discussion stays on the layout instead of the content.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The biggest mistake is leaving the sample text on a site after it is published. The page then looks unfinished. Before publishing, search the page for \"lorem\" or \"ipsum\" and replace every dummy block.",
+        "The second mistake is judging Bangla fonts or line height with Latin filler. Bangla letter heights and conjuncts are not like English. Paste your own Bangla text for a final check.",
+        "The third is expecting full stops or capital letters in Words mode. That mode gives only lowercase words. If you want punctuation, use Sentences or Paragraphs mode.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "One run can give up to 50 paragraphs, 200 sentences or 2000 words. If you need more, copy several runs and join them. The tool draws from a small Latin word list, so words repeat in long texts, which is normal.",
+        "Generate only as much as the space needs. Too much can make a design look more crowded than it will be. If you know the rough word count of the real text, make the filler about the same size.",
+        "The text is generated in your browser and is not stored anywhere. Every run gives a different result, so if you want to reuse a particular text later, copy it and save it first.",
+      ] },
+    ],
+  },
+  "pdf-to-jpg": {
+    bn: [
+      { h: "একটি উদাহরণ: ৮ পেজের PDF থেকে ২টি পেজ ছবি করা", p: [
+        "ধরুন application.pdf নামে ৮ পেজের একটি ফাইল আছে। আপনি শুধু পেজ ২ ও পেজ ৭ ছবি হিসেবে মেসেঞ্জারে পাঠাতে চান। ফাইল সিলেক্ট করলে বক্সে \"৮টি পেজ\" দেখাবে। পেজের ঘরে লিখুন 2, 7। মান \"সাধারণ\" রেখে \"JPG বানান\" চাপুন।",
+        "প্রসেস চলার সময় \"পেজ ২ হচ্ছে (১/২)\" এ ধরনের বার্তা দেখাবে। শেষে তালিকায় application-page-2.jpg ও application-page-7.jpg আসবে। প্রতিটির পাশে ছোট প্রিভিউ, ছবির মাপ (যেমন ৮৯২ × ১২৬২ px) আর ফাইলের সাইজ লেখা থাকবে। ডাউনলোড চেপে ছবি দুটি সেভ করুন।",
+        "লেখা পড়তে সমস্যা হলে একই পেজ \"উচ্চ\" মানে আবার বানান। A4 পেজের ছবি তখন প্রায় ১৪৮৮ × ২১০৪ পিক্সেলের হয়। ফাইলও বড় হবে, তাই সব সময় উচ্চ মান দরকার নেই।",
+        "ছবিগুলো JPG ফরম্যাটে তৈরি হয় এবং প্রতিটি পেজ আলাদা ফাইল হয়। পেজের ক্রম নামের সংখ্যা দেখেই বোঝা যায়, তাই ডাউনলোডের পর ফোনের গ্যালারিতে সহজে গুছিয়ে রাখতে পারবেন।",
+      ] },
+      { h: "কেন PDF পেজকে ছবি করা কাজে লাগে", p: [
+        "সব জায়গায় PDF পাঠানো যায় না। কিছু ফর্ম বা অ্যাপ শুধু JPG ছবি নেয়। কখনো আবার কোনো পেজের একটি অংশ ক্রপ করে পাঠাতে হয়, যার জন্য ছবি দরকার। চ্যাটে একটি পেজ দ্রুত দেখাতে চাইলেও ছবি সুবিধাজনক, কারণ গ্রহীতাকে PDF খুলতে হয় না।",
+        "ছবি হিসেবে পেজ পেলে আপনি সেটি ছবি এডিটরে খুলে ক্রপ করতে বা লেখা যোগ করতে পারেন। তবে মনে রাখবেন, এটি পেজের একটি ছবি মাত্র। ছবির ভেতরের লেখা কপি করা বা সার্চ করা যায় না।",
+        "একাধিক পেজের ছবি আবার একটি PDF বানাতে চাইলে Image to PDF টুল ব্যবহার করতে পারেন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "পেজের ঘর খালি রেখে ৫০ পেজের বেশি PDF দিলে টুল জানিয়ে দেয় যে একবারে ৫০টির বেশি হয় না। তখন 1-50 লিখে একবার, তারপর 51-100 লিখে আবার চালান।",
+        "রেঞ্জে ভুল হলেও বার্তা আসে। কমা দিয়ে আলাদা করুন (1-3, 5), মোট পেজের বেশি নম্বর দেবেন না, আর 5-3 এর মতো উল্টো রেঞ্জ লিখবেন না।",
+        "\"PDF পড়ার টুল লোড হয়নি\" বার্তা এলে ইন্টারনেট সংযোগ দেখে আবার চেষ্টা করুন। পাসওয়ার্ড দেওয়া বা নষ্ট PDF খোলা যায় না। ছবি বানাতে গিয়ে সমস্যা হলে কম পেজ নিন বা \"সাধারণ\" মান বেছে নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "ফাইলের সর্বোচ্চ সাইজ ৫০ MB এবং একবারে সর্বোচ্চ ৫০ পেজ। প্রতিটি ছবির পিক্সেল সংখ্যারও একটি ঊর্ধ্বসীমা আছে, যাতে ফোন আটকে না যায়। প্রতিটি ছবি আলাদা করে ডাউনলোড করতে হয়।",
+        "ছবি পাঠানোর আগে ডাউনলোড করা ফাইলটি খুলে দেখুন লেখা পড়া যাচ্ছে কি না। সাধারণ মান দিয়ে শুরু করুন, দরকার হলে তবেই উচ্চ মান নিন। এতে ফাইল ছোট থাকে এবং কাজও দ্রুত হয়।",
+        "কোথাও জমা দেওয়ার সাইজ সীমা থাকলে ছবি বানানোর পর Image Compressor ব্যবহার করে দেখতে পারেন। কাজটি আপনার ফোনেই হয়, তাই অনেক পেজ একসাথে নিলে ফোন একটু ধীর লাগতে পারে। অল্প অল্প করে নেওয়াই ভালো।",
+        "একটি ভালো অভ্যাস হলো মূল PDF টি আলাদা জায়গায় রেখে দেওয়া। ছবি বানালে মূল ফাইল বদলায় না, তবু ভবিষ্যতে আবার দরকার হলে হাতের কাছে থাকলে সুবিধা।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example: two pages from an 8-page PDF", p: [
+        "Say you have an 8-page file called application.pdf and you want pages 2 and 7 as images to send in a chat. After you select it, the box shows \"8 page(s)\". Type 2, 7 in the pages box, keep the quality on \"Normal\" and tap \"Convert to JPG\".",
+        "While it works you will see messages such as \"Converting page 2 (1/2)...\". When it finishes, application-page-2.jpg and application-page-7.jpg appear in the list. Each shows a small preview, the image size (for example 892 × 1262 px) and the file size. Tap Download to save both.",
+        "If the text is hard to read, convert the same pages again with \"High\" quality. An A4 page then comes out at about 1488 × 2104 pixels. The files get larger too, so you do not always need high quality.",
+      ] },
+      { h: "Why turning PDF pages into images helps", p: [
+        "Not every place accepts a PDF. Some forms and apps take only JPG images. Sometimes you need to crop part of a page, which needs an image. For a quick look in a chat, an image is also easier because the other person does not have to open a PDF.",
+        "Once a page is an image you can open it in a photo editor to crop it or add text. Keep in mind that it is only a picture of the page. The text inside the image cannot be copied or searched.",
+        "If you later want to join several page images back into a PDF, the Image to PDF tool can do that.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "If you leave the pages box empty and the PDF has more than 50 pages, the tool tells you it cannot convert more than 50 at a time. Type 1-50 and run it, then type 51-100 and run it again.",
+        "Range mistakes also show a message. Separate parts with commas (1-3, 5), do not use a number above the page count, and avoid backwards ranges like 5-3.",
+        "If you see that the PDF reader could not be loaded, check your internet connection and try again. Password protected or damaged PDFs cannot be opened. If something goes wrong while making the images, try fewer pages or the Normal quality.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "A file can be up to 50 MB and you can convert up to 50 pages at a time. Each image also has a cap on its pixel count so your phone does not freeze. Images are downloaded one by one.",
+        "Open a downloaded image before you send it and check that the text is readable. Start with Normal quality and move to High only when needed. That keeps files small and the work quick.",
+        "If a form has a size limit, you can run the images through the Image Compressor afterwards. The work happens on your own phone, so many pages at once can feel slow. Taking a few pages at a time is a better habit.",
+      ] },
+    ],
+  },
+  "qr-code-generator": {
+    bn: [
+      { h: "একটি উদাহরণসহ ধাপে ধাপে ব্যবহার", p: [
+        "ধরুন আপনার দোকানের মেনুর লিংক https://example.com/menu। বক্সে এই লিংকটি বসান। লেখা বসানোর সঙ্গে সঙ্গে নিচে QR এর প্রিভিউ দেখা যাবে। বক্সের নিচে ডান পাশে ঢোকানো অক্ষরের সংখ্যা দেখায়, যেমন ২৪/১৫০০।",
+        "সাইজ ৪০০ রেখে ভুল সংশোধনের মাত্রা M রাখুন। এবার PNG ডাউনলোড বাটনে চাপলে ৪০০×৪০০ পিক্সেলের qrcode.png নামের ফাইল নামবে। প্রিভিউ পর্দায় সর্বোচ্চ ৩০০ পিক্সেল চওড়া দেখানো হয়, কিন্তু ডাউনলোড হয় আপনার বাছা পূর্ণ সাইজে।",
+        "ডাউনলোডের আগে ফোনের ক্যামেরা বা স্ক্যানার অ্যাপ দিয়ে পর্দার QR টি স্ক্যান করুন। লিংক ঠিক পেজে গেলে তবেই ফাইলটি ব্যবহার করুন। ভুল শুধরাতে চাইলে Reset বাটন সব কিছু শুরুর অবস্থায় ফিরিয়ে দেয়।",
+        "লিংকের বদলে সাধারণ লেখা দিলেও একই নিয়মে কাজ হয়। ফাঁকা বক্সে কোনো QR দেখানো হয় না, লেখা দিলেই প্রিভিউ আসে।",
+      ] },
+      { h: "কখন QR কোড কাজে লাগে", p: [
+        "লম্বা লিংক ছাপা কাগজে লিখে দিলে মানুষ ভুল টাইপ করে। QR থাকলে ফোন তুলে স্ক্যান করলেই কাজ শেষ। তাই মেনু, পোস্টার, ভিজিটিং কার্ড, ইভেন্টের নিমন্ত্রণপত্র বা দোকানের পেজের লিংকে এটি সুবিধার।",
+        "ওয়াইফাই পাসওয়ার্ড, যোগাযোগের নম্বর বা ছোট বার্তাও লেখা হিসেবে QR করা যায়। তবে যে লেখা গোপন রাখা দরকার, তা ছাপানো QR এ দেবেন না। QR যে কেউ স্ক্যান করে পড়তে পারে।",
+        "একই লিংকের জন্য আলাদা আলাদা রঙের QR বানিয়ে ডিজাইনের সঙ্গে মেলানো যায়। তবে রং বেছে নেওয়ার সময় পাঠযোগ্যতা আগে দেখুন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো হালকা রঙের QR হালকা ব্যাকগ্রাউন্ডে বসানো, বা গাঢ় ব্যাকগ্রাউন্ডে হালকা QR করা। এতে কিছু স্ক্যানারে পড়া যায় না। সমাধান হলো গাঢ় QR আর হালকা ব্যাকগ্রাউন্ড রাখা, আর প্রিন্টের আগে নিজের ফোনে পরীক্ষা করা।",
+        "দ্বিতীয় ভুল হলো লিংকে https:// না দেওয়া। কিছু স্ক্যানার একে সাধারণ লেখা ধরে, ফলে লিংক হিসেবে খোলে না। তৃতীয় ভুল হলো লিংকে অকারণে লম্বা ট্র্যাকিং অংশ জুড়ে দেওয়া। লেখা বড় হলে QR ঘন হয় এবং ছোট প্রিন্টে পড়া কঠিন হয়। সম্ভব হলে ছোট ও সরাসরি লিংক দিন।",
+        "চতুর্থ ভুল হলো ছোট সাইজে বানিয়ে বড় পোস্টারে ছাপানো। ছবি ফেটে গিয়ে স্ক্যান করা কঠিন হয়। বড় ব্যবহারের জন্য শুরুতেই ৮০০ বা তার বেশি সাইজ বেছে নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "এই টুলে লেখা ১৫০০ অক্ষর পর্যন্ত দেওয়া যায় এবং সাইজ ২০০ থেকে ১০০০ পিক্সেল। আউটপুট শুধু PNG ছবি। লোগো বসানোর বা লিংকের ক্লিক গোনার সুবিধা এখানে নেই। লিংকের ঠিকানা বদলালে পুরোনো QR আর কাজ করবে না, তাই বদলানোর সম্ভাবনা থাকলে আগেই স্থায়ী ঠিকানা বেছে নিন।",
+        "ছাপানোর আগে অন্তত দুটি ফোনে স্ক্যান করে দেখুন। QR এর চারপাশে কিছুটা সাদা ফাঁকা জায়গা রাখুন, কারণ ঘেঁষে ছাপালে স্ক্যানার সীমানা চিনতে পারে না। ছাপা জায়গায় ভাঁজ, দাগ বা ছাপের ঝুঁকি থাকলে Q বা H মাত্রা নিন।",
+        "QR আপনার ব্রাউজারেই তৈরি হয়, তাই লেখা সার্ভারে যায় না। তবু ডাউনলোড করা ফাইলটি যেখানে রাখছেন বা পাঠাচ্ছেন, সেখানে এর ভেতরের লেখা সবাই পড়তে পারবে, এটা মনে রাখুন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with an example", p: [
+        "Say your shop's menu is at https://example.com/menu. Paste that link into the box. As soon as you enter it, a preview of the QR appears below. A counter under the box shows how many characters you have used, for example 24/1500.",
+        "Keep the size at 400 and the error correction level at M. Pressing the PNG download button saves a 400×400 pixel file named qrcode.png. The preview on screen is shown at most 300 pixels wide, but the download uses the full size you chose.",
+        "Before downloading, scan the QR on your screen with your phone camera or a scanner app. Use the file only if it opens the right page. The Reset button returns everything to the starting values if you want to begin again.",
+      ] },
+      { h: "When a QR code helps", p: [
+        "Long links printed on paper get mistyped. With a QR, people just point their phone and scan. That makes it useful for menus, posters, visiting cards, event invitations and a link to your shop page.",
+        "Plain text such as a contact number or a short message can also be turned into a QR. But do not put anything secret in a printed QR, because anyone can scan it and read it.",
+        "You can make QR codes in different colours to match your design for the same link. Check that it stays readable before you settle on a colour.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is a light QR on a light background, or a light QR on a dark background. Some scanners cannot read these. Keep a dark QR on a light background and test it on your own phone before printing.",
+        "The second is leaving out https:// in a link. Some scanners treat it as plain text and will not open it as a link. The third is adding long tracking parts to a link. A longer text makes a denser QR that is harder to read in small prints. Use a short, direct link when you can.",
+        "The fourth is making a small QR and then printing it on a large poster. It turns blurry and is hard to scan. For large prints, choose 800 or more from the start.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool accepts up to 1500 characters and sizes from 200 to 1000 pixels. The output is a PNG image only. There is no logo option and no scan counting. If the address of a link changes, the old QR will stop working, so choose a stable address if you expect changes.",
+        "Scan the result on at least two phones before printing. Leave some blank space around the QR, because a QR printed edge to edge can be hard for scanners to detect. If the print may get folded, smudged or scratched, choose level Q or H.",
+        "The QR is generated in your browser, so the text is not sent to a server. Still, remember that wherever you share or print the downloaded file, anyone can read the text inside it.",
+      ] },
+    ],
+  },
+  "random-number-generator": {
+    bn: [
+      { h: "র‍্যাফেল ড্রয়ের উদাহরণ ধাপে ধাপে", p: [
+        "ধরুন ক্লাসে ৪০ জন শিক্ষার্থী আছে এবং রোল নম্বর ধরে ৩ জনকে পুরস্কার দেবেন। সংখ্যা ট্যাবে সর্বনিম্ন ১, সর্বোচ্চ ৪০ এবং কতগুলো ঘরে ৩ লিখুন। এবার আলাদা সংখ্যার অপশন চালু করুন, নইলে একই রোল দুইবার উঠে আসতে পারে।",
+        "সংখ্যা বানান চাপলে তিনটি ভিন্ন রোল নম্বর আসবে, যেমন ১৭, ৩, ২৯। সাজানোর অপশন চালু থাকলে ফল ৩, ১৭, ২৯ ক্রমে দেখাবে, কিন্তু কে প্রথম পুরস্কার পাবে তা আগেই ঠিক করে নিন। যেমন বলতে পারেন, বানানোর ক্রমে প্রথমজন প্রথম পুরস্কার পাবে। তাই ক্রম গুরুত্বপূর্ণ হলে সাজানোর অপশন চালু করবেন না।",
+        "সব কপি করুন চাপলে সংখ্যাগুলো কমা দিয়ে কপি হয়। এগুলো সরাসরি মেসেজ বা খাতায় বসিয়ে দেওয়া যায়।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "সিদ্ধান্ত নিতে নিরপেক্ষতা দরকার হলে র‍্যান্ডম সংখ্যা কাজে লাগে। কে আগে প্রশ্ন করবে, কোন দল কোন বিষয় পাবে বা কার সঙ্গে কার জুটি হবে, এসব ঠিক করতে এটি সুবিধাজনক। কেউ পক্ষপাতের অভিযোগ তুলতে পারে না, কারণ ফল কারও হাতে নেই।",
+        "শিক্ষক পরীক্ষার প্রশ্ন বা নমুনা বাছাই করতে পারেন। গবেষণার ছাত্র জরিপের জন্য এলোমেলোভাবে নমুনা বেছে নিতে পারে। লুডু বা বোর্ড গেমে ডাইস না থাকলে ডাইস মোডে D6 বেছে গড়ানো যায়। ডি অ্যান্ড ডি ধরনের খেলায় D20 বা D100 লাগলে সেটিও আছে।",
+        "কয়েন টস মোড ছোট সিদ্ধান্তে কাজে আসে, যেমন কোন দল আগে ব্যাট করবে। হেড ও টেলের গণনা পাশেই থাকে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো সর্বনিম্ন সংখ্যা সর্বোচ্চের চেয়ে বড় দেওয়া। তখন টুল ফল দেবে না, একটি লাল বার্তা দেখাবে। দুটি ঘর বদলে দিন।",
+        "দ্বিতীয় ভুল হলো আলাদা সংখ্যা চেয়ে সীমা ছোট রাখা। ১ থেকে ১০ সীমায় ১২টি আলাদা সংখ্যা চাইলে হবে না, কারণ মাত্র ১০টি সংখ্যা আছে। সীমা বাড়ান বা সংখ্যা কমান।",
+        "তৃতীয় ভুল হলো দশমিক সংখ্যা দেওয়া, যেমন ২.৫। এই টুল শুধু পূর্ণসংখ্যা নেয়। ঘর খালি রাখলেও একই বার্তা আসে।",
+        "চতুর্থ ভুল হলো ফল পছন্দ না হলে বারবার বানিয়ে পছন্দসই ফল বেছে নেওয়া। এতে র‍্যান্ডম রাখার উদ্দেশ্যই নষ্ট হয়। বানানোর আগে ঠিক করে নিন কতবার চালাবেন, তারপর প্রথম ফলই মেনে নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "একসঙ্গে সর্বোচ্চ ১০০০টি সংখ্যা এবং মান ১০০ কোটির মধ্যে। ফলাফল পেজে সেভ থাকে না, তাই পেজ রিফ্রেশের আগে সংখ্যাগুলো কপি করে রাখুন। কয়েন টসের গণনাও রিফ্রেশে চলে যায়।",
+        "কয়েন বা ডাইস অল্প কয়েকবার ফেললে একটি ফল বেশি আসা স্বাভাবিক। ১০ বার টসে ৭টি হেড এলে তাতে অবাক হওয়ার কিছু নেই। সমান ভাগ আশা করা ঠিক নয়।",
+        "কারও সামনে ড্র করলে প্রথমে সীমা ও নিয়ম সবাইকে জানিয়ে দিন, তারপর বানান। এতে সবার আস্থা থাকে। আইনি বা সরকারি অনুমোদনযুক্ত লটারির জন্য এই টুল ব্যবহার না করে প্রযোজ্য নিয়ম দেখে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "A raffle draw, step by step", p: [
+        "Say your class has 40 students and you want to pick 3 winners by roll number. In the Numbers tab set the minimum to 1, the maximum to 40 and how many to 3. Turn on the different-numbers option, otherwise the same roll number could come up twice.",
+        "Tap Generate numbers and you get three different roll numbers, for example 17, 3 and 29. If the sort option is on, they appear as 3, 17, 29, so decide beforehand who gets the first prize. For example, you could say the first number generated wins first prize. If the order matters, leave the sort option off.",
+        "Tapping Copy all copies the numbers separated by commas. You can paste them straight into a message or a notebook.",
+      ] },
+      { h: "When and why it helps", p: [
+        "When a decision needs to be fair, random numbers help. Who asks the first question, which team gets which topic, who is paired with whom: it settles all of these. Nobody can claim bias, because the result is not in anyone's hands.",
+        "A teacher can pick quiz questions or samples. A student doing a survey can choose a sample at random. If you have no dice for Ludo or a board game, pick D6 in the Dice tab and roll. If a game needs a D20 or D100, those are available too.",
+        "The coin flip is handy for small decisions, such as which team bats first. The heads and tails counts are shown right beside it.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is entering a minimum larger than the maximum. The tool will not produce a result and shows a red message instead. Swap the two fields.",
+        "The second mistake is asking for different numbers from a small range. You cannot get 12 different numbers between 1 and 10, because only 10 exist. Widen the range or ask for fewer.",
+        "The third mistake is typing a decimal such as 2.5. The tool accepts whole numbers only. An empty field gives the same message.",
+        "The fourth mistake is generating again and again until you like the result. That defeats the purpose of randomness. Decide in advance how many times you will run it, then accept the first result.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "You can get at most 1000 numbers at once, and values must stay within 1 billion. Results are not saved on the page, so copy the numbers before you refresh. The coin flip counts also vanish on refresh.",
+        "With only a few flips or rolls, one outcome showing up more often is normal. Seeing 7 heads in 10 flips is nothing unusual, so do not expect an even split.",
+        "When you run a draw in front of others, announce the range and the rules first, then generate. That builds trust. For legally regulated or officially approved lotteries, do not rely on this tool. Check the rules that apply.",
+      ] },
+    ],
+  },
+  "split-pdf": {
+    bn: [
+      { h: "একটি উদাহরণ: ২০ পেজের PDF থেকে ৬টি পেজ বের করা", p: [
+        "ধরুন আপনার কাছে report.pdf নামে ২০ পেজের একটি ফাইল আছে। আপনাকে শুধু প্রথম তিন পেজ, পাঁচ নম্বর পেজ আর শেষ দুই পেজ পাঠাতে হবে। ফাইলটি সিলেক্ট করলে বক্সে \"২০টি পেজ\" আর ফাইলের সাইজ দেখাবে। এবার \"পেজ রেঞ্জ\" অপশনে থাকা অবস্থায় ঘরে লিখুন 1-3, 5, 19-20 এবং \"PDF আলাদা করুন\" চাপুন।",
+        "কয়েক মুহূর্ত পরে report-pages.pdf নামে একটি ফাইল তালিকায় আসবে। পাশে লেখা থাকবে \"৬টি পেজ\" এবং ফাইলের সাইজ। ডাউনলোড চেপে ফাইলটি সেভ করুন। মূল report.pdf একটুও বদলায় না।",
+        "আরেকটি অপশন হলো \"প্রতি পেজ আলাদা\"। এটি বাছলে ২০টি পেজের জন্য ২০টি আলাদা PDF হবে, নাম হবে report-page-1.pdf থেকে report-page-20.pdf। প্রতিটি আলাদা বাটনে ডাউনলোড করতে হয়, তাই সব পেজ না লাগলে রেঞ্জ অপশনই সুবিধাজনক।",
+      ] },
+      { h: "কেন ও কখন পেজ আলাদা করা দরকার", p: [
+        "অনেক সময় একটি বড় PDF এর সবটা পাঠানোর দরকার হয় না। বই বা স্ক্যান করা নথির মধ্যে হয়তো দুটি পেজ আপনার কাজের। পুরো ফাইল পাঠালে ফাইল বড় হয়, গ্রহীতাকেও খুঁজে নিতে হয়। দরকারি পেজ আলাদা করে পাঠালে দুই পক্ষেরই সুবিধা।",
+        "অনলাইন ফর্ম বা আবেদনে ফাইল আপলোডের সাইজ সীমা থাকতে পারে। নির্দিষ্ট কয়েকটি পেজ রেখে বাকিটা বাদ দিলে ফাইল ছোট হয়। তবে ঠিক কত ছোট হবে তা পেজের ভেতরের ছবি ও লেখার ওপর নির্ভর করে, আগে থেকে বলা যায় না। সীমা পূরণ না হলে Compress PDF টুল ব্যবহার করে দেখতে পারেন।",
+        "একটি স্ক্যান করা ফাইলে একাধিক নথি থাকলে প্রতি পেজ আলাদা করেও কাজ চালানো যায়। এরপর যে পেজগুলো লাগবে, Merge PDF দিয়ে নিজের পছন্দের ক্রমে জুড়ে নিতে পারেন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বেশি হয় রেঞ্জ লেখার ভুল। কমার বদলে স্পেস বা দাঁড়ি দিলে (যেমন 1 3 বা 1.3) \"ভুল ফরম্যাট\" বার্তা আসবে। শেষে বাড়তি কমা থাকলেও একই বার্তা আসে। সবসময় 1-3, 5 এই ধাঁচে লিখুন।",
+        "মোট পেজের চেয়ে বড় নম্বর লিখলে বা 5-3 এর মতো উল্টো রেঞ্জ লিখলে টুল আটকে দেয়। উপরে দেখানো পেজ সংখ্যা মিলিয়ে নিন।",
+        "\"PDF খোলা যায়নি\" বার্তা এলে ফাইলে পাসওয়ার্ড দেওয়া থাকতে পারে বা ফাইলটি নষ্ট। অন্য কোনো PDF রিডারে ফাইলটি খোলে কাজ করছে কি না দেখুন। আরেকটি সমস্যা হলো \"প্রতি পেজ আলাদা\" অপশনে ১০০ পেজের বেশি দিলে কাজ হয় না। তখন রেঞ্জ অপশনে ভাগে ভাগে করুন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "এক ফাইলের সর্বোচ্চ সাইজ ৫০ MB। \"প্রতি পেজ আলাদা\" অপশন সর্বোচ্চ ১০০ পেজের PDF এ চলে। কাজটি আপনার ফোন বা ব্রাউজারের মেমোরিতে হয়, তাই খুব বড় ফাইলে একটু সময় লাগতে পারে এবং পুরোনো ফোনে ধীর হতে পারে।",
+        "ডাউনলোডের আগে ফাইলটি খুলে পেজগুলো ঠিক আছে কি না দেখে নিন, বিশেষ করে যদি ফাইলটি কোথাও জমা দিতে হয়। ফাইলের নাম বদলে অর্থবহ কিছু রাখলে পরে খুঁজে পাওয়া সহজ হয়।",
+        "নথিতে ব্যক্তিগত তথ্য থাকলে সেই পেজগুলো বাদ দিয়ে বাকি অংশ পাঠানো যায়। তবে পাঠানোর আগে নতুন ফাইলটি নিজে একবার খুলে দেখুন। মূল ফাইলটি আলাদা জায়গায় রেখে দেওয়াও ভালো, কারণ টুল সেটি বদলায় না।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example: six pages out of a 20-page PDF", p: [
+        "Say you have a 20-page file called report.pdf and you only need to send the first three pages, page 5 and the last two. After you select it, the box shows \"20 page(s)\" and the file size. With \"Page range\" selected, type 1-3, 5, 19-20 and tap \"Split PDF\".",
+        "A moment later a file called report-pages.pdf appears in the list, labelled \"6 page(s)\" with its size. Tap Download to save it. The original report.pdf is not touched.",
+        "The other option is \"Each page separately\". Choosing it makes 20 PDFs named report-page-1.pdf to report-page-20.pdf. Each has its own download button, so if you do not need every page, the range option is quicker.",
+      ] },
+      { h: "Why and when splitting pages helps", p: [
+        "A big PDF is often more than you need to send. A book or scanned bundle may have only two pages that matter to you. Sending the whole file makes it larger and the reader has to hunt for the right pages. Sending just those pages is easier for both sides.",
+        "Online forms sometimes limit the size of an upload. Keeping only the pages you need and dropping the rest can make the file smaller, though how much smaller depends on the images and text inside, so it cannot be predicted in advance. If it is still too large, you can try the Compress PDF tool.",
+        "If one scan holds several documents, splitting every page lets you pick out what you need. You can then join the pages you want in any order with Merge PDF.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "Most problems come from typing the range wrongly. Using a space or a dot instead of a comma, such as 1 3 or 1.3, gives an \"Invalid format\" message, and so does a stray comma at the end. Always write it like 1-3, 5.",
+        "A number larger than the total page count, or a backwards range like 5-3, is rejected. Check the page count shown at the top of the box.",
+        "If you see \"Could not open this PDF\", the file may be password protected or damaged. Try opening it in another PDF reader to see whether it works there. Another common snag is the \"Each page separately\" mode, which does not run on PDFs over 100 pages. Use the range option in batches instead.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "A file can be at most 50 MB, and \"Each page separately\" works on PDFs up to 100 pages. The work uses your phone or browser memory, so a very large file may take a while and can feel slow on an older phone.",
+        "Before you send the result anywhere, open it and check that the pages are the right ones, especially if it is going into an application. Renaming the file to something meaningful also helps you find it later.",
+        "If a document has personal details on some pages, you can leave those out and send the rest. Still, open the new file yourself first. Keep the original somewhere safe too, although the tool never changes it.",
+      ] },
+    ],
+  },
+  "stopwatch-timer": {
+    bn: [
+      { h: "ল্যাপ নিয়ে একটি উদাহরণ", p: [
+        "ধরুন আপনি মাঠে চার চক্কর দৌড়াচ্ছেন এবং প্রতি চক্করের সময় জানতে চান। স্টপওয়াচ ট্যাবে Start চেপে দৌড় শুরু করুন। প্রতিবার চক্কর শেষ হলে Lap চাপুন। ধরুন প্রথম চক্করে লাগল ১ মিনিট ২০ সেকেন্ড, দ্বিতীয়বার Lap চাপার সময় ঘড়িতে ২ মিনিট ৫০ সেকেন্ড।",
+        "তালিকায় প্রতিটি সারিতে তিনটি জিনিস থাকে: ল্যাপের নম্বর, সেই ল্যাপের নিজস্ব সময় এবং শুরু থেকে মোট সময়। দ্বিতীয় ল্যাপের সারিতে নিজস্ব সময় ০১:৩০.০০ এবং মোট সময় ০২:৫০.০০ দেখাবে। নতুন ল্যাপ সবসময় তালিকার ওপরে বসে। সময় সেকেন্ডের একশো ভাগের এক ভাগ পর্যন্ত দেখানো হয়।",
+        "এক ঘণ্টা পার হলে ঘণ্টার ঘরও যোগ হয়ে যায়। Lap বাটন শুধু ঘড়ি চলার সময় কাজ করে। থামানো অবস্থায় সেটি বন্ধ থাকে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "পড়াশোনায় সময় বেঁধে নিলে মনোযোগ ধরে রাখা সহজ হয়। উদাহরণ হিসেবে ২৫ মিনিট পড়া ও ৫ মিনিট বিরতির নিয়ম অনেকে মানেন। টাইমার ট্যাবে মিনিট ঘরে ২৫ লিখে Start চাপলেই হলো। বিরতির জন্য আলাদা করে ৫ মিনিটের প্রিসেট নিন। এটি একটি জনপ্রিয় কৌশল মাত্র, আপনার সুবিধামতো সময় ঠিক করুন।",
+        "রান্নায় সেদ্ধ বা ভাজার সময় মাপতে, ব্যায়ামে বিরতির হিসাব রাখতে, বক্তৃতার মহড়ায় কত সময় লাগছে দেখতে, কিংবা পরীক্ষার অনুশীলনে নির্দিষ্ট সময়ে প্রশ্ন সমাধান করতে এটি কাজে লাগে। ক্লাসে শিক্ষক বড় পর্দায় ফুলস্ক্রিনে টাইমার দেখাতে পারেন।",
+        "ফোনে আলাদা অ্যাপ নামাতে হয় না, ব্রাউজারেই কাজ হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো টাইমারের সময় ফাঁকা বা শূন্য রেখে Start চাপা। তখন \"সময় ০ এর বেশি দিন\" বার্তা আসবে। কমপক্ষে একটি ঘরে সংখ্যা দিন বা একটি প্রিসেট বেছে নিন।",
+        "দ্বিতীয় ভুল হলো দশমিক বা ঋণাত্মক সংখ্যা দেওয়া, যেমন ১.৫ মিনিট। এই টুল শুধু পূর্ণসংখ্যা নেয়। দেড় মিনিট চাইলে মিনিটে ১ ও সেকেন্ডে ৩০ লিখুন।",
+        "তৃতীয় ভুল হলো স্টপওয়াচ চলার সময় ট্যাব বদলে টাইমারে যাওয়া। এতে স্টপওয়াচের সময় ও ল্যাপ মুছে যায়। আগে Pause দিয়ে সময় লিখে নিন।",
+        "চতুর্থ ভুল হলো ফোন সাইলেন্ট রেখে শব্দের অপেক্ষা করা। শব্দ বন্ধ থাকলেও কম্পন চলতে পারে, তবে নিশ্চিত থাকতে ভলিউম ঠিক রাখুন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "টাইমারে সর্বোচ্চ ৯৯ ঘণ্টা দেওয়া যায়। সময়ের হিসাব ডিভাইসের ঘড়ি থেকে আসে, তবে টাইমার শেষে বিপ ও কম্পন তখনই নির্ভরযোগ্য যখন পেজ খোলা থাকে। স্ক্রিন লক বা ট্যাব বন্ধ করলে ব্রাউজার এগুলো আটকে দিতে পারে।",
+        "যেখানে সময়মতো জেগে ওঠা বা ওষুধ খাওয়ার মতো জরুরি বিষয় আছে, সেখানে শুধু এই পেজের ওপর ভরসা না করে ফোনের অ্যালার্ম ব্যবহার করুন।",
+        "খেলাধুলার প্রতিযোগিতার সরকারি সময় মাপার জন্য এই টুল তৈরি নয়। অনুশীলন বা ঘরোয়া খেলায় এটি যথেষ্ট। ফলাফল বা ল্যাপ সেভ হয় না, তাই দরকারি সময় খাতায় বা নোটে টুকে রাখুন।",
+      ] },
+    ],
+    en: [
+      { h: "A lap example", p: [
+        "Say you are running four rounds of a field and want the time for each round. On the Stopwatch tab press Start and begin running. Each time you finish a round, press Lap. Suppose the first round took 1 minute 20 seconds, and the clock reads 2 minutes 50 seconds when you press Lap the second time.",
+        "Each row in the list shows three things: the lap number, that lap's own time, and the total time since the start. The second lap row would show 01:30.00 as its own time and 02:50.00 as the total. New laps are always added at the top. Time is shown down to hundredths of a second.",
+        "After one hour passes, an hours section is added. The Lap button only works while the clock is running, and it is disabled when stopped.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Setting a time limit makes it easier to hold your focus when studying. A common example is 25 minutes of study followed by a 5 minute break. On the Timer tab, type 25 in the minutes box and press Start, then set 5 minutes for the break. It is only one popular method, so choose lengths that suit you.",
+        "It also helps with timing how long something boils or fries in the kitchen, keeping track of rests during exercise, checking how long a speech rehearsal takes, or solving exam practice questions within a set time. A teacher can show the timer full screen on a big display in class.",
+        "You do not need to install an app on your phone. It runs in the browser.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is pressing Start on the timer with the time empty or zero. You will see the message \"Time must be more than 0\". Enter a number in at least one field or pick a preset.",
+        "The second mistake is entering a decimal or negative number, such as 1.5 minutes. The tool accepts whole numbers only. For a minute and a half, type 1 in minutes and 30 in seconds.",
+        "The third mistake is switching to the Timer tab while the stopwatch is running. That clears the stopwatch time and laps. Pause and note the time first.",
+        "The fourth mistake is keeping the phone on silent and waiting for the beep. Vibration may still work, but to be sure, keep the volume on.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The timer accepts up to 99 hours. Time is counted from your device clock, but the end beep and vibration are only dependable while the page stays open. A locked screen or closed tab may make the browser block them.",
+        "Where something important depends on it, such as waking on time or taking medicine, do not rely only on this page. Use your phone's alarm as well.",
+        "This tool is not built for official timing at sports competitions. For practice or casual games it is enough. Results and laps are not saved, so write down any times you need in a notebook or notes app.",
+      ] },
+    ],
+  },
+  "todo-list": {
+    bn: [
+      { h: "একটি সকালের উদাহরণ ধাপে ধাপে", p: [
+        "ধরুন কাল আপনার একটি ক্লাস টেস্ট আছে। উপরের ঘরে লিখুন \"পদার্থবিজ্ঞান অধ্যায় ৩ পড়া\" এবং + চাপুন। একই ভাবে লিখুন \"গণিতের পাঁচটি অঙ্ক করা\" আর \"বিকেলে বাজারে যাওয়া\"। প্রতিটি নতুন কাজ তালিকার ওপরে এসে বসে, তাই সবশেষ লেখাটি সবার ওপরে দেখা যাবে।",
+        "নিচে \"৩টি কাজ বাকি\" লেখা দেখাবে। পড়া শেষ করে টিক দিলে সংখ্যা কমে ২ হবে এবং লেখার ওপর দাগ পড়বে। এখন বাকি ট্যাবে ট্যাপ করলে শুধু যেগুলো শেষ হয়নি সেগুলো দেখা যাবে। শেষ ট্যাবে গেলে সারাদিনে কী কী করলেন তার হিসাব দেখতে পারবেন।",
+        "দিন শেষে শেষ হওয়াগুলো মুছুন লিঙ্কে ট্যাপ করুন। টিক দেওয়া সব কাজ সরে যাবে, আর যেগুলো বাকি আছে সেগুলো পরদিনের জন্য থেকে যাবে।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "মাথায় অনেক কাজ জমে থাকলে কোনটি আগে করবেন তা বুঝতে কষ্ট হয়। সব লিখে ফেললে মাথা হালকা লাগে এবং কাজগুলো চোখের সামনে থাকে। ছাত্রছাত্রী, চাকরিজীবী, ফ্রিল্যান্সার বা গৃহিণী, যে কেউ দৈনিক কাজের জন্য এটি ব্যবহার করতে পারেন।",
+        "বাজারের ফর্দ বানাতেও সুবিধা। দোকানে গিয়ে একটি একটি জিনিস কিনে টিক দিলে কিছু বাদ পড়ার সম্ভাবনা কমে। কোনো সফটওয়্যার ইনস্টল করতে হয় না, ফোনের ব্রাউজারেই কাজ হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো কাজ অতিরিক্ত বড় করে লেখা, যেমন \"পরীক্ষার প্রস্তুতি\"। এটি কখনো শেষ হয়েছে মনে হয় না। এর বদলে \"ইংরেজি দ্বিতীয় পত্রের গ্রামার পড়া\" এর মতো ছোট কাজ লিখুন।",
+        "দ্বিতীয় ভুল হলো একসঙ্গে অনেক কাজ জমানো। প্রথম দিনে ৩০টি কাজ লিখলে বাকির সংখ্যা দেখেই হতাশ লাগে। দিনে পাঁচ থেকে সাতটি জরুরি কাজ রাখলে তালিকা সামলানো সহজ।",
+        "তৃতীয় ভুল হলো ব্রাউজারের ডেটা পরিষ্কার করার সময় তালিকাও হারানো। ফোনের ক্লিনার অ্যাপ বা ব্রাউজারের Clear data চালানোর আগে জরুরি কাজগুলো খাতায় বা নোটে টুকে নিন। এছাড়া ভুল লেখা কাজ এডিট করা যায় না, তাই মুছে আবার লিখতে হবে।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "এই টুলে সময়সীমা, রিমাইন্ডার, ক্যাটাগরি বা কাজের ক্রম বদলানোর সুবিধা নেই। এটি একটি সহজ চেকলিস্ট। কোনো কাজের নির্দিষ্ট সময় থাকলে ফোনের অ্যালার্ম বা ক্যালেন্ডার আলাদা ব্যবহার করুন।",
+        "তালিকা কোনো সার্ভারে যায় না, তাই অন্য ডিভাইস থেকে দেখা সম্ভব নয়। একাধিক ডিভাইসে কাজ করলে একটি ডিভাইসই বেছে নিন। একই ব্রাউজারের প্রাইভেট বা ইনকগনিটো মোডে লিখলে সেশন শেষে তালিকা হারিয়ে যেতে পারে।",
+        "প্রতিদিন একটি নির্দিষ্ট সময়ে তালিকা দেখার অভ্যাস করুন, যেমন সকালে চা খাওয়ার সময়। তালিকা লিখে রাখাই যথেষ্ট নয়, নিয়মিত দেখলেই তা কাজে আসে। সর্বোচ্চ ২০০টি কাজ রাখা যায়, তাই পুরোনো ও অপ্রয়োজনীয় কাজ নিয়মিত সরিয়ে দিন।",
+      ] },
+    ],
+    en: [
+      { h: "A morning, step by step", p: [
+        "Suppose you have a class test tomorrow. In the top box type \"Read physics chapter 3\" and press +. Do the same for \"Solve five maths problems\" and \"Go to the market in the afternoon\". Each new task lands at the top of the list, so the last one you typed is the first one you see.",
+        "Below the list you will see \"3 tasks left\". When you finish reading and tick the first task, the count drops to 2 and the text gets a strike-through. Tap the Active tab to see only the tasks that are not finished. Open the Done tab to see what you have completed during the day.",
+        "At the end of the day, tap the Clear completed link. Every ticked task disappears, and the unfinished ones stay for tomorrow.",
+      ] },
+      { h: "When and why it helps", p: [
+        "When many tasks pile up in your head, it is hard to decide what to do first. Writing them all down makes your mind lighter and keeps the work in front of you. Students, office workers, freelancers and people running a household can all use it for daily jobs.",
+        "It also works for a shopping list. Ticking items off one by one in the shop makes it less likely that you forget something. There is nothing to install, since it runs in your phone's browser.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is writing tasks that are too big, such as \"exam preparation\". It never feels finished. Write smaller tasks instead, like \"read English second paper grammar\".",
+        "The second mistake is piling up too many tasks at once. If you write 30 tasks on day one, the number alone can feel discouraging. Keeping five to seven important tasks a day makes the list easier to manage.",
+        "The third mistake is losing the list when you clear browser data. Before running a phone cleaner app or the browser's Clear data option, copy important tasks into a notebook or notes app. Also, a task cannot be edited, so a wrongly typed task has to be deleted and typed again.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool has no due dates, reminders, categories or reordering. It is a simple checklist. If a task has a fixed time, use your phone's alarm or calendar separately.",
+        "The list does not go to any server, so you cannot view it from another device. If you work on several devices, pick one to use. Writing in a private or incognito window may also lose the list when the session ends.",
+        "Build a habit of checking the list at a fixed time, such as with your morning tea. Writing a list is not enough, it only helps when you look at it regularly. The limit is 200 tasks, so remove old and unneeded items from time to time.",
+      ] },
+    ],
+  },
+  "word-counter": {
+    bn: [
+      { h: "একটি উদাহরণ দিয়ে ছয়টি সংখ্যার মানে", p: [
+        "ধরুন বক্সে লিখলেন: Hello world. This is a test! এখানে শব্দ ৬, অক্ষর ২৮ (ফাঁকা সহ), ফাঁকা ছাড়া অক্ষর ২৩, বাক্য ২ (একটি পূর্ণচ্ছেদ ও একটি বিস্ময়সূচক চিহ্ন), প্যারাগ্রাফ ১ এবং পড়ার সময় ১ মিনিট দেখাবে।",
+        "পড়ার সময় সব সময় পরের পূর্ণ মিনিটে উঠে যায়। তাই একটি শব্দ লিখলেও ১ মিনিট দেখাবে, আর বক্স খালি থাকলে ০ মিনিট। ৫০০ শব্দের রচনায় ৫০০ ÷ ২০০ = ২.৫, তাই ৩ মিনিট দেখাবে।",
+        "বাংলা লেখাতেও একই নিয়ম। বাংলায় দাঁড়ি (।) বাক্য শেষের চিহ্ন হিসেবে ধরা হয়, তাই ইংরেজি ও বাংলা মিশিয়ে লিখলেও বাক্য গোনা ঠিক থাকে।",
+      ] },
+      { h: "কখন এই টুল কাজে লাগে", p: [
+        "স্কুল বা কলেজের রচনা, অ্যাসাইনমেন্ট ও আবেদনপত্রে প্রায়ই শব্দসীমা থাকে, যেমন ৩০০ বা ৫০০ শব্দ। লেখা শেষ হলে এখানে পেস্ট করে সংখ্যা মিলিয়ে নেওয়া যায়। জমা দেওয়ার ফর্মে অক্ষর গোনার নিয়ম থাকলে ফাঁকা সহ ও ফাঁকা ছাড়া দুটো সংখ্যাই হাতের কাছে পাওয়া যায়।",
+        "ব্লগার ও ওয়েবসাইটের লেখকরা পোস্টের শব্দসংখ্যা ও পড়ার সময় দেখে নিতে পারেন। মেটা ডেসক্রিপশন বা শিরোনামের দৈর্ঘ্য মাপতেও অক্ষর গোনা কাজে লাগে। সোশ্যাল মিডিয়ায় অক্ষরসীমা থাকলে পোস্ট দেওয়ার আগে গুনে নিন, তবে সীমা প্ল্যাটফর্মভেদে বদলায়, তাই সংশ্লিষ্ট প্ল্যাটফর্মের নিজস্ব তথ্য দেখে নিন।",
+        "অনুবাদক বা লেখকরা কাজের পরিমাণ বোঝাতেও শব্দসংখ্যা ব্যবহার করেন।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো শিরোনাম, নাম বা তারিখের লাইন বাদ না দিয়ে গোনা। ফর্ম যদি শুধু মূল লেখার সীমা চায়, তবে শুধু সেই অংশ পেস্ট করুন।",
+        "দ্বিতীয় ভুল হলো বাক্যের সংখ্যাকে সম্পূর্ণ নির্ভুল মনে করা। কারণ টুল চিহ্ন দেখে গোনে। সংখ্যার ভেতরের দশমিক বিন্দু বা Mr. ও Dr. এর মতো সংক্ষেপও গোনায় ঢুকতে পারে। বাক্য নিয়ে কড়া সীমা থাকলে নিজে একবার পড়ে মিলিয়ে নিন।",
+        "তৃতীয় ভুল হলো প্যারাগ্রাফ না মেলা। এই টুলে Enter চেপে নতুন লাইনে গেলেই নতুন প্যারাগ্রাফ ধরা হয়। অন্য কোথা থেকে পেস্ট করা লেখায় লাইনের মাঝে জোর করে ভাঙা লাইন থাকলে প্যারাগ্রাফ বেশি দেখাবে। সেক্ষেত্রে বাড়তি লাইন ভাঙা মুছে নিন।",
+      ] },
+      { h: "সীমা ও ভালো অভ্যাস", p: [
+        "পড়ার সময় একটি আনুমানিক হিসাব, কারণ এটি প্রতি মিনিটে ২০০ শব্দ ধরে বের করা। কঠিন বিষয়ের লেখা বা ধীরে পড়া পাঠকের জন্য সময় বেশি লাগতে পারে।",
+        "কঠোর শব্দসীমা থাকলে সীমার ঠিক শেষ সংখ্যায় না থেকে কিছুটা কম রাখুন। অন্য প্রোগ্রাম হাইফেন, সংখ্যা ও চিহ্ন ভিন্নভাবে গোনে, তাই কয়েক শব্দের তফাত হতে পারে। জমার আগে শেষবারের মতো ওই ফর্মের নিজস্ব গণনার সঙ্গেও মিলিয়ে নিন।",
+        "লেখা শুধু আপনার ব্রাউজারে থাকে এবং কোথাও জমা হয় না। তবু বড় বা মূল্যবান লেখা শুধু এখানে রেখে দেবেন না। পেজ বন্ধ করলে বা Clear চাপলে লেখা মুছে যায়, তাই আগে আলাদা ফাইলে সংরক্ষণ করে রাখুন।",
+        "লেখা সম্পাদনার সময় মাঝেমাঝে সংখ্যা দেখে নিন। কোন অংশ ছোট করলে সীমার ভেতরে আসবে, তা বুঝতে এটি সুবিধা দেয়। গণনা সঙ্গে সঙ্গে বদলায়, তাই কোনো বাটন না চেপেই ফল দেখা যায়।",
+      ] },
+    ],
+    en: [
+      { h: "What the six numbers mean, with an example", p: [
+        "Say you type: Hello world. This is a test! The tool shows 6 words, 28 characters (with spaces), 23 characters without spaces, 2 sentences (one full stop and one exclamation mark), 1 paragraph and a read time of 1 minute.",
+        "Read time always rounds up to the next whole minute. So even one word shows 1 minute, and an empty box shows 0 minutes. For a 500-word essay, 500 divided by 200 is 2.5, so it shows 3 minutes.",
+        "The same rules apply to Bangla text. The Bangla danda (।) counts as a sentence ending, so sentence counting stays correct even if you mix Bangla and English.",
+      ] },
+      { h: "When this tool helps", p: [
+        "School and college essays, assignments and applications often have word limits, such as 300 or 500 words. When you finish writing, paste the text here and check the number. If the form has a character rule, you have both the with-spaces and without-spaces numbers at hand.",
+        "Bloggers and website writers can check a post's word count and reading time. Character counts also help when measuring a meta description or a title. If a social media platform has a character limit, count before you post, but limits differ between platforms, so check the platform's own information.",
+        "Translators and writers also use word counts to describe the size of a job.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is counting the title, name or date lines when the form wants only the main text. Paste only that part if so.",
+        "The second is treating the sentence count as exact. The tool counts by punctuation marks. A decimal point inside a number, or abbreviations like Mr. and Dr., can be counted too. If you have a strict sentence rule, read through the text once yourself.",
+        "The third is a paragraph count that looks too high. In this tool, every new line made with Enter starts a new paragraph. Text pasted from elsewhere may have lines broken in the middle of a paragraph. Remove those extra line breaks and the count will fix itself.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "Read time is an estimate because it assumes 200 words per minute. Technical writing or a slow reader may need longer.",
+        "If you have a strict word limit, stay a little under it instead of landing on the exact number. Other programs treat hyphens, numbers and symbols differently, so a few words of difference is possible. Check against the submission form's own counter as a last step.",
+        "Your text stays in your browser and is not stored anywhere. Even so, do not keep a long or important piece only here. Closing the page or pressing Clear removes it, so save it in a separate file first.",
+      ] },
+    ],
+  },
+};
+
+for (const [slug, add] of Object.entries(EXTRA_B3)) {
+  const base = TOOL_ARTICLES[slug];
+  if (base) {
+    base.bn.push(...add.bn);
+    base.en.push(...add.en);
+  } else {
+    TOOL_ARTICLES[slug] = add;
+  }
+}

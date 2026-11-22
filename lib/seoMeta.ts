@@ -83,8 +83,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি Countdown Timer দিয়ে পরীক্ষা, বিয়ে বা ট্রিপের তারিখ দিন। দিন, ঘণ্টা, মিনিট ও সেকেন্ড লাইভ দেখুন, ইভেন্ট ব্রাউজারে সেভ থাকে।",
   },
   "stopwatch-timer": {
-    title: "Online Stopwatch & Timer - অনলাইন স্টপওয়াচ",
-    description: "ফ্রি অনলাইন স্টপওয়াচ (stop watch) ল্যাপসহ এবং শব্দ করা কাউন্টডাউন টাইমার, একই পেজে। ফুলস্ক্রিন ও শর্টকাট আছে। Online timer stopwatch।",
+    title: "অনলাইন স্টপওয়াচ ও টাইমার - Stopwatch Timer",
+    description: "ফ্রি Online Stopwatch ল্যাপসহ এবং শব্দ করা কাউন্টডাউন Timer, একই পেজে। ১, ৫, ১০ মিনিটের প্রিসেট, ফুলস্ক্রিন ও কীবোর্ড শর্টকাট আছে।",
   },
   "image-compressor": {
     title: "Image Compressor - ছবির সাইজ KB তে কমান",
@@ -99,16 +99,16 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "একাধিক PDF ফাইল ফ্রিতে জোড়া দিয়ে একটি PDF বানান, তীর বাটনে ক্রম নিজে ঠিক করুন। ফাইল আপলোড হয় না, ব্রাউজারেই merge PDF হয়।",
   },
   "image-to-pdf": {
-    title: "Image to PDF - ছবি থেকে পিডিএফ",
-    description: "JPG ও PNG ছবি থেকে PDF বানান, একাধিক ছবি এক PDF-এ। ছবি আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি image to PDF।",
+    title: "Image to PDF - ছবি থেকে পিডিএফ বানান",
+    description: "ফ্রি Image to PDF টুল: একাধিক JPG, PNG বা WebP ছবি এক PDF ফাইলে জুড়ুন, ক্রম ঠিক করুন, A4 বা ছবির মাপ বেছে নিন। ছবি আপলোড হয় না।",
   },
   "qr-code-generator": {
-    title: "QR Code Generator - ফ্রি কিউআর কোড",
-    description: "লিংক বা লেখা থেকে ফ্রি QR কোড বানান, রং ও সাইজ ঠিক করে PNG ডাউনলোড করুন। সাইনআপ লাগে না, সব কাজ ব্রাউজারে হয়। Free QR code generator।",
+    title: "QR Code Generator - ফ্রি QR কোড বানান",
+    description: "ফ্রি QR code generator: লিংক বা লেখা দিন, রং, সাইজ ও ভুল সংশোধনের মাত্রা ঠিক করুন, তারপর PNG ডাউনলোড করুন। সব কাজ ব্রাউজারেই হয়।",
   },
   "word-counter": {
     title: "Word Counter - শব্দ গণনা (বাংলা ও ইংরেজি)",
-    description: "শব্দ, অক্ষর, বাক্য ও প্যারাগ্রাফ গণনা করুন টাইপ করার সাথে সাথে। Word counter ও character counter, ফ্রি অনলাইন।",
+    description: "ফ্রি Word Counter: লেখা পেস্ট করলেই শব্দ, অক্ষর, বাক্য, প্যারাগ্রাফ ও পড়ার সময় দেখুন। বাংলা ও ইংরেজি দুটোতেই চলে, সাইনআপ লাগে না।",
   },
   "percentage-calculator": {
     title: "Percentage Calculator - শতকরা হিসাব, VAT ও ছাড়",
@@ -155,12 +155,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি online character counter। লেখা পেস্ট করলে স্পেসসহ, স্পেস ছাড়া অক্ষর ও লাইন গোনে এবং SMS, X, SEO Title, Bio এর লিমিট মিলিয়ে দেখায়।",
   },
   "color-picker": {
-    title: "Color Picker - HEX RGB HSL কালার কোড",
-    description: "রং বেছে নিন বা HEX লিখুন, HEX, RGB ও HSL কোড দেখুন এবং এক ক্লিকে কপি করুন। ডিজাইনার ও ডেভেলপারদের জন্য ফ্রি color picker।",
+    title: "কালার পিকার - Color Picker HEX RGB HSL",
+    description: "ফ্রি Color Picker দিয়ে রং বেছে নিন বা HEX কোড লিখুন। HEX, RGB ও HSL কোড একসাথে দেখুন এবং এক ট্যাপে কপি করে CSS বা ডিজাইনে বসান।",
   },
   "lorem-ipsum-generator": {
-    title: "Lorem Ipsum Generator - ডামি টেক্সট",
-    description: "ডিজাইন বা ওয়েবসাইটের জন্য প্যারাগ্রাফ, বাক্য বা শব্দ হিসেবে Lorem Ipsum ডামি টেক্সট বানান। ফ্রি lorem ipsum generator।",
+    title: "Lorem Ipsum Generator - ডামি টেক্সট বানান",
+    description: "ফ্রি Lorem Ipsum generator: প্যারাগ্রাফ, বাক্য বা শব্দ বেছে সংখ্যা দিন, ডামি টেক্সট তৈরি করে এক ক্লিকে কপি করুন। সাইনআপ লাগে না।",
   },
   "meta-tag-generator": {
     title: "Meta Tag Generator - ফ্রি SEO মেটা ট্যাগ বানান",
@@ -171,12 +171,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি কীওয়ার্ড ডেনসিটি চেকার। লেখা পেস্ট করে নিজের টার্গেট কীওয়ার্ড ও ১-৩ শব্দের বাক্যাংশের ঘনত্ব দেখুন। বাংলা ও ইংরেজি, CSV ডাউনলোডসহ।",
   },
   "todo-list": {
-    title: "To-Do List - দৈনিক কাজের তালিকা",
-    description: "দৈনিক কাজের তালিকা বানান, সম্পন্ন চিহ্নিত করুন। সাইন-আপ লাগে না, তালিকা আপনার ব্রাউজারেই সেভ থাকে। ফ্রি to-do list।",
+    title: "টু-ডু লিস্ট - Todo List দৈনিক কাজের তালিকা",
+    description: "ফ্রি Todo List দিয়ে দৈনিক কাজের তালিকা বানান, টিক দিন ও ফিল্টার করুন। সাইন-আপ লাগে না, তালিকা শুধু আপনার ব্রাউজারে সেভ থাকে।",
   },
   "random-number-generator": {
-    title: "Random Number Generator - র‍্যান্ডম সংখ্যা",
-    description: "নির্দিষ্ট সীমার মধ্যে র‍্যান্ডম সংখ্যা বানান। কয়েন টস ও ডাইস রোলও আছে। ফ্রি, সাইনআপ ছাড়া। Free random number generator।",
+    title: "র‍্যান্ডম নাম্বার জেনারেটর - Random Number",
+    description: "ফ্রি Random Number Generator দিয়ে নির্দিষ্ট সীমায় র‍্যান্ডম সংখ্যা বানান, ইউনিক ও সাজানো অপশনসহ। কয়েন টস ও ডাইস রোলও করা যায়।",
   },
   "time-zone-converter": {
     title: "BD Time to USA Time - আমেরিকায় এখন কয়টা বাজে?",
@@ -184,7 +184,7 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
   },
   "expense-tracker": {
     title: "খরচের হিসাব - Expense Tracker আয়-ব্যয়",
-    description: "খরচের হিসাব ও আয়-ব্যয় রাখুন, মাস অনুযায়ী দেখুন ও ক্যাটাগরি অনুযায়ী খরচের ভাগ জানুন। CSV ডাউনলোড করা যায়। ফ্রি expense tracker।",
+    description: "ফ্রি Expense Tracker দিয়ে আয়-খরচ লিখুন, মাস অনুযায়ী ব্যালেন্স ও ক্যাটাগরির ভাগ দেখুন এবং CSV নামান। হিসাব শুধু আপনার ব্রাউজারে থাকে।",
   },
   "invoice-generator": {
     title: "Invoice Generator - ফ্রি ইনভয়েস বানান PDF",
@@ -203,11 +203,11 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি rotate PDF টুল। কাত বা উল্টো PDF পেজ ডানে, বামে বা ১৮০° ঘুরিয়ে সোজা করুন, সব পেজ বা নির্দিষ্ট পেজ। ফাইল আপলোড হয় না।",
   },
   "split-pdf": {
-    title: "Split PDF - পিডিএফ ভাগ করুন",
-    description: "PDF থেকে পছন্দের পেজ বের করুন বা প্রতিটি পেজ আলাদা PDF করুন। ফাইল আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি split PDF।",
+    title: "Split PDF - পিডিএফ পেজ আলাদা করুন",
+    description: "ফ্রি Split PDF টুল: PDF থেকে পছন্দের পেজ বের করে নতুন ফাইল বানান বা প্রতিটি পেজ আলাদা PDF করুন। ফাইল আপনার ফোনেই প্রসেস হয়, আপলোড লাগে না।",
   },
   "pdf-to-jpg": {
-    title: "PDF to JPG - পিডিএফ থেকে ছবি",
-    description: "PDF এর প্রতিটি পেজ JPG ছবিতে বদলান। পছন্দের পেজ বেছে নিন, ছবির মান ঠিক করুন। PDF আপলোড হয় না। ফ্রি PDF to JPG।",
+    title: "PDF to JPG - পিডিএফ থেকে ছবি বানান",
+    description: "ফ্রি PDF to JPG টুল: PDF এর পছন্দের পেজ বা সব পেজ JPG ছবিতে বদলান, ছবির মান বেছে নিন। PDF আপলোড হয় না, সব কাজ আপনার ফোনেই হয়।",
   },
 };
