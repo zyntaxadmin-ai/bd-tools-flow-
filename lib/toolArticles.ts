@@ -3578,3 +3578,249 @@ for (const [slug, add] of Object.entries(EXTRA2)) {
     TOOL_ARTICLES[slug] = add;
   }
 }
+
+// ---------------------------------------------------------------------------
+// Extra sections (added 22 Nov 2026): worked examples, use cases and tips for the
+// tools that had the shortest pages. Appended to the entries above.
+// ---------------------------------------------------------------------------
+const EXTRA_B2: Record<string, ToolArticle> = {
+  "case-converter": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও একটি বাস্তব উদাহরণ", p: [
+        "ধরুন আপনি ক্যাপস লক চালু রেখে লিখে ফেলেছেন: MY NAME IS RAHIM. I LIVE IN DHAKA। লেখাটি বক্সে পেস্ট করুন। নিচে অক্ষর ও শব্দের সংখ্যা দেখা যাবে। এবার Sentence case বাটন চাপলে ফল হবে: My name is rahim. I live in dhaka।",
+        "লক্ষ করুন, নামের প্রথম অক্ষরও ছোট হয়ে গেছে। কারণ এই কেস আগে পুরো লেখা ছোট করে, তারপর শুধু বাক্যের প্রথম অক্ষর বড় করে। এখন Title Case চাপলে পাবেন: My Name Is Rahim. I Live In Dhaka। এটি প্রতিটি শব্দের প্রথম অক্ষর বড় করে।",
+        "প্রোগ্রামিংয়ের জন্য একই লেখা থেকে camelCase করলে হবে myNameIsRahimILiveInDhaka। snake_case করলে হবে my_name_is_rahim_i_live_in_dhaka। শব্দের মাঝের দাঁড়ি আর স্পেস এখানে বাদ পড়ে যায়।",
+        "কাজ শেষ হলে Copy বাটন চাপুন। বাটনে কিছুক্ষণ Copied! দেখা যাবে। তারপর ইমেইল, ডকুমেন্ট বা কোডের ফাইলে পেস্ট করুন।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "অফিসের রিপোর্ট বা অ্যাসাইনমেন্টের শিরোনাম ঠিকঠাক সাজাতে Title Case কাজে লাগে। মোবাইলে দ্রুত টাইপ করা ইংরেজি লেখায় বড় হাতের অক্ষর ভুল জায়গায় বসলে Sentence case দিয়ে সহজে ঠিক করা যায়।",
+        "যাঁরা ওয়েব বা অ্যাপ বানান, তাঁদের ভ্যারিয়েবল, ফাইলের নাম বা URL এর অংশ লিখতে camelCase, snake_case ও kebab-case লাগে। যেমন Product Page Title লিখে kebab-case করলে পাওয়া যায় product-page-title, যা ফাইল বা লিংকের নামের জন্য সুবিধাজনক।",
+        "ডেটা এন্ট্রির সময় একই নাম কেউ বড় হাতে, কেউ ছোট হাতে লেখে। সবগুলো lowercase করে নিলে তালিকা মেলানো সহজ হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "প্রথম ভুল হলো মূল লেখা না রেখেই বাটন চাপা। বাটন চাপলে বক্সের লেখাই বদলে যায়, আর lowercase করার পর আগের বড় হাতের অক্ষর ফেরত আনা যায় না। সমাধান হলো আগে মূল লেখার একটি কপি অন্য জায়গায় রাখা।",
+        "দ্বিতীয় ভুল হলো Sentence case চাপলে নামের প্রথম অক্ষরও ছোট হয়ে যায়, যেমন rahim বা dhaka। এরপর নাম ও জায়গার নাম হাতে ঠিক করে নিতে হয়।",
+        "তৃতীয় সমস্যা অ্যাপোস্ট্রফি নিয়ে। camelCase বা snake_case এ don't লেখাটি don ও t আলাদা শব্দ হিসেবে ধরা হয়, ফলে ফল হয় donT বা don_t। কোডের নামে অ্যাপোস্ট্রফি না রাখাই ভালো।",
+        "চতুর্থ বিষয় হলো বাংলা লেখা। বাংলায় বড়-ছোট হাতের ধারণা নেই, তাই বাংলা লেখায় বাটন চাপলে কিছু বদলাবে না। এটি ত্রুটি নয়।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "Title Case এখানে সব শব্দের প্রথম অক্ষর বড় করে। ইংরেজি ব্যাকরণের নিয়মে of, and বা the এর মতো ছোট শব্দ অনেক সময় ছোট হাতে থাকে। এই টুল সেই ব্যতিক্রম মানে না। তাই প্রকাশের আগে শিরোনাম একবার চোখ বুলিয়ে নিন।",
+        "লম্বা লেখায় একবারে সব বদলানোর আগে ছোট একটি অংশে পরীক্ষা করে দেখুন। ফল মনে হলে পুরো লেখা পেস্ট করুন। ইংরেজি আর বাংলা মেশানো লেখায় শুধু ইংরেজি অংশ বদলাবে, বাংলা অংশ যেমন আছে তেমনই থাকবে।",
+        "শব্দের সংখ্যা এখানে অক্ষর, সংখ্যা ও চিহ্নযুক্ত বর্ণের ধারা ধরে গোনা হয়। তাই এটি মোটামুটি সংখ্যা জানার জন্য ঠিক আছে। কোনো নির্দিষ্ট শব্দসীমা মেলাতে হলে Word Counter টুলেও যাচাই করে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step with a worked example", p: [
+        "Say you typed this with Caps Lock on: MY NAME IS RAHIM. I LIVE IN DHAKA. Paste it into the box. The character and word counts appear below. Press Sentence case and you get: My name is rahim. I live in dhaka.",
+        "Notice that the name also lost its capital. Sentence case first lowercases the whole text and then capitalises only the start of each sentence. Press Title Case instead and you get: My Name Is Rahim. I Live In Dhaka. This capitalises the first letter of every word.",
+        "For programming, the same text in camelCase becomes myNameIsRahimILiveInDhaka and in snake_case becomes my_name_is_rahim_i_live_in_dhaka. Spaces and full stops are dropped in these formats.",
+        "When you are done, press Copy. The button shows Copied! for a moment. Then paste the result into an email, a document or a code file.",
+      ] },
+      { h: "When and why it helps", p: [
+        "Title Case helps when you tidy up headings for a report or an assignment. If English text typed quickly on a phone has capitals in the wrong places, Sentence case fixes it in one click.",
+        "People who build websites or apps need camelCase, snake_case and kebab-case for variables, file names and parts of a URL. For example, Product Page Title becomes product-page-title in kebab-case, which suits a file or link name.",
+        "In data entry, one person writes a name in capitals and another in small letters. Converting everything to lowercase makes lists easier to match.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The first mistake is clicking a button without keeping the original. The button replaces the text in the box, and once you press lowercase the earlier capitals cannot be brought back. Keep a copy of the original somewhere else first.",
+        "The second is Sentence case lowering names, so rahim and dhaka lose their capitals. You need to fix names and place names by hand afterwards.",
+        "The third is apostrophes. In camelCase or snake_case, don't is read as two words, don and t, so you get donT or don_t. Avoid apostrophes in names meant for code.",
+        "Finally, Bangla text does not change because Bangla has no upper and lower case. That is expected, not an error.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "Title Case here capitalises every word. In English style rules, small words like of, and or the often stay lowercase, and this tool does not follow that exception. Read a heading once before you publish it.",
+        "With long text, test a small part first and then paste the whole thing. In mixed English and Bangla text, only the English part changes and the Bangla stays as it is.",
+        "The word count here counts runs of letters, digits and combining marks, so it is fine for a rough figure. If you must meet a specific word limit, check it again in the Word Counter tool.",
+      ] },
+    ],
+  },
+  "compress-pdf": {
+    bn: [
+      { h: "একটি বাস্তব উদাহরণ, ধাপে ধাপে", p: [
+        "ধরুন আপনার কাছে ২০ পেজের একটি স্ক্যান করা PDF আছে এবং ফাইলটি ১৮ MB। একটি অনলাইন আবেদনে ফাইলের সাইজের সীমা আছে, তাই এটি ছোট করতে হবে। টুলে PDF সিলেক্ট করলে উপরে \"২০টি পেজ, ১৮ MB\" ধরনের তথ্য দেখা যাবে।",
+        "এবার মাঝারি মাত্রা রেখে \"PDF কম্প্রেস করুন\" চাপুন। টুল পেজ ১ থেকে ২০ পর্যন্ত একটি একটি করে প্রক্রিয়া করবে এবং অগ্রগতি দেখাবে। শেষে \"আগে\" ও \"পরে\" সাইজ পাশাপাশি দেখাবে। ধরুন পরে ৩ MB এসেছে, তাহলে টুল লিখবে প্রায় ৮৩% ছোট হয়েছে।",
+        "এখন ফাইলটি আপনার আবেদনের সীমার ভেতরে আছে কি না দেখুন। না থাকলে আবার শক্তিশালী মাত্রায় চেষ্টা করুন। আর পেজের লেখা ঝাপসা মনে হলে হালকা মাত্রা নিন। এই সংখ্যাগুলো শুধু উদাহরণ, আপনার ফাইলে ফল আলাদা হতে পারে।",
+      ] },
+      { h: "কখন এই টুল কাজে লাগে", p: [
+        "চাকরির আবেদন, ভর্তি ফর্ম বা সরকারি পোর্টালে প্রায়ই ফাইলের সাইজের সীমা থাকে। স্ক্যানার অ্যাপ দিয়ে তোলা সার্টিফিকেট বা ফোনের ছবি দিয়ে বানানো PDF সাধারণত বড় হয়। এমন ফাইলে এই টুল সুবিধা দেয়। সীমা কত, তা সবসময় সংশ্লিষ্ট ওয়েবসাইটে দেখে নিন।",
+        "ইমেইলে বা মেসেজিং অ্যাপে পাঠানোর সময়ও ছোট ফাইল সুবিধার। মোবাইল ডেটা কম থাকলে বড় ফাইল পাঠানো ধীর হয়। কম্প্রেস করা ফাইল দ্রুত যায় এবং কম ডেটা খরচ হয়।",
+        "সবকিছু আপনার ডিভাইসেই হয়, তাই পরিচয়পত্র বা সার্টিফিকেটের মতো ব্যক্তিগত নথির জন্যও এটি সুবিধাজনক। শুধু PDF পড়ার টুল প্রথমবার ইন্টারনেট থেকে লোড হয়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "অনেকে লেখা-ভিত্তিক PDF, যেমন Word থেকে বানানো ফাইল, কম্প্রেস করতে চান। এমন ফাইল সাধারণত আগে থেকেই ছোট, আর এই টুল পেজকে ছবি বানায় বলে ফল বড়ও হতে পারে। টুল তখন ডাউনলোড বাটন দেখায় না, এবং মূল ফাইল রাখাই ভালো।",
+        "আরেক ভুল হলো কম্প্রেসের পর লেখা কপি করার চেষ্টা। পেজ এখন ছবি, তাই লেখা সিলেক্ট হবে না। যে ফাইলে লেখা কপি বা সার্চ লাগে, সেটির মূল কপি আলাদা রাখুন।",
+        "৬০ পেজের বেশি হলে টুল ফাইলটি নেবে না। আগে Split PDF দিয়ে ভাগ করুন, প্রতিটি অংশ কম্প্রেস করুন। পাসওয়ার্ড দেওয়া ফাইল খুলবে না, আগে আনলক করে নিন। ফাইল নষ্ট হলেও খোলা যাবে না, তখন অন্য কপি ব্যবহার করুন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এই টুল প্রতিটি পেজ ছবি করে নতুন PDF বানায়, তাই লিংক, ফর্মের ঘর বা সার্চযোগ্য লেখা বাদ পড়ে। চুক্তিপত্র বা যে ফাইলে লেখা দরকার, সেখানে এটি ব্যবহার না করাই ভালো।",
+        "সবসময় মূল ফাইলটি আলাদা জায়গায় রেখে দিন। ডাউনলোড হওয়া ফাইলের নাম হয় মূল নামের পরে -compressed যোগ করে, তাই দুটি ফাইল গুলিয়ে যাওয়ার ভয় কম। জমা দেওয়ার আগে নতুন ফাইলটি খুলে সব পেজ পড়া যায় কি না দেখে নিন।",
+        "বড় ফাইলে কাজ করতে কিছুটা সময় লাগে, কারণ প্রতিটি পেজ আপনার ডিভাইসে প্রক্রিয়া হয়। তাই কাজ চলার সময় ট্যাব বন্ধ করবেন না। একই ফাইল বারবার কম্প্রেস না করে মূল ফাইল থেকে মাত্রা বদলে চেষ্টা করুন।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example, step by step", p: [
+        "Say you have a scanned PDF of 20 pages and 18 MB, and an online application has a file size limit. When you select it in the tool, it shows the page count and size, something like \"20 page(s), 18 MB\".",
+        "Keep Balanced selected and tap \"Compress PDF\". The tool processes pages 1 to 20 one at a time and shows progress. At the end it lists the size before and after. If the new file is 3 MB, it reports about 83% smaller.",
+        "Now check whether the file fits the limit. If not, try Strong. If the text looks blurry, go with Light instead. These numbers are only an example, and your own file may behave differently.",
+      ] },
+      { h: "When this tool is useful", p: [
+        "Job applications, admission forms and government portals often set a file size limit. PDFs made with a scanner app or from phone photos are usually large, and these are the files this tool helps with. Always check the exact limit on the website concerned.",
+        "Smaller files also help when sending by email or a chat app. On limited mobile data, big attachments are slow to send. A compressed file goes faster and uses less data.",
+        "Everything runs on your own device, which suits personal papers such as certificates or ID copies. Only the PDF reader library is loaded from the internet the first time.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "People often try to compress a text-based PDF, such as one exported from Word. Those files are usually small already, and since this tool turns pages into images the result can even be bigger. The tool then hides the download button, and you should keep the original.",
+        "Another mistake is trying to copy text after compressing. The pages are now images, so text cannot be selected. Keep a separate original of any file where you need to copy or search text.",
+        "A PDF with more than 60 pages is refused. Split it with Split PDF first and compress each part. Password protected files will not open, so unlock them first. A damaged file cannot be opened either, so use another copy.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool rebuilds each page as an image, so links, form fields and searchable text are lost. For contracts or any file where text matters, it is better not to use it.",
+        "Always keep the original file somewhere safe. The download is named with -compressed after the original name, so the two are hard to mix up. Before submitting, open the new file and make sure every page is readable.",
+        "Large files take a little time because every page is processed on your device, so do not close the tab while it runs. Rather than compressing the same file again and again, go back to the original and try a different level.",
+      ] },
+    ],
+  },
+  "countdown-timer": {
+    bn: [
+      { h: "ধাপে ধাপে ব্যবহার ও একটি উদাহরণ", p: [
+        "ধরুন আপনার এইচএসসি পরীক্ষা শুরু হবে ২৫ এপ্রিল সকাল ১০টায়। প্রথম ঘরে লিখুন এইচএসসি পরীক্ষা। তারপর তারিখ ও সময়ের ঘরে ২৫ এপ্রিল, সকাল ১০:০০ বেছে নিন। সঙ্গে সঙ্গে নিচে চারটি বক্স আসবে: দিন, ঘণ্টা, মিনিট ও সেকেন্ড।",
+        "ধরুন আজ থেকে পরীক্ষার মধ্যে ৪০ দিন ৫ ঘণ্টা বাকি। বক্সে দেখাবে ৪০ দিন, ৫ ঘণ্টা এবং বাকি মিনিট ও সেকেন্ড। সেকেন্ডের ঘরটি প্রতি সেকেন্ডে একটি করে কমবে। নাম ও তারিখ আপনি দেওয়ামাত্র ব্রাউজারে সেভ হয়ে যায়। তাই পরদিন একই ফোনে পেজ খুললেই আবার একই ইভেন্ট দেখতে পাবেন।",
+        "পরীক্ষা শেষ হলে বা ইভেন্ট মিটে গেলে Reset চাপুন। এতে নাম ও তারিখ দুটোই মুছে যায় এবং ঘরগুলো ফাঁকা হয়। তারপর নতুন ইভেন্টের তথ্য বসানো যায়। নামের ঘরে ৮০ অক্ষর পর্যন্ত লেখা যায়, তাই ছোট ও স্পষ্ট নাম দিন।",
+      ] },
+      { h: "কখন ও কেন কাজে লাগে", p: [
+        "কোনো বড় দিনের জন্য প্রস্তুতি নিতে গেলে হাতে কত সময় আছে তা চোখের সামনে থাকলে পরিকল্পনা সহজ হয়। শিক্ষার্থীরা পরীক্ষা বা ভর্তি পরীক্ষার আগে বাকি দিন গুনতে পারেন। চাকরির আবেদনের শেষ দিন, ফর্ম পূরণের সময়সীমা বা কাজের ডেডলাইনের জন্যও এটি ব্যবহার করা যায়।",
+        "পরিবারের অনুষ্ঠানের জন্যও এটি কাজে আসে, যেমন বিয়ে, জন্মদিন, বিদেশ যাত্রা বা ছুটির ট্রিপ। শুধু এটুকু মনে রাখুন, টুল আপনার দেওয়া তারিখই ব্যবহার করে। ঈদের মতো তারিখ নিশ্চিত না হলে আগে সরকারি ঘোষণা দেখে নিন, তারপর তারিখ বসান।",
+        "সপ্তাহ বা মাসের লক্ষ্য ঠিক করতেও এটি কাজে আসে। যেমন মাসের শেষে কোনো বিল জমা দিতে হলে সেই তারিখ দিয়ে রাখলে মনে থাকে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে সাধারণ ভুল হলো সকাল ও বিকাল গুলিয়ে ফেলা। তারিখের বক্সে সময় বেছে নেওয়ার সময় AM ও PM ভালোভাবে দেখে নিন। রাত ১২টা বা দুপুর ১২টা দিলে বিভ্রান্তি বেশি হয়, তাই একবার যাচাই করুন।",
+        "দ্বিতীয় ভুল হলো ফোনের ঘড়ি ঠিক না থাকা। টুল ডিভাইসের সময় ধরে হিসাব করে, তাই ফোনের তারিখ বা টাইম জোন ভুল থাকলে ফলও ভুল হবে। তৃতীয়ত, অনেকে মনে করেন নতুন ইভেন্ট দিলে আগেরটি পাশে থেকে যাবে। আসলে একটি ইভেন্টই থাকে, নতুন তথ্য দিলে পুরোনোটি বদলে যায়। আর যদি লাল বার্তা দেখেন, বুঝবেন তারিখটি অতীতে চলে গেছে। তখন নতুন তারিখ দিন।",
+        "তারিখ বাছাইয়ের সময় বছরটিও দেখে নিন। ভুল বছর দিলে দিনের সংখ্যা অনেক বড় বা লাল বার্তা আসবে।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এই টুল শুধু বাকি সময় দেখায়, অ্যালার্ম বাজায় না। গুরুত্বপূর্ণ কাজের জন্য ফোনের অ্যালার্ম বা ক্যালেন্ডারও ব্যবহার করুন। তথ্য শুধু আপনার ব্রাউজারে থাকে। ব্রাউজারের ডেটা মুছলে বা অন্য ফোন ব্যবহার করলে ইভেন্ট আর দেখা যাবে না।",
+        "ভালো অভ্যাস হলো বড় লক্ষ্যের জন্য ছোট ছোট ধাপ ঠিক করা। যেমন কাউন্টডাউন দেখে ঠিক করুন, প্রতি সপ্তাহে কতটুকু পড়া শেষ করবেন। বাকি সময় সংখ্যায় দেখলে সময় নষ্ট করার প্রবণতা কমে। তবে সংখ্যা দেখে দুশ্চিন্তা না করে সেটিকে পরিকল্পনার সহায়ক হিসেবে নিন।",
+      ] },
+    ],
+    en: [
+      { h: "Step by step use with an example", p: [
+        "Say your HSC exam starts on 25 April at 10 AM. In the first box type HSC exam. In the date and time box pick 25 April, 10:00 AM. Four boxes appear straight away: days, hours, minutes and seconds.",
+        "If there are 40 days and 5 hours left today, the boxes show 40 days, 5 hours and the remaining minutes and seconds. The seconds box drops by one every second. Your name and date are saved in the browser as soon as you enter them, so opening the page on the same phone the next day shows the same event.",
+      ] },
+      { h: "When and why it helps", p: [
+        "When you prepare for a big day, seeing how much time is left makes planning easier. Students can count the days before an exam or admission test. It also works for a job application deadline, a form submission date or a work deadline.",
+        "Family events fit too, such as a wedding, a birthday, a trip abroad or a holiday. Just remember that the tool uses the date you enter. If a date like Eid is not confirmed yet, check the official announcement first and then set the date.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The most common mistake is mixing up AM and PM. When you pick the time, check AM and PM carefully. Midnight and noon cause the most confusion, so verify them once.",
+        "The second mistake is a wrong phone clock. The tool counts from your device time, so a wrong date or time zone on the phone gives a wrong result. Third, some people expect a new event to appear beside the old one. Only one event is kept, and new details replace the old. If you see the red message, the date is already in the past, so enter a new one.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool only shows the time left and does not sound an alarm. For important tasks also use your phone alarm or calendar. The data lives only in your browser, so clearing browser data or using another phone means the event will not show.",
+        "A good habit is to break a big goal into small steps. For example, use the countdown to decide how much to finish each week. Seeing the remaining time as numbers makes it harder to waste. Use the numbers to plan, not to worry.",
+      ] },
+    ],
+  },
+  "image-resizer": {
+    bn: [
+      { h: "একটি বাস্তব উদাহরণ, ধাপে ধাপে", p: [
+        "ধরুন আপনার ফোনের ছবির মাপ ৪০০০ × ৩০০০ পিক্সেল এবং একটি ফর্মে পাসপোর্ট সাইজ ছবি লাগবে। ছবি সিলেক্ট করলে নিচে বর্তমান মাপ ও ফাইলের সাইজ দেখাবে। এবার \"পাসপোর্ট 413×531\" প্রিসেট চাপুন।",
+        "প্রিসেট চাপলে Lock নিজে বন্ধ হয়ে যায় এবং কেটে ভরাট পদ্ধতি বাছা হয়। তাই ছবির মাঝখান থেকে ৪১৩ × ৫৩১ অনুপাতের অংশ কেটে নেওয়া হয়, ছবি চ্যাপ্টা হয় না। মুখ ছবির মাঝখানে না থাকলে অংশ বাদ পড়তে পারে, তাই আগেই ছবিটি মাঝখানে রেখে তুলুন বা প্রিভিউ দেখে নিন।",
+        "অন্য উদাহরণ: ৪০০০ × ৩০০০ ছবির প্রস্থ ১০০০ লিখলে Lock চালু থাকায় উচ্চতা নিজে ৭৫০ হয়ে যায়। এটি ওয়েবসাইট বা মেসেজে পাঠানোর জন্য ছোট ছবি বানাতে কাজে লাগে।",
+      ] },
+      { h: "কখন এই টুল কাজে লাগে", p: [
+        "অনলাইন আবেদনে ছবির নির্দিষ্ট মাপ চাওয়া হতে পারে, যেমন পাসপোর্ট সাইজ বা নির্দিষ্ট প্রস্থ ও উচ্চতা। প্রয়োজনীয় মাপ সবসময় সংশ্লিষ্ট ফর্ম বা ওয়েবসাইটে দেখে নিন।",
+        "ওয়েবসাইট বা ব্লগের জন্য ছবি ছোট করলে পেজ দ্রুত খোলে। প্রিসেটে ১২৮০×৭২০ ও ১৯২০×১০৮০ আছে, যা ভিডিও থাম্বনেইল বা কভার ছবির জন্য সুবিধাজনক। ৩০০×৩০০ ও ৬০০×৬০০ প্রিসেট প্রোফাইল ছবির মতো বর্গাকার ছবির জন্য।",
+        "ছবি আপনার ডিভাইসেই প্রসেস হয়, তাই পরিচয়পত্র বা ব্যক্তিগত ছবির জন্যও এটি নিরাপদভাবে ব্যবহার করা যায়।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে সাধারণ ভুল হলো Lock বন্ধ রেখে প্রস্থ ও উচ্চতা এলোমেলো দেওয়া এবং টেনে ভরাট বেছে নেওয়া। এতে ছবি চ্যাপ্টা বা লম্বা দেখায়। বিকৃতি এড়াতে Lock চালু রাখুন অথবা কেটে ভরাট ব্যবহার করুন।",
+        "ছোট ছবিকে বড় মাপে বাড়ানো আরেক ভুল। ছবি ঝাপসা দেখাবে, কারণ নতুন ডিটেইল তৈরি হয় না। মূল বড় ছবি থাকলে সেটি থেকে রিসাইজ করুন।",
+        "PNG ছবিকে JPEG করলে স্বচ্ছ অংশ সাদা হয়ে যায়। এটি না চাইলে PNG বা WebP বেছে নিন। আর ফাইল সাইজ বেশি লাগলে ফরম্যাট JPEG করে কোয়ালিটি স্লাইডার কমান। ২৫ MB এর বড় ছবি নেবে না, আর ৮০০০ পিক্সেলের বেশি মাপও দেওয়া যাবে না।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "এই টুল শুধু পিক্সেল মাপ ও ফরম্যাট বদলায়। ছবি ঘোরানো, ফিল্টার বা হাতে বেছে ক্রপ করার সুবিধা এতে নেই। কেটে ভরাট সবসময় ছবির মাঝখান থেকে কাটে।",
+        "মূল ছবি আলাদা রেখে দিন। নতুন ফাইলের নামে মাপ যোগ হয়, যেমন photo-413x531.jpg, তাই গুলিয়ে ফেলার সম্ভাবনা কম। আবেদনে জমা দেওয়ার আগে নতুন ছবিটি খুলে মুখ ও লেখা ঠিকঠাক দেখা যায় কি না দেখুন।",
+        "কোয়ালিটি ৯০% থেকে শুরু হয়। ফাইল ছোট দরকার হলে ধীরে ধীরে কমান এবং প্রতিবার ফলাফলের সাইজ দেখুন। বেশি কমালে ছবিতে দানা দেখা যেতে পারে।",
+      ] },
+    ],
+    en: [
+      { h: "A worked example, step by step", p: [
+        "Say your phone photo is 4000 × 3000 pixels and a form needs a passport size photo. After you select the image, the tool shows its current size and file size. Now tap the \"Passport 413×531\" preset.",
+        "Tapping a preset turns Lock off and selects crop to fill. The tool cuts the part of the image that matches the 413 × 531 shape from the centre, so the photo is not flattened. If the face is off centre, part of it may be cut, so take the photo centred or check the preview.",
+        "Another example: type 1000 as the width for the same 4000 × 3000 photo. With Lock on, the height becomes 750 on its own. This is useful for a smaller image to put on a website or send in a message.",
+      ] },
+      { h: "When this tool is useful", p: [
+        "Online applications may ask for a photo of a set size, such as passport size or a fixed width and height. Always check the exact requirement on the form or website concerned.",
+        "Shrinking images for a website or blog helps pages open faster. The presets include 1280×720 and 1920×1080, handy for video thumbnails or cover images, while 300×300 and 600×600 suit square images such as profile pictures.",
+        "The image is processed on your own device, so it is also fine for ID photos or personal pictures.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The most common mistake is turning Lock off, typing random width and height and choosing stretch to fill. The image then looks flattened or tall. Keep Lock on or use crop to fill to avoid distortion.",
+        "Enlarging a small image is another one. It will look blurry because no new detail is created. If you have the original large image, resize from that.",
+        "Turning a PNG into JPEG makes transparent parts white. If you do not want that, choose PNG or WebP. If the file is too big, switch to JPEG and lower the quality slider. Images over 25 MB are refused, and sizes above 8000 pixels are not allowed.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "This tool only changes pixel size and format. It has no rotate, filters or hand picked cropping. Crop to fill always cuts from the centre of the image.",
+        "Keep your original image safe. The new file name includes the size, for example photo-413x531.jpg, so it is hard to mix up. Before submitting, open the new image and check that faces and text look right.",
+        "Quality starts at 90%. If you need a smaller file, lower it step by step and check the resulting size each time. Going too low can make the image look grainy.",
+      ] },
+    ],
+  },
+  "merge-pdf": {
+    bn: [
+      { h: "ধাপে ধাপে উদাহরণ: তিনটি ফাইল এক PDF-এ", p: [
+        "ধরুন চাকরির আবেদনে একটি PDF-ই জমা দিতে হবে। আপনার কাছে তিনটি ফাইল আছে: cv.pdf (২ পেজ), certificates.pdf (৫ পেজ) আর nid.pdf (১ পেজ)। তিনটি একসাথে সিলেক্ট করুন। তালিকায় ক্রম দেখুন এবং তীর বাটন দিয়ে cv.pdf উপরে, তারপর certificates.pdf, শেষে nid.pdf রাখুন।",
+        "\"PDF জোড়া দিন\" চাপলে টুল ফাইলগুলো একে একে পড়ে একটি নতুন PDF বানায়। ফলাফলে মোট ৮টি পেজ দেখাবে, সাথে ফাইলের সাইজ। প্রথম দুই পেজ cv, পরের পাঁচ পেজ সনদ, শেষ পেজ NID। ডাউনলোড করলে ফাইলের নাম হবে merged.pdf।",
+        "ডাউনলোড করার পর একবার ফাইলটি খুলে পেজগুলো ক্রমানুযায়ী আছে কি না দেখে নিন। ক্রম ভুল হলে ফিরে এসে তীর বাটন দিয়ে ঠিক করে আবার জোড়া দিন।",
+        "ফাইলের নাম আগে থেকে সংখ্যা দিয়ে সাজিয়ে রাখলে, যেমন 1-cv, 2-certificates, 3-nid, তালিকায় ক্রম চেনা সহজ হয়। এতে ভুল হওয়ার সম্ভাবনা কমে।",
+      ] },
+      { h: "কখন কাজে লাগে", p: [
+        "অনেক আবেদনে বা অনলাইন ফর্মে একটিমাত্র ফাইল আপলোডের সুযোগ থাকে। তখন আলাদা আলাদা কাগজ এক ফাইলে আনতে হয়। ব্যাংকে লোনের কাগজ, ভিসার আবেদন, ভর্তির ফর্ম বা অফিসের রিপোর্ট জমা দেওয়ার সময় এমন দরকার হয়।",
+        "ইমেইলে অনেকগুলো সংযুক্তি পাঠানোর বদলে একটি ফাইল পাঠালে গ্রহণকারীর জন্যও সুবিধা হয়। স্ক্যান করা পেজ আলাদা আলাদা ফাইলে জমে গেলে সেগুলো একসাথে করে সাজিয়ে রাখাও যায়। জমা দেওয়ার আগে আবেদনের নিয়মে ফাইলের ধরন ও সাইজ সীমা দেখে নিন, কারণ প্রতিষ্ঠানভেদে তা আলাদা।",
+        "অফিসে মাসিক রিপোর্টের বিভিন্ন অংশ আলাদা মানুষ বানালে শেষে সব অংশ এক ফাইলে আনতেও এটি কাজে লাগে।",
+      ] },
+      { h: "সাধারণ ভুল ও সমাধান", p: [
+        "সবচেয়ে বেশি হয় ক্রমের ভুল। জোড়া দেওয়ার আগে তালিকার ওপর থেকে নিচে একবার পড়ে নিন। উপরের ফাইলের পেজ আগে বসে।",
+        "একটি ফাইল খোলা না গেলে টুল তার নাম দেখিয়ে বলে ফাইলটি পাসওয়ার্ড দেওয়া বা নষ্ট হতে পারে। পাসওয়ার্ড থাকলে আগে অন্য কোনো PDF রিডারে খুলে পাসওয়ার্ড ছাড়া কপি সংরক্ষণ করুন। নষ্ট ফাইল হলে আবার ডাউনলোড বা স্ক্যান করুন।",
+        "ছবি জোড়া দিতে গেলে ফাইল বাদ যাবে, কারণ শুধু PDF নেওয়া হয়। আগে Image to PDF ব্যবহার করুন। ৫০ MB এর বড় ফাইলও বাদ যায়। তখন Compress PDF দিয়ে সাইজ কমিয়ে নিন।",
+      ] },
+      { h: "সীমাবদ্ধতা ও ভালো অভ্যাস", p: [
+        "একবারে সর্বোচ্চ ২০টি ফাইল এবং প্রতিটি ৫০ MB পর্যন্ত নেওয়া হয়। বেশি ফাইল থাকলে দুই ধাপে জোড়া দিন: প্রথমে ২০টি, তারপর ফলাফলের সাথে বাকিগুলো। আর পুরো ফাইল না নিয়ে শুধু কিছু পেজ নিতে চাইলে আগে Split PDF ব্যবহার করুন।",
+        "বড় ফাইল জোড়া দিতে ফোনে কিছুটা সময় লাগতে পারে, কারণ সব কাজ আপনার ডিভাইসেই হয়। প্রসেস চলার সময় পেজ বন্ধ করবেন না।",
+        "গুরুত্বপূর্ণ কাগজ জমা দেওয়ার আগে ফলাফল ফাইলটি খুলে সব পেজ ও লেখা পড়া যাচ্ছে কি না যাচাই করুন। আসল ফাইল মুছে ফেলার আগে নতুন ফাইলটি ভালোভাবে দেখে নিন, কারণ আসল ফাইল এই টুল বদলায় না কিন্তু আপনি ভুল করে মুছে ফেলতে পারেন।",
+      ] },
+    ],
+    en: [
+      { h: "Worked example: three files into one PDF", p: [
+        "Say a job application accepts only one PDF. You have three files: cv.pdf (2 pages), certificates.pdf (5 pages) and nid.pdf (1 page). Select all three. Check the list and use the arrow buttons to put cv.pdf on top, then certificates.pdf, then nid.pdf last.",
+        "When you press Merge PDFs, the tool reads the files one by one and builds a new PDF. The result shows 8 pages in total along with the file size. The first two pages are the CV, the next five are the certificates and the last is the NID. The download is named merged.pdf.",
+        "After downloading, open the file once and check that the pages are in the right order. If not, go back, fix the order with the arrows and merge again.",
+      ] },
+      { h: "When this is useful", p: [
+        "Many applications and online forms allow only one file upload, so separate papers must be brought into a single file. Loan documents, visa applications, admission forms and office reports often need this.",
+        "Sending one file instead of many attachments is also easier for the person receiving it. If scanned pages pile up as separate files, you can combine and arrange them too. Before submitting, check the file type and size limit in the application rules, since these differ between organisations.",
+      ] },
+      { h: "Common mistakes and fixes", p: [
+        "The most common mistake is the wrong order. Read the list from top to bottom before merging. The top file's pages come first.",
+        "If a file cannot be opened, the tool shows its name and says it may be password protected or damaged. For a password, open it in another PDF reader and save a copy without the password first. For a damaged file, download or scan it again.",
+        "Images are skipped because only PDFs are accepted. Use Image to PDF first. Files above 50 MB are also skipped, so shrink them with Compress PDF.",
+      ] },
+      { h: "Limits and good habits", p: [
+        "The tool takes up to 20 files at once, each up to 50 MB. With more files, merge in two rounds: first 20, then the result together with the rest. If you want only some pages of a file rather than all of it, use Split PDF first.",
+        "Large files may take a while on a phone because all the work happens on your device. Do not close the page while it runs.",
+        "Before submitting an important document, open the result and check that every page and all text is readable. This tool does not change your originals, but be careful not to delete them by mistake before you have checked the new file.",
+      ] },
+    ],
+  },
+};
+
+for (const [slug, add] of Object.entries(EXTRA_B2)) {
+  const base = TOOL_ARTICLES[slug];
+  if (base) {
+    base.bn.push(...add.bn);
+    base.en.push(...add.en);
+  } else {
+    TOOL_ARTICLES[slug] = add;
+  }
+}

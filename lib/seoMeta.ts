@@ -79,8 +79,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি Bangla calendar: আজকের বাংলা তারিখ ও ঋতু দেখুন, ইংরেজি থেকে বাংলা এবং বাংলা থেকে ইংরেজি তারিখ বদলান। বাংলাদেশের সংশোধিত পঞ্জিকা অনুযায়ী।",
   },
   "countdown-timer": {
-    title: "Countdown - কাউন্টডাউন টাইমার অনলাইন",
-    description: "অনলাইন কাউন্টডাউন। পরীক্ষা, ট্রিপ বা যেকোনো ইভেন্টের তারিখ দিয়ে কত দিন-ঘণ্টা-মিনিট বাকি তা লাইভ দেখুন। ফ্রি countdown timer।",
+    title: "কাউন্টডাউন টাইমার - Countdown Timer ফ্রি",
+    description: "ফ্রি Countdown Timer দিয়ে পরীক্ষা, বিয়ে বা ট্রিপের তারিখ দিন। দিন, ঘণ্টা, মিনিট ও সেকেন্ড লাইভ দেখুন, ইভেন্ট ব্রাউজারে সেভ থাকে।",
   },
   "stopwatch-timer": {
     title: "Online Stopwatch & Timer - অনলাইন স্টপওয়াচ",
@@ -91,12 +91,12 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি image compressor: JPEG বা WebP বেছে কোয়ালিটি ও প্রস্থ ঠিক করে ছবির সাইজ KB/MB তে কমান। আগে-পরের সাইজ দেখুন। ছবি আপলোড হয় না।",
   },
   "compress-pdf": {
-    title: "Compress PDF - পিডিএফ সাইজ কমান",
-    description: "PDF-এর সাইজ ফ্রিতে কমান। ফাইল আপলোড হয় না, সব কাজ আপনার ফোন বা ব্রাউজারেই হয়। স্ক্যান করা PDF-এর জন্য ভালো। Free PDF compressor।",
+    title: "PDF কম্প্রেস করুন, Compress PDF ফ্রি",
+    description: "ফ্রি Compress PDF টুল: স্ক্যান করা বা ছবির PDF এর সাইজ কমান, হালকা, মাঝারি বা শক্তিশালী মাত্রা বেছে আগে ও পরের সাইজ দেখুন, ফোনেই।",
   },
   "merge-pdf": {
-    title: "Merge PDF - পিডিএফ জোড়া দিন",
-    description: "একাধিক PDF ফাইল জোড়া দিয়ে একটি PDF বানান, ক্রম নিজে ঠিক করুন। ফাইল আপলোড হয় না, সব কাজ ব্রাউজারে হয়। ফ্রি merge PDF টুল।",
+    title: "Merge PDF - ফ্রি পিডিএফ জোড়া দিন",
+    description: "একাধিক PDF ফাইল ফ্রিতে জোড়া দিয়ে একটি PDF বানান, তীর বাটনে ক্রম নিজে ঠিক করুন। ফাইল আপলোড হয় না, ব্রাউজারেই merge PDF হয়।",
   },
   "image-to-pdf": {
     title: "Image to PDF - ছবি থেকে পিডিএফ",
@@ -123,8 +123,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি Password Generator: ৮ থেকে ৬৪ অক্ষরের র‍্যান্ডম পাসওয়ার্ড বানান, ধরন বেছে নিন ও কপি করুন। ব্রাউজারেই তৈরি হয়, সেভ হয় না।",
   },
   "case-converter": {
-    title: "Case Converter - UPPERCASE lowercase Title Case",
-    description: "লেখাকে UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case ও kebab-case এ বদলান। ফ্রি অনলাইন case converter।",
+    title: "Case Converter - ফ্রি অক্ষর কেস বদলান",
+    description: "ফ্রি Case Converter দিয়ে ইংরেজি লেখা UPPERCASE, lowercase, Title Case, camelCase, snake_case ও kebab-case এ এক ক্লিকে বদলান ও কপি করুন।",
   },
   "unit-converter": {
     title: "একক রূপান্তর | Unit Converter",
@@ -143,8 +143,8 @@ export const SEO_META: Record<string, { title: string; description: string }> = 
     description: "ফ্রি অনলাইন সায়েন্টিফিক ক্যালকুলেটর (Casio fx-991 স্টাইল)। ভগ্নাংশে সঠিক উত্তর, ইন্টিগ্রাল, জটিল সংখ্যা, সমীকরণ, ম্যাট্রিক্স, পরিসংখ্যান ও বেস-N। সাইন-আপ লাগে না।",
   },
   "image-resizer": {
-    title: "Image Resizer - ছবির সাইজ পরিবর্তন",
-    description: "ছবির প্রস্থ-উচ্চতা px এ বদলান। পাসপোর্ট সাইজসহ প্রিসেট আছে। ছবি আপলোড হয় না, সব কাজ আপনার ফোনেই হয়। ফ্রি image resizer।",
+    title: "ছবির সাইজ পরিবর্তন, Image Resizer ফ্রি",
+    description: "ফ্রি Image Resizer: ছবির প্রস্থ ও উচ্চতা পিক্সেলে বদলান, পাসপোর্ট সাইজ প্রিসেট ব্যবহার করুন, JPG, PNG বা WebP এ ডাউনলোড করুন, ফোনেই।",
   },
   "image-converter": {
     title: "Image Converter - JPG PNG WebP বদলান",
